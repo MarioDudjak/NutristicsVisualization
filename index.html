@@ -18,56 +18,57 @@ var data=[{"vrsta_jela":"Predjelo","Ime_jela":"Sunka","Broj_kalorija":"250","sli
 {"vrsta_jela":"Salata","Ime_jela":"Mijesana salata","Broj_kalorija":"80","slika":"https://coolinarika-cdn.azureedge.net/image/salata-za-sva-cula-c465af5b192c8cc43f441510d8eda4af_view_l.jpg?v=1"},
 {"vrsta_jela":"Desert","Ime_jela":"Muffin","Broj_kalorija":"600","slika":"http://img.taste.com.au/mDT6P_Gq/taste/2016/11/classic-blueberry-muffins-87882-1.jpeg"}
 ];
+
  $(document).on('click','polygon',function(){ 
-		body = d3.select('body')
+		body = d3.select('body').select("#machine")
 		svg = body.select('svg');
 		
 		switch($(this).attr('id')){
 		case 'first_polygon_up':
-		rect = svg.append('rect').transition().duration(500).attr('width', 400)
-                .attr('height', 500)
-                .attr('x', 150)
-                .attr('y', 100)
+		
+		rect = svg.append('rect').transition().duration(500).attr('width', 200)
+                .attr('height', 300)
+                .attr('x', 100)
+                .attr('y', 650)
                 .style('fill', 'white')
                 .attr('stroke', 'black')
-				.attr('stroke-width',10)
+				.attr('stroke-width',5)
 		var text = svg.append('text').text(data[0].Ime_jela)
-                .attr('x', 275)
-                .attr('y', 150)
+                .attr('x', 125)
+                .attr('y', 700)
                 .attr('fill', 'black')
 				.attr('font-size',50)
 				.attr('text-align','center')
 		var img = svg.append("svg:image")
 				.attr("xlink:href", data[0].slika)
-				.attr("width", 350)
-				.attr("height", 400)
-				.attr("x", 175)
-				.attr("y",100);
+				.attr("width", 190)
+				.attr("height", 300)
+				.attr("x", 105)
+				.attr("y",700);
 		break;
 		case 'first_polygon_down':
 	
 		break;
 		case 'second_polygon_up':
-		rect = svg.append('rect').transition().duration(500).attr('width', 400)
-                .attr('height', 500)
-                .attr('x', 700)
-                .attr('y', 100)
+		rect = svg.append('rect').transition().duration(500).attr('width', 200)
+                .attr('height', 300)
+                .attr('x', 300)
+                .attr('y', 650)
                 .style('fill', 'white')
                 .attr('stroke', 'black')
-				.attr('stroke-width',10)
+				.attr('stroke-width',5)
 		var text = svg.append('text').text(data[1].Ime_jela)
-                .attr('x', 825)
-                .attr('y', 150)
+                .attr('x', 325)
+                .attr('y', 700)
                 .attr('fill', 'black')
 				.attr('font-size',50)
 				.attr('text-align','center')
 		var img = svg.append("svg:image")
 				.attr("xlink:href", data[1].slika)
-				.attr("width", 350)
-				.attr("height", 400)
-				.attr("x", 725)
-				.attr("y",100);
-		
+				.attr("width", 190)
+				.attr("height", 300)
+				.attr("x", 305)
+				.attr("y",700);
 		break;
 		case 'second_polygon_down':
 		
@@ -165,15 +166,102 @@ var data=[{"vrsta_jela":"Predjelo","Ime_jela":"Sunka","Broj_kalorija":"250","sli
   <div class="row content">
     <div class="col-sm-2 sidenav">
     
-  <script type="text/javascript" src="menu_items.js"></script>
+   <script type="text/javascript" src="menu_items.js"></script> 
     </div>
     <div class="col-sm-8 text-left"> 
       <h1>Data visualization</h1>
       <hr>
       <h3 style="text-align:center">Slot machine like nutristics vizualization</h3>
-      
+        
 	  <div id="machine">
-	    
+   <script>
+   var i=0;
+   var x_small_rectangles=[100,300,500,700,900];
+   
+   var svg = d3.select("body").select("#machine")
+			.append("svg")
+			.attr("width","1500")
+			.attr("height","1500");
+	for(i=0;i<5;i++){		
+	svg.append("rect")
+		.attr("x",x_small_rectangles[i])
+		.attr("y",300)
+		.attr("width","200")
+		.attr("height","150")
+		.attr("style","stroke:black;stroke-width:4;fill:none;");
+}
+	for(i=0;i<5;i++){
+	svg.append("rect")
+		.attr("x",x_small_rectangles[i])
+		.attr("y",650)
+		.attr("width","200")
+		.attr("height","300")
+		.attr("style","stroke:black;stroke-width:4;fill:none;");
+	}
+
+	svg.append("polygon")
+	.attr("points", "150,600 200,600 175,550")
+	.attr("stroke-width", "2px")
+	.attr("id","first_polygon_up")
+	.attr("stroke", "black"); 
+	
+	svg.append("polygon")
+	.attr("points", "150,1000 200,1000 175,1050")
+	.attr("stroke-width", "2px")
+	.attr("id","first_polygon_down")
+	.attr("stroke", "black");
+	
+	svg.append("polygon")
+	.attr("points", "350,600 400,600 375,550")
+	.attr("stroke-width", "2px")
+	.attr("id","second_polygon_up")
+	.attr("stroke", "black");
+	
+	svg.append("polygon")
+	.attr("points", "350,1000 400,1000 375,1050")
+	.attr("stroke-width", "2px")
+	.attr("id","second_polygon_down")
+	.attr("stroke", "black");
+	
+	svg.append("polygon")
+	.attr("points", "550,600 600,600 575,550")
+	.attr("stroke-width", "2px")
+	.attr("id","third_polygon_up")
+	.attr("stroke", "black");
+	
+	svg.append("polygon")
+	.attr("points", "550,1000 600,1000 575,1050")
+	.attr("stroke-width", "2px")
+	.attr("id","third_polygon_down")
+	.attr("stroke", "black");
+	
+	svg.append("polygon")
+	.attr("points", "750,600 800,600 775,550")
+	.attr("stroke-width", "2px")
+	.attr("id","fourth_polygon_up")
+	.attr("stroke", "black");
+	
+	svg.append("polygon")
+	.attr("points", "750,1000 800,1000 775,1050")
+	.attr("stroke-width", "2px")
+	.attr("id","fourth_polygon_down")
+	.attr("stroke", "black");
+	
+	svg.append("polygon")
+	.attr("points", "950,600 1000,600 975,550")
+	.attr("stroke-width", "2px")
+	.attr("id","fifth_polygon_up")
+	.attr("stroke", "black");
+	
+	svg.append("polygon")
+	.attr("points", "950,1000 1000,1000 975,1050")
+	.attr("stroke-width", "2px")
+	.attr("id","fifth_polygon_up")
+	.attr("stroke", "black");
+	
+	//}
+   </script>
+ <!--
     <svg width="800" height="1000" viewBox="0 0 2800 1000" id="body_svg">
 	
 	<rect x="150" y="-450" width="400" height="200" id="first_rectangle" fill="white" stroke="black" stroke-width="10">
@@ -253,6 +341,7 @@ var data=[{"vrsta_jela":"Predjelo","Ime_jela":"Sunka","Broj_kalorija":"250","sli
             2550,700" />
 
     </svg>
+	-->
 </div>
     </div>
     <div class="col-sm-2 sidenav">

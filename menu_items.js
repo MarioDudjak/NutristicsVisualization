@@ -1,33 +1,30 @@
 
-/*
+
     var drag = d3.behavior.drag()
         .on("drag", function(d,i) {
-			
-			var rect = document.getElementById(d.id);
-			 
-			 //var fromSVG = rect.ownerSVGElement;
-			// var toId = (fromSVG.id === "nav_svg") ? "body_svg" : "nav_svg";	
-			// var toSVG = document.getElementById(toId);
             d.x += d3.event.dx
             d.y += d3.event.dy
-			
-			if(d.y<5) d.y=10;
-			if((d.x+150)>200){
-				//fromSVG.removeChild(rect);
-				//toSVG.appendChild(rect);
-			}
             d3.select(this).attr("transform", function(d,i){
                 return "translate(" + [ d.x,d.y ] + ")"
             })
         });
 
-*/
-	
+
+	 var drag = d3.behavior.drag()
+        .on("drag", function(d,i) {
+            d.x += d3.event.dx
+            d.y += d3.event.dy
+            d3.select(this).attr("transform", function(d,i){
+                return "translate(" + [ d.x,d.y ] + ")"
+            })
+        });
+		
     function rect_factory(id, x, y,title,image)
     { 
      
         var rectangle = container.append("rect")
                 .attr("id", id)
+				.attr("class","drag_meal")
                 .attr("fill", "none")
                 .attr("fill-opacity", .8)
                 .attr("stroke", "black")
@@ -53,34 +50,36 @@
 		
 		
 		img.on("dblclick",function(d){ 
+		d3.select('body').select("#machine").select('.izabranaJela').select('rect').remove();
+		d3.select('body').select("#machine").select('.izabranaJela').select('image').remove();
+		d3.select('body').select("#machine").select('.izabranaJela').select('text').remove();
 		body = d3.select('body')
-		svg = body.select("#body_svg");
-		d3.select('.izabranaJela').selectAll('rect').remove();
-		var rect = svg.append('rect').transition().duration(500).attr('width', 400)
-                .attr('height', 200)
+		svg = body.select("#machine").select('svg');
+		var rect = svg.append('rect').transition().duration(500).attr('width', 200)
+                .attr('height', 150)
 				.attr('class','izabranaJela')
-                .attr('x', 150)
-                .attr('y', -1000)
+                .attr('x', 50)
+                .attr('y', 50)
 				.attr('id',id)
                 .style('fill', 'none')
                 .attr('stroke', 'black')
 				.attr('stroke-width',10)
+				
 		var img = svg.append("svg:image")
 				.attr("xlink:href", image)
-				.attr("width", 400)
-				.attr("height", 200)
-				.attr("x", 150)
-				.attr("y",-1000);
+				.attr("width", 200)
+				.attr('class','izabranaJela')
+				.attr("height", 150)
+				.attr("x", 50)
+				.attr("y",50);
 		var text = svg.append('text').text(title)
-                .attr('x', 200)
-                .attr('y', -1050)
+                .attr('x', 50)
+                .attr('y', 50)
+				.attr('class','izabranaJela')
                 .attr('fill', 'black')
 				.attr('font-size',50)
 				.attr('text-align','center');
-		
-	
 		});
-		
     }
 
     var w = 200;

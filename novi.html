@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Data visualization</title>
+  <meta charset="utf-8">
+      <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+   
+  
+<script> 
+var data=[{"vrsta_jela":"Predjelo","Ime_jela":"Sunka","Broj_kalorija":"250","slika":"https://coolinarika-cdn.azureedge.net/image/sunka-3de1e7eae12dfb74bed765a6c2b83a6d_header.jpg?v=0"},
+{"vrsta_jela":"Glavno jelo","Ime_jela":"Piletina","Broj_kalorija":"150","slika":"https://coolinarika-cdn.azureedge.net/image/fant-eci-peci-pecena-piletina-5f38b8f9db6e2cfd710a3db472cb0656_view_l.jpg?v=1"},
+{"vrsta_jela":"Prilog","Ime_jela":"Njoki","Broj_kalorija":"500","slika":"https://coolinarika-cdn.azureedge.net/image/govedji-gulas-s-njokima-c403104e509330c3bdee863026eb7765_view_l.jpg?v=3"},
+{"vrsta_jela":"Salata","Ime_jela":"Mijesana salata","Broj_kalorija":"80","slika":"https://coolinarika-cdn.azureedge.net/image/salata-za-sva-cula-c465af5b192c8cc43f441510d8eda4af_view_l.jpg?v=1"},
+{"vrsta_jela":"Desert","Ime_jela":"Muffin","Broj_kalorija":"600","slika":"http://img.taste.com.au/mDT6P_Gq/taste/2016/11/classic-blueberry-muffins-87882-1.jpeg"}
+];
+
+ $(document).on('click','polygon',function(){ 
+		body = d3.select('body')
+		svg = body.select('svg');
+		
+		switch($(this).attr('id')){
+		case 'first_polygon_up':
+		rect = svg.append('rect').transition().duration(500).attr('width', 400)
+                .attr('height', 500)
+                .attr('x', 150)
+                .attr('y', 100)
+                .style('fill', 'white')
+                .attr('stroke', 'black')
+				.attr('stroke-width',10)
+		var text = svg.append('text').text(data[0].Ime_jela)
+                .attr('x', 275)
+                .attr('y', 150)
+                .attr('fill', 'black')
+				.attr('font-size',50)
+				.attr('text-align','center')
+		var img = svg.append("svg:image")
+				.attr("xlink:href", data[0].slika)
+				.attr("width", 350)
+				.attr("height", 400)
+				.attr("x", 175)
+				.attr("y",100);
+		break;
+		case 'first_polygon_down':
+	
+		break;
+		case 'second_polygon_up':
+		rect = svg.append('rect').transition().duration(500).attr('width', 400)
+                .attr('height', 500)
+                .attr('x', 700)
+                .attr('y', 100)
+                .style('fill', 'white')
+                .attr('stroke', 'black')
+				.attr('stroke-width',10)
+		var text = svg.append('text').text(data[1].Ime_jela)
+                .attr('x', 825)
+                .attr('y', 150)
+                .attr('fill', 'black')
+				.attr('font-size',50)
+				.attr('text-align','center')
+		var img = svg.append("svg:image")
+				.attr("xlink:href", data[1].slika)
+				.attr("width", 350)
+				.attr("height", 400)
+				.attr("x", 725)
+				.attr("y",100);
+		
+		break;
+		case 'second_polygon_down':
+		
+		break;
+		case 'third_polygon_up':
+		
+		break;
+		case 'third_polygon_down':
+		
+		break;
+		case 'fourth_polygon_up':
+		
+		break;
+		case 'fourth_polygon_down':
+		
+		break;
+		case 'fifth_polygon_up':
+		
+		break;
+		case 'fifth_polygon_down':
+		
+		break;
+		}
+	});
+
+</script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+
+    .row.content {height: 1200px;}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+	 
+	  right: 0;
+      bottom: 0;
+	  left: 0;
+	  text-align: center;
+	  position: relative;
+	  margin-top: -150px; /* negative value of footer height */
+	  height: 50px;
+	  clear:both;
+	   padding-top:20px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#"><img src="https://www.pubnub.com/wp-content/uploads/2014/01/D3.js-Logo.png" height="30" width="165" alt="D3.js"</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="kv1.html">Home</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+    
+  <script type="text/javascript" src="menu_items.js"></script>
+    </div>
+    <div class="col-sm-8 text-left"> 
+      <h1>Data visualization</h1>
+      <hr>
+      <h3 style="text-align:center">Slot machine like nutristics vizualization</h3>
+        
+	  <div id="machine">
+  
+	</div>
+    </div>
+    <div class="col-sm-2 sidenav">
+      <div class="well">
+        
+      </div>
+      <div class="well">
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+  <p>Footer Text</p>
+</footer>
+
+</body>
+</html>
