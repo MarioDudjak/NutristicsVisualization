@@ -1,5 +1,5 @@
 
-
+	var number_of_clicks=0;
     var drag = d3.behavior.drag()
         .on("drag", function(d,i) {
             d.x += d3.event.dx
@@ -50,35 +50,42 @@
 		
 		
 		img.on("dblclick",function(d){ 
-		d3.select('body').select("#machine").select('.izabranaJela').select('rect').remove();
-		d3.select('body').select("#machine").select('.izabranaJela').select('image').remove();
-		d3.select('body').select("#machine").select('.izabranaJela').select('text').remove();
+		if(number_of_clicks==0){
 		body = d3.select('body')
 		svg = body.select("#machine").select('svg');
-		var rect = svg.append('rect').transition().duration(500).attr('width', 200)
-                .attr('height', 150)
-				.attr('class','izabranaJela')
-                .attr('x', 50)
-                .attr('y', 50)
-				.attr('id',id)
-                .style('fill', 'none')
-                .attr('stroke', 'black')
-				.attr('stroke-width',10)
-				
+		svg.append("rect")
+		.attr("x",100)
+		.attr("y",300)
+		.attr("width","200")
+		.attr("height","150")
+		.attr("style","stroke:black;stroke-width:4;fill:white;");	
 		var img = svg.append("svg:image")
 				.attr("xlink:href", image)
 				.attr("width", 200)
 				.attr('class','izabranaJela')
 				.attr("height", 150)
-				.attr("x", 50)
-				.attr("y",50);
+				.attr("x", 100)
+				.attr("y",300);
 		var text = svg.append('text').text(title)
-                .attr('x', 50)
-                .attr('y', 50)
+                .attr('x', 100)
+                .attr('y', 300)
 				.attr('class','izabranaJela')
                 .attr('fill', 'black')
 				.attr('font-size',50)
 				.attr('text-align','center');
+		}
+		if(number_of_clicks==1){
+			
+		}
+		if(number_of_clicks==2){
+			
+		}
+		if(number_of_clicks==3){
+			
+		}
+		if(number_of_clicks==4){
+			number_of_clicks=0;
+		}
 		});
     }
 

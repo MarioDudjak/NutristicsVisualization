@@ -9,136 +9,14 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="http://d3js.org/d3.v3.min.js"></script>
-   
-  
-<script> 
-var data=[{"vrsta_jela":"Predjelo","Ime_jela":"Sunka","Broj_kalorija":"250","slika":"https://coolinarika-cdn.azureedge.net/image/sunka-3de1e7eae12dfb74bed765a6c2b83a6d_header.jpg?v=0"},
-{"vrsta_jela":"Glavno jelo","Ime_jela":"Piletina","Broj_kalorija":"150","slika":"https://coolinarika-cdn.azureedge.net/image/fant-eci-peci-pecena-piletina-5f38b8f9db6e2cfd710a3db472cb0656_view_l.jpg?v=1"},
-{"vrsta_jela":"Prilog","Ime_jela":"Njoki","Broj_kalorija":"500","slika":"https://coolinarika-cdn.azureedge.net/image/govedji-gulas-s-njokima-c403104e509330c3bdee863026eb7765_view_l.jpg?v=3"},
-{"vrsta_jela":"Salata","Ime_jela":"Mijesana salata","Broj_kalorija":"80","slika":"https://coolinarika-cdn.azureedge.net/image/salata-za-sva-cula-c465af5b192c8cc43f441510d8eda4af_view_l.jpg?v=1"},
-{"vrsta_jela":"Desert","Ime_jela":"Muffin","Broj_kalorija":"600","slika":"http://img.taste.com.au/mDT6P_Gq/taste/2016/11/classic-blueberry-muffins-87882-1.jpeg"}
-];
-
- $(document).on('click','polygon',function(){ 
-		body = d3.select('body').select("#machine")
-		svg = body.select('svg');
-		
-		switch($(this).attr('id')){
-		case 'first_polygon_up':
-		
-		rect = svg.append('rect').transition().duration(500).attr('width', 200)
-                .attr('height', 300)
-                .attr('x', 100)
-                .attr('y', 650)
-                .style('fill', 'white')
-                .attr('stroke', 'black')
-				.attr('stroke-width',5)
-		var text = svg.append('text').text(data[0].Ime_jela)
-                .attr('x', 125)
-                .attr('y', 700)
-                .attr('fill', 'black')
-				.attr('font-size',50)
-				.attr('text-align','center')
-		var img = svg.append("svg:image")
-				.attr("xlink:href", data[0].slika)
-				.attr("width", 190)
-				.attr("height", 300)
-				.attr("x", 105)
-				.attr("y",700);
-		break;
-		case 'first_polygon_down':
-	
-		break;
-		case 'second_polygon_up':
-		rect = svg.append('rect').transition().duration(500).attr('width', 200)
-                .attr('height', 300)
-                .attr('x', 300)
-                .attr('y', 650)
-                .style('fill', 'white')
-                .attr('stroke', 'black')
-				.attr('stroke-width',5)
-		var text = svg.append('text').text(data[1].Ime_jela)
-                .attr('x', 325)
-                .attr('y', 700)
-                .attr('fill', 'black')
-				.attr('font-size',50)
-				.attr('text-align','center')
-		var img = svg.append("svg:image")
-				.attr("xlink:href", data[1].slika)
-				.attr("width", 190)
-				.attr("height", 300)
-				.attr("x", 305)
-				.attr("y",700);
-		break;
-		case 'second_polygon_down':
-		
-		break;
-		case 'third_polygon_up':
-		
-		break;
-		case 'third_polygon_down':
-		
-		break;
-		case 'fourth_polygon_up':
-		
-		break;
-		case 'fourth_polygon_down':
-		
-		break;
-		case 'fifth_polygon_up':
-		
-		break;
-		case 'fifth_polygon_down':
-		
-		break;
-		}
-	});
-
-</script>
-  <style>
-    /* Remove the navbar's default margin-bottom and rounded borders */ 
-    .navbar {
-      margin-bottom: 0;
-      border-radius: 0;
-    }
-    
-    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-
-    .row.content {height: 1200px;}
-    
-    /* Set gray background color and 100% height */
-    .sidenav {
-      padding-top: 20px;
-      background-color: #f1f1f1;
-      height: 100%;
-    }
-    
-    /* Set black background color, white text and some padding */
-    footer {
-      background-color: #555;
-      color: white;
-      padding: 15px;
-	 
-	  right: 0;
-      bottom: 0;
-	  left: 0;
-	  text-align: center;
-	  position: relative;
-	  margin-top: -150px; /* negative value of footer height */
-	  height: 50px;
-	  clear:both;
-	   padding-top:20px;
-    }
-    
-    /* On small screens, set height to 'auto' for sidenav and grid */
-    @media screen and (max-width: 767px) {
-      .sidenav {
-        height: auto;
-        padding: 15px;
-      }
-      .row.content {height:auto;} 
-    }
-  </style>
+      <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.2/d3.js"></script>
+  <link rel="stylesheet" href="styles.css">
+  <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+         rel = "stylesheet">
+      <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+	  <script src="jquery.min.js"></script>
+		<script src="jquery.textfill.min.js"></script>
 </head>
 <body>
 
@@ -166,7 +44,7 @@ var data=[{"vrsta_jela":"Predjelo","Ime_jela":"Sunka","Broj_kalorija":"250","sli
   <div class="row content">
     <div class="col-sm-2 sidenav">
     
-   <script type="text/javascript" src="menu_items.js"></script> 
+  <!-- <script type="text/javascript" src="menu_items.js"></script>  -->
     </div>
     <div class="col-sm-8 text-left"> 
       <h1>Data visualization</h1>
@@ -174,174 +52,1062 @@ var data=[{"vrsta_jela":"Predjelo","Ime_jela":"Sunka","Broj_kalorija":"250","sli
       <h3 style="text-align:center">Slot machine like nutristics vizualization</h3>
         
 	  <div id="machine">
-   <script>
-   var i=0;
-   var x_small_rectangles=[100,300,500,700,900];
-   
-   var svg = d3.select("body").select("#machine")
-			.append("svg")
-			.attr("width","1500")
-			.attr("height","1500");
-	for(i=0;i<5;i++){		
-	svg.append("rect")
-		.attr("x",x_small_rectangles[i])
+	     <form style="float:left; display:inline; position:relative; top:100px; left:50px;" name="myform" onSubmit="return handleClick()">
+            <input name="Submit"  type="submit" value="Add total calories" style="width:200px; height:50px;">
+            <input type="number" min="0" required id="myVal" placeholder="Input number&hellip;" style="width:200px; height:50px;">
+        </form>
+		
+		 <form style="float:right; display:inline; position:relative; top:580px; right:150px;" name="secondForm" onSubmit="return slowMotion() ">
+            <input name="Submit"  type="submit" value="Slot machine" style="width:100px; height:50px;">
+        </form>
+		
+		 <form style="float:right; display:inline; position:relative; top:580px; right:-60px;" name="thirdForm" onSubmit="return filterCalories() ">
+            <input name="Submit"  type="submit" value="Filter columns" style="width:100px; height:50px;">
+        </form>
+	
+
+<script>
+var first=20,second=20,third=20,fourth=20,fifth=20;
+var first_kcal,second_kcal, third_kcal, fourth_kcal, fifth_kcal;
+var sum=100;
+var total_number_of_calories=0, current_number_of_calories=0,target_number_of_calories=0;
+var hladna_predjela = [{"Ime":"Sarena slana rolada","Broj_kalorija":"250","slika":"probne_slike/rolada.jpg"},
+{"Ime":"Hladna plata","Broj_kalorija":"600","slika":"probne_slike/hladna_plata.jpg"},
+{"Ime":"Bijele pihtije","Broj_kalorija":"310","slika":"probne_slike/bijele_pihtije.jpg"}
+];
+var juhe = [{"Ime":"Riblja juha","Broj_kalorija":"110","slika":"https://coolinarika-cdn.azureedge.net/image/riblja-juha-0dc2351fcec7f4a604ac97a9f7cc22bf_view_l.jpg?v=2"},
+{"Ime":"Pire juha od cvjetače","Broj_kalorija":"130","slika":"https://coolinarika-cdn.azureedge.net/image/pire-juha-od-cvjetace-6bfa6a5e269d251414bff55a19c65809_header.jpg?v=3"},
+{"Ime":"Bistra juha","Broj_kalorija":"90","slika":"https://coolinarika-cdn.azureedge.net/image/pileca-juha-koja-lijeci-2c7b545ad37d80d3e5777dd66ff1894e_view_l.jpg?v=1"}
+];
+var topla_predjela=[{"Ime":"Palacinka s mesom","Broj_kalorija":"250","slika":"https://coolinarika-cdn.azureedge.net/image/palacinka-s-mesom-d71f2de0f70f99357072a55f38912bf0_listing_l.jpg?v=3"},
+{"Ime":"Zapeceni sampinjoni sa sirom","Broj_kalorija":"220","slika":"https://coolinarika-cdn.azureedge.net/image/zapeceni-sampinjoni-sa-sirom-c66c3a92e2999ecf00ac1c1fdc390645_view_l.jpg?v=15"},
+{"Ime":"Burek s mesom","Broj_kalorija":"690","slika":"https://coolinarika-cdn.azureedge.net/image/burek-1407c30c0963cd484004a33df620212a_header.jpg?v=1"}];
+
+var mesa=[{"Ime":"Pohano bijelo meso","Broj_kalorija":"340","slika":"https://coolinarika-cdn.azureedge.net/image/beli-medaljoni-a672bb1fa1980163deba9571843368f8_header.jpg?v=0"},
+{"Ime":"Fasirano meso","Broj_kalorija":"430","slika":"https://coolinarika-cdn.azureedge.net/image/fasirano-meso-d77f8351eecc643449cf488b4cdab166_header.jpg?v=10"},
+{"Ime":"Cordon blue","Broj_kalorija":"490","slika":"https://coolinarika-cdn.azureedge.net/image/pileci-cordon-bleu-iz-pecnice-2ad0e6c05c83d9ddbdf35f1bc52aa008_header.jpg?v=1"}];
+
+var prilozi=[{"Ime":"Krumpir iz pecnice","Broj_kalorija":"260","slika":"https://coolinarika-cdn.azureedge.net/image/krumpir-iz-pecnice-31ff03fe9a8809840811a79fe2b2d0f9_header.jpg?v=2"},
+{"Ime":"Tikvice i gljive","Broj_kalorija":"120","slika":"https://coolinarika-cdn.azureedge.net/image/prilog-od-poriluka-tikvica-i-sampinjona-2b396b0cdc0499212cf32224d69a60f2_view_l.jpg?v=10"},
+{"Ime":"Okruglice od rize","Broj_kalorija":"250","slika":"https://coolinarika-cdn.azureedge.net/image/sarena-riza-2c91c5814e96f1687e8f8ec0dce3581f_view_l.jpg?v=0"}];
+
+var ribe=[];
+var umaci=[];
+var salate=[];
+
+var deserti=[{"Ime":"Monte kolac","Broj_kalorija":"660","slika":"https://coolinarika-cdn.azureedge.net/image/monte-kolac-c016d53ddcd764ad8e457e3d670bb3df_header.jpg?v=0"},
+{"Ime":"Pita od maka","Broj_kalorija":"520","slika":"https://coolinarika-cdn.azureedge.net/image/pita-od-maka--b41b4aaeea71197c9cd2bb13714dd073_header.jpg?v=0"},
+{"Ime":"Tena kolac","Broj_kalorija":"650","slika":"https://coolinarika-cdn.azureedge.net/image/tena-kolac-71a5f3a435ca89ddbf047958d9b222b8_header.jpg?v=2"}];
+
+var voce=[];
+
+var data=[{"vrsta_jela":"Predjelo","Ime_jela":"Sunka","Broj_kalorija":"250","slika":"https://coolinarika-cdn.azureedge.net/image/sunka-3de1e7eae12dfb74bed765a6c2b83a6d_header.jpg?v=0"},
+{"vrsta_jela":"Glavno jelo","Ime_jela":"Piletina","Broj_kalorija":"150","slika":"https://coolinarika-cdn.azureedge.net/image/fant-eci-peci-pecena-piletina-5f38b8f9db6e2cfd710a3db472cb0656_view_l.jpg?v=1"},
+{"vrsta_jela":"Prilog","Ime_jela":"Njoki","Broj_kalorija":"500","slika":"https://coolinarika-cdn.azureedge.net/image/govedji-gulas-s-njokima-c403104e509330c3bdee863026eb7765_view_l.jpg?v=3"},
+{"vrsta_jela":"Salata","Ime_jela":"Mijesana salata","Broj_kalorija":"80","slika":"https://coolinarika-cdn.azureedge.net/image/salata-za-sva-cula-c465af5b192c8cc43f441510d8eda4af_view_l.jpg?v=1"},
+{"vrsta_jela":"Desert","Ime_jela":"Muffin","Broj_kalorija":"600","slika":"http://img.taste.com.au/mDT6P_Gq/taste/2016/11/classic-blueberry-muffins-87882-1.jpeg"}
+];
+var first_array,second_array,third_array,fourth_array,fifth_array;
+first_array=second_array=third_array=fourth_array=fifth_array=[{"Broj_kalorija":"0"}];
+var first_index=0,second_index=0,third_index=0,fourth_index=0,fifth_index=0;
+var filter=0;
+var first_size,second_size,third_size,fourth_size,fifth_size;
+
+function first_draw(){
+body = d3.select('body').select("#machine")
+		svg = body.select('svg');
+		var g= svg.append('g');
+rect = g.append('rect').transition().duration(500).attr('width', 200)
+                .attr('height', 300)
+                .attr('x', 100)
+                .attr('y', 650)
+                .style('fill', 'white')
+                .attr('stroke', 'black')
+				.attr('stroke-width',5)
+		var img = svg.append("svg:image")
+				.attr("xlink:href", first_array[first_index].slika)
+				.attr("width", 190)
+				.attr("height", 180)
+				.attr("x", 105)
+				.attr("y",760);
+		var text = g.append('text').text(first_array[first_index].Ime)
+                .attr('x', 105)
+                .attr('y', 700)
+                .attr('fill', 'black')
+				.attr('font-size',50)
+				.attr('font-weight','bold')
+				.attr('text-align','center')
+				.attr('textLength',190)
+				.attr('lengthAdjust','spacingAndGlyphs');	
+		var text = g.append('text').text(first_array[first_index].Broj_kalorija + " kCal")
+                .attr('x', 105)
+                .attr('y', 750)
+                .attr('fill', 'black')
+				.attr('font-size',50)
+				.attr('font-weight','bold')
+				.attr('text-align','center')
+				.attr('textLength',190)
+				.attr('lengthAdjust','spacingAndGlyphs');
+}
+function second_draw(){
+body = d3.select('body').select("#machine")
+		svg = body.select('svg');
+		var g= svg.append('g');
+rect = g.append('rect').transition().duration(500).attr('width', 200)
+                .attr('height', 300)
+                .attr('x', 300)
+                .attr('y', 650)
+                .style('fill', 'white')
+                .attr('stroke', 'black')
+				.attr('stroke-width',5)
+		var img = svg.append("svg:image")
+				.attr("xlink:href", second_array[second_index].slika)
+				.attr("width", 190)
+				.attr("height", 180)
+				.attr("x", 305)
+				.attr("y",760);
+		var text = g.append('text').text(second_array[second_index].Ime)
+                .attr('x', 305)
+                .attr('y', 700)
+                .attr('fill', 'black')
+				.attr('font-size',50)
+				.attr('font-weight','bold')
+				.attr('text-align','center')
+				.attr('textLength',190)
+				.attr('lengthAdjust','spacingAndGlyphs');	
+		var text = g.append('text').text(second_array[second_index].Broj_kalorija + " kCal")
+                .attr('x', 305)
+                .attr('y', 750)
+                .attr('fill', 'black')
+				.attr('font-size',50)
+				.attr('font-weight','bold')
+				.attr('text-align','center')
+				.attr('textLength',190)
+				.attr('lengthAdjust','spacingAndGlyphs');
+}
+function third_draw(){
+body = d3.select('body').select("#machine")
+		svg = body.select('svg');
+		var g= svg.append('g');
+rect = g.append('rect').transition().duration(500).attr('width', 200)
+                .attr('height', 300)
+                .attr('x', 500)
+                .attr('y', 650)
+                .style('fill', 'white')
+                .attr('stroke', 'black')
+				.attr('stroke-width',5)
+		var img = svg.append("svg:image")
+				.attr("xlink:href", third_array[third_index].slika)
+				.attr("width", 190)
+				.attr("height", 180)
+				.attr("x", 505)
+				.attr("y",760);
+		var text = g.append('text').text(third_array[third_index].Ime)
+                .attr('x', 505)
+                .attr('y', 700)
+                .attr('fill', 'black')
+				.attr('font-size',50)
+				.attr('font-weight','bold')
+				.attr('text-align','center')
+				.attr('textLength',190)
+				.attr('lengthAdjust','spacingAndGlyphs');	
+		var text = g.append('text').text(third_array[third_index].Broj_kalorija + " kCal")
+                .attr('x', 505)
+                .attr('y', 750)
+                .attr('fill', 'black')
+				.attr('font-size',50)
+				.attr('font-weight','bold')
+				.attr('text-align','center')
+				.attr('textLength',190)
+				.attr('lengthAdjust','spacingAndGlyphs');
+		
+}
+function fourth_draw(){
+body = d3.select('body').select("#machine")
+		svg = body.select('svg');
+		var g= svg.append('g');
+		rect = g.append('rect').transition().duration(500).attr('width', 200)
+                .attr('height', 300)
+                .attr('x', 700)
+                .attr('y', 650)
+                .style('fill', 'white')
+                .attr('stroke', 'black')
+				.attr('stroke-width',5)
+		var img = svg.append("svg:image")
+				.attr("xlink:href", fourth_array[fourth_index].slika)
+				.attr("width", 190)
+				.attr("height", 180)
+				.attr("x", 705)
+				.attr("y",760);
+		var text = g.append('text').text(fourth_array[fourth_index].Ime)
+                .attr('x', 705)
+                .attr('y', 700)
+                .attr('fill', 'black')
+				.attr('font-size',50)
+				.attr('font-weight','bold')
+				.attr('text-align','center')
+				.attr('textLength',190)
+				.attr('lengthAdjust','spacingAndGlyphs');	
+		var text = g.append('text').text(fourth_array[fourth_index].Broj_kalorija + " kCal")
+                .attr('x', 705)
+                .attr('y', 750)
+                .attr('fill', 'black')
+				.attr('font-size',50)
+				.attr('font-weight','bold')
+				.attr('text-align','center')
+				.attr('textLength',190)
+				.attr('lengthAdjust','spacingAndGlyphs');
+}
+function fifth_draw(){
+body = d3.select('body').select("#machine")
+		svg = body.select('svg');
+		var g= svg.append('g');
+		rect = g.append('rect').transition().duration(500).attr('width', 200)
+                .attr('height', 300)
+                .attr('x', 900)
+                .attr('y', 650)
+                .style('fill', 'white')
+                .attr('stroke', 'black')
+				.attr('stroke-width',5)
+		var img = svg.append("svg:image")
+				.attr("xlink:href", fifth_array[fifth_index].slika)
+				.attr("width", 190)
+				.attr("height", 180)
+				.attr("x", 905)
+				.attr("y",760);
+		var text = g.append('text').text(fifth_array[fifth_index].Ime)
+                .attr('x', 905)
+                .attr('y', 700)
+                .attr('fill', 'black')
+				.attr('font-size',50)
+				.attr('font-weight','bold')
+				.attr('text-align','center')
+				.attr('textLength',190)
+				.attr('lengthAdjust','spacingAndGlyphs');	
+		var text = g.append('text').text(fifth_array[fifth_index].Broj_kalorija + " kCal")
+                .attr('x', 905)
+                .attr('y', 750)
+                .attr('fill', 'black')
+				.attr('font-size',50)
+				.attr('font-weight','bold')
+				.attr('text-align','center')
+				.attr('textLength',190)
+				.attr('lengthAdjust','spacingAndGlyphs');
+}
+//Klikanje na trokute za gore-dolje
+ $(document).on('click','polygon',function(){ 
+		body = d3.select('body').select("#machine")
+		svg = body.select('svg');
+		var g= svg.append('g');
+		switch($(this).attr('id')){
+		case 'first_polygon_up':
+		if(first_index==first_size-1) 
+			first_index=0;
+		else
+			first_index++; //Postaviti ograničenja za naprijed nazad
+		if(filter==0){
+			first_draw();
+		}
+		else{
+			if(parseFloat(first_array[first_index].Broj_kalorija)<first_kcal)
+				first_draw();
+			else{
+				var br=0;
+				while(first_array[first_index].Broj_kalorija>first_kcal){
+					first_kcal++;
+					br++;
+					if(br==first_size) /* drawEmpty(); */  break;
+				}
+			}
+		}
+
+		break;
+		case 'first_polygon_down':
+		if(first_index==0) first_index=first_size-1;
+		else
+		first_index--;
+		if(filter==0){
+			first_draw();
+		}
+		else{
+			if(parseFloat(first_array[first_index].Broj_kalorija)<first_kcal)
+				first_draw();
+			else{
+				var br=0;
+				while(first_array[first_index].Broj_kalorija>first_kcal){
+					first_kcal--;
+					br++;
+					if(br==first_size) /* drawEmpty(); */  break;
+				}
+			}
+		}
+		break;
+		case 'second_polygon_up':
+		if(second_index==second_size-1) second_index=0;
+		else
+		second_index++;
+		if(filter==0){
+			second_draw();
+		}
+		else{
+			if(parseFloat(second_array[second_index].Broj_kalorija)<second_kcal)
+				second_draw();
+			else{
+				var br=0;
+				while(second_array[second_index].Broj_kalorija>second_kcal){
+					second_kcal++;
+					br++;
+					if(br==second_size) /* drawEmpty(); */  break;
+				}
+			}
+		}
+		break;
+		case 'second_polygon_down':
+		if(second_index==0) second_index=second_size-1;
+		else
+		second_index--;
+		if(filter==0){
+			second_draw();
+		}
+		else{
+			if(parseFloat(second_array[second_index].Broj_kalorija)<second_kcal)
+				second_draw();
+			else{
+				var br=0;
+				while(second_array[second_index].Broj_kalorija>second_kcal){
+					second_kcal--;
+					br++;
+					if(br==second_size) /* drawEmpty(); */  break;
+				}
+			}
+		}
+		break;
+		case 'third_polygon_up':
+		if(third_index==third_size-1) third_index=0;
+		else
+		third_index++;
+		if(filter==0){
+			third_draw();
+		}
+		else{
+			if(parseFloat(third_array[third_index].Broj_kalorija)<third_kcal)
+				third_draw();
+			else{
+				var br=0;
+				while(third_array[third_index].Broj_kalorija>third_kcal){
+					third_kcal++;
+					br++;
+					if(br==third_size) /* drawEmpty(); */  break;
+				}
+			}
+		}
+		break;
+		case 'third_polygon_down':
+		if(third_index==0) third_index=third_size-1;
+		else
+		third_index--;
+		if(filter==0){
+			third_draw();
+		}
+		else{
+			if(parseFloat(third_array[third_index].Broj_kalorija)<third_kcal)
+				third_draw();
+			else{
+				var br=0;
+				while(third_array[third_index].Broj_kalorija>third_kcal){
+					third_kcal--;
+					br++;
+					if(br==third_size) /* drawEmpty(); */  break;
+				}
+			}
+		}
+		break;
+		case 'fourth_polygon_up':
+		if(fourth_index==fourth_size-1) fourth_index=0;
+		else
+		fourth_index++;
+		if(filter==0){
+			fourth_draw();
+		}
+		else{
+			if(parseFloat(fourth_array[fourth_index].Broj_kalorija)<fourth_kcal)
+				fourth_draw();
+			else{
+				var br=0;
+				while(fourth_array[fourth_index].Broj_kalorija>fourth_kcal){
+					fourth_kcal++;
+					br++;
+					if(br==fourth_size) /* drawEmpty(); */  break;
+				}
+			}
+		}
+		break;
+		case 'fourth_polygon_down':
+		if(fourth_index==0) fourth_index=fourth_size-1;
+		else
+		fourth_index--;
+		if(filter==0){
+			fourth_draw();
+		}
+		else{
+			if(parseFloat(fourth_array[fourth_index].Broj_kalorija)<fourth_kcal)
+				fourth_draw();
+			else{
+				var br=0;
+				while(fourth_array[fourth_index].Broj_kalorija>fourth_kcal){
+					fourth_kcal--;
+					br++;
+					if(br==fourth_size) /* drawEmpty(); */  break;
+				}
+			}
+		}
+		break;
+		case 'fifth_polygon_up':
+		if(fifth_index==fifth_size-1) fifth_index=0;
+		else
+		fifth_index++;
+		if(filter==0){
+			fifth_draw();
+		}
+		else{
+			if(parseFloat(fifth_array[fifth_index].Broj_kalorija)<fifth_kcal)
+				fifth_draw();
+			else{
+				var br=0;
+				while(fifth_array[fifth_index].Broj_kalorija>fifth_kcal){
+					fifth_kcal++;
+					br++;
+					if(br==fifth_size) /* drawEmpty(); */  break;
+				}
+			}
+		}
+		break;
+		case 'fifth_polygon_down':
+		if(fifth_index==0) fifth_index=fifth_size-1;
+		else
+		fifth_index--;
+		if(filter==0){
+			fifth_draw();
+		}
+		else{
+			if(parseFloat(fifth_array[fifth_index].Broj_kalorija)<fifth_kcal)
+				fifth_draw();
+			else{
+				var br=0;
+				while(fifth_array[fifth_index].Broj_kalorija>fifth_kcal){
+					fifth_kcal--;
+					br++;
+					if(br==fifth_size) /* drawEmpty(); */  break;
+				}
+			}
+		}
+		break;
+		}
+		current_number_of_calories=parseFloat(first_array[first_index].Broj_kalorija)+parseFloat(second_array[second_index].Broj_kalorija)+parseFloat(third_array[third_index].Broj_kalorija)+parseFloat(fourth_array[fourth_index].Broj_kalorija)+parseFloat(fifth_array[fifth_index].Broj_kalorija);
+		draw(current_number_of_calories,1200,650,"Current number of calories");
+	});
+//Unos ukupnog broja kalorija
+	function handleClick(event){
+		if(document.getElementById("myVal").value!=""){
+		total_number_of_calories= parseFloat(document.getElementById("myVal").value);
+		first_kcal=((first/100)*total_number_of_calories);
+		second_kcal=(second/100)*total_number_of_calories;
+		third_kcal=(third/100)*total_number_of_calories;
+		fourth_kcal=(fourth/100)*total_number_of_calories;
+		fifth_kcal=(fifth/100)*total_number_of_calories;
+		document.getElementById("first_meal_calories").value = first_kcal.toFixed(2);
+		document.getElementById("second_meal_calories").value = second_kcal.toFixed(2);
+		document.getElementById("third_meal_calories").value = third_kcal.toFixed(2);
+		document.getElementById("fourth_meal_calories").value = fourth_kcal.toFixed(2);
+		document.getElementById("fifth_meal_calories").value = fifth_kcal.toFixed(2);
+		document.getElementById("Total_sum_calories").value=total_number_of_calories +" kcal";
+		console.log(document.getElementById("myVal").value)
+		draw(document.getElementById("myVal").value,1200,250,"Target number of calories:");
+		}
+		return false;
+	}
+	
+	function slowMotion(){
+	total_number_of_calories= parseFloat(document.getElementById("myVal").value);
+	return false;
+	}
+	function filterCalories(){
+		target_number_of_calories=total_number_of_calories*sum/100;
+		draw(target_number_of_calories,1200,250,"Target number of calories:")
+		filter=1;
+		draw(current_number_of_calories,1200,650,"Current number of calories:");
+		return false;
+	}
+	function updateCurrentCalories(x,y,value){
+		var text = svg.append('text').text(value)
+		.attr('x', x+250)
+		.attr('y', y+150)
+		.attr("alignment-baseline","middle") 
+		.attr("text-anchor","middle")
+		.attr('fill', 'black')
+		.attr('font-size',80)
+		.attr('text-align','center')
+	}
+//Crtanje pravokutnika s podacima o ukupnom broju kalorija
+	function draw(val,x,y,tekst){
+		body = d3.select('body').select("#machine")
+		svg = body.select('svg');
+	rect = svg.append('rect').attr('width', 500)
+		.attr('height', 300)
+		.attr('x', x)
+		.attr('y', y)
+		.style('fill', 'white')
+		.attr('stroke', 'black')
+		.attr('stroke-width',4)
+	var text = svg.append('text').text(tekst)
+		.attr('x', x+13)
+		.attr('y', y+50)
+		.attr("alignment-baseline","middle") 
+		.attr('fill', 'black')
+		.attr('font-size',40)
+		.attr('text-align','center')
+	var text = svg.append('text').text(val)
+		.attr('x', x+250)
+		.attr('y', y+150)
+		.attr("alignment-baseline","middle") 
+		.attr("text-anchor","middle")
+		.attr('fill', 'black')
+		.attr('font-size',80)
+		.attr('text-align','center')
+	var text = svg.append('text').text("kcal")
+		.attr('x', x+250)
+		.attr('y', y+250)
+		.attr("alignment-baseline","middle") 
+		.attr("text-anchor","middle")
+		.attr('fill', 'black')
+		.attr('font-size',80)
+		.attr('text-align','center')
+	}
+
+//Crtanje slot-machinea i trokutica iznad i ispod njega 
+var i=0;
+var x_small_rectangles=[100,300,500,700,900];
+var svg = d3.select("body").select("#machine")
+	.append("svg")
+	.attr("width","1000")
+	.attr("height","600")
+	.attr("viewBox","0 200 2000 800"); //Ovo se mijenja u ovisnosti o ekranu
+	/*
+for(i=0;i<5;i++){		
+svg.append("rect")
+.attr("x",x_small_rectangles[i])
+.attr("y",300)
+.attr("width","200")
+.attr("height","150")
+.attr("style","stroke:black;stroke-width:4;fill:none;");
+}
+*/
+for(i=0;i<5;i++){
+svg.append("rect")
+.attr("x",x_small_rectangles[i])
+.attr("y",650)
+.attr("width","200")
+.attr("height","300")
+.attr("style","stroke:black;stroke-width:4;fill:none;");
+}
+
+svg.append("polygon")
+.attr("points", "150,600 200,600 175,550")
+.attr("stroke-width", "2px")
+.attr("id","first_polygon_up")
+.attr("stroke", "black"); 
+
+svg.append("polygon")
+.attr("points", "150,1000 200,1000 175,1050")
+.attr("stroke-width", "2px")
+.attr("id","first_polygon_down")
+.attr("stroke", "black");
+
+svg.append("polygon")
+.attr("points", "350,600 400,600 375,550")
+.attr("stroke-width", "2px")
+.attr("id","second_polygon_up")
+.attr("stroke", "black");
+
+svg.append("polygon")
+.attr("points", "350,1000 400,1000 375,1050")
+.attr("stroke-width", "2px")
+.attr("id","second_polygon_down")
+.attr("stroke", "black");
+
+svg.append("polygon")
+.attr("points", "550,600 600,600 575,550")
+.attr("stroke-width", "2px")
+.attr("id","third_polygon_up")
+.attr("stroke", "black");
+
+svg.append("polygon")
+.attr("points", "550,1000 600,1000 575,1050")
+.attr("stroke-width", "2px")
+.attr("id","third_polygon_down")
+.attr("stroke", "black");
+
+svg.append("polygon")
+.attr("points", "750,600 800,600 775,550")
+.attr("stroke-width", "2px")
+.attr("id","fourth_polygon_up")
+.attr("stroke", "black");
+
+svg.append("polygon")
+.attr("points", "750,1000 800,1000 775,1050")
+.attr("stroke-width", "2px")
+.attr("id","fourth_polygon_down")
+.attr("stroke", "black");
+
+svg.append("polygon")
+.attr("points", "950,600 1000,600 975,550")
+.attr("stroke-width", "2px")
+.attr("id","fifth_polygon_up")
+.attr("stroke", "black");
+
+svg.append("polygon")
+.attr("points", "950,1000 1000,1000 975,1050")
+.attr("stroke-width", "2px")
+.attr("id","fifth_polygon_up")
+.attr("stroke", "black");
+
+//Rukovanje sa sliderima
+ $(function() {
+	$( "#Total_sum" ).val( "100%" );
+	$( "#first_meal_calories" ).val( first_kcal );
+	$( "#second_meal_calories" ).val( second_kcal );
+	$( "#third_meal_calories" ).val( third_kcal);
+	$( "#fourth_meal_calories" ).val( fourth_kcal);
+	$( "#fifth_meal_calories" ).val( fifth_kcal );
+	$( "#slider-1" ).slider({
+	   orientation:"vertical",
+	   value:20,
+	   slide: function( event, ui ) {
+	   $( "#first_meal" ).val( ui.value + "%" );
+	   first=ui.value;
+	   sum=first+second+third+fourth+fifth;
+	   if(sum>100) 
+			document.getElementById("Total_sum").style.color = "#ff0000";
+	   if(sum==100)
+			document.getElementById("Total_sum").style.color = "#b9cd6d";
+		if(sum<100) 
+		document.getElementById("Total_sum").style.color = "#DBA901";
+	   $( "#Total_sum" ).val( sum+"%" );
+	   $( "#Total_sum_calories" ).val( total_number_of_calories*sum/100 +" kcal" );
+		first_kcal=((first/100)*total_number_of_calories);
+		document.getElementById("first_meal_calories").value = first_kcal.toFixed(2);
+	   }	
+	});
+	$( "#first_meal" ).val( $( "#slider-1" ).slider( "value") );
+	$( "#slider-2" ).slider({
+	   orientation:"vertical",
+	   value:20,
+	   slide: function( event, ui ) {
+		  $( "#second_meal" ).val( ui.value + "%" );
+	   second=ui.value;
+	   sum=first+second+third+fourth+fifth;
+	   if(sum>100) 
+			document.getElementById("Total_sum").style.color = "#ff0000";
+	   if(sum==100)
+			document.getElementById("Total_sum").style.color = "#b9cd6d";
+		if(sum<100) 
+		document.getElementById("Total_sum").style.color = "#DBA901";
+	   $( "#Total_sum" ).val( sum+"%" );
+	   second_kcal=(second/100)*total_number_of_calories;
+	   document.getElementById("second_meal_calories").value = second_kcal.toFixed(2);
+	    $( "#Total_sum_calories" ).val( total_number_of_calories*sum/100 +" kcal" );
+	   }	
+	});
+	$( "#second_meal" ).val( $( "#slider-2" ).slider( "value" ) );
+	$( "#slider-3" ).slider({
+	   orientation:"vertical",
+	   value:20,
+	   slide: function( event, ui ) {
+		  $( "#third_meal" ).val( ui.value + "%" );
+	   third=ui.value;
+	   sum=first+second+third+fourth+fifth;
+	   if(sum>100) 
+			document.getElementById("Total_sum").style.color = "#ff0000";
+	   if(sum==100)
+			document.getElementById("Total_sum").style.color = "#b9cd6d";
+		if(sum<100) 
+		document.getElementById("Total_sum").style.color = "#DBA901";
+	   $( "#Total_sum" ).val( sum+"%" );
+	   third_kcal=(third/100)*total_number_of_calories;
+	   document.getElementById("third_meal_calories").value = third_kcal.toFixed(2);
+	    $( "#Total_sum_calories" ).val( total_number_of_calories*sum/100 +" kcal" );
+	   }	
+	});
+	$( "#third_meal" ).val( $( "#slider-3" ).slider( "value" ) );
+	$( "#slider-4" ).slider({
+	   orientation:"vertical",
+	   value:20,
+	   slide: function( event, ui ) {
+		  $( "#fourth_meal" ).val( ui.value +"%" );
+	   fourth=ui.value;
+	   sum=first+second+third+fourth+fifth;
+	   if(sum>100) 
+			document.getElementById("Total_sum").style.color = "#ff0000";
+	   if(sum==100)
+			document.getElementById("Total_sum").style.color = "#b9cd6d";
+		if(sum<100) 
+		document.getElementById("Total_sum").style.color = "#DBA901";
+	   $( "#Total_sum" ).val( sum+"%" );
+	   fourth_kcal=(fourth/100)*total_number_of_calories;
+	   document.getElementById("fourth_meal_calories").value = fourth_kcal.toFixed(2);
+	    $( "#Total_sum_calories" ).val( total_number_of_calories*sum/100 +" kcal" );
+	   }	
+	});
+	$( "#fourth_meal" ).val( $( "#slider-4" ).slider( "value" ) );
+	$( "#slider-5" ).slider({
+	   orientation:"vertical",
+	   value:20,
+	   slide: function( event, ui ) {
+		  $( "#fifth_meal" ).val( ui.value + "%" );
+	   fifth=ui.value;
+	   sum=first+second+third+fourth+fifth;
+	   if(sum>100) 
+			document.getElementById("Total_sum").style.color = "#ff0000";
+	   if(sum==100)
+			document.getElementById("Total_sum").style.color = "#b9cd6d";
+		if(sum<100) 
+		document.getElementById("Total_sum").style.color = "#DBA901";
+	   $( "#Total_sum" ).val( sum+"%" );
+	   fifth_kcal=(fifth/100)*total_number_of_calories;
+	   document.getElementById("fifth_meal_calories").value = fifth_kcal.toFixed(2);
+	    $( "#Total_sum_calories" ).val( total_number_of_calories*sum/100 +" kcal" );
+	   }	
+	});
+	$( "#fifth_meal" ).val( $( "#slider-5" ).slider( "value" ) );
+ });
+ 
+ 
+	var number_of_clicks=0;
+ // Menu items 
+    function rect_factory(id, x, y,title,image,index)
+    { 
+     
+        var rectangle = container.append("rect")
+                .attr("id", id)
+				.attr("class","drag_meal")
+                .attr("fill", "none")
+                .attr("fill-opacity", .8)
+                .attr("stroke", "black")
+                .attr("stroke-width", 3)
+				.attr("x",x)
+				.attr("y",y)
+                .attr("width", 150)
+				.attr("height",100);
+		
+		var img = container.append("svg:image")
+				.attr("xlink:href", image)
+				.attr("width", 144)
+				.attr("height", 75)
+				.attr("x", x+3)
+				.attr("y",y+20);
+		var text = container.append('text')
+				.text(title)
+                .attr('x', '50%')
+                .attr('y', y+18)
+				.attr('text-anchor','middle')
+                .attr('fill', 'black')
+				.attr('font-size',20)
+				.attr('text-align','center');
+		
+		
+		img.on("dblclick",function(d){ 
+		var temp_array;
+		 ["Juha","Hladno predjelo", "Toplo predjelo","Meso", "Riba", "Prilog", "Umak", "Salata", "Desert", "Voće"];
+		switch(index){
+		case 0: 
+		temp_array=juhe;
+		break;
+		case 1:
+		temp_array=hladna_predjela;
+		break;
+		case 2:
+		temp_array=topla_predjela;
+		break;
+		case 3:
+		temp_array=mesa;
+		break;
+		case 4:
+		temp_array=ribe;
+		break;
+		case 5:
+		temp_array=prilozi;
+		break;
+		case 6:
+		temp_array=umaci;
+		break;
+		case 7:
+		temp_array=salate;
+		break;
+		case 8:
+		temp_array=deserti;
+		break;
+		case 9:
+		temp_array=voce;
+		break;
+		}
+		number_of_clicks++;
+		body = d3.select('body')
+		svg = body.select("#machine").select('svg');
+		if(number_of_clicks==1){
+		svg.append("rect")
+		.attr("x",100)
 		.attr("y",300)
 		.attr("width","200")
 		.attr("height","150")
-		.attr("style","stroke:black;stroke-width:4;fill:none;");
-}
-	for(i=0;i<5;i++){
-	svg.append("rect")
-		.attr("x",x_small_rectangles[i])
-		.attr("y",650)
+		.attr("style","stroke:black;stroke-width:6;fill:white;");	
+		svg.append("rect")
+		.attr("x",100)
+		.attr("y",250)
 		.attr("width","200")
-		.attr("height","300")
-		.attr("style","stroke:black;stroke-width:4;fill:none;");
-	}
+		.attr("height","50")
+		.attr("style","stroke:black;stroke-width:6;fill:white;");
+		var img = svg.append("svg:image")
+				.attr("xlink:href", image)
+				.attr("width", 180)
+				.attr('class','izabranaJela')
+				.attr("height", 150)
+				.attr("x", 110)
+				.attr("y",300);
+		var text = svg.append('text').text(title)
+                .attr('x', 110)
+                .attr('y', 280)
+				.attr('class','izabranaJela')
+                .attr('fill', 'black')
+				.attr('font-size',23)
+				.attr('font-weight','bold')
+				.attr('text-align','center');
+		first_array=temp_array;
+		first_size=first_array.length;
+		first_draw();
+		current_number_of_calories=parseFloat(first_array[first_index].Broj_kalorija)+parseFloat(second_array[second_index].Broj_kalorija)+parseFloat(third_array[third_index].Broj_kalorija)+parseFloat(fourth_array[fourth_index].Broj_kalorija)+parseFloat(fifth_array[fifth_index].Broj_kalorija);
+		draw(current_number_of_calories,1200,650,"Current number of calories");
+		}
+		if(number_of_clicks==2){
+		svg.append("rect")
+		.attr("x",300)
+		.attr("y",300)
+		.attr("width","200")
+		.attr("height","150")
+		.attr("style","stroke:black;stroke-width:6;fill:white;");	
+		svg.append("rect")
+		.attr("x",300)
+		.attr("y",250)
+		.attr("width","200")
+		.attr("height","50")
+		.attr("style","stroke:black;stroke-width:6;fill:white;");
+		var img = svg.append("svg:image")
+				.attr("xlink:href", image)
+				.attr("width", 180)
+				.attr('class','izabranaJela')
+				.attr("height", 150)
+				.attr("x", 310)
+				.attr("y",300);
+		var text = svg.append('text').text(title)
+                .attr('x', 310)
+                .attr('y', 280)
+				.attr('class','izabranaJela')
+                .attr('fill', 'black')
+				.attr('font-size',23)
+				.attr('font-weight','bold')
+				.attr('text-align','center');
+		second_array=temp_array;
+		second_size=second_array.length;
+		second_draw();
+		current_number_of_calories=parseFloat(first_array[first_index].Broj_kalorija)+parseFloat(second_array[second_index].Broj_kalorija)+parseFloat(third_array[third_index].Broj_kalorija)+parseFloat(fourth_array[fourth_index].Broj_kalorija)+parseFloat(fifth_array[fifth_index].Broj_kalorija);
+		draw(current_number_of_calories,1200,650,"Current number of calories");
+		}
+		if(number_of_clicks==3){
+		svg.append("rect")
+		.attr("x",500)
+		.attr("y",300)
+		.attr("width","200")
+		.attr("height","150")
+		.attr("style","stroke:black;stroke-width:6;fill:white;");	
+		svg.append("rect")
+		.attr("x",500)
+		.attr("y",250)
+		.attr("width","200")
+		.attr("height","50")
+		.attr("style","stroke:black;stroke-width:6;fill:white;");
+		var img = svg.append("svg:image")
+				.attr("xlink:href", image)
+				.attr("width", 180)
+				.attr('class','izabranaJela')
+				.attr("height", 150)
+				.attr("x", 510)
+				.attr("y",300);
+		var text = svg.append('text').text(title)
+                .attr('x', 510)
+                .attr('y', 280)
+				.attr('class','izabranaJela')
+                .attr('fill', 'black')
+				.attr('font-size',23)
+				.attr('font-weight','bold')
+				.attr('text-align','center');
+		third_array=temp_array;
+		third_size=third_array.length;
+		third_draw();
+		current_number_of_calories=parseFloat(first_array[first_index].Broj_kalorija)+parseFloat(second_array[second_index].Broj_kalorija)+parseFloat(third_array[third_index].Broj_kalorija)+parseFloat(fourth_array[fourth_index].Broj_kalorija)+parseFloat(fifth_array[fifth_index].Broj_kalorija);
+		draw(current_number_of_calories,1200,650,"Current number of calories");
+		}
+		if(number_of_clicks==4){
+			svg.append("rect")
+		.attr("x",700)
+		.attr("y",300)
+		.attr("width","200")
+		.attr("height","150")
+		.attr("style","stroke:black;stroke-width:6;fill:white;");	
+		svg.append("rect")
+		.attr("x",700)
+		.attr("y",250)
+		.attr("width","200")
+		.attr("height","50")
+		.attr("style","stroke:black;stroke-width:6;fill:white;");
+		var img = svg.append("svg:image")
+				.attr("xlink:href", image)
+				.attr("width", 180)
+				.attr('class','izabranaJela')
+				.attr("height", 150)
+				.attr("x", 710)
+				.attr("y",300);
+		var text = svg.append('text').text(title)
+                .attr('x', 710)
+                .attr('y', 280)
+				.attr('class','izabranaJela')
+                .attr('fill', 'black')
+				.attr('font-size',23)
+				.attr('font-weight','bold')
+				.attr('text-align','center');
+		fourth_array=temp_array;
+		fourth_size=fourth_array.length;
+		fourth_draw();
+		current_number_of_calories=parseFloat(first_array[first_index].Broj_kalorija)+parseFloat(second_array[second_index].Broj_kalorija)+parseFloat(third_array[third_index].Broj_kalorija)+parseFloat(fourth_array[fourth_index].Broj_kalorija)+parseFloat(fifth_array[fifth_index].Broj_kalorija);
+		draw(current_number_of_calories,1200,650,"Current number of calories");
+		}
+		if(number_of_clicks==5){
+			number_of_clicks=0;
+			svg.append("rect")
+		.attr("x",900)
+		.attr("y",300)
+		.attr("width","200")
+		.attr("height","150")
+		.attr("style","stroke:black;stroke-width:6;fill:white;");	
+		svg.append("rect")
+		.attr("x",900)
+		.attr("y",250)
+		.attr("width","200")
+		.attr("height","50")
+		.attr("style","stroke:black;stroke-width:6;fill:white;");
+		var img = svg.append("svg:image")
+				.attr("xlink:href", image)
+				.attr("width", 180)
+				.attr('class','izabranaJela')
+				.attr("height", 150)
+				.attr("x", 910)
+				.attr("y",300);
+		var text = svg.append('text').text(title)
+                .attr('x', 910)
+                .attr('y', 280)
+				.attr('class','izabranaJela')
+                .attr('fill', 'black')
+				.attr('font-size',23)
+				.attr('font-weight','bold')
+				.attr('text-align','center');
+		fifth_array=temp_array;
+		fifth_size=fifth_array.length;
+		fifth_draw();
+		current_number_of_calories=parseFloat(first_array[first_index].Broj_kalorija)+parseFloat(second_array[second_index].Broj_kalorija)+parseFloat(third_array[third_index].Broj_kalorija)+parseFloat(fourth_array[fourth_index].Broj_kalorija)+parseFloat(fifth_array[fifth_index].Broj_kalorija);
+		draw(current_number_of_calories,1200,650,"Current number of calories");
+		}
+	
 
-	svg.append("polygon")
-	.attr("points", "150,600 200,600 175,550")
-	.attr("stroke-width", "2px")
-	.attr("id","first_polygon_up")
-	.attr("stroke", "black"); 
-	
-	svg.append("polygon")
-	.attr("points", "150,1000 200,1000 175,1050")
-	.attr("stroke-width", "2px")
-	.attr("id","first_polygon_down")
-	.attr("stroke", "black");
-	
-	svg.append("polygon")
-	.attr("points", "350,600 400,600 375,550")
-	.attr("stroke-width", "2px")
-	.attr("id","second_polygon_up")
-	.attr("stroke", "black");
-	
-	svg.append("polygon")
-	.attr("points", "350,1000 400,1000 375,1050")
-	.attr("stroke-width", "2px")
-	.attr("id","second_polygon_down")
-	.attr("stroke", "black");
-	
-	svg.append("polygon")
-	.attr("points", "550,600 600,600 575,550")
-	.attr("stroke-width", "2px")
-	.attr("id","third_polygon_up")
-	.attr("stroke", "black");
-	
-	svg.append("polygon")
-	.attr("points", "550,1000 600,1000 575,1050")
-	.attr("stroke-width", "2px")
-	.attr("id","third_polygon_down")
-	.attr("stroke", "black");
-	
-	svg.append("polygon")
-	.attr("points", "750,600 800,600 775,550")
-	.attr("stroke-width", "2px")
-	.attr("id","fourth_polygon_up")
-	.attr("stroke", "black");
-	
-	svg.append("polygon")
-	.attr("points", "750,1000 800,1000 775,1050")
-	.attr("stroke-width", "2px")
-	.attr("id","fourth_polygon_down")
-	.attr("stroke", "black");
-	
-	svg.append("polygon")
-	.attr("points", "950,600 1000,600 975,550")
-	.attr("stroke-width", "2px")
-	.attr("id","fifth_polygon_up")
-	.attr("stroke", "black");
-	
-	svg.append("polygon")
-	.attr("points", "950,1000 1000,1000 975,1050")
-	.attr("stroke-width", "2px")
-	.attr("id","fifth_polygon_up")
-	.attr("stroke", "black");
-	
-	//}
-   </script>
- <!--
-    <svg width="800" height="1000" viewBox="0 0 2800 1000" id="body_svg">
-	
-	<rect x="150" y="-450" width="400" height="200" id="first_rectangle" fill="white" stroke="black" stroke-width="10">
-    </rect>
-	<rect x="700" y="-450" width="400" height="200" id="second_rectangle" fill="white" stroke="black" stroke-width="10">
-    </rect>
-	<rect x="1250" y="-450" width="400" height="200" id="third_polygon" fill="white" stroke="black" stroke-width="10">
-    </rect>
-	<rect x="1800" y="-450" width="400" height="200" id="fourth_rectangle" fill="white" stroke="black" stroke-width="10">
-    </rect>
-	<rect  x="2350" y="-450" width="400" height="200" id="fifth_rectangle" fill="white" stroke="black" stroke-width="10">
-    </rect>
-	
-	<polygon id="first_polygon_up" fill="black" stroke="blue" stroke-width="2"
-    points="300,80
-            400,80
-            350,0" />
-			
-    <rect x="150" y="100" width="400" height="500" id="first_rectangle" fill="white" stroke="black" stroke-width="10">
-    </rect>
-	
-	<polygon id="first_polygon_down" fill="black" stroke="blue" stroke-width="2"
-    points="300,620
-            400,620
-            350,700" />
-				
-	<polygon id="second_polygon_up" fill="black" stroke="blue" stroke-width="2"
-    points="850,80
-            950,80
-            900,0" />
-	
-    <rect x="700" y="100" width="400" height="500" id="second_rectangle" fill="white" stroke="black" stroke-width="10">
-    </rect>
+		});
+    }
 
-	<polygon id="second_polygon_down" fill="black" stroke="blue" stroke-width="2"
-    points="850,620
-            950,620
-            900,700" />
-			
-	<polygon id="third_polygon_up" fill="black" stroke="blue" stroke-width="2"
-    points="1400,80
-            1500,80
-            1450,0" />
-	
-    <rect x="1250" y="100" width="400" height="500" id="third_polygon" fill="white" stroke="black" stroke-width="10">
-    </rect>
-	
-	<polygon id="third_polygon_down" fill="black" stroke="blue" stroke-width="2"
-    points="1400,620
-            1500,620
-            1450,700" />
-	
-	<polygon id="fourth_polygon_up" fill="black" stroke="blue" stroke-width="2"
-    points="1950,80
-            2050,80
-            2000,0" />
-	
-	 <rect x="1800" y="100" width="400" height="500" id="fourth_rectangle" fill="white" stroke="black" stroke-width="10">
-    </rect>
-	
-	<polygon id="fourth_polygon_down" fill="black" stroke="blue" stroke-width="2"
-    points="1950,620
-            2050,620
-            2000,700" />
-	
-	<polygon id="fifth_polygon_up" fill="black" stroke="blue" stroke-width="2"
-    points="2500,80
-            2600,80
-            2550,0" />
-			
-	<rect  x="2350" y="100" width="400" height="500" id="fifth_rectangle" fill="white" stroke="black" stroke-width="10">
-    </rect>
-	
-	<polygon id="fifth_polygon_down" fill="black" stroke="blue" stroke-width="2"
-    points="2500,620
-            2600,620
-            2550,700" />
+    var w = 200;
+    var h = 1110;
 
-    </svg>
-	-->
+    var container=d3.select(".col-sm-2.sidenav")
+        .append("svg")
+            .attr("width", w)
+            .attr("height", h);
+			
+       container.append("rect")
+                .attr("width", "100%")
+                .attr("height", "100%")
+                .attr("stroke", "#000")
+                .attr("stroke-width", 3)
+                .attr("fill", "none")
+
+    var titles = ["Soup","Cold appetizer", "Warm appetizer","Meat", "Fish", "Side dish", "Gravy", "Salad", "Dessert", "Fruit"];
+	var images =["pictures/juha.jpg","pictures/hladno_predjelo.jpg","pictures/toplo_predjelo.jpg","pictures/meso.jpg","pictures/riba.jpg","pictures/prilog.jpg","pictures/umak.jpg","pictures/salata.jpg","pictures/kolac.jpg","pictures/voce.jpg"];
+    for(i = 0; i < 10; i++)
+    {	
+        x = 25;
+        y =(i*100)+(i+1)*10;
+		id="meal"+i;
+        rect_factory(id, x, y,titles[i],images[i],i);
+    }
+    
+   
+</script>
+
+      <p>
+         <label for = "first_meal"  style="display:inline-block; margin-left:80px;" >First meal:</label>
+		 <input type = "text" id = "first_meal" 
+            style = "border:0; color:#b9cd6d; font-weight:bold; display:inline-block; margin-right:-125px;">
+		 <label for = "second_meal"  style="display:inline-block; ">Second meal:</label>
+		<input type = "text" id = "second_meal" 
+            style = "border:0; color:#b9cd6d; font-weight:bold; display:inline-block; margin-right:-125px;">
+		 <label for = "third_meal"  style="display:inline-block; ">Third meal:</label>
+		 <input type = "text" id = "third_meal" 
+            style = "border:0; color:#b9cd6d; font-weight:bold; display:inline-block; margin-right:-125px;">
+		 <label for = "fourth_meal"  style="display:inline-block; ">Fourth meal:</label>
+		 <input type = "text" id = "fourth_meal" 
+            style = "border:0; color:#b9cd6d; font-weight:bold; display:inline-block; margin-right:-125px;">
+		 <label for = "fifth_meal"  style="display:inline-block; ">Fifth meal:</label>
+		 <input type = "text" id = "fifth_meal" 
+            style = "border:0; color:#b9cd6d; font-weight:bold; display:inline-block; margin-right:-125px;">
+      </p>
+	  
+	   <p>
+         <label for = "first_meal_calories"  style="display:inline-block; margin-left:80px;" >kCal:</label>
+		 <input type = "text" id = "first_meal_calories" 
+            style = "border:0; color:#b9cd6d; font-weight:bold; display:inline-block; margin-right:-80px;">
+		 <label for = "second_meal_calories"  style="display:inline-block; ">kCal:</label>
+		<input type = "text" id = "second_meal_calories" 
+            style = "border:0; color:#b9cd6d; font-weight:bold; display:inline-block; margin-right:-80px;">
+		 <label for = "third_meal_calories"  style="display:inline-block; ">kCal:</label>
+		 <input type = "text" id = "third_meal_calories" 
+            style = "border:0; color:#b9cd6d; font-weight:bold; display:inline-block; margin-right:-80px;">
+		 <label for = "fourth_meal_calories"  style="display:inline-block; ">kCal:</label>
+		 <input type = "text" id = "fourth_meal_calories" 
+            style = "border:0; color:#b9cd6d; font-weight:bold; display:inline-block; margin-right:-80px;">
+		 <label for = "fifth_meal_calories"  style="display:inline-block; ">kCal:</label>
+		 <input type = "text" id = "fifth_meal_calories" 
+            style = "border:0; color:#b9cd6d; font-weight:bold; display:inline-block; margin-right:-80px;">
+      </p>
+	
+<div id = "slider-1" style="height:200px; width:12px; float:left; margin-left:130px;"></div>
+<div id = "slider-2" style="height:200px; width:12px; float:left; margin-left:130px;"></div>
+<div id = "slider-3" style="height:200px; width:12px; float:left; margin-left:130px;"></div>
+<div id = "slider-4" style="height:200px; width:12px; float:left; margin-left:130px;"></div>
+<div id = "slider-5" style="height:200px; width:12px; float:left; margin-left:130px;"></div>
+</br>  </br> </br> </br>
+<p align="right">
+   <label for = "Total_sum"  style="">Total percentage:</label>
+	 <input type = "text" id = "Total_sum" 
+		style = "border:0; color:#b9cd6d; font-weight:bold; display:inline-block; margin-right:-110px;font-size:15px;">
+	</br> 
+	<label for = "Total_sum_calories"  style="margin-right:10px; margin-top:10px;">Total calories:</label>
+	 <input type = "text" id = "Total_sum_calories" 
+		style = "border:0; color:#b9cd6d; font-weight:bold; display:inline-block; margin-right:-90px;">
+</p>
 </div>
     </div>
     <div class="col-sm-2 sidenav">
