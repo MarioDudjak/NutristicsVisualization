@@ -53,16 +53,20 @@
         
 	  <div id="machine">
 	     <form style="float:left; display:inline; position:relative; top:100px; left:50px;" name="myform" onSubmit="return handleClick()">
-            <input name="Submit"  type="submit" value="Add total calories" style="width:200px; height:50px;">
+            <input name="Submit1"  type="submit" value="Add total calories" style="width:200px; height:50px;">
             <input type="number" min="0" required id="myVal" placeholder="Input number&hellip;" style="width:200px; height:50px;">
         </form>
 		
-		 <form style="float:right; display:inline; position:relative; top:580px; right:150px;" name="secondForm" onSubmit="return slowMotion() ">
-            <input name="Submit"  type="submit" value="Slot machine" style="width:100px; height:50px;">
+		 <form style="float:right; display:inline; position:relative; top:580px; right:150px;" name="secondForm">
+            <input name="Submit2"  id="SlotMachine" type="submit" value="Slow motion" style="width:100px; height:50px;">
         </form>
 		
 		 <form style="float:right; display:inline; position:relative; top:580px; right:-60px;" name="thirdForm" onSubmit="return filterCalories() ">
-            <input name="Submit"  type="submit" value="Filter columns" style="width:100px; height:50px;">
+            <input name="Submit3"  type="submit" value="Filter columns" style="width:100px; height:50px;">
+        </form>
+		
+		 <form style="float:right; display:inline; position:relative; top:580px; right:60px;" name="fourthForm">
+            <input name="Submit4"  id="Spin" type="submit" value="Spin" style="width:100px; height:50px;">
         </form>
 	
 
@@ -101,46 +105,39 @@ var deserti=[{"Ime":"Monte kolac","Broj_kalorija":"660","slika":"https://coolina
 
 var voce=[];
 
-var data=[{"vrsta_jela":"Predjelo","Ime_jela":"Sunka","Broj_kalorija":"250","slika":"https://coolinarika-cdn.azureedge.net/image/sunka-3de1e7eae12dfb74bed765a6c2b83a6d_header.jpg?v=0"},
-{"vrsta_jela":"Glavno jelo","Ime_jela":"Piletina","Broj_kalorija":"150","slika":"https://coolinarika-cdn.azureedge.net/image/fant-eci-peci-pecena-piletina-5f38b8f9db6e2cfd710a3db472cb0656_view_l.jpg?v=1"},
-{"vrsta_jela":"Prilog","Ime_jela":"Njoki","Broj_kalorija":"500","slika":"https://coolinarika-cdn.azureedge.net/image/govedji-gulas-s-njokima-c403104e509330c3bdee863026eb7765_view_l.jpg?v=3"},
-{"vrsta_jela":"Salata","Ime_jela":"Mijesana salata","Broj_kalorija":"80","slika":"https://coolinarika-cdn.azureedge.net/image/salata-za-sva-cula-c465af5b192c8cc43f441510d8eda4af_view_l.jpg?v=1"},
-{"vrsta_jela":"Desert","Ime_jela":"Muffin","Broj_kalorija":"600","slika":"http://img.taste.com.au/mDT6P_Gq/taste/2016/11/classic-blueberry-muffins-87882-1.jpeg"}
-];
 var first_array,second_array,third_array,fourth_array,fifth_array;
-first_array=second_array=third_array=fourth_array=fifth_array=[{"Broj_kalorija":"0"}];
+first_array=second_array=third_array=fourth_array=fifth_array=[{"Ime":"No entry","Broj_kalorija":"0","slika":""}];
 var first_index=0,second_index=0,third_index=0,fourth_index=0,fifth_index=0;
 var filter=0;
-var first_size,second_size,third_size,fourth_size,fifth_size;
+var first_size=1,second_size=1,third_size=1,fourth_size=1,fifth_size=1;
 var empty_value=0,empty_first=0,empty_second=0,empty_third=0,empty_fourth=0,empty_fifth=0;
 
-function combination(){
-
 var combination_array=[];
+function combination(){
 var i=0,j=0,z=0,p=0,k=0,br=0,broj_kalorija=0;
 for(i=0;i<first_size;i++){
 	for(j=0;j<second_size;j++){
 		for(k=0;k<third_size;k++){
 			for(z=0;z<fourth_size;z++){
 				for(p=0;p<fifth_size;p++){
-				/*
 						broj_kalorija=parseFloat(first_array[i].Broj_kalorija)+parseFloat(second_array[j].Broj_kalorija)+parseFloat(third_array[k].Broj_kalorija)+parseFloat(fourth_array[z].Broj_kalorija)+parseFloat(fifth_array[p].Broj_kalorija);
 						combination_array[br]={"Broj_kalorija":broj_kalorija,"prvi":i,"drugi":j,"treci":k,"cetvrti":z,"peti":p};
 						br++;
-						*/
 					}
 				}
 			}
 	}
-}
 
 }
+}
  
-function first_draw(){
+function first_draw(transition){
+empty_first=0;
+
 body = d3.select('body').select("#machine")
 		svg = body.select('svg');
 		var g= svg.append('g');
-rect = g.append('rect').transition().duration(500).attr('width', 200)
+rect = g.append('rect').transition().duration(500*transition).attr('width', 200)
                 .attr('height', 300)
                 .attr('x', 100)
                 .attr('y', 650)
@@ -172,11 +169,14 @@ rect = g.append('rect').transition().duration(500).attr('width', 200)
 				.attr('textLength',190)
 				.attr('lengthAdjust','spacingAndGlyphs');
 }
-function second_draw(){
+function second_draw(transition){
+empty_second=0;
+
+
 body = d3.select('body').select("#machine")
 		svg = body.select('svg');
 		var g= svg.append('g');
-rect = g.append('rect').transition().duration(500).attr('width', 200)
+rect = g.append('rect').transition().duration(500*transition).attr('width', 200)
                 .attr('height', 300)
                 .attr('x', 300)
                 .attr('y', 650)
@@ -208,11 +208,13 @@ rect = g.append('rect').transition().duration(500).attr('width', 200)
 				.attr('textLength',190)
 				.attr('lengthAdjust','spacingAndGlyphs');
 }
-function third_draw(){
+function third_draw(transition){
+empty_third=0;
+
 body = d3.select('body').select("#machine")
 		svg = body.select('svg');
 		var g= svg.append('g');
-rect = g.append('rect').transition().duration(500).attr('width', 200)
+rect = g.append('rect').transition().duration(500*transition).attr('width', 200)
                 .attr('height', 300)
                 .attr('x', 500)
                 .attr('y', 650)
@@ -245,11 +247,13 @@ rect = g.append('rect').transition().duration(500).attr('width', 200)
 				.attr('lengthAdjust','spacingAndGlyphs');
 		
 }
-function fourth_draw(){
+function fourth_draw(transition){
+empty_fourth=0;
+
 body = d3.select('body').select("#machine")
 		svg = body.select('svg');
 		var g= svg.append('g');
-		rect = g.append('rect').transition().duration(500).attr('width', 200)
+		rect = g.append('rect').transition().duration(500*transition).attr('width', 200)
                 .attr('height', 300)
                 .attr('x', 700)
                 .attr('y', 650)
@@ -281,11 +285,13 @@ body = d3.select('body').select("#machine")
 				.attr('textLength',190)
 				.attr('lengthAdjust','spacingAndGlyphs');
 }
-function fifth_draw(){
+function fifth_draw(transition){
+empty_fifth=0;
+
 body = d3.select('body').select("#machine")
 		svg = body.select('svg');
 		var g= svg.append('g');
-		rect = g.append('rect').transition().duration(500).attr('width', 200)
+		rect = g.append('rect').transition().duration(500*transition).attr('width', 200)
                 .attr('height', 300)
                 .attr('x', 900)
                 .attr('y', 650)
@@ -331,11 +337,11 @@ body = d3.select('body').select("#machine")
 		first_index++;
 		}
 		if(filter==0){
-			first_draw();
+			first_draw(1);
 		}
 		else{
 			if(parseFloat(first_array[first_index].Broj_kalorija)<first_kcal)
-				first_draw();
+				first_draw(1);
 			else{
 				var br=first_index;
 				while(first_array[first_index].Broj_kalorija>first_kcal){
@@ -344,32 +350,32 @@ body = d3.select('body').select("#machine")
 						first_index++;
 					if(br==first_index)  break;
 				}
-				if(br!=first_index) first_draw();
+				if(br!=first_index) first_draw(1);
 				if(br==first_index) drawEmpty(100);
 			}
 		}
 		break;
 		case 'first_polygon_down':
 		if(!(filter==1 && first_array[first_index].Broj_kalorija>first_kcal)){
-		if(first_index==first_size-1) first_index=0;
+		if(first_index==0) first_index=first_size-1;
 		else
 		first_index--;
 		}
 		if(filter==0){
-			first_draw();
+			first_draw(1);
 		}
 		else{
 			if(parseFloat(first_array[first_index].Broj_kalorija)<first_kcal)
-				first_draw();
+				first_draw(1);
 			else{
 				var br=first_index;
 				while(first_array[first_index].Broj_kalorija>first_kcal){
-					if(first_index==first_size-1) first_index=0;
+					if(first_index==0) first_index=first_size-1;
 					else
 						first_index--;
 					if(br==first_index)  break;
 				}
-				if(br!=first_index) first_draw();
+				if(br!=first_index) first_draw(1);
 				if(br==first_index) drawEmpty(100);
 			}
 		}
@@ -381,11 +387,11 @@ body = d3.select('body').select("#machine")
 		second_index++;
 		}
 		if(filter==0){
-			second_draw();
+			second_draw(1);
 		}
 		else{
 			if(parseFloat(second_array[second_index].Broj_kalorija)<second_kcal)
-				second_draw();
+				second_draw(1);
 			else{
 				var br=second_index;
 				while(second_array[second_index].Broj_kalorija>second_kcal){
@@ -394,32 +400,32 @@ body = d3.select('body').select("#machine")
 						second_index++;
 					if(br==second_index)  break;
 				}
-				if(br!=second_index) second_draw();
+				if(br!=second_index) second_draw(1);
 				if(br==second_index) drawEmpty(300);
 			}
 		}
 		break;
 		case 'second_polygon_down':
 		if(!(filter==1 && second_array[second_index].Broj_kalorija>second_kcal)){
-		if(second_index==second_size-1) second_index=0;
+		if(second_index==0) second_index=second_size-1;
 		else
 		second_index--;
 		}
 		if(filter==0){
-			second_draw();
+			second_draw(1);
 		}
 		else{
 			if(parseFloat(second_array[second_index].Broj_kalorija)<second_kcal)
-				second_draw();
+				second_draw(1);
 			else{
 				var br=second_index;
 				while(second_array[second_index].Broj_kalorija>second_kcal){
-					if(second_index==0) second_index=second_index-1;
+					if(second_index==0) second_index=second_size-1;
 					else
 						second_index--;
 					if(br==second_index)  break;
 				}
-				if(br!=second_index) second_draw();
+				if(br!=second_index) second_draw(1);
 				if(br==second_index) drawEmpty(300);
 			}
 		}
@@ -431,11 +437,11 @@ body = d3.select('body').select("#machine")
 		third_index++;
 		}
 		if(filter==0){
-			third_draw();
+			third_draw(1);
 		}
 		else{
 			if(parseFloat(third_array[third_index].Broj_kalorija)<third_kcal)
-				third_draw();
+				third_draw(1);
 			else{
 				var br=third_index;
 				while(third_array[third_index].Broj_kalorija>third_kcal){
@@ -444,7 +450,7 @@ body = d3.select('body').select("#machine")
 						third_index++;
 					if(br==third_index)  break;
 				}
-				if(br!=third_index) third_draw();
+				if(br!=third_index) third_draw(1);
 				if(br==third_index) drawEmpty(500);
 			}
 		}
@@ -456,20 +462,20 @@ body = d3.select('body').select("#machine")
 		third_index--;
 		}
 		if(filter==0){
-			third_draw();
+			third_draw(1);
 		}
 		else{
 			if(parseFloat(third_array[third_index].Broj_kalorija)<third_kcal)
-				third_draw();
+				third_draw(1);
 			else{
 				var br=third_index;
 				while(third_array[third_index].Broj_kalorija>third_kcal){
-					if(third_index==third_size-1) third_index=0;
+					if(third_index==0) third_index=third_size-1;
 					else
 						third_index--;
 					if(br==third_index)  break;
 				}
-				if(br!=third_index) third_draw();
+				if(br!=third_index) third_draw(1);
 				if(br==third_index) drawEmpty(500);
 			}
 		}
@@ -481,11 +487,11 @@ body = d3.select('body').select("#machine")
 		fourth_index++;
 		}
 		if(filter==0){
-			fourth_draw();
+			fourth_draw(1);
 		}
 		else{
 			if(parseFloat(fourth_array[fourth_index].Broj_kalorija)<fourth_kcal)
-				fourth_draw();
+				fourth_draw(1);
 			else{
 				var br=fourth_index;
 				while(fourth_array[fourth_index].Broj_kalorija>fourth_kcal){
@@ -494,7 +500,7 @@ body = d3.select('body').select("#machine")
 						fourth_index++;
 					if(br==fourth_index)  break;
 				}
-				if(br!=fourth_index) fourth_draw();
+				if(br!=fourth_index) fourth_draw(1);
 				if(br==fourth_index) drawEmpty(700);
 			}
 		}
@@ -506,20 +512,20 @@ body = d3.select('body').select("#machine")
 		fourth_index--;
 		}
 		if(filter==0){
-			fourth_draw();
+			fourth_draw(1);
 		}
 		else{
 			if(parseFloat(fourth_array[fourth_index].Broj_kalorija)<fourth_kcal)
-				fourth_draw();
+				fourth_draw(1);
 			else{
 				var br=fourth_index;
 				while(fourth_array[fourth_index].Broj_kalorija>fourth_kcal){
-					if(fourth_index==fourth_size-1) fourth_index=0;
+					if(fourth_index==0) fourth_index=fourth_size-1;
 					else
 						fourth_index--;
 					if(br==fourth_index)  break;
 				}
-				if(br!=fourth_index) fourth_draw();
+				if(br!=fourth_index) fourth_draw(1);
 				if(br==fourth_index) drawEmpty(700);
 			}
 		}
@@ -531,11 +537,11 @@ body = d3.select('body').select("#machine")
 		fifth_index++;
 		}
 		if(filter==0){
-			fifth_draw();
+			fifth_draw(1);
 		}
 		else{
 			if(parseFloat(fifth_array[fifth_index].Broj_kalorija)<fifth_kcal)
-				fifth_draw();
+				fifth_draw(1);
 			else{
 				var br=fifth_index;
 				while(fifth_array[fifth_index].Broj_kalorija>fifth_kcal){
@@ -544,7 +550,7 @@ body = d3.select('body').select("#machine")
 						fifth_index++;
 					if(br==fifth_index)  break;
 				}
-				if(br!=fifth_index) fifth_draw();
+				if(br!=fifth_index) fifth_draw(1);
 				if(br==fifth_index) drawEmpty(900);
 			}
 		}
@@ -556,29 +562,29 @@ body = d3.select('body').select("#machine")
 		fifth_index--;
 		}
 		if(filter==0){
-			fifth_draw();
+			fifth_draw(1);
 		}
 		else{
 			if(parseFloat(fifth_array[fifth_index].Broj_kalorija)<fifth_kcal)
-				fifth_draw();
+				fifth_draw(1);
 			else{
 				var br=fifth_index;
 				while(fifth_array[fifth_index].Broj_kalorija>fifth_kcal){
-					if(fifth_index==fifth_size-1) fifth_index=0;
+					if(fifth_index==0) fifth_index=fifth_size-1;
 					else
 						fifth_index--;
 					if(br==fifth_index)  break;
 				}
-				if(br!=fifth_index) fifth_draw();
+				if(br!=fifth_index) fifth_draw(1);
 				if(br==fifth_index) drawEmpty(900); 
 			}
 		}
 		break;
 		}
 		if(empty_value==0)
-			current_number_of_calories=parseFloat(first_array[first_index].Broj_kalorija)+parseFloat(second_array[second_index].Broj_kalorija)+parseFloat(third_array[third_index].Broj_kalorija)+parseFloat(fourth_array[fourth_index].Broj_kalorija)+parseFloat(fifth_array[fifth_index].Broj_kalorija);
+		current_number_of_calories=parseFloat((1-empty_first)*first_array[first_index].Broj_kalorija)+parseFloat((1-empty_second)*second_array[second_index].Broj_kalorija)+parseFloat((1-empty_third)*third_array[third_index].Broj_kalorija)+parseFloat((1-empty_fourth)*fourth_array[fourth_index].Broj_kalorija)+parseFloat((1-empty_fifth)*fifth_array[fifth_index].Broj_kalorija);
 		draw(current_number_of_calories,1200,650,"Current number of calories");
-	});
+	}); 
 	
 	function drawEmpty(x){
 	if(current_number_of_calories>0){
@@ -593,7 +599,6 @@ body = d3.select('body').select("#machine")
 	if(empty_second==0)
 	current_number_of_calories=current_number_of_calories-parseFloat(second_array[second_index].Broj_kalorija);
 	empty_second=1;
-	empty
 	break;
 	case 500:
 	if(empty_third==0)
@@ -636,6 +641,7 @@ rect = g.append('rect').transition().duration(500).attr('width', 200)
 	function handleClick(event){
 		if(document.getElementById("myVal").value!=""){
 		total_number_of_calories= parseFloat(document.getElementById("myVal").value);
+		target_number_of_calories=total_number_of_calories*sum/100;
 		first_kcal=((first/100)*total_number_of_calories);
 		second_kcal=(second/100)*total_number_of_calories;
 		third_kcal=(third/100)*total_number_of_calories;
@@ -652,31 +658,233 @@ rect = g.append('rect').transition().duration(500).attr('width', 200)
 		}
 		return false;
 	}
+
+	$(document).ready(function() {
+    $('#SlotMachine').click(slowMotion);
+	});
 	
-	function slowMotion(){
-	total_number_of_calories= parseFloat(document.getElementById("myVal").value);
+	$(document).ready(function() {
+    $('#Spin').click(spin);
+	});
+function spin(event){
+event.preventDefault();
+	target_number_of_calories=total_number_of_calories*sum/100;
+	draw(target_number_of_calories,1200,250,"Target number of calories:");
+	combination();
+	var i=0;
+	var current_number_of_times=0;
+	var array_of_indexes=[];
+	var j=0;
+	
+	for(i=0;i<combination_array.length;i++){
+	if(parseFloat(combination_array[i].Broj_kalorija)<target_number_of_calories)
+		{
+		array_of_indexes[j++]=i;
+		}
+	}
+	var lucky_winner= Math.floor((Math.random()*array_of_indexes.length) +0); 
+	var index=0;
+	var number_of_times=20;
+	
+	if(array_of_indexes.length==0){
+	drawEmpty(100); drawEmpty(300); drawEmpty(500); drawEmpty(700); drawEmpty(900); 
+	current_number_of_calories=parseFloat((1-empty_first)*first_array[first_index].Broj_kalorija)+parseFloat((1-empty_second)*second_array[second_index].Broj_kalorija)+parseFloat((1-empty_third)*third_array[third_index].Broj_kalorija)+parseFloat((1-empty_fourth)*fourth_array[fourth_index].Broj_kalorija)+parseFloat((1-empty_fifth)*fifth_array[fifth_index].Broj_kalorija);
+	draw(current_number_of_calories,1200,650,"Current number of calories");
+	number_of_times=0;
+	alert("Done spinning");
+	}
+	
+	else {
+	function loop(){
+	current_number_of_times++;
+	if(parseFloat(combination_array[array_of_indexes[index]].Broj_kalorija)<target_number_of_calories){
+		first_index=combination_array[array_of_indexes[index]].prvi;
+		second_index=combination_array[array_of_indexes[index]].drugi;
+		third_index=combination_array[array_of_indexes[index]].treci;
+		fourth_index=combination_array[array_of_indexes[index]].cetvrti;
+		fifth_index=combination_array[array_of_indexes[index]].peti;
+			first_draw(0);
+			second_draw(0);
+			third_draw(0);
+			fourth_draw(0);
+			fifth_draw(0);
+			current_number_of_calories=parseFloat((1-empty_first)*first_array[first_index].Broj_kalorija)+parseFloat((1-empty_second)*second_array[second_index].Broj_kalorija)+parseFloat((1-empty_third)*third_array[third_index].Broj_kalorija)+parseFloat((1-empty_fourth)*fourth_array[fourth_index].Broj_kalorija)+parseFloat((1-empty_fifth)*fifth_array[fifth_index].Broj_kalorija);
+			draw(current_number_of_calories,1200,650,"Current number of calories");
+		}
+	if(index==array_of_indexes.length-1) index=0;
+	else
+		index++;
+	if(current_number_of_times<number_of_times){ setTimeout( loop, 5 ); }
+	
+	else { 
+			first_index=combination_array[array_of_indexes[lucky_winner]].prvi;
+			second_index=combination_array[array_of_indexes[lucky_winner]].drugi;
+			third_index=combination_array[array_of_indexes[lucky_winner]].treci;
+			fourth_index=combination_array[array_of_indexes[lucky_winner]].cetvrti;
+			fifth_index=combination_array[array_of_indexes[lucky_winner]].peti;
+			first_draw(0);
+			second_draw(0);
+			third_draw(0);
+			fourth_draw(0);
+			fifth_draw(0);
+			current_number_of_calories=parseFloat((1-empty_first)*first_array[first_index].Broj_kalorija)+parseFloat((1-empty_second)*second_array[second_index].Broj_kalorija)+parseFloat((1-empty_third)*third_array[third_index].Broj_kalorija)+parseFloat((1-empty_fourth)*fourth_array[fourth_index].Broj_kalorija)+parseFloat((1-empty_fifth)*fifth_array[fifth_index].Broj_kalorija);
+			draw(current_number_of_calories,1200,650,"Current number of calories");   
+			setTimeout(function(){
+			if(number_of_times!=0)
+			alert("Done spinning");
+			}, 10);
+		}
+	}
+	loop();
+	}
 	return false;
 	}
+
+	
+var slowMotionClicked=0;
+var first_timeout, second_timeout;
+
+	function slowMotion(event){
+	event.preventDefault();
+	if(slowMotionClicked==1){
+	slowMotionClicked=0;
+	clearTimeout(first_timeout);
+	clearTimeout(second_timeout);
+	}
+	
+	else {
+	slowMotionClicked=1;
+	
+	target_number_of_calories=total_number_of_calories*sum/100;
+	draw(target_number_of_calories,1200,250,"Target number of calories:");
+	combination();
+	var i=0;
+	var current_number_of_times=0;
+	var array_of_indexes=[];
+	var j=0;
+	for(i=0;i<combination_array.length;i++){
+	if(parseFloat(combination_array[i].Broj_kalorija)<target_number_of_calories)
+	{
+	array_of_indexes[j++]=i;
+	}
+	}
+	var number_of_times=array_of_indexes.length;
+	if(number_of_times==0){
+	drawEmpty(100); drawEmpty(300); drawEmpty(500); drawEmpty(700); drawEmpty(900); 
+	current_number_of_calories=parseFloat((1-empty_first)*first_array[first_index].Broj_kalorija)+parseFloat((1-empty_second)*second_array[second_index].Broj_kalorija)+parseFloat((1-empty_third)*third_array[third_index].Broj_kalorija)+parseFloat((1-empty_fourth)*fourth_array[fourth_index].Broj_kalorija)+parseFloat((1-empty_fifth)*fifth_array[fifth_index].Broj_kalorija);
+	draw(current_number_of_calories,1200,650,"Current number of calories");
+	}
+	function loop(){
+	if(parseFloat(combination_array[array_of_indexes[current_number_of_times]].Broj_kalorija)<target_number_of_calories){
+		first_index=combination_array[array_of_indexes[current_number_of_times]].prvi;
+		second_index=combination_array[array_of_indexes[current_number_of_times]].drugi;
+		third_index=combination_array[array_of_indexes[current_number_of_times]].treci;
+		fourth_index=combination_array[array_of_indexes[current_number_of_times]].cetvrti;
+		fifth_index=combination_array[array_of_indexes[current_number_of_times]].peti;
+			first_draw(0);
+			second_draw(0);
+			third_draw(0);
+			fourth_draw(0);
+			fifth_draw(0);
+			current_number_of_calories=parseFloat((1-empty_first)*first_array[first_index].Broj_kalorija)+parseFloat((1-empty_second)*second_array[second_index].Broj_kalorija)+parseFloat((1-empty_third)*third_array[third_index].Broj_kalorija)+parseFloat((1-empty_fourth)*fourth_array[fourth_index].Broj_kalorija)+parseFloat((1-empty_fifth)*fifth_array[fifth_index].Broj_kalorija);
+			draw(current_number_of_calories,1200,650,"Current number of calories");
+		}
+	current_number_of_times++;
+	if(current_number_of_times<number_of_times){ first_timeout=setTimeout( loop, 4000 ); }
+	}
+	loop();
+	var cekanje=4000*number_of_times;
+	second_timeout=setTimeout(function(){
+	if(number_of_times!=0)
+	alert("Slow motion done!");
+	}, cekanje);
+	}
+	return false;
+	
+	}
+	
+	
 	function filterCalories(){
-		var r= confirm("Do you want to filter each meal based on calories?");
-		if(r==true){
+		//var r= confirm("Do you want to filter each meal based on calories?");
+		//if(r==true){
 		target_number_of_calories=total_number_of_calories*sum/100;
 		draw(target_number_of_calories,1200,250,"Target number of calories:");
 		filter=1;
-		draw(current_number_of_calories,1200,650,"Current number of calories:");
-		}
+		
+		if(parseFloat(first_array[first_index].Broj_kalorija)<first_kcal)
+				first_draw(1);
+			else{
+				var br=first_index;
+				while(first_array[first_index].Broj_kalorija>first_kcal){
+					if(first_index==first_size-1) first_index=0;
+					else
+						first_index++;
+					if(br==first_index)  break;
+				}
+				if(br!=first_index) first_draw(1);
+				if(br==first_index) drawEmpty(100);
+			}
+		if(parseFloat(second_array[second_index].Broj_kalorija)<second_kcal)
+				second_draw(1);
+			else{
+				var br=second_index;
+				while(second_array[second_index].Broj_kalorija>second_kcal){
+					if(second_index==second_size-1) second_index=0;
+					else
+						second_index++;
+					if(br==second_index)  break;
+				}
+				if(br!=second_index) second_draw(1);
+				if(br==second_index) drawEmpty(300);
+			}
+		if(parseFloat(third_array[third_index].Broj_kalorija)<third_kcal)
+				third_draw(1);
+			else{
+				var br=third_index;
+				while(third_array[third_index].Broj_kalorija>third_kcal){
+					if(third_index==third_size-1) third_index=0;
+					else
+						third_index++;
+					if(br==third_index)  break;
+				}
+				if(br!=third_index) third_draw(1);
+				if(br==third_index) drawEmpty(500);
+			}
+		if(parseFloat(fourth_array[fourth_index].Broj_kalorija)<fourth_kcal)
+				fourth_draw(1);
+			else{
+				var br=fourth_index;
+				while(fourth_array[fourth_index].Broj_kalorija>fourth_kcal){
+					if(fourth_index==fourth_size-1) fourth_index=0;
+					else
+						fourth_index++;
+					if(br==fourth_index)  break;
+				}
+				if(br!=fourth_index) fourth_draw(1);
+				if(br==fourth_index) drawEmpty(700);
+			}
+		if(parseFloat(fifth_array[fifth_index].Broj_kalorija)<fifth_kcal)
+				fifth_draw(1);
+			else{
+				var br=fifth_index;
+				while(fifth_array[fifth_index].Broj_kalorija>fifth_kcal){
+					if(fifth_index==fifth_size-1) fifth_index=0;
+					else
+						fifth_index++;
+					if(br==fifth_index)  break;
+				}
+				if(br!=fifth_index) fifth_draw(1);
+				if(br==fifth_index) drawEmpty(900);
+			}
+		current_number_of_calories=parseFloat((1-empty_first)*first_array[first_index].Broj_kalorija)+parseFloat((1-empty_second)*second_array[second_index].Broj_kalorija)+parseFloat((1-empty_third)*third_array[third_index].Broj_kalorija)+parseFloat((1-empty_fourth)*fourth_array[fourth_index].Broj_kalorija)+parseFloat((1-empty_fifth)*fifth_array[fifth_index].Broj_kalorija);
+		draw(current_number_of_calories,1200,650,"Current number of calories");
+		
+		
+		//}
+		
 		return false;
 	}
-	function updateCurrentCalories(x,y,value){
-		var text = svg.append('text').text(value)
-		.attr('x', x+250)
-		.attr('y', y+150)
-		.attr("alignment-baseline","middle") 
-		.attr("text-anchor","middle")
-		.attr('fill', 'black')
-		.attr('font-size',80)
-		.attr('text-align','center')
-	}
+	
 //Crtanje pravokutnika s podacima o ukupnom broju kalorija
 	function draw(val,x,y,tekst){
 		body = d3.select('body').select("#machine")
@@ -946,7 +1154,6 @@ svg.append("polygon")
 		
 		img.on("dblclick",function(d){ 
 		var temp_array;
-		 ["Juha","Hladno predjelo", "Toplo predjelo","Meso", "Riba", "Prilog", "Umak", "Salata", "Desert", "Voće"];
 		switch(index){
 		case 0: 
 		temp_array=juhe;
@@ -1012,7 +1219,7 @@ svg.append("polygon")
 				.attr('text-align','center');
 		first_array=temp_array;
 		first_size=first_array.length;
-		first_draw();
+		first_draw(1);
 		current_number_of_calories=parseFloat(first_array[first_index].Broj_kalorija)+parseFloat(second_array[second_index].Broj_kalorija)+parseFloat(third_array[third_index].Broj_kalorija)+parseFloat(fourth_array[fourth_index].Broj_kalorija)+parseFloat(fifth_array[fifth_index].Broj_kalorija);
 		draw(current_number_of_calories,1200,650,"Current number of calories");
 		}
@@ -1046,7 +1253,7 @@ svg.append("polygon")
 				.attr('text-align','center');
 		second_array=temp_array;
 		second_size=second_array.length;
-		second_draw();
+		second_draw(1);
 		current_number_of_calories=parseFloat(first_array[first_index].Broj_kalorija)+parseFloat(second_array[second_index].Broj_kalorija)+parseFloat(third_array[third_index].Broj_kalorija)+parseFloat(fourth_array[fourth_index].Broj_kalorija)+parseFloat(fifth_array[fifth_index].Broj_kalorija);
 		draw(current_number_of_calories,1200,650,"Current number of calories");
 		}
@@ -1080,7 +1287,7 @@ svg.append("polygon")
 				.attr('text-align','center');
 		third_array=temp_array;
 		third_size=third_array.length;
-		third_draw();
+		third_draw(1);
 		current_number_of_calories=parseFloat(first_array[first_index].Broj_kalorija)+parseFloat(second_array[second_index].Broj_kalorija)+parseFloat(third_array[third_index].Broj_kalorija)+parseFloat(fourth_array[fourth_index].Broj_kalorija)+parseFloat(fifth_array[fifth_index].Broj_kalorija);
 		draw(current_number_of_calories,1200,650,"Current number of calories");
 		}
@@ -1114,7 +1321,7 @@ svg.append("polygon")
 				.attr('text-align','center');
 		fourth_array=temp_array;
 		fourth_size=fourth_array.length;
-		fourth_draw();
+		fourth_draw(1);
 		current_number_of_calories=parseFloat(first_array[first_index].Broj_kalorija)+parseFloat(second_array[second_index].Broj_kalorija)+parseFloat(third_array[third_index].Broj_kalorija)+parseFloat(fourth_array[fourth_index].Broj_kalorija)+parseFloat(fifth_array[fifth_index].Broj_kalorija);
 		draw(current_number_of_calories,1200,650,"Current number of calories");
 		}
@@ -1149,7 +1356,7 @@ svg.append("polygon")
 				.attr('text-align','center');
 		fifth_array=temp_array;
 		fifth_size=fifth_array.length;
-		fifth_draw();
+		fifth_draw(1);
 		current_number_of_calories=parseFloat(first_array[first_index].Broj_kalorija)+parseFloat(second_array[second_index].Broj_kalorija)+parseFloat(third_array[third_index].Broj_kalorija)+parseFloat(fourth_array[fourth_index].Broj_kalorija)+parseFloat(fifth_array[fifth_index].Broj_kalorija);
 		draw(current_number_of_calories,1200,650,"Current number of calories");
 		}
