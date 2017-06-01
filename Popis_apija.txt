@@ -1,0 +1,102 @@
+LISTE APIJA :
+(API KEY): 7uUANJytiXmshrLiPi1aypEeoaNUp1w0ZRcjsndhlrbMIQSx7N
+
+GLAVNA JELA:
+$response = Unirest\Request::get("https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/searchComplex?addRecipeInformation=false&fillIngredients=false&instructionsRequired=true&limitLicense=false&maxCalories=3500&maxCarbs=1000&maxFat=1000&maxProtein=1000&minCalories=50&minCarbs=5&minFat=5&minProtein=5&number=100&offset=0&query=&ranking=1&type=main+course",
+  array(
+    "X-Mashape-Key" => "7uUANJytiXmshrLiPi1aypEeoaNUp1w0ZRcjsndhlrbMIQSx7N",
+    "Accept" => "application/json"
+  )
+);
+
+PRILOZI:
+
+$response = Unirest\Request::get("https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/searchComplex?addRecipeInformation=false&fillIngredients=false&instructionsRequired=true&limitLicense=false&maxCalories=3500&maxCarbs=1000&maxFat=1000&maxProtein=1000&minCalories=10&minCarbs=1&minFat=1&minProtein=1&number=100&offset=0&query=&ranking=1&type=side+dish",
+  array(
+    "X-Mashape-Key" => "7uUANJytiXmshrLiPi1aypEeoaNUp1w0ZRcjsndhlrbMIQSx7N",
+    "Accept" => "application/json"
+  )
+);
+
+DESERTI:
+
+// These code snippets use an open-source library. http://unirest.io/php
+$response = Unirest\Request::get("https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/searchComplex?addRecipeInformation=false&fillIngredients=false&instructionsRequired=true&limitLicense=false&maxCalories=3500&maxCarbs=1000&maxFat=1000&maxProtein=1000&minCalories=10&minCarbs=1&minFat=1&minProtein=1&number=100&offset=0&query=&ranking=1&type=dessert",
+  array(
+    "X-Mashape-Key" => "7uUANJytiXmshrLiPi1aypEeoaNUp1w0ZRcjsndhlrbMIQSx7N",
+    "Accept" => "application/json"
+  )
+);
+
+PREDJELA:
+
+// These code snippets use an open-source library. http://unirest.io/php
+$response = Unirest\Request::get("https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/searchComplex?addRecipeInformation=false&fillIngredients=false&instructionsRequired=true&limitLicense=false&maxCalories=3500&maxCarbs=1000&maxFat=1000&maxProtein=1000&minCalories=10&minCarbs=1&minFat=1&minProtein=1&number=100&offset=0&query=&ranking=1&type=appetizer",
+  array(
+    "X-Mashape-Key" => "7uUANJytiXmshrLiPi1aypEeoaNUp1w0ZRcjsndhlrbMIQSx7N",
+    "Accept" => "application/json"
+  )
+);
+
+SALATE:
+
+// These code snippets use an open-source library. http://unirest.io/php
+$response = Unirest\Request::get("https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/searchComplex?addRecipeInformation=false&fillIngredients=false&instructionsRequired=true&limitLicense=false&maxCalories=3500&maxCarbs=1000&maxFat=1000&maxProtein=1000&minCalories=10&minCarbs=1&minFat=1&minProtein=1&number=100&offset=0&query=&ranking=1&type=salad",
+  array(
+    "X-Mashape-Key" => "7uUANJytiXmshrLiPi1aypEeoaNUp1w0ZRcjsndhlrbMIQSx7N",
+    "Accept" => "application/json"
+  )
+);
+
+KRUH:
+
+// These code snippets use an open-source library. http://unirest.io/php
+$response = Unirest\Request::get("https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/searchComplex?addRecipeInformation=false&fillIngredients=false&instructionsRequired=true&limitLicense=false&maxCalories=3500&maxCarbs=1000&maxFat=1000&maxProtein=1000&minCalories=10&minCarbs=1&minFat=1&minProtein=1&number=100&offset=0&query=&ranking=1&type=bread",
+  array(
+    "X-Mashape-Key" => "7uUANJytiXmshrLiPi1aypEeoaNUp1w0ZRcjsndhlrbMIQSx7N",
+    "Accept" => "application/json"
+  )
+);
+
+JUHE:
+
+// These code snippets use an open-source library. http://unirest.io/php
+$response = Unirest\Request::get("https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/searchComplex?addRecipeInformation=false&fillIngredients=false&instructionsRequired=true&limitLicense=false&maxCalories=3500&maxCarbs=1000&maxFat=1000&maxProtein=1000&minCalories=10&minCarbs=1&minFat=1&minProtein=1&number=100&offset=0&query=&ranking=1&type=soup",
+  array(
+    "X-Mashape-Key" => "7uUANJytiXmshrLiPi1aypEeoaNUp1w0ZRcjsndhlrbMIQSx7N",
+    "Accept" => "application/json"
+  )
+);
+
+
+BEVERAGES:
+
+// These code snippets use an open-source library. http://unirest.io/php
+$response = Unirest\Request::get("https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/searchComplex?addRecipeInformation=false&fillIngredients=false&instructionsRequired=true&limitLicense=false&maxCalories=3500&maxCarbs=1000&maxFat=1000&maxProtein=1000&minCalories=10&minCarbs=1&minFat=1&minProtein=1&number=100&offset=0&query=&ranking=1&type=beverage",
+  array(
+    "X-Mashape-Key" => "7uUANJytiXmshrLiPi1aypEeoaNUp1w0ZRcjsndhlrbMIQSx7N",
+    "Accept" => "application/json"
+  )
+);
+
+UMACI:
+
+// These code snippets use an open-source library. http://unirest.io/php
+$response = Unirest\Request::get("https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/searchComplex?addRecipeInformation=false&fillIngredients=false&instructionsRequired=true&limitLicense=false&maxCalories=3500&maxCarbs=1000&maxFat=1000&maxProtein=1000&minCalories=10&minCarbs=1&minFat=1&minProtein=1&number=100&offset=0&query=&ranking=1&type=sauce",
+  array(
+    "X-Mashape-Key" => "7uUANJytiXmshrLiPi1aypEeoaNUp1w0ZRcjsndhlrbMIQSx7N",
+    "Accept" => "application/json"
+  )
+);
+
+PIĆA:
+
+// These code snippets use an open-source library. http://unirest.io/php
+$response = Unirest\Request::get("https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/searchComplex?addRecipeInformation=false&fillIngredients=false&instructionsRequired=true&limitLicense=false&maxCalories=3500&maxCarbs=1000&maxFat=1000&maxProtein=1000&minCalories=10&minCarbs=1&minFat=1&minProtein=1&number=100&offset=0&query=&ranking=1&type=drink",
+  array(
+    "X-Mashape-Key" => "7uUANJytiXmshrLiPi1aypEeoaNUp1w0ZRcjsndhlrbMIQSx7N",
+    "Accept" => "application/json"
+  )
+);
+
+
