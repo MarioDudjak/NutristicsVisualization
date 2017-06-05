@@ -1,0 +1,902 @@
+[{
+				"id": 197,
+				"Ime": "Seafood Stew with Anchovy Aioli",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/seafood-stew-with-anchovy-aioli-197.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 471,
+				"protein": "38g",
+				"fat": "22g",
+				"carbs": "27g"
+			}, {
+				"id": 304,
+				"Ime": "Hunter's Chicken Stew",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/hunters-chicken-stew-304.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 850,
+				"protein": "50g",
+				"fat": "47g",
+				"carbs": "21g"
+			}, {
+				"id": 309,
+				"Ime": "Fish and Zucchini Puttanesca Stew",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/fish_and_zucchini_puttanesca_stew-309.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 260,
+				"protein": "28g",
+				"fat": "8g",
+				"carbs": "24g"
+			}, {
+				"id": 474,
+				"Ime": "Chickpea and Pasta Soup",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/chickpea-and-pasta-soup-474.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 502,
+				"protein": "31g",
+				"fat": "14g",
+				"carbs": "71g"
+			}, {
+				"id": 685,
+				"Ime": "Tuscan Kale, White Bean, and Ciabatta Soup",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/tuscan-kale-white-bean-and-ciabatta-soup-685.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 518,
+				"protein": "28g",
+				"fat": "26g",
+				"carbs": "50g"
+			}, {
+				"id": 710,
+				"Ime": "Secret Ingredient Beef Stew",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/secret-ingredient-beef-stew-710.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 3048,
+				"protein": "428g",
+				"fat": "129g",
+				"carbs": "11g"
+			}, {
+				"id": 825,
+				"Ime": "Pint Of Prawns & Chilli Mayo",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/pint_of_prawns_chilli_mayo-825.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 90,
+				"protein": "9g",
+				"fat": "5g",
+				"carbs": "3g"
+			}, {
+				"id": 1096,
+				"Ime": "Corn And Clam Chowder Sauce",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/corn-and-clam-chowder-sauce-2-1096.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 611,
+				"protein": "42g",
+				"fat": "30g",
+				"carbs": "40g"
+			}, {
+				"id": 1102,
+				"Ime": "Portuguese-Style Fish Stew",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/portuguese-style-fish-stew-1102.jpeg",
+				"imageType": "jpeg",
+				"Broj_kalorija": 783,
+				"protein": "55g",
+				"fat": "19g",
+				"carbs": "114g"
+			}, {
+				"id": 1126,
+				"Ime": "Bouillabaisse",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/bouillabaisse-2-1126.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 734,
+				"protein": "84g",
+				"fat": "37g",
+				"carbs": "12g"
+			}, {
+				"id": 1137,
+				"Ime": "Cheddar Beer Soup",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/cheddar-beer-soup-2-1137.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 567,
+				"protein": "26g",
+				"fat": "42g",
+				"carbs": "20g"
+			}, {
+				"id": 1173,
+				"Ime": "Seafood Chowder With Crispy Bread Crumbs",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/seafood_chowder_with_crispy_bread_crumbs-1173.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 50,
+				"protein": "2g",
+				"fat": "3g",
+				"carbs": "3g"
+			}, {
+				"id": 1181,
+				"Ime": "Fisherman's Stew",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/fishermans-stew-1181.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 445,
+				"protein": "56g",
+				"fat": "19g",
+				"carbs": "7g"
+			}, {
+				"id": 1183,
+				"Ime": "Ligurian Seafood Stew",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/ligurian-seafood-stew-1183.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 330,
+				"protein": "33g",
+				"fat": "15g",
+				"carbs": "7g"
+			}, {
+				"id": 1185,
+				"Ime": "Portuguese Fish Stew",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/portuguese-fish-stew-1185.jpeg",
+				"imageType": "jpeg",
+				"Broj_kalorija": 1107,
+				"protein": "48g",
+				"fat": "63g",
+				"carbs": "91g"
+			}, {
+				"id": 1190,
+				"Ime": "Sauteed Fish Stew",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/sauteed-fish-stew-1190.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 713,
+				"protein": "99g",
+				"fat": "25g",
+				"carbs": "19g"
+			}, {
+				"id": 1197,
+				"Ime": "Cioppino",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/cioppino-2-1197.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 133,
+				"protein": "13g",
+				"fat": "4g",
+				"carbs": "10g"
+			}, {
+				"id": 1223,
+				"Ime": "Fish Stew with Clams",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/fish-stew-with-clams-1223.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 530,
+				"protein": "64g",
+				"fat": "19g",
+				"carbs": "24g"
+			}, {
+				"id": 1232,
+				"Ime": "Dad's Fish Stew",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/dads-fish-stew-2-1232.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 120,
+				"protein": "10g",
+				"fat": "6g",
+				"carbs": "5g"
+			}, {
+				"id": 1236,
+				"Ime": "Bouillabaisse",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/bouillabaisse-2-1236.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 995,
+				"protein": "131g",
+				"fat": "27g",
+				"carbs": "44g"
+			}, {
+				"id": 1238,
+				"Ime": "Seafood Stew with Saffron Zabaglione",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/seafood-stew-with-saffron-zabaglione-1238.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 1130,
+				"protein": "63g",
+				"fat": "28g",
+				"carbs": "142g"
+			}, {
+				"id": 1251,
+				"Ime": "Fisherman's Soup",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/fishermans-soup-1251.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 481,
+				"protein": "37g",
+				"fat": "28g",
+				"carbs": "12g"
+			}, {
+				"id": 1252,
+				"Ime": "Fish Soup with Bread and Rouille",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/fish-soup-with-bread-and-rouille-1252.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 337,
+				"protein": "18g",
+				"fat": "17g",
+				"carbs": "16g"
+			}, {
+				"id": 1260,
+				"Ime": "Bouillabaisse",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/bouillabaisse-2-1260.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 2991,
+				"protein": "173g",
+				"fat": "70g",
+				"carbs": "409g"
+			}, {
+				"id": 1263,
+				"Ime": "Fish and Vegetable Soup with Lime, Ginger, and Cilantro",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/fish-and-vegetable-soup-with-lime-ginger-and-cilantro-2-1263.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 154,
+				"protein": "16g",
+				"fat": "4g",
+				"carbs": "15g"
+			}, {
+				"id": 1264,
+				"Ime": "Brazilian Fish Stew (Moqueca de Peixe)",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/brazilian-fish-stew-moqueca-de-peixe-1264.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 385,
+				"protein": "47g",
+				"fat": "11g",
+				"carbs": "23g"
+			}, {
+				"id": 1265,
+				"Ime": "Fabulous fish stew",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/fabulous-fish-stew-1265.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 1384,
+				"protein": "124g",
+				"fat": "70g",
+				"carbs": "61g"
+			}, {
+				"id": 1272,
+				"Ime": "Seafood Stew with Rice and Salsa Criolla (Arroz con Mariscos)",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/seafood-stew-with-rice-and-salsa-criolla-arroz-con-mariscos-1272.jpeg",
+				"imageType": "jpeg",
+				"Broj_kalorija": 938,
+				"protein": "46g",
+				"fat": "26g",
+				"carbs": "124g"
+			}, {
+				"id": 1290,
+				"Ime": "The Lady's Bouillabaisse",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/the-ladys-bouillabaisse-1290.jpeg",
+				"imageType": "jpeg",
+				"Broj_kalorija": 471,
+				"protein": "45g",
+				"fat": "16g",
+				"carbs": "36g"
+			}, {
+				"id": 1300,
+				"Ime": "Fish and Shrimp Stew: Vatapa de Peixe e Camarao",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/fish-and-shrimp-stew-vatapa-de-peixe-e-camarao-1300.jpeg",
+				"imageType": "jpeg",
+				"Broj_kalorija": 709,
+				"protein": "68g",
+				"fat": "26g",
+				"carbs": "54g"
+			}, {
+				"id": 1305,
+				"Ime": "Bouillabaisse",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/bouillabaisse-1305.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 378,
+				"protein": "4g",
+				"fat": "19g",
+				"carbs": "24g"
+			}, {
+				"id": 1308,
+				"Ime": "Chesapeake Bay Seafood Stew",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/chesapeake-bay-seafood-stew-1308.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 409,
+				"protein": "39g",
+				"fat": "11g",
+				"carbs": "28g"
+			}, {
+				"id": 1320,
+				"Ime": "Warm Cucumber Soup with Scallop and Sole Mousselines",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/warm-cucumber-soup-with-scallop-and-sole-mousselines-2-1320.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 156,
+				"protein": "22g",
+				"fat": "6g",
+				"carbs": "4g"
+			}, {
+				"id": 1328,
+				"Ime": "Bluefish Chowder",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/bluefish-chowder-1328.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 694,
+				"protein": "43g",
+				"fat": "45g",
+				"carbs": "31g"
+			}, {
+				"id": 1485,
+				"Ime": "Fish Chowder",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/fish-chowder-1485.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 263,
+				"protein": "18g",
+				"fat": "15g",
+				"carbs": "11g"
+			}, {
+				"id": 1498,
+				"Ime": "Salmon Chowder",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/salmon-chowder-1498.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 381,
+				"protein": "28g",
+				"fat": "17g",
+				"carbs": "30g"
+			}, {
+				"id": 1567,
+				"Ime": "Fish Chowder",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/fish_chowder-1567.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 49,
+				"protein": "3g",
+				"fat": "3g",
+				"carbs": "3g"
+			}, {
+				"id": 1581,
+				"Ime": "Salmon Chowder with Chives",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/salmon-chowder-with-chives-1581.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 272,
+				"protein": "16g",
+				"fat": "18g",
+				"carbs": "11g"
+			}, {
+				"id": 1625,
+				"Ime": "Cook the Book: Smoked Trout Chowder",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/cook-the-book-smoked-trout-chowder-2-1625.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 373,
+				"protein": "22g",
+				"fat": "15g",
+				"carbs": "37g"
+			}, {
+				"id": 1630,
+				"Ime": "Manhattan-Style Fish Chowder",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/manhattan-style-fish-chowder-1630.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 353,
+				"protein": "33g",
+				"fat": "7g",
+				"carbs": "35g"
+			}, {
+				"id": 1653,
+				"Ime": "Normandy Fish Stew",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/normandy_fish_stew-1653.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 55,
+				"protein": "1g",
+				"fat": "5g",
+				"carbs": "1g"
+			}, {
+				"id": 1654,
+				"Ime": "Smoked Haddock Chowder",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/smoked-haddock-chowder-2-1654.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 35,
+				"protein": "2g",
+				"fat": "1g",
+				"carbs": "3g"
+			}, {
+				"id": 1661,
+				"Ime": "Smoked Haddock Chowder",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/smoked-haddock-chowder-2-1661.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 108,
+				"protein": "5g",
+				"fat": "2g",
+				"carbs": "16g"
+			}, {
+				"id": 1673,
+				"Ime": "Salmon Chowder",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/salmon-chowder-1673.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 381,
+				"protein": "28g",
+				"fat": "17g",
+				"carbs": "30g"
+			}, {
+				"id": 1681,
+				"Ime": "New England Fish Chowder",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/new-england-fish-chowder-1681.jpeg",
+				"imageType": "jpeg",
+				"Broj_kalorija": 503,
+				"protein": "35g",
+				"fat": "32g",
+				"carbs": "18g"
+			}, {
+				"id": 1718,
+				"Ime": "Fish Chowder",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/fish-chowder-1718.jpeg",
+				"imageType": "jpeg",
+				"Broj_kalorija": 170,
+				"protein": "19g",
+				"fat": "3g",
+				"carbs": "16g"
+			}, {
+				"id": 1759,
+				"Ime": "Fish Chowder",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/fish-chowder-2-1759.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 400,
+				"protein": "34g",
+				"fat": "12g",
+				"carbs": "39g"
+			}, {
+				"id": 1784,
+				"Ime": "Codfish and Potato Chowder",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/codfish-and-potato-chowder-1784.jpeg",
+				"imageType": "jpeg",
+				"Broj_kalorija": 548,
+				"protein": "26g",
+				"fat": "26g",
+				"carbs": "46g"
+			}, {
+				"id": 1801,
+				"Ime": "Leek And Smoked Haddock Chowder",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/leek_and_smoked_haddock_chowder-1801.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 528,
+				"protein": "36g",
+				"fat": "25g",
+				"carbs": "42g"
+			}, {
+				"id": 1848,
+				"Ime": "Salmon, Sweet Potato, and Broccoli Chowder",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/salmon-sweet-potato-and-broccoli-chowder-1848.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 475,
+				"protein": "34g",
+				"fat": "21g",
+				"carbs": "40g"
+			}, {
+				"id": 1855,
+				"Ime": "Cheesy Catfish Chowder",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/cheesy-catfish-chowder-2-1855.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 309,
+				"protein": "25g",
+				"fat": "16g",
+				"carbs": "18g"
+			}, {
+				"id": 1866,
+				"Ime": "Fish Stew with Arepa Dumplings",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/fish-stew-with-arepa-dumplings-1866.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 285,
+				"protein": "19g",
+				"fat": "12g",
+				"carbs": "27g"
+			}, {
+				"id": 1878,
+				"Ime": "Sweetcorn & Smoked Haddock Chowder",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/sweetcorn-smoked-haddock-chowder-2-1878.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 73,
+				"protein": "3g",
+				"fat": "5g",
+				"carbs": "4g"
+			}, {
+				"id": 1890,
+				"Ime": "Salmon Chowder",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/salmon-chowder-2-1890.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 455,
+				"protein": "39g",
+				"fat": "23g",
+				"carbs": "25g"
+			}, {
+				"id": 1932,
+				"Ime": "Hearty Halibut Chowder",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/hearty-halibut-chowder-2-1932.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 341,
+				"protein": "31g",
+				"fat": "15g",
+				"carbs": "21g"
+			}, {
+				"id": 2116,
+				"Ime": "Florida Catfish Stew",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/florida-catfish-stew-2116.jpeg",
+				"imageType": "jpeg",
+				"Broj_kalorija": 290,
+				"protein": "14g",
+				"fat": "19g",
+				"carbs": "16g"
+			}, {
+				"id": 2184,
+				"Ime": "Catfish Gumbo",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/catfish-gumbo-2-2184.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 189,
+				"protein": "14g",
+				"fat": "11g",
+				"carbs": "9g"
+			}, {
+				"id": 2198,
+				"Ime": "Corn-Fish Chowder",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/corn-fish-chowder-2198.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 277,
+				"protein": "17g",
+				"fat": "9g",
+				"carbs": "34g"
+			}, {
+				"id": 2233,
+				"Ime": "Shrimp And Catfish Gumbo",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/shrimp-and-catfish-gumbo-2-2233.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 239,
+				"protein": "28g",
+				"fat": "9g",
+				"carbs": "12g"
+			}, {
+				"id": 2238,
+				"Ime": "Cheesy Catfish Chowder",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/cheesy-catfish-chowder-2-2238.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 2480,
+				"protein": "196g",
+				"fat": "124g",
+				"carbs": "143g"
+			}, {
+				"id": 2270,
+				"Ime": "Rick Bayless's Red Chile Seafood Soup",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/rick-baylesss-red-chile-seafood-soup-2270.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 455,
+				"protein": "71g",
+				"fat": "11g",
+				"carbs": "19g"
+			}, {
+				"id": 2280,
+				"Ime": "Emeril's Classic Seafood Gumbo",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/emerils-classic-seafood-gumbo-2280.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 393,
+				"protein": "25g",
+				"fat": "16g",
+				"carbs": "36g"
+			}, {
+				"id": 2315,
+				"Ime": "Cape Cod Clam Chowder",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/cape-cod-clam-chowder-2315.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 662,
+				"protein": "21g",
+				"fat": "53g",
+				"carbs": "28g"
+			}, {
+				"id": 2366,
+				"Ime": "Cod Chowder with Saffron and Fingerling Potatoes",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/cod-chowder-with-saffron-and-fingerling-potatoes-2-2366.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 311,
+				"protein": "28g",
+				"fat": "9g",
+				"carbs": "29g"
+			}, {
+				"id": 2400,
+				"Ime": "Portuguese Salt Cod Stew (bacalhoada)",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/portuguese-salt-cod-stew-2-2400.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 1359,
+				"protein": "110g",
+				"fat": "72g",
+				"carbs": "67g"
+			}, {
+				"id": 2406,
+				"Ime": "Brazilian Salt Cod Stew",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/brazilian-salt-cod-stew-2406.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 1058,
+				"protein": "148g",
+				"fat": "34g",
+				"carbs": "34g"
+			}, {
+				"id": 2467,
+				"Ime": "Chowder Bake",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/chowder-bake-2467.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 494,
+				"protein": "22g",
+				"fat": "30g",
+				"carbs": "34g"
+			}, {
+				"id": 2517,
+				"Ime": "Mexican Cod And Potato Stew",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/mexican-cod-and-potato-stew-2-2517.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 258,
+				"protein": "25g",
+				"fat": "3g",
+				"carbs": "35g"
+			}, {
+				"id": 2536,
+				"Ime": "Green Tea Soup",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/green-tea-soup-2536.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 531,
+				"protein": "27g",
+				"fat": "6g",
+				"carbs": "91g"
+			}, {
+				"id": 2545,
+				"Ime": "Fennel & Fish Chowder",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/fennel_fish_chowder-2545.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 669,
+				"protein": "51g",
+				"fat": "24g",
+				"carbs": "39g"
+			}, {
+				"id": 2553,
+				"Ime": "Halibut and Chickpea Soup",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/halibut-and-chickpea-soup-2553.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 216,
+				"protein": "24g",
+				"fat": "5g",
+				"carbs": "18g"
+			}, {
+				"id": 2578,
+				"Ime": "Summer Bouillabaisse",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/summer-bouillabaisse-2578.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 417,
+				"protein": "54g",
+				"fat": "8g",
+				"carbs": "21g"
+			}, {
+				"id": 2614,
+				"Ime": "Chowder With Asian Flavours",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/chowder-with-asian-flavours-2614.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 460,
+				"protein": "51g",
+				"fat": "6g",
+				"carbs": "52g"
+			}, {
+				"id": 2642,
+				"Ime": "Fish Stew",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/fish-stew-2642.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 82,
+				"protein": "7g",
+				"fat": "4g",
+				"carbs": "3g"
+			}, {
+				"id": 2643,
+				"Ime": "Fish Soup",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/fish-soup-2643.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 163,
+				"protein": "15g",
+				"fat": "10g",
+				"carbs": "4g"
+			}, {
+				"id": 2650,
+				"Ime": "Smoky Fish Chowder Recipe",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/smoky_fish_chowder_recipe-2650.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 93,
+				"protein": "9g",
+				"fat": "4g",
+				"carbs": "7g"
+			}, {
+				"id": 2655,
+				"Ime": "Cod Stew With Chorizo, Leeks & Potatoes",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/cod-stew-with-chorizo-leeks-potatoes-2-2655.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 517,
+				"protein": "37g",
+				"fat": "21g",
+				"carbs": "41g"
+			}, {
+				"id": 2671,
+				"Ime": "Cioppino",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/cioppino-2671.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 328,
+				"protein": "29g",
+				"fat": "8g",
+				"carbs": "25g"
+			}, {
+				"id": 2697,
+				"Ime": "Speedy Cioppino",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/speedy-cioppino-2697.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 364,
+				"protein": "35g",
+				"fat": "7g",
+				"carbs": "29g"
+			}, {
+				"id": 2702,
+				"Ime": "Bouillabaisse of Nohu with \"Aioli",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/bouillabaisse-of-nohu-with-aioli-2702.jpeg",
+				"imageType": "jpeg",
+				"Broj_kalorija": 266,
+				"protein": "4g",
+				"fat": "18g",
+				"carbs": "23g"
+			}, {
+				"id": 2710,
+				"Ime": "Curry Fish Chowder With Crout-tains (paleo Croutons)",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/curry_fish_chowder_with_crout-tains-2710.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 1420,
+				"protein": "101g",
+				"fat": "64g",
+				"carbs": "130g"
+			}, {
+				"id": 2719,
+				"Ime": "Fish and Fennel Stew",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/fish-and-fennel-stew-2719.jpeg",
+				"imageType": "jpeg",
+				"Broj_kalorija": 275,
+				"protein": "24g",
+				"fat": "9g",
+				"carbs": "12g"
+			}, {
+				"id": 2728,
+				"Ime": "Simple Suppers: Fish And Smoked Oyster Chowder",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/simple-suppers-fish-and-smoked-oyster-chowder-2728.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 396,
+				"protein": "18g",
+				"fat": "16g",
+				"carbs": "48g"
+			}, {
+				"id": 2730,
+				"Ime": "Cilantro Fish Stew",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/cilantro-fish-stew-2730.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 265,
+				"protein": "27g",
+				"fat": "4g",
+				"carbs": "31g"
+			}, {
+				"id": 2742,
+				"Ime": "Bouillabaisse",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/bouillabaisse-2742.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 232,
+				"protein": "21g",
+				"fat": "9g",
+				"carbs": "9g"
+			}, {
+				"id": 2784,
+				"Ime": "Ben's Bahamian Monkfish and Eel Chowder",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/bens-bahamian-monkfish-and-eel-chowder-2784.jpeg",
+				"imageType": "jpeg",
+				"Broj_kalorija": 1027,
+				"protein": "23g",
+				"fat": "78g",
+				"carbs": "70g"
+			}, {
+				"id": 2785,
+				"Ime": "Garlic And Pepper Eel Stew",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/garlic-and-pepper-eel-stew-2-2785.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 311,
+				"protein": "9g",
+				"fat": "16g",
+				"carbs": "37g"
+			}, {
+				"id": 2869,
+				"Ime": "Saffron Fish Stew with White Beans",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/saffron-fish-stew-with-white-beans-2869.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 309,
+				"protein": "24g",
+				"fat": "7g",
+				"carbs": "40g"
+			}, {
+				"id": 2870,
+				"Ime": "Peruvian Seafood Chowder",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/peruvian-seafood-chowder-2870.jpeg",
+				"imageType": "jpeg",
+				"Broj_kalorija": 474,
+				"protein": "33g",
+				"fat": "23g",
+				"carbs": "31g"
+			}, {
+				"id": 2925,
+				"Ime": "Breton Fish Soup",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/breton-fish-soup-2-2925.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 2262,
+				"protein": "205g",
+				"fat": "90g",
+				"carbs": "153g"
+			}, {
+				"id": 2948,
+				"Ime": "Moqueca-Brazilian Fish Stew",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/moqueca-brazilian-fish-stew-2948.jpeg",
+				"imageType": "jpeg",
+				"Broj_kalorija": 467,
+				"protein": "33g",
+				"fat": "23g",
+				"carbs": "34g"
+			}, {
+				"id": 2960,
+				"Ime": "Shellfish Stew Proven\u00e7ale",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/shellfish-stew-provenale-2960.png",
+				"imageType": "png",
+				"Broj_kalorija": 1251,
+				"protein": "184g",
+				"fat": "31g",
+				"carbs": "34g"
+			}, {
+				"id": 2971,
+				"Ime": "Grouper Chowder",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/grouper-chowder-2971.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 402,
+				"protein": "34g",
+				"fat": "7g",
+				"carbs": "42g"
+			}, {
+				"id": 3010,
+				"Ime": "Fish Stew",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/fish-stew-3010.jpeg",
+				"imageType": "jpeg",
+				"Broj_kalorija": 452,
+				"protein": "33g",
+				"fat": "27g",
+				"carbs": "19g"
+			}, {
+				"id": 3013,
+				"Ime": "red chile seafood chowder",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/red-chile-seafood-chowder-3013.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 413,
+				"protein": "30g",
+				"fat": "13g",
+				"carbs": "45g"
+			}, {
+				"id": 3021,
+				"Ime": "Proven\u00e7al Fish Soup",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/provenal-fish-soup-3021.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 599,
+				"protein": "56g",
+				"fat": "18g",
+				"carbs": "34g"
+			}, {
+				"id": 3026,
+				"Ime": "Bahian Seafood Stew with Coconut and Tomato",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/bahian-seafood-stew-with-coconut-and-tomato-3026.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 470,
+				"protein": "49g",
+				"fat": "25g",
+				"carbs": "14g"
+			}, {
+				"id": 3028,
+				"Ime": "Proven\u00e7al Fish Soup",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/provenal-fish-soup-3028.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 606,
+				"protein": "56g",
+				"fat": "18g",
+				"carbs": "36g"
+			}, {
+				"id": 3029,
+				"Ime": "Proven\u00e7al Fish Stew",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/provenal-fish-stew-3029.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 148,
+				"protein": "16g",
+				"fat": "2g",
+				"carbs": "14g"
+			}, {
+				"id": 3031,
+				"Ime": "Fisherman's Seafood Stew",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/fishermans-seafood-stew-3031.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 262,
+				"protein": "28g",
+				"fat": "8g",
+				"carbs": "13g"
+			}
+		]

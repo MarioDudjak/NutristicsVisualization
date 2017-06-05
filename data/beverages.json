@@ -1,0 +1,902 @@
+[{
+				"id": 496,
+				"Ime": "NYC Vodka Arrabbiata",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/nyc-vodka-arrabbiata-496.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 448,
+				"protein": "12g",
+				"fat": "16g",
+				"carbs": "65g"
+			}, {
+				"id": 1128,
+				"Ime": "Steak and Ale",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/steak-and-ale-1128.jpeg",
+				"imageType": "jpeg",
+				"Broj_kalorija": 748,
+				"protein": "48g",
+				"fat": "56g",
+				"carbs": "9g"
+			}, {
+				"id": 2015,
+				"Ime": "Pomegranate Cocktail",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/pomegranate-cocktail-2-2015.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 525,
+				"protein": "3g",
+				"fat": "2g",
+				"carbs": "54g"
+			}, {
+				"id": 2556,
+				"Ime": "Cook the Book: Black Cod and Soy Milk Hot Pot (Tonyu Nabe)",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/cook_the_book_black_cod_and_soy_milk_hot_pot-2556.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 397,
+				"protein": "39g",
+				"fat": "8g",
+				"carbs": "41g"
+			}, {
+				"id": 2792,
+				"Ime": "Unagi Roll (Broiled fresh water Eel)",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/unagi-roll-broiled-fresh-water-eel-2792.jpeg",
+				"imageType": "jpeg",
+				"Broj_kalorija": 1496,
+				"protein": "20g",
+				"fat": "2g",
+				"carbs": "308g"
+			}, {
+				"id": 4377,
+				"Ime": "Beer Batter Frito Misto",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/beer-batter-frito-misto-4377.jpeg",
+				"imageType": "jpeg",
+				"Broj_kalorija": 497,
+				"protein": "42g",
+				"fat": "10g",
+				"carbs": "51g"
+			}, {
+				"id": 6260,
+				"Ime": "Spicy Red Snapper (Bloody Mary with Gin)",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/spicy-red-snapper-2-6260.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 247,
+				"protein": "4g",
+				"fat": "2g",
+				"carbs": "26g"
+			}, {
+				"id": 6544,
+				"Ime": "Tea Smoked Sturgeon",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/tea-smoked-sturgeon-6544.jpeg",
+				"imageType": "jpeg",
+				"Broj_kalorija": 1745,
+				"protein": "30g",
+				"fat": "161g",
+				"carbs": "55g"
+			}, {
+				"id": 8189,
+				"Ime": "Popped Amaranth Crunch",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/popped_amaranth_crunch-8189.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 595,
+				"protein": "20g",
+				"fat": "35g",
+				"carbs": "58g"
+			}, {
+				"id": 11051,
+				"Ime": "Irish Cheddar and Stout Fondue",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/irish-cheddar-and-stout-fondue-2-11051.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 405,
+				"protein": "22g",
+				"fat": "26g",
+				"carbs": "23g"
+			}, {
+				"id": 11401,
+				"Ime": "Shrimp Martinis with Napa Cabbage Slaw",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/shrimp-martinis-with-napa-cabbage-slaw-11401.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 297,
+				"protein": "21g",
+				"fat": "17g",
+				"carbs": "15g"
+			}, {
+				"id": 12666,
+				"Ime": "Sichuan \"Water Boiled\" Beef",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/sichuan-water-boiled-beef-12666.jpeg",
+				"imageType": "jpeg",
+				"Broj_kalorija": 763,
+				"protein": "29g",
+				"fat": "60g",
+				"carbs": "25g"
+			}, {
+				"id": 13227,
+				"Ime": "Collard Green Risotto and Pot Liquor",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/collard-green-risotto-and-pot-liquor-13227.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 210,
+				"protein": "5g",
+				"fat": "11g",
+				"carbs": "24g"
+			}, {
+				"id": 14171,
+				"Ime": "Grilled Lobster and Avocado Cocktail",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/grilled-lobster-and-avocado-cocktail-14171.jpeg",
+				"imageType": "jpeg",
+				"Broj_kalorija": 235,
+				"protein": "18g",
+				"fat": "12g",
+				"carbs": "19g"
+			}, {
+				"id": 14420,
+				"Ime": "Chicken Riesling",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/chicken-riesling-14420.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 529,
+				"protein": "32g",
+				"fat": "36g",
+				"carbs": "9g"
+			}, {
+				"id": 14499,
+				"Ime": "Crab-Coconut Cocktail",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/crab-coconut-cocktail-14499.jpeg",
+				"imageType": "jpeg",
+				"Broj_kalorija": 96,
+				"protein": "8g",
+				"fat": "5g",
+				"carbs": "5g"
+			}, {
+				"id": 15452,
+				"Ime": "Lunch Shake",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/lunch-shake-15452.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 248,
+				"protein": "10g",
+				"fat": "6g",
+				"carbs": "44g"
+			}, {
+				"id": 16487,
+				"Ime": "Roasted Lamb Shoulder (Agnello de Latte Arrosto)",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/roasted-lamb-shoulder-2-16487.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 1417,
+				"protein": "76g",
+				"fat": "110g",
+				"carbs": "11g"
+			}, {
+				"id": 16564,
+				"Ime": "Bison and Water Chestnut Lettuce Cups",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/bison-and-water-chestnut-lettuce-cups-16564.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 320,
+				"protein": "32g",
+				"fat": "15g",
+				"carbs": "16g"
+			}, {
+				"id": 16850,
+				"Ime": "Cognac Mustard",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/cognac-mustard-16850.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 132,
+				"protein": "4g",
+				"fat": "5g",
+				"carbs": "13g"
+			}, {
+				"id": 16866,
+				"Ime": "Seeded Agave Nectar Mustard",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/seeded-agave-nectar-mustard-16866.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 50,
+				"protein": "1g",
+				"fat": "2g",
+				"carbs": "6g"
+			}, {
+				"id": 16972,
+				"Ime": "Spicy Beer Mustard",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/spicy-beer-mustard-16972.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 364,
+				"protein": "9g",
+				"fat": "12g",
+				"carbs": "51g"
+			}, {
+				"id": 18556,
+				"Ime": "Shaking Beef with Pea Shoot Salad",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/shaking-beef-with-pea-shoot-salad-18556.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 270,
+				"protein": "28g",
+				"fat": "15g",
+				"carbs": "6g"
+			}, {
+				"id": 18713,
+				"Ime": "Chilled Pea Shots with Spicy Crab",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/chilled-pea-shots-with-spicy-crab-18713.jpeg",
+				"imageType": "jpeg",
+				"Broj_kalorija": 119,
+				"protein": "3g",
+				"fat": "10g",
+				"carbs": "4g"
+			}, {
+				"id": 20937,
+				"Ime": "Red Wine Brasato with Glazed Root Vegetables",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/red-wine-brasato-with-glazed-root-vegetables-2-20937.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 1091,
+				"protein": "91g",
+				"fat": "59g",
+				"carbs": "28g"
+			}, {
+				"id": 21098,
+				"Ime": "Stout and Cheddar Rarebit with Fried Eggs",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/stout-and-cheddar-rarebit-with-fried-eggs-2-21098.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 535,
+				"protein": "29g",
+				"fat": "34g",
+				"carbs": "25g"
+			}, {
+				"id": 21126,
+				"Ime": "Stir-Fried Water Spinach (Kangkung)",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/stir-fried-water-spinach-kangkung-21126.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 112,
+				"protein": "9g",
+				"fat": "5g",
+				"carbs": "12g"
+			}, {
+				"id": 21503,
+				"Ime": "Avocado-Shrimp Cocktail",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/avocado-shrimp-cocktail-21503.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 357,
+				"protein": "21g",
+				"fat": "18g",
+				"carbs": "37g"
+			}, {
+				"id": 21762,
+				"Ime": "King Crab and Avocado Shooters",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/king-crab-and-avocado-shooters-21762.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 113,
+				"protein": "3g",
+				"fat": "10g",
+				"carbs": "5g"
+			}, {
+				"id": 22036,
+				"Ime": "Chilled Red Bell Pepper Shooters",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/chilled-red-bell-pepper-shooters-22036.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 108,
+				"protein": "2g",
+				"fat": "7g",
+				"carbs": "11g"
+			}, {
+				"id": 24201,
+				"Ime": "Pumpkin Tea Bread",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/pumpkin-tea-bread-2-24201.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 640,
+				"protein": "9g",
+				"fat": "24g",
+				"carbs": "102g"
+			}, {
+				"id": 24414,
+				"Ime": "Pumpkin Smoothie",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/pumpkin_smoothie-24414.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 244,
+				"protein": "6g",
+				"fat": "6g",
+				"carbs": "42g"
+			}, {
+				"id": 24713,
+				"Ime": "Pumpkin Chai Pots de Cr\u00e8me",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/pumpkin-chai-pots-de-crme-24713.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 292,
+				"protein": "5g",
+				"fat": "21g",
+				"carbs": "22g"
+			}, {
+				"id": 24768,
+				"Ime": "Pumpkin Soup Cordials",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/pumpkin-soup-cordials-24768.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 396,
+				"protein": "4g",
+				"fat": "37g",
+				"carbs": "15g"
+			}, {
+				"id": 24831,
+				"Ime": "Pumpkin Spice-infused Vodka",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/pumpkin-spice-infused-vodka-24831.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 1561,
+				"protein": "43g",
+				"fat": "7g",
+				"carbs": "391g"
+			}, {
+				"id": 26235,
+				"Ime": "Shrimp Cocktail & Tomatillo Gazpacho Shooters",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/shrimp_cocktail_tomatillo_gazpacho_shooters-26235.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 45,
+				"protein": "5g",
+				"fat": "2g",
+				"carbs": "2g"
+			}, {
+				"id": 26247,
+				"Ime": "Agua Verde Cocktail",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/agua_verde-26247.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 179,
+				"protein": "1g",
+				"fat": "1g",
+				"carbs": "7g"
+			}, {
+				"id": 26317,
+				"Ime": "Green Tomato Bloody Mary",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/green-tomato-bloody-mary-26317.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 45,
+				"protein": "1g",
+				"fat": "2g",
+				"carbs": "3g"
+			}, {
+				"id": 26382,
+				"Ime": "Shrimp-Tomatillo Cocktail",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/shrimp-tomatillo-cocktail-26382.jpeg",
+				"imageType": "jpeg",
+				"Broj_kalorija": 206,
+				"protein": "18g",
+				"fat": "9g",
+				"carbs": "16g"
+			}, {
+				"id": 26461,
+				"Ime": "Tequila Pork Chile Verde",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/tequila-pork-chile-verde-26461.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 242,
+				"protein": "27g",
+				"fat": "6g",
+				"carbs": "16g"
+			}, {
+				"id": 26844,
+				"Ime": "Spoonable Bloody Marys",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/spoonable-bloody-marys-26844.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 87,
+				"protein": "2g",
+				"fat": "3g",
+				"carbs": "6g"
+			}, {
+				"id": 27338,
+				"Ime": "Balsamic Bloody Mary",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/balsamic-bloody-mary-27338.jpeg",
+				"imageType": "jpeg",
+				"Broj_kalorija": 265,
+				"protein": "6g",
+				"fat": "1g",
+				"carbs": "28g"
+			}, {
+				"id": 27391,
+				"Ime": "Bloody Maria - Spanish Bloody Mary",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/bloody-maria-spanish-bloody-mary-27391.jpeg",
+				"imageType": "jpeg",
+				"Broj_kalorija": 90,
+				"protein": "2g",
+				"fat": "5g",
+				"carbs": "11g"
+			}, {
+				"id": 27619,
+				"Ime": "Minty Honeydew Limeade",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/minty-honeydew-limeade-27619.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 1008,
+				"protein": "4g",
+				"fat": "1g",
+				"carbs": "268g"
+			}, {
+				"id": 27733,
+				"Ime": "Apple Cider Beignets with Butter-Rum Caramel Sauce",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/apple-cider-beignets-with-butter-rum-caramel-sauce-2-27733.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 1012,
+				"protein": "9g",
+				"fat": "60g",
+				"carbs": "108g"
+			}, {
+				"id": 27776,
+				"Ime": "Cook the Book: Watermelon Margaritas",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/cook_the_book_watermelon_margaritas-27776.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 550,
+				"protein": "4g",
+				"fat": "1g",
+				"carbs": "93g"
+			}, {
+				"id": 27808,
+				"Ime": "Melon Smoothie",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/melon-smoothie-27808.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 133,
+				"protein": "3g",
+				"fat": "2g",
+				"carbs": "29g"
+			}, {
+				"id": 27917,
+				"Ime": "Fresh Fruit Margaritas",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/fresh-fruit-margaritas-27917.jpeg",
+				"imageType": "jpeg",
+				"Broj_kalorija": 164,
+				"protein": "3g",
+				"fat": "3g",
+				"carbs": "33g"
+			}, {
+				"id": 27925,
+				"Ime": "Galaxy Fruit Pops",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/galaxy-fruit-pops-27925.jpeg",
+				"imageType": "jpeg",
+				"Broj_kalorija": 233,
+				"protein": "4g",
+				"fat": "1g",
+				"carbs": "59g"
+			}, {
+				"id": 27953,
+				"Ime": "Watermelon Pops",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/watermelon-pops-2-27953.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 145,
+				"protein": "2g",
+				"fat": "4g",
+				"carbs": "26g"
+			}, {
+				"id": 28671,
+				"Ime": "Marsala Artichokes",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/marsala-artichokes-28671.jpeg",
+				"imageType": "jpeg",
+				"Broj_kalorija": 242,
+				"protein": "4g",
+				"fat": "11g",
+				"carbs": "18g"
+			}, {
+				"id": 35538,
+				"Ime": "Peanut Butter, Banana, and Flax Smoothies",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/peanut-butter-banana-and-flax-smoothies-35538.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 237,
+				"protein": "9g",
+				"fat": "8g",
+				"carbs": "34g"
+			}, {
+				"id": 35564,
+				"Ime": "Chocolate-Peanut Butter Smoothie",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/chocolate-peanut-butter-smoothie-35564.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 328,
+				"protein": "13g",
+				"fat": "11g",
+				"carbs": "48g"
+			}, {
+				"id": 35578,
+				"Ime": "Peanut-Butter-Cup Smoothie",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/peanut-butter-cup-smoothie-35578.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 292,
+				"protein": "12g",
+				"fat": "9g",
+				"carbs": "45g"
+			}, {
+				"id": 36448,
+				"Ime": "Sweet Tea Rice with Jalape\u00f1o, Peaches, and Pecans",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/sweet-tea-rice-with-jalapeo-peaches-and-pecans-36448.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 215,
+				"protein": "3g",
+				"fat": "10g",
+				"carbs": "29g"
+			}, {
+				"id": 37402,
+				"Ime": "Sugar Free & Dairy Free Chocolate Tofu Smoothie",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/sugar-free-dairy-free-chocolate-tofu-smoothie-37402.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 392,
+				"protein": "8g",
+				"fat": "38g",
+				"carbs": "14g"
+			}, {
+				"id": 41865,
+				"Ime": "Lemon Grass and Ginger Iced Tea",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/lemon-grass-and-ginger-iced-tea-41865.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 235,
+				"protein": "3g",
+				"fat": "1g",
+				"carbs": "56g"
+			}, {
+				"id": 42213,
+				"Ime": "Ginger-Orange Mocktails",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/ginger-orange-mocktails-42213.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 501,
+				"protein": "4g",
+				"fat": "1g",
+				"carbs": "121g"
+			}, {
+				"id": 42548,
+				"Ime": "Standing Rib Roast, Spinach-Porcini Stuffing, Irish Whiskey Gravy, and Horseradish Cream",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/standing-rib-roast-spinach-porcini-stuffing-irish-whiskey-gra-2-42548.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 1511,
+				"protein": "60g",
+				"fat": "128g",
+				"carbs": "5g"
+			}, {
+				"id": 43167,
+				"Ime": "Tropical Scallop Cocktail",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/tropical-scallop-cocktail-43167.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 79,
+				"protein": "5g",
+				"fat": "2g",
+				"carbs": "9g"
+			}, {
+				"id": 44651,
+				"Ime": "Pasties",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/pasties-44651.jpeg",
+				"imageType": "jpeg",
+				"Broj_kalorija": 1362,
+				"protein": "35g",
+				"fat": "79g",
+				"carbs": "128g"
+			}, {
+				"id": 44670,
+				"Ime": "Pasties I",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/pasties-i-2-44670.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 634,
+				"protein": "26g",
+				"fat": "36g",
+				"carbs": "54g"
+			}, {
+				"id": 44675,
+				"Ime": "Cornish Finnish Michigan Pasties",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/cornish-finnish-michigan-pasties-2-44675.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 773,
+				"protein": "34g",
+				"fat": "37g",
+				"carbs": "75g"
+			}, {
+				"id": 44810,
+				"Ime": "Bourbon Sweet Potatoes",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/bourbon-sweet-potatoes-44810.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 251,
+				"protein": "4g",
+				"fat": "8g",
+				"carbs": "33g"
+			}, {
+				"id": 44912,
+				"Ime": "Bourbon Baked Sweet Potatoes",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/bourbon-baked-sweet-potatoes-44912.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 644,
+				"protein": "2g",
+				"fat": "36g",
+				"carbs": "64g"
+			}, {
+				"id": 44938,
+				"Ime": "Mashed Maple Bourbon Sweet Potatoes",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/mashed-maple-bourbon-sweet-potatoes-44938.jpeg",
+				"imageType": "jpeg",
+				"Broj_kalorija": 358,
+				"protein": "4g",
+				"fat": "10g",
+				"carbs": "62g"
+			}, {
+				"id": 45370,
+				"Ime": "Bourbon Pecan Smashed Sweet Potatoes",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/bourbon-pecan-smashed-sweet-potatoes-45370.jpeg",
+				"imageType": "jpeg",
+				"Broj_kalorija": 326,
+				"protein": "3g",
+				"fat": "18g",
+				"carbs": "33g"
+			}, {
+				"id": 45487,
+				"Ime": "Punch \u00e0 la Noix de Coco",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/punch-la-noix-de-coco-2-45487.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 343,
+				"protein": "1g",
+				"fat": "14g",
+				"carbs": "57g"
+			}, {
+				"id": 45489,
+				"Ime": "Tropical Taro, Coconut Milk Vichyssoise",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/tropical_taro_coconut_milk_vichyssoise-45489.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 317,
+				"protein": "7g",
+				"fat": "16g",
+				"carbs": "38g"
+			}, {
+				"id": 45514,
+				"Ime": "Pina Colada",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/pina-colada-45514.jpeg",
+				"imageType": "jpeg",
+				"Broj_kalorija": 232,
+				"protein": "2g",
+				"fat": "10g",
+				"carbs": "16g"
+			}, {
+				"id": 45562,
+				"Ime": "Coconut, Strawberry, and Banana Smoothie",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/coconut-strawberry-and-banana-smoothie-2-45562.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 375,
+				"protein": "3g",
+				"fat": "12g",
+				"carbs": "67g"
+			}, {
+				"id": 45569,
+				"Ime": "Cocojito",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/cocojito-45569.jpeg",
+				"imageType": "jpeg",
+				"Broj_kalorija": 249,
+				"protein": "1g",
+				"fat": "10g",
+				"carbs": "5g"
+			}, {
+				"id": 45953,
+				"Ime": "Bacon Water Chestnuts",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/bacon-water-chestnuts-45953.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 83,
+				"protein": "1g",
+				"fat": "3g",
+				"carbs": "14g"
+			}, {
+				"id": 45954,
+				"Ime": "Bacon Wrapped Water Chestnuts III",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/bacon-wrapped-water-chestnuts-iii-2-45954.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 352,
+				"protein": "7g",
+				"fat": "18g",
+				"carbs": "41g"
+			}, {
+				"id": 45957,
+				"Ime": "Bacon Wrapped Water Chestnuts II",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/bacon-wrapped-water-chestnuts-ii-2-45957.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 179,
+				"protein": "4g",
+				"fat": "10g",
+				"carbs": "19g"
+			}, {
+				"id": 45959,
+				"Ime": "Bacon Wrapped Water Chestnuts II",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/bacon-wrapped-water-chestnuts-ii-2-45959.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 125,
+				"protein": "3g",
+				"fat": "10g",
+				"carbs": "6g"
+			}, {
+				"id": 45966,
+				"Ime": "Asian Chicken and Water Chestnut Patties",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/asian-chicken-and-water-chestnut-patties-2-45966.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 165,
+				"protein": "25g",
+				"fat": "4g",
+				"carbs": "6g"
+			}, {
+				"id": 46028,
+				"Ime": "Asian Chicken and Water Chestnut Patties",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/asian-chicken-and-water-chestnut-patties-46028.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 308,
+				"protein": "25g",
+				"fat": "17g",
+				"carbs": "14g"
+			}, {
+				"id": 46825,
+				"Ime": "Lemon-Mint Cooler",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/lemon-mint-cooler-46825.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 501,
+				"protein": "3g",
+				"fat": "1g",
+				"carbs": "133g"
+			}, {
+				"id": 47093,
+				"Ime": "A\u00e7ai Super Smoothie",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/aai-super-smoothie-47093.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 265,
+				"protein": "2g",
+				"fat": "1g",
+				"carbs": "64g"
+			}, {
+				"id": 47154,
+				"Ime": "Champagne and Pomegranate Cocktail",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/champagne-and-pomegranate-cocktail-47154.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 147,
+				"protein": "2g",
+				"fat": "1g",
+				"carbs": "25g"
+			}, {
+				"id": 47255,
+				"Ime": "Holy Purple Cow! Grape and Milk Together",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/holy_purple_cow_grape_and_milk_together-47255.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 324,
+				"protein": "7g",
+				"fat": "16g",
+				"carbs": "38g"
+			}, {
+				"id": 47462,
+				"Ime": "Grape Milk Shake",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/grape-milk-shake-47462.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 127,
+				"protein": "4g",
+				"fat": "6g",
+				"carbs": "15g"
+			}, {
+				"id": 47520,
+				"Ime": "Peanut Butter and Jelly Shakes",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/peanut-butter-and-jelly-shakes-47520.jpeg",
+				"imageType": "jpeg",
+				"Broj_kalorija": 635,
+				"protein": "13g",
+				"fat": "34g",
+				"carbs": "72g"
+			}, {
+				"id": 48008,
+				"Ime": "Warm Spiced Cider",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/warm-spiced-cider-48008.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 599,
+				"protein": "2g",
+				"fat": "2g",
+				"carbs": "147g"
+			}, {
+				"id": 48596,
+				"Ime": "Apricot and Lemon Verbena Pops",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/apricot_and_lemon_verbena_pops-48596.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 167,
+				"protein": "2g",
+				"fat": "9g",
+				"carbs": "21g"
+			}, {
+				"id": 49192,
+				"Ime": "Tropical Lemonade",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/tropical-lemonade-49192.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 1072,
+				"protein": "4g",
+				"fat": "2g",
+				"carbs": "278g"
+			}, {
+				"id": 49407,
+				"Ime": "Banana-Berry Smoothie",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/banana-berry-smoothie-49407.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 165,
+				"protein": "5g",
+				"fat": "1g",
+				"carbs": "37g"
+			}, {
+				"id": 49434,
+				"Ime": "Energy Smoothie",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/energy-smoothie-49434.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 234,
+				"protein": "6g",
+				"fat": "3g",
+				"carbs": "50g"
+			}, {
+				"id": 49469,
+				"Ime": "Dirty Banana",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/dirty-banana-49469.jpeg",
+				"imageType": "jpeg",
+				"Broj_kalorija": 372,
+				"protein": "3g",
+				"fat": "7g",
+				"carbs": "37g"
+			}, {
+				"id": 49477,
+				"Ime": "Banana-Berry Smoothie",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/banana-berry-smoothie-49477.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 165,
+				"protein": "5g",
+				"fat": "1g",
+				"carbs": "37g"
+			}, {
+				"id": 49491,
+				"Ime": "Banana-Berry Smoothie",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/banana-berry-smoothie-49491.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 165,
+				"protein": "5g",
+				"fat": "1g",
+				"carbs": "37g"
+			}, {
+				"id": 49535,
+				"Ime": "Banana-Pecan Smoothies",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/banana-pecan-smoothies-49535.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 1005,
+				"protein": "29g",
+				"fat": "45g",
+				"carbs": "135g"
+			}, {
+				"id": 49571,
+				"Ime": "Banana Breakfast Smoothie",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/banana-breakfast-smoothie-49571.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 186,
+				"protein": "7g",
+				"fat": "2g",
+				"carbs": "37g"
+			}, {
+				"id": 49596,
+				"Ime": "Strawberry, Banana and Almond Butter Smoothie",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/strawberry-banana-and-almond-butter-smoothie-49596.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 329,
+				"protein": "8g",
+				"fat": "10g",
+				"carbs": "57g"
+			}, {
+				"id": 49601,
+				"Ime": "Curious George Banana Hot Chocolate",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/curious_george_banana_hot_chocolate-49601.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 484,
+				"protein": "4g",
+				"fat": "14g",
+				"carbs": "86g"
+			}, {
+				"id": 49647,
+				"Ime": "Double Strawberry-Banana Shake",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/double-strawberry-banana-shake-49647.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 199,
+				"protein": "5g",
+				"fat": "9g",
+				"carbs": "26g"
+			}, {
+				"id": 49660,
+				"Ime": "Warm Almond Milk with Bananas and Honey",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/warm-almond-milk-with-bananas-and-honey-49660.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 531,
+				"protein": "21g",
+				"fat": "29g",
+				"carbs": "55g"
+			}, {
+				"id": 49696,
+				"Ime": "Coconut Milk Smoothie",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/coconut-milk-smoothie-49696.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 326,
+				"protein": "5g",
+				"fat": "17g",
+				"carbs": "45g"
+			}, {
+				"id": 49744,
+				"Ime": "Banana Pumpkin Smoothie",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/banana-pumpkin-smoothie-49744.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 233,
+				"protein": "8g",
+				"fat": "2g",
+				"carbs": "49g"
+			}
+		]

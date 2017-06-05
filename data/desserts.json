@@ -1,0 +1,902 @@
+[{
+				"id": 2649,
+				"Ime": "Cape Cod Oatmeal Cookies",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/cape-cod-oatmeal-cookies-2-2649.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 137,
+				"protein": "2g",
+				"fat": "8g",
+				"carbs": "16g"
+			}, {
+				"id": 3767,
+				"Ime": "Chocolate Chip Strawberry Crunch Cookies",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/chocolate_chip_strawberry_crunch_cookies-3767.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 194,
+				"protein": "2g",
+				"fat": "4g",
+				"carbs": "38g"
+			}, {
+				"id": 6167,
+				"Ime": "Ice Skating Wonderland Cake",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/ice-skating-wonderland-cake-6167.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 232,
+				"protein": "3g",
+				"fat": "4g",
+				"carbs": "46g"
+			}, {
+				"id": 7354,
+				"Ime": "Trout Dale Oatmeal-Raisin Cookies",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/trout-dale-oatmeal-raisin-cookies-7354.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 92,
+				"protein": "1g",
+				"fat": "4g",
+				"carbs": "14g"
+			}, {
+				"id": 8205,
+				"Ime": "Double Chocolate And Pear Cakes",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/double_chocolate_and_pear_cakes-8205.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 673,
+				"protein": "11g",
+				"fat": "34g",
+				"carbs": "85g"
+			}, {
+				"id": 12901,
+				"Ime": "Chocolate Cupped Cakes with Coffee and Chicory",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/chocolate-cupped-cakes-with-coffee-and-chicory-2-12901.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 727,
+				"protein": "8g",
+				"fat": "26g",
+				"carbs": "122g"
+			}, {
+				"id": 18721,
+				"Ime": "Pudding Poke Brownies",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/",
+				"imageType": "",
+				"Broj_kalorija": 187,
+				"protein": "2g",
+				"fat": "5g",
+				"carbs": "34g"
+			}, {
+				"id": 18723,
+				"Ime": "JELL-O Ween Poke Brownies",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/jell-o-ween-poke-brownies-18723.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 93,
+				"protein": "1g",
+				"fat": "2g",
+				"carbs": "17g"
+			}, {
+				"id": 18728,
+				"Ime": "Springtime Poke Cupcakes",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/springtime-poke-cupcakes-18728.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 2802,
+				"protein": "35g",
+				"fat": "49g",
+				"carbs": "563g"
+			}, {
+				"id": 18730,
+				"Ime": "Touchdown Poke Cupcakes",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/touchdown-poke-cupcakes-18730.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 1283,
+				"protein": "34g",
+				"fat": "33g",
+				"carbs": "218g"
+			}, {
+				"id": 18731,
+				"Ime": "Holiday Poke Cupcakes",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/holiday-poke-cupcakes-18731.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 2763,
+				"protein": "101g",
+				"fat": "49g",
+				"carbs": "486g"
+			}, {
+				"id": 21587,
+				"Ime": "Coconut Avocado Ice Cream",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/coconut-avocado-ice-cream-21587.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 75,
+				"protein": "1g",
+				"fat": "5g",
+				"carbs": "8g"
+			}, {
+				"id": 21784,
+				"Ime": "Avocado Gelato",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/avocado-gelato-2-21784.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 795,
+				"protein": "12g",
+				"fat": "37g",
+				"carbs": "112g"
+			}, {
+				"id": 24178,
+				"Ime": "Pumpkin (or Sweet Potato) Crumb Cakes",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/pumpkin-or-sweet-potato-crumb-cakes-24178.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 363,
+				"protein": "5g",
+				"fat": "17g",
+				"carbs": "49g"
+			}, {
+				"id": 24272,
+				"Ime": "Pumpkin Bread",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/pumpkin-bread-24272.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 410,
+				"protein": "4g",
+				"fat": "14g",
+				"carbs": "68g"
+			}, {
+				"id": 24320,
+				"Ime": "Pumpkin Custard for the Thanksgiving Table",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/pumpkin_custard-24320.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 480,
+				"protein": "6g",
+				"fat": "42g",
+				"carbs": "21g"
+			}, {
+				"id": 24593,
+				"Ime": "Dreena's Chocolate Pumpkin Pie",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/dreenas-chocolate-pumpkin-pie-2-24593.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 146,
+				"protein": "1g",
+				"fat": "4g",
+				"carbs": "29g"
+			}, {
+				"id": 24736,
+				"Ime": "Cinnamon Pumpkin Seed Brittle",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/cinnamon-pumpkin-seed-brittle-24736.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 3245,
+				"protein": "30g",
+				"fat": "93g",
+				"carbs": "602g"
+			}, {
+				"id": 27408,
+				"Ime": "Rose Levy Beranbaum's Chocolate Tomato Cake with Mystery Ganache",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/rose_levy_beranbaums_chocolate_tomato_cake_with_mystery_ganache-27408.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 786,
+				"protein": "9g",
+				"fat": "46g",
+				"carbs": "89g"
+			}, {
+				"id": 27460,
+				"Ime": "Melon and Apple Berry Crumble",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/melon-and-apple-berry-crumble-27460.jpeg",
+				"imageType": "jpeg",
+				"Broj_kalorija": 723,
+				"protein": "11g",
+				"fat": "26g",
+				"carbs": "117g"
+			}, {
+				"id": 27630,
+				"Ime": "Cantaloupe Sherbet",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/cantaloupe-sherbet-27630.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 127,
+				"protein": "1g",
+				"fat": "1g",
+				"carbs": "28g"
+			}, {
+				"id": 27660,
+				"Ime": "Cantaloupe Gelato",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/cantaloupe-gelato-2-27660.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 632,
+				"protein": "7g",
+				"fat": "2g",
+				"carbs": "157g"
+			}, {
+				"id": 27929,
+				"Ime": "Watermelon Pudding",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/watermelon-pudding-2-27929.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 320,
+				"protein": "4g",
+				"fat": "6g",
+				"carbs": "69g"
+			}, {
+				"id": 28014,
+				"Ime": "Apple, Carrot, Or Zucchini Cake",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/apple-carrot-or-zucchini-cake-2-28014.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 305,
+				"protein": "4g",
+				"fat": "13g",
+				"carbs": "45g"
+			}, {
+				"id": 33240,
+				"Ime": "Lemon Layer Cake",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/lemon-layer-cake-2-33240.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 714,
+				"protein": "9g",
+				"fat": "32g",
+				"carbs": "100g"
+			}, {
+				"id": 33261,
+				"Ime": "Homemade Chocolate Cookie Dough Ice Cream \u2013 Vegan and Gluten Free",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/homemade-chocolate-cookie-dough-ice-cream-vegan-and-gluten-free-33261.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 795,
+				"protein": "7g",
+				"fat": "36g",
+				"carbs": "120g"
+			}, {
+				"id": 34218,
+				"Ime": "Puff Pastry Tart Filled with Almond Cream",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/puff-pastry-tart-filled-with-almond-cream-2-34218.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 456,
+				"protein": "7g",
+				"fat": "31g",
+				"carbs": "39g"
+			}, {
+				"id": 35033,
+				"Ime": "Single-Girl Melty Chocolate Peanut Butter Cake",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/single-girl-melty-chocolate-peanut-butter-cake-35033.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 489,
+				"protein": "14g",
+				"fat": "29g",
+				"carbs": "47g"
+			}, {
+				"id": 35140,
+				"Ime": "Peanut-Butter Chocolate Ice Cream Sandwiches",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/peanut-butter-chocolate-ice-cream-sandwiches-35140.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 250,
+				"protein": "3g",
+				"fat": "11g",
+				"carbs": "36g"
+			}, {
+				"id": 35157,
+				"Ime": "Peanut Butter Crunch Cookies",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/peanut-butter-crunch-cookies-35157.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 119,
+				"protein": "2g",
+				"fat": "4g",
+				"carbs": "21g"
+			}, {
+				"id": 35163,
+				"Ime": "Chocolate Peanut Butter Thumbprint Cookies",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/chocolate-peanut-butter-thumbprint-cookies-35163.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 147,
+				"protein": "3g",
+				"fat": "9g",
+				"carbs": "15g"
+			}, {
+				"id": 35309,
+				"Ime": "Peanut Butter Streusel Brownies",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/peanut-butter-streusel-brownies-35309.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 321,
+				"protein": "5g",
+				"fat": "17g",
+				"carbs": "41g"
+			}, {
+				"id": 35496,
+				"Ime": "Peanut Butter Icebox Cookies",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/peanut-butter-icebox-cookies-35496.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 68,
+				"protein": "1g",
+				"fat": "2g",
+				"carbs": "11g"
+			}, {
+				"id": 35535,
+				"Ime": "Strawberry-Peanut Butter Tart",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/strawberry-peanut-butter-tart-35535.jpeg",
+				"imageType": "jpeg",
+				"Broj_kalorija": 419,
+				"protein": "8g",
+				"fat": "23g",
+				"carbs": "48g"
+			}, {
+				"id": 35536,
+				"Ime": "PB & Chocolate Pan Cookie",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/pb-chocolate-pan-cookie-35536.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 418,
+				"protein": "9g",
+				"fat": "21g",
+				"carbs": "51g"
+			}, {
+				"id": 35592,
+				"Ime": "Peanut Butter-Chocolate Cookies",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/peanut-butter-chocolate-cookies-35592.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 2930,
+				"protein": "52g",
+				"fat": "144g",
+				"carbs": "381g"
+			}, {
+				"id": 35633,
+				"Ime": "Peanut Butter Crispy Rice Treats",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/peanut-butter-crispy-rice-treats-35633.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 344,
+				"protein": "6g",
+				"fat": "2g",
+				"carbs": "76g"
+			}, {
+				"id": 35694,
+				"Ime": "Chocolate-Peanut Butter Moon Pies",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/chocolate-peanut-butter-moon-pies-35694.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 222,
+				"protein": "4g",
+				"fat": "12g",
+				"carbs": "26g"
+			}, {
+				"id": 35709,
+				"Ime": "Ooey-Gooey Peanut Butter-Chocolate Brownies",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/ooey-gooey-peanut-butter-chocolate-brownies-35709.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 201,
+				"protein": "4g",
+				"fat": "9g",
+				"carbs": "29g"
+			}, {
+				"id": 35766,
+				"Ime": "Peanut Butter and Chocolate Cupcake",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/peanut-butter-and-chocolate-cupcake-35766.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 628,
+				"protein": "9g",
+				"fat": "38g",
+				"carbs": "71g"
+			}, {
+				"id": 41659,
+				"Ime": "Pear Ginger Crisp with Crumbly Streusel",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/pear-ginger-crisp-with-crumbly-streusel-41659.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 406,
+				"protein": "3g",
+				"fat": "12g",
+				"carbs": "72g"
+			}, {
+				"id": 41714,
+				"Ime": "Pear and Ginger Crisp",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/pear-and-ginger-crisp-41714.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 292,
+				"protein": "3g",
+				"fat": "9g",
+				"carbs": "54g"
+			}, {
+				"id": 41715,
+				"Ime": "Strawberry-Mango Parfaits with Ginger Topping",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/strawberry-mango-parfaits-with-ginger-topping-41715.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 441,
+				"protein": "7g",
+				"fat": "15g",
+				"carbs": "73g"
+			}, {
+				"id": 41806,
+				"Ime": "Passover Pear-Ginger Crisp",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/passover-pear-ginger-crisp-41806.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 312,
+				"protein": "3g",
+				"fat": "8g",
+				"carbs": "59g"
+			}, {
+				"id": 41879,
+				"Ime": "Ginger Sandwich Cookies",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/ginger-sandwich-cookies-41879.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 197,
+				"protein": "1g",
+				"fat": "8g",
+				"carbs": "30g"
+			}, {
+				"id": 41929,
+				"Ime": "Pear and Ginger Upside-Down Cake",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/pear-and-ginger-upside-down-cake-41929.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 330,
+				"protein": "5g",
+				"fat": "4g",
+				"carbs": "71g"
+			}, {
+				"id": 41955,
+				"Ime": "Gingered Pear Tart",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/gingered-pear-tart-41955.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 238,
+				"protein": "2g",
+				"fat": "8g",
+				"carbs": "40g"
+			}, {
+				"id": 41986,
+				"Ime": "Apple Tarts with Candied Ginger",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/apple-tarts-with-candied-ginger-41986.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 839,
+				"protein": "11g",
+				"fat": "51g",
+				"carbs": "87g"
+			}, {
+				"id": 42042,
+				"Ime": "Ginger-Pear Cobbler",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/ginger-pear-cobbler-42042.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 493,
+				"protein": "5g",
+				"fat": "20g",
+				"carbs": "78g"
+			}, {
+				"id": 42043,
+				"Ime": "Apricot-Ginger Scones",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/apricot-ginger-scones-42043.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 380,
+				"protein": "4g",
+				"fat": "23g",
+				"carbs": "41g"
+			}, {
+				"id": 42073,
+				"Ime": "Lemon-Ginger Mousse",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/lemon-ginger-mousse-42073.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 492,
+				"protein": "6g",
+				"fat": "38g",
+				"carbs": "34g"
+			}, {
+				"id": 42093,
+				"Ime": "Granola-Ginger Baked Apples",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/granola-ginger-baked-apples-42093.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 290,
+				"protein": "5g",
+				"fat": "11g",
+				"carbs": "48g"
+			}, {
+				"id": 42094,
+				"Ime": "Black Forest Ginger Cookies",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/black-forest-ginger-cookies-42094.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 94,
+				"protein": "2g",
+				"fat": "3g",
+				"carbs": "16g"
+			}, {
+				"id": 42095,
+				"Ime": "Chocolate-Ginger Pound Cake",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/chocolate-ginger-pound-cake-42095.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 636,
+				"protein": "8g",
+				"fat": "33g",
+				"carbs": "78g"
+			}, {
+				"id": 42122,
+				"Ime": "Date-sweetened Gingerbread Men for a Christmas Tree Hunt",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/gingerbread_men-42122.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 324,
+				"protein": "8g",
+				"fat": "16g",
+				"carbs": "43g"
+			}, {
+				"id": 42136,
+				"Ime": "Vanilla-Ginger Peach Pie",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/vanilla-ginger-peach-pie-42136.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 259,
+				"protein": "3g",
+				"fat": "6g",
+				"carbs": "51g"
+			}, {
+				"id": 42153,
+				"Ime": "Gingered Berry Crumble",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/gingered-berry-crumble-42153.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 345,
+				"protein": "5g",
+				"fat": "13g",
+				"carbs": "54g"
+			}, {
+				"id": 42179,
+				"Ime": "Sour Cherry Scones and Ginger-Marmalade Cream",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/sour-cherry-scones-and-ginger-marmalade-cream-42179.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 373,
+				"protein": "5g",
+				"fat": "24g",
+				"carbs": "36g"
+			}, {
+				"id": 42191,
+				"Ime": "Apple-Ginger Crisp",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/apple-ginger-crisp-42191.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 258,
+				"protein": "6g",
+				"fat": "7g",
+				"carbs": "44g"
+			}, {
+				"id": 42211,
+				"Ime": "Apple Crisp with Sweet Ginger and Macadamia Nuts",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/apple-crisp-with-sweet-ginger-and-macadamia-nuts-42211.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 629,
+				"protein": "6g",
+				"fat": "29g",
+				"carbs": "92g"
+			}, {
+				"id": 42245,
+				"Ime": "Cherry-Ginger Scones",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/cherry-ginger-scones-42245.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 330,
+				"protein": "7g",
+				"fat": "13g",
+				"carbs": "49g"
+			}, {
+				"id": 42249,
+				"Ime": "Double-Ginger Cookies",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/double-ginger-cookies-42249.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 122,
+				"protein": "1g",
+				"fat": "2g",
+				"carbs": "24g"
+			}, {
+				"id": 42251,
+				"Ime": "Apricot Crumbles",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/apricot-crumbles-42251.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 344,
+				"protein": "3g",
+				"fat": "21g",
+				"carbs": "36g"
+			}, {
+				"id": 42257,
+				"Ime": "Gingered Blueberry Shortcake",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/gingered-blueberry-shortcake-42257.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 329,
+				"protein": "5g",
+				"fat": "14g",
+				"carbs": "48g"
+			}, {
+				"id": 42962,
+				"Ime": "Chockablock Chocolate Cakes with Warm Macadamia Nut Goo",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/chockablock-chocolate-cakes-with-warm-macadamia-nut-goo-42962.jpeg",
+				"imageType": "jpeg",
+				"Broj_kalorija": 393,
+				"protein": "5g",
+				"fat": "16g",
+				"carbs": "61g"
+			}, {
+				"id": 43011,
+				"Ime": "Vanilla Cupcakes",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/vanilla-cupcakes-2-43011.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 168,
+				"protein": "3g",
+				"fat": "7g",
+				"carbs": "24g"
+			}, {
+				"id": 43128,
+				"Ime": "Banana Bourbon Pudding",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/banana-bourbon-pudding-43128.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 349,
+				"protein": "9g",
+				"fat": "9g",
+				"carbs": "53g"
+			}, {
+				"id": 43160,
+				"Ime": "Blackberry Lemon Chess Pie w\/ Honey Jumbleberry Sauce. How I won the SF Food Wars \u2013 Pie or Die Competition",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/blackberry-lemon-chess-pie-w-honey-jumbleberry-sauce-how-i-won-the-sf-food-wars-pie-or-die-competition-43160.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 152,
+				"protein": "1g",
+				"fat": "5g",
+				"carbs": "28g"
+			}, {
+				"id": 43182,
+				"Ime": "Red Currant Pie with Buttered Sourdough Crust",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/red_currant_pie_with_buttered_sourdough_crust-43182.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 415,
+				"protein": "7g",
+				"fat": "9g",
+				"carbs": "79g"
+			}, {
+				"id": 45286,
+				"Ime": "Cakespy: Sweet Potato Tarte Tatin",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/cakespy_sweet_potato_tarte_tatin-45286.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 480,
+				"protein": "4g",
+				"fat": "32g",
+				"carbs": "46g"
+			}, {
+				"id": 45481,
+				"Ime": "Coco Cookies",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/coco_cookies-45481.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 163,
+				"protein": "2g",
+				"fat": "7g",
+				"carbs": "22g"
+			}, {
+				"id": 45484,
+				"Ime": "Flan de Coco (Coconut Flan)",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/flan-de-coco-2-45484.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 292,
+				"protein": "8g",
+				"fat": "9g",
+				"carbs": "47g"
+			}, {
+				"id": 45550,
+				"Ime": "Pineapple and Banana Couscous Pudding",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/pineapple-and-banana-couscous-pudding-2-45550.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 404,
+				"protein": "4g",
+				"fat": "27g",
+				"carbs": "38g"
+			}, {
+				"id": 45558,
+				"Ime": "Coconut Cream Pie with Pineapple",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/coconut-cream-pie-with-pineapple-45558.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 330,
+				"protein": "5g",
+				"fat": "12g",
+				"carbs": "51g"
+			}, {
+				"id": 45560,
+				"Ime": "Key Lime-Coconut Pie",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/key-lime-coconut-pie-45560.jpeg",
+				"imageType": "jpeg",
+				"Broj_kalorija": 561,
+				"protein": "8g",
+				"fat": "38g",
+				"carbs": "50g"
+			}, {
+				"id": 45564,
+				"Ime": "Coconut Panna Cotta with Tropical Fruit",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/coconut-panna-cotta-with-tropical-fruit-45564.jpeg",
+				"imageType": "jpeg",
+				"Broj_kalorija": 687,
+				"protein": "7g",
+				"fat": "69g",
+				"carbs": "18g"
+			}, {
+				"id": 45565,
+				"Ime": "Lemon-Coconut Tart with Brown-Sugar Cream",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/lemon-coconut-tart-with-brown-sugar-cream-45565.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 687,
+				"protein": "8g",
+				"fat": "40g",
+				"carbs": "76g"
+			}, {
+				"id": 45572,
+				"Ime": "Chilled Lime-Coconut Pie with Macadamia-Coconut Crust",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/chilled-lime-coconut-pie-with-macadamia-coconut-crust-2-45572.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 568,
+				"protein": "4g",
+				"fat": "33g",
+				"carbs": "67g"
+			}, {
+				"id": 45573,
+				"Ime": "Coconut-Peach Layer Cake",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/coconut-peach-layer-cake-2-45573.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 731,
+				"protein": "9g",
+				"fat": "48g",
+				"carbs": "70g"
+			}, {
+				"id": 45574,
+				"Ime": "Coconut Cream Tart",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/coconut-cream-tart-2-45574.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 380,
+				"protein": "5g",
+				"fat": "34g",
+				"carbs": "16g"
+			}, {
+				"id": 45591,
+				"Ime": "Banana Split with Curried Chocolate-Coconut Sauce",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/banana-split-with-curried-chocolate-coconut-sauce-2-45591.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 1179,
+				"protein": "14g",
+				"fat": "68g",
+				"carbs": "128g"
+			}, {
+				"id": 45593,
+				"Ime": "Caramelized Pineapple Sundaes with Chocolate-Coconut Sauce",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/caramelized-pineapple-sundaes-with-chocolate-coconut-sauce-2-45593.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 723,
+				"protein": "6g",
+				"fat": "33g",
+				"carbs": "105g"
+			}, {
+				"id": 45965,
+				"Ime": "Coconut Tapioca Pudding",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/coconut-tapioca-pudding-45965.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 459,
+				"protein": "5g",
+				"fat": "34g",
+				"carbs": "38g"
+			}, {
+				"id": 47219,
+				"Ime": "Grape Tart",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/grape-tart-2-47219.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 186,
+				"protein": "4g",
+				"fat": "7g",
+				"carbs": "29g"
+			}, {
+				"id": 47239,
+				"Ime": "Harvest Cake with Grapes and Sangiovese Syrup",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/harvest-cake-with-grapes-and-sangiovese-syrup-47239.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 382,
+				"protein": "5g",
+				"fat": "14g",
+				"carbs": "60g"
+			}, {
+				"id": 47250,
+				"Ime": "Striped Purple Grape and Panna Cotta Parfait",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/striped-purple-grape-and-panna-cotta-parfait-47250.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 267,
+				"protein": "4g",
+				"fat": "16g",
+				"carbs": "28g"
+			}, {
+				"id": 47262,
+				"Ime": "Grape Jelly Breakfast Tarts",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/grape-jelly-breakfast-tarts-47262.jpeg",
+				"imageType": "jpeg",
+				"Broj_kalorija": 931,
+				"protein": "10g",
+				"fat": "49g",
+				"carbs": "111g"
+			}, {
+				"id": 47268,
+				"Ime": "Fresh Blackberry Crisp",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/fresh-blackberry-crisp-47268.jpeg",
+				"imageType": "jpeg",
+				"Broj_kalorija": 1924,
+				"protein": "11g",
+				"fat": "95g",
+				"carbs": "277g"
+			}, {
+				"id": 47295,
+				"Ime": "Warm Almond Cakes with Grapes",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/warm-almond-cakes-with-grapes-2-47295.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 568,
+				"protein": "10g",
+				"fat": "39g",
+				"carbs": "45g"
+			}, {
+				"id": 47296,
+				"Ime": "Slow-Roasted Grape and Yogurt Parfaits",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/slow-roasted-grape-and-yogurt-parfaits-47296.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 308,
+				"protein": "10g",
+				"fat": "6g",
+				"carbs": "60g"
+			}, {
+				"id": 47298,
+				"Ime": "Beaumes-de-Venise Cake with Grapes",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/beaumes-de-venise-cake-with-grapes-2-47298.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 274,
+				"protein": "3g",
+				"fat": "14g",
+				"carbs": "34g"
+			}, {
+				"id": 47323,
+				"Ime": "Yogurt and Brown-Sugar Panna Cotta with Grape Gel\u00e9e",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/yogurt-and-brown-sugar-panna-cotta-with-grape-gele-2-47323.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 444,
+				"protein": "7g",
+				"fat": "30g",
+				"carbs": "37g"
+			}, {
+				"id": 47356,
+				"Ime": "Fresh Grape Tarts",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/fresh-grape-tarts-2-47356.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 410,
+				"protein": "5g",
+				"fat": "18g",
+				"carbs": "61g"
+			}, {
+				"id": 47362,
+				"Ime": "Individual Grape and Vin Santo Cakes",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/individual-grape-and-vin-santo-cakes-2-47362.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 412,
+				"protein": "5g",
+				"fat": "17g",
+				"carbs": "61g"
+			}, {
+				"id": 47411,
+				"Ime": "Fresh Fig and Grape Turnovers",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/fresh-fig-and-grape-turnovers-47411.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 422,
+				"protein": "6g",
+				"fat": "25g",
+				"carbs": "44g"
+			}, {
+				"id": 47424,
+				"Ime": "Grape Sherbet",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/grape-sherbet-2-47424.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 882,
+				"protein": "13g",
+				"fat": "34g",
+				"carbs": "135g"
+			}, {
+				"id": 47475,
+				"Ime": "Italian Almond Tart",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/italian-almond-tart-47475.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 297,
+				"protein": "5g",
+				"fat": "12g",
+				"carbs": "45g"
+			}, {
+				"id": 47478,
+				"Ime": "Concord Grape Pie I",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/concord-grape-pie-i-2-47478.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 256,
+				"protein": "1g",
+				"fat": "2g",
+				"carbs": "61g"
+			}, {
+				"id": 47493,
+				"Ime": "Concord Grape Pie III",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/concord-grape-pie-iii-2-47493.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 1221,
+				"protein": "15g",
+				"fat": "59g",
+				"carbs": "159g"
+			}, {
+				"id": 47668,
+				"Ime": "Port-Glazed Grape Tarts with Pecan Crust",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/port-glazed-grape-tarts-with-pecan-crust-2-47668.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 571,
+				"protein": "4g",
+				"fat": "19g",
+				"carbs": "89g"
+			}
+		]

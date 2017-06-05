@@ -18,7 +18,7 @@
 	  <script src="jquery.min.js"></script>
 		<script src="jquery.textfill.min.js"></script>
 		
-<script src="http://platform.fatsecret.com/js?key=ef37af572702462d9aceb6cb54919b33"></script>
+
 
 </head>
 <body>
@@ -45,71 +45,88 @@
   
 <div class="container-fluid text-center">    
   <div class="row content">
-    <div class="col-sm-2 sidenav">
-    
+    <div class="col-sm-2 sidenav" style="background-image:url('pictures/menu_background.jpg'); background-size:100%;">
+    <img src="pictures/menu.jpg" height="200px" width="200px" style="margin-top:-10px; margin-bottom:20px; border-radius: 25px;">
   <!-- <script type="text/javascript" src="menu_items.js"></script>  -->
     </div>
     <div class="col-sm-8 text-left"> 
+	
       <h1>Data visualization</h1>
       <hr>
       <h3 style="text-align:center">Slot machine like nutristics vizualization</h3>
         
-	  <div id="machine">
+	  <div id="machine" >
+	  
 	     <form style="float:left; display:inline; position:relative; top:100px; left:50px;" name="myform" onSubmit="return handleClick()">
             <input name="Submit1"  type="submit" value="Add total calories" style="width:200px; height:50px;">
             <input type="number" min="0" required id="myVal" placeholder="Input number&hellip;" style="width:200px; height:50px;">
         </form>
 		
-		 <form style="float:right; display:inline; position:relative; top:580px; right:150px;" name="secondForm">
+		 <form style="float:right; display:inline; position:relative; top:700px; right:110px;" name="secondForm">
             <input name="Submit2"  id="SlotMachine" type="submit" value="Slow motion" style="width:100px; height:50px;">
         </form>
 		
-		 <form style="float:right; display:inline; position:relative; top:580px; right:-60px;" name="thirdForm" onSubmit="return filterCalories() ">
-            <input name="Submit3"  type="submit" value="Filter columns" style="width:100px; height:50px;">
+		 <form style="float:right; display:inline; position:relative; top:700px; right:-100px;" name="thirdForm"  ">
+            <input name="Submit3"  id="filterCalories" type="submit" value="Filter columns" style="width:110; height:50px;">
         </form>
 		
-		 <form style="float:right; display:inline; position:relative; top:580px; right:60px;" name="fourthForm">
+		 <form style="float:right; display:inline; position:relative; top:700px; right:0px;" name="fourthForm">
             <input name="Submit4"  id="Spin" type="submit" value="Spin" style="width:100px; height:50px;">
         </form>
-	
+		
+		
+		 
+			
 
 <script>
 var first=20,second=20,third=20,fourth=20,fifth=20;
 var first_kcal,second_kcal, third_kcal, fourth_kcal, fifth_kcal;
 var sum=100;
 var total_number_of_calories=0, current_number_of_calories=0,target_number_of_calories=0;
-var hladna_predjela = [{"Ime":"Sarena slana rolada","Broj_kalorija":"250","slika":"probne_slike/rolada.jpg"},
-{"Ime":"Hladna plata","Broj_kalorija":"600","slika":"probne_slike/hladna_plata.jpg"},
-{"Ime":"Bijele pihtije","Broj_kalorija":"310","slika":"probne_slike/bijele_pihtije.jpg"}
-];
-var juhe = [{"Ime":"Riblja juha","Broj_kalorija":"110","slika":"https://coolinarika-cdn.azureedge.net/image/riblja-juha-0dc2351fcec7f4a604ac97a9f7cc22bf_view_l.jpg?v=2"},
-{"Ime":"Pire juha od cvjetače","Broj_kalorija":"130","slika":"https://coolinarika-cdn.azureedge.net/image/pire-juha-od-cvjetace-6bfa6a5e269d251414bff55a19c65809_header.jpg?v=3"},
-{"Ime":"Bistra juha","Broj_kalorija":"90","slika":"https://coolinarika-cdn.azureedge.net/image/pileca-juha-koja-lijeci-2c7b545ad37d80d3e5777dd66ff1894e_view_l.jpg?v=1"}
-];
-var topla_predjela=[{"Ime":"Palacinka s mesom","Broj_kalorija":"250","slika":"https://coolinarika-cdn.azureedge.net/image/palacinka-s-mesom-d71f2de0f70f99357072a55f38912bf0_listing_l.jpg?v=3"},
-{"Ime":"Zapeceni sampinjoni sa sirom","Broj_kalorija":"220","slika":"https://coolinarika-cdn.azureedge.net/image/zapeceni-sampinjoni-sa-sirom-c66c3a92e2999ecf00ac1c1fdc390645_view_l.jpg?v=15"},
-{"Ime":"Burek s mesom","Broj_kalorija":"690","slika":"https://coolinarika-cdn.azureedge.net/image/burek-1407c30c0963cd484004a33df620212a_header.jpg?v=1"}];
+var current_number_of_proteins=0, current_number_of_carbs=0,current_number_of_fat=0;
+var number_of_combination_with_filter=0, number_of_combination_without_filter=0;
 
-var mesa=[{"Ime":"Pohano bijelo meso","Broj_kalorija":"340","slika":"https://coolinarika-cdn.azureedge.net/image/beli-medaljoni-a672bb1fa1980163deba9571843368f8_header.jpg?v=0"},
-{"Ime":"Fasirano meso","Broj_kalorija":"430","slika":"https://coolinarika-cdn.azureedge.net/image/fasirano-meso-d77f8351eecc643449cf488b4cdab166_header.jpg?v=10"},
-{"Ime":"Cordon blue","Broj_kalorija":"490","slika":"https://coolinarika-cdn.azureedge.net/image/pileci-cordon-bleu-iz-pecnice-2ad0e6c05c83d9ddbdf35f1bc52aa008_header.jpg?v=1"}];
+var juhe=[], predjela=[], prilozi=[], glavna_jela=[],umaci=[],pica=[], salate=[], deserti=[];
+d3.json("data/soups.json", function(data) {
+  juhe=data;
 
-var prilozi=[{"Ime":"Krumpir iz pecnice","Broj_kalorija":"260","slika":"https://coolinarika-cdn.azureedge.net/image/krumpir-iz-pecnice-31ff03fe9a8809840811a79fe2b2d0f9_header.jpg?v=2"},
-{"Ime":"Tikvice i gljive","Broj_kalorija":"120","slika":"https://coolinarika-cdn.azureedge.net/image/prilog-od-poriluka-tikvica-i-sampinjona-2b396b0cdc0499212cf32224d69a60f2_view_l.jpg?v=10"},
-{"Ime":"Okruglice od rize","Broj_kalorija":"250","slika":"https://coolinarika-cdn.azureedge.net/image/sarena-riza-2c91c5814e96f1687e8f8ec0dce3581f_view_l.jpg?v=0"}];
+});
 
-var ribe=[];
-var umaci=[];
-var salate=[];
+d3.json("data/main_course.json", function(data) {
+  glavna_jela=data;
 
-var deserti=[{"Ime":"Monte kolac","Broj_kalorija":"660","slika":"https://coolinarika-cdn.azureedge.net/image/monte-kolac-c016d53ddcd764ad8e457e3d670bb3df_header.jpg?v=0"},
-{"Ime":"Pita od maka","Broj_kalorija":"520","slika":"https://coolinarika-cdn.azureedge.net/image/pita-od-maka--b41b4aaeea71197c9cd2bb13714dd073_header.jpg?v=0"},
-{"Ime":"Tena kolac","Broj_kalorija":"650","slika":"https://coolinarika-cdn.azureedge.net/image/tena-kolac-71a5f3a435ca89ddbf047958d9b222b8_header.jpg?v=2"}];
+});
 
-var voce=[];
+d3.json("data/side_dish.json", function(data) {
+  prilozi=data;
+  
+});
 
+d3.json("data/desserts.json", function(data) {
+  deserti=data;
+
+});
+
+d3.json("data/appetizers.json", function(data) {
+  predjela=data;
+  
+});
+
+d3.json("data/sauces.json", function(data) {
+  umaci=data;
+  
+});
+
+d3.json("data/beverages.json", function(data) {
+  pica=data;
+});
+
+d3.json("data/salads.json", function(data) {
+  salate=data;
+  
+});
 var first_array,second_array,third_array,fourth_array,fifth_array;
-first_array=second_array=third_array=fourth_array=fifth_array=[{"Ime":"No entry","Broj_kalorija":"0","slika":""}];
+first_array=second_array=third_array=fourth_array=fifth_array=[{"Ime":"No entry","Broj_kalorija":"0","slika":"","protein":"0g","fat":"0g","carbs":"0g"}];
 var first_index=0,second_index=0,third_index=0,fourth_index=0,fifth_index=0;
 var filter=0;
 var first_size=1,second_size=1,third_size=1,fourth_size=1,fifth_size=1;
@@ -117,39 +134,58 @@ var empty_value=0,empty_first=0,empty_second=0,empty_third=0,empty_fourth=0,empt
 
 var combination_array=[];
 function combination(){
-var i=0,j=0,z=0,p=0,k=0,br=0,broj_kalorija=0;
-for(i=0;i<first_size;i++){
-	for(j=0;j<second_size;j++){
-		for(k=0;k<third_size;k++){
-			for(z=0;z<fourth_size;z++){
-				for(p=0;p<fifth_size;p++){
-						broj_kalorija=parseFloat(first_array[i].Broj_kalorija)+parseFloat(second_array[j].Broj_kalorija)+parseFloat(third_array[k].Broj_kalorija)+parseFloat(fourth_array[z].Broj_kalorija)+parseFloat(fifth_array[p].Broj_kalorija);
-						combination_array[br]={"Broj_kalorija":broj_kalorija,"prvi":i,"drugi":j,"treci":k,"cetvrti":z,"peti":p};
+var br=0,broj_kalorija=0;
+
+var i_max=15,j_max=15,k_max=15,z_max=15,p_max=15;
+if(first_array.length==1) i_max=1;
+if(second_array.length==1) j_max=1;
+if(third_array.length==1) k_max=1;
+if(fourth_array.length==1) z_max=1;
+if(fifth_array.length==1) p_max=1;
+var i,j,k,z,p;
+for(i=0;i<i_max;i++){
+	for(j=0;j<j_max;j++){
+		for(k=0;k<k_max;k++){
+			for(z=0;z<z_max;z++){
+				for(p=0;p<p_max;p++){
+				var first_random= parseInt((Math.random()*first_size) +0); 
+				var second_random= parseInt((Math.random()*second_size) +0); 
+				var third_random= parseInt(Math.floor((Math.random()*third_size) +0)); 
+				var fourth_random= parseInt(Math.floor((Math.random()*fourth_size) +0)); 
+				var fifth_random= parseInt(Math.floor((Math.random()*fifth_size) +0)); 
+						broj_kalorija=parseFloat(first_array[first_random].Broj_kalorija)+parseFloat(second_array[second_random].Broj_kalorija)+parseFloat(third_array[third_random].Broj_kalorija)+parseFloat(fourth_array[fourth_random].Broj_kalorija)+parseFloat(fifth_array[fifth_random].Broj_kalorija);
+						combination_array[br]={"Broj_kalorija":broj_kalorija,"prvi":first_random,"drugi":second_random,"treci":third_random,"cetvrti":fourth_random,"peti":fifth_random};
 						br++;
 					}
 				}
 			}
 	}
+}
+draw_combinations();
+}
 
-}
-}
- 
+
+	var r=150;
+var color = d3.scale.category10();
+
+
+
 function first_draw(transition){
 empty_first=0;
 
 body = d3.select('body').select("#machine")
 		svg = body.select('svg');
 		var g= svg.append('g');
-rect = g.append('rect').transition().duration(500*transition).attr('width', 200)
+rect = g.append('rect').transition().duration(500*transition).attr('width', 260)
                 .attr('height', 300)
                 .attr('x', 100)
                 .attr('y', 650)
-                .style('fill', 'white')
+                .style('fill', '#EBDCB2')
                 .attr('stroke', 'black')
 				.attr('stroke-width',5)
 		var img = svg.append("svg:image")
 				.attr("xlink:href", first_array[first_index].slika)
-				.attr("width", 190)
+				.attr("width", 250)
 				.attr("height", 180)
 				.attr("x", 105)
 				.attr("y",760);
@@ -160,7 +196,7 @@ rect = g.append('rect').transition().duration(500*transition).attr('width', 200)
 				.attr('font-size',50)
 				.attr('font-weight','bold')
 				.attr('text-align','center')
-				.attr('textLength',190)
+				.attr('textLength',250)
 				.attr('lengthAdjust','spacingAndGlyphs');	
 		var text = g.append('text').text(first_array[first_index].Broj_kalorija + " kCal")
                 .attr('x', 105)
@@ -169,9 +205,157 @@ rect = g.append('rect').transition().duration(500*transition).attr('width', 200)
 				.attr('font-size',50)
 				.attr('font-weight','bold')
 				.attr('text-align','center')
-				.attr('textLength',190)
+				.attr('textLength',250)
 				.attr('lengthAdjust','spacingAndGlyphs');
+				
+img.attr("class","prva_slika");
+
+
+$(".prva_slika").mouseover(function(){
+	body = d3.select('body').select("#machine")
+		svg = body.select('svg');
+		var first_info= svg.append('g');
+		first_info.attr("id","first_info");
+    rect = first_info.append('rect').transition().duration(500*transition).attr('width', 500)
+                .attr('height', 300)
+                .attr('x', 100)
+                .attr('y', 1200)
+                .style('fill', 'white')
+                .attr('stroke', 'black')
+				.attr('stroke-width',2);
+	var text = first_info.append('text').text(first_array[first_index].Ime)
+                .attr('x', 105)
+                .attr('y', 1250)
+                .attr('fill', 'black')
+				.attr('font-size',50)
+				.attr('font-weight','bold')
+				.attr('text-align','center')
+				.attr('textLength',495)
+				.attr('lengthAdjust','spacingAndGlyphs');	
+	var text = first_info.append('text').text("Calories:                  "+ first_array[first_index].Broj_kalorija )
+                .attr('x', 105)
+                .attr('y', 1300)
+                .attr('fill', 'black')
+				.attr('font-size',25)
+				.attr('font-weight','bold')
+				.attr('text-align','center');
+				
+	var text = first_info.append('text').text("Calories from fat:                  "+ (parseFloat(first_array[first_index].fat)*8.8).toFixed(2))
+                .attr('x', 295)
+                .attr('y', 1300)
+                .attr('fill', 'black')
+				.attr('font-size',25)
+				.attr('font-weight','bold')
+				.attr('text-align','center');
+				
+	var text = first_info.append('text').text("Total fat:                  "+ first_array[first_index].fat)
+                .attr('x', 105)
+                .attr('y', 1350)
+                .attr('fill', 'black')
+				.attr('font-size',25)
+				.attr('font-weight','bold')
+				.attr('text-align','center');
+	var text = first_info.append('text').text((100*parseFloat(first_array[first_index].fat)*8.8 / first_array[first_index].Broj_kalorija).toFixed(2) +" %") 
+                .attr('x', 450)
+                .attr('y', 1350)
+                .attr('fill', 'black')
+				.attr('font-size',25)
+				.attr('font-weight','bold')
+				.attr('text-align','center');
+	
+	var text = first_info.append('text').text("Total carbohydrates:                  "+ first_array[first_index].carbs)
+                .attr('x', 105)
+                .attr('y', 1400)
+                .attr('fill', 'black')
+				.attr('font-size',25)
+				.attr('font-weight','bold')
+				.attr('text-align','center');
+	var text = first_info.append('text').text((100*parseFloat(first_array[first_index].carbs)*4.1 / first_array[first_index].Broj_kalorija).toFixed(2) +" %") 
+                .attr('x', 450)
+                .attr('y', 1400)
+                .attr('fill', 'black')
+				.attr('font-size',25)
+				.attr('font-weight','bold')
+				.attr('text-align','center');
+	
+	
+	var text = first_info.append('text').text("Total protein:                  "+ first_array[first_index].protein)
+                .attr('x', 105)
+                .attr('y', 1450)
+                .attr('fill', 'black')
+				.attr('font-size',25)
+				.attr('font-weight','bold')
+				.attr('text-align','center');
+	var text = first_info.append('text').text((100*parseFloat(first_array[first_index].protein)*4.1 / first_array[first_index].Broj_kalorija).toFixed(2) +" %") 
+                .attr('x', 450)
+                .attr('y', 1450)
+                .attr('fill', 'black')
+				.attr('font-size',25)
+				.attr('font-weight','bold')
+				.attr('text-align','center');
+				
+	
+	if(parseFloat(first_array[first_index].protein)!=0 || parseFloat(first_array[first_index].carbs)!=0 || parseFloat(first_array[first_index].fat)!=0){
+	
+	 var data = [{"label":"protein", "value":(100*parseFloat(first_array[first_index].protein)*4.1 / first_array[first_index].Broj_kalorija).toFixed(2)}, 
+            {"label":"carbs", "value":(100*parseFloat(first_array[first_index].carbs)*4.1 / first_array[first_index].Broj_kalorija).toFixed(2)}, 
+            {"label":"fat", "value":(100*parseFloat(first_array[first_index].fat)*8.8 / first_array[first_index].Broj_kalorija).toFixed(2)}];
+	
+    var vis = d3.select('body').select("#machine")
+        .select("svg")              //create the SVG element inside the <body>
+        .data([data])                   //associate our data with the document
+        .append("svg:g")    
+		.attr("id","first_pie")//make a group to hold our pie chart
+            .attr("transform", "translate(" + 850 + "," + 1350 + ")")    //move the center of the pie chart from 0, 0 to radius, radius
+
+    var arc = d3.svg.arc()              //this will create <path> elements for us using arc data
+        .outerRadius(r);
+
+    var pie = d3.layout.pie()           //this will create arc data for us given a list of values
+        .value(function(d) { return d.value; });    //we must tell it out to access the value of each element in our data array
+
+    var arcs = vis.selectAll("g.slice")     //this selects all <g> elements with class slice (there aren't any yet)
+        .data(pie)                          //associate the generated pie data (an array of arcs, each having startAngle, endAngle and value properties) 
+        .enter()                            //this will create <g> elements for every "extra" data element that should be associated with a selection. The result is creating a <g> for every object in the data array
+            .append("svg:g")                //create a group to hold each slice (we will have a <path> and a <text> element associated with each slice)
+                .attr("class", "slice");    //allow us to style things in the slices (like text)
+
+        arcs.append("svg:path")
+                .attr("fill", function(d, i) { return color(i); } ) //set the color for each slice to be chosen from the color function defined above
+                .attr("d", arc);                                    //this creates the actual SVG path using the associated data (pie) with the arc drawing function
+
+        arcs.append("svg:text")                                     //add a label to each slice
+                .attr("transform", function(d) {                    //set the label's origin to the center of the arc
+                //we have to make sure to set these before calling arc.centroid
+                d.innerRadius = r-75;
+                d.outerRadius = r;
+                return "translate(" + arc.centroid(d) + ")";        //this gives us a pair of coordinates like [50, 50]
+            })
+            .attr("text-anchor", "middle")                          //center the text on it's origin
+            .text(function(d, i) { return data[i].value + "%"; });        //get the label from our original data array
+        
+		 arcs.append("svg:text")                                     //add a label to each slice
+                .attr("transform", function(d) {                    //set the label's origin to the center of the arc
+                //we have to make sure to set these before calling arc.centroid
+                d.innerRadius = r+90;
+                d.outerRadius = r;
+                return "translate(" + arc.centroid(d) + ")";        //this gives us a pair of coordinates like [50, 50]
+            })
+            .attr("text-anchor", "middle")                          //center the text on it's origin
+            .text(function(d, i) { return data[i].label; });        //get the label from our original data array
 }
+
+});
+
+$(".prva_slika").mouseleave(function(){
+    d3.select("#first_info").remove();
+	d3.select("#first_pie").remove();
+});
+
+
+}
+
+
 function second_draw(transition){
 empty_second=0;
 
@@ -179,37 +363,182 @@ empty_second=0;
 body = d3.select('body').select("#machine")
 		svg = body.select('svg');
 		var g= svg.append('g');
-rect = g.append('rect').transition().duration(500*transition).attr('width', 200)
+rect = g.append('rect').transition().duration(500*transition).attr('width', 260)
                 .attr('height', 300)
-                .attr('x', 300)
+                .attr('x', 360)
                 .attr('y', 650)
-                .style('fill', 'white')
+                .style('fill', '#EBDCB2')
                 .attr('stroke', 'black')
 				.attr('stroke-width',5)
 		var img = svg.append("svg:image")
 				.attr("xlink:href", second_array[second_index].slika)
-				.attr("width", 190)
+				.attr("width", 250)
 				.attr("height", 180)
-				.attr("x", 305)
+				.attr("x", 365)
 				.attr("y",760);
 		var text = g.append('text').text(second_array[second_index].Ime)
-                .attr('x', 305)
+                .attr('x', 365)
                 .attr('y', 700)
                 .attr('fill', 'black')
 				.attr('font-size',50)
 				.attr('font-weight','bold')
 				.attr('text-align','center')
-				.attr('textLength',190)
+				.attr('textLength',250)
 				.attr('lengthAdjust','spacingAndGlyphs');	
 		var text = g.append('text').text(second_array[second_index].Broj_kalorija + " kCal")
-                .attr('x', 305)
+                .attr('x', 365)
                 .attr('y', 750)
                 .attr('fill', 'black')
 				.attr('font-size',50)
 				.attr('font-weight','bold')
 				.attr('text-align','center')
-				.attr('textLength',190)
+				.attr('textLength',250)
 				.attr('lengthAdjust','spacingAndGlyphs');
+
+				img.attr("class","druga_slika");
+
+
+$(".druga_slika").mouseover(function(){
+	body = d3.select('body').select("#machine")
+		svg = body.select('svg');
+		var second_info= svg.append('g');
+		second_info.attr("id","second_info");
+   rect = second_info.append('rect').transition().duration(500*transition).attr('width', 500)
+                .attr('height', 300)
+                .attr('x', 100)
+                .attr('y', 1200)
+                .style('fill', 'white')
+                .attr('stroke', 'black')
+				.attr('stroke-width',2);
+	var text = second_info.append('text').text(second_array[second_index].Ime)
+                .attr('x', 105)
+                .attr('y', 1250)
+                .attr('fill', 'black')
+				.attr('font-size',50)
+				.attr('font-weight','bold')
+				.attr('text-align','center')
+				.attr('textLength',495)
+				.attr('lengthAdjust','spacingAndGlyphs');	
+	var text = second_info.append('text').text("Calories:                  "+ second_array[second_index].Broj_kalorija )
+                .attr('x', 105)
+                .attr('y', 1300)
+                .attr('fill', 'black')
+				.attr('font-size',25)
+				.attr('font-weight','bold')
+				.attr('text-align','center');
+				
+	var text = second_info.append('text').text("Calories from fat:                  "+ (parseFloat(second_array[second_index].fat)*8.8).toFixed(2))
+                .attr('x', 295)
+                .attr('y', 1300)
+                .attr('fill', 'black')
+				.attr('font-size',25)
+				.attr('font-weight','bold')
+				.attr('text-align','center');
+				
+	var text = second_info.append('text').text("Total fat:                  "+ second_array[second_index].fat)
+                .attr('x', 105)
+                .attr('y', 1350)
+                .attr('fill', 'black')
+				.attr('font-size',25)
+				.attr('font-weight','bold')
+				.attr('text-align','center');
+	var text = second_info.append('text').text((100*parseFloat(second_array[second_index].fat)*8.8 / second_array[second_index].Broj_kalorija).toFixed(2) +" %") 
+                .attr('x', 450)
+                .attr('y', 1350)
+                .attr('fill', 'black')
+				.attr('font-size',25)
+				.attr('font-weight','bold')
+				.attr('text-align','center');
+	
+	var text = second_info.append('text').text("Total carbohydrates:                  "+ second_array[second_index].carbs)
+                .attr('x', 105)
+                .attr('y', 1400)
+                .attr('fill', 'black')
+				.attr('font-size',25)
+				.attr('font-weight','bold')
+				.attr('text-align','center');
+	var text = second_info.append('text').text((100*parseFloat(second_array[second_index].carbs)*4.1 / second_array[second_index].Broj_kalorija).toFixed(2) +" %") 
+                .attr('x', 450)
+                .attr('y', 1400)
+                .attr('fill', 'black')
+				.attr('font-size',25)
+				.attr('font-weight','bold')
+				.attr('text-align','center');
+	
+	
+	var text = second_info.append('text').text("Total protein:                  "+ second_array[second_index].protein)
+                .attr('x', 105)
+                .attr('y', 1450)
+                .attr('fill', 'black')
+				.attr('font-size',25)
+				.attr('font-weight','bold')
+				.attr('text-align','center');
+	var text = second_info.append('text').text((100*parseFloat(second_array[second_index].protein)*4.1 / second_array[second_index].Broj_kalorija).toFixed(2) +" %") 
+                .attr('x', 450)
+                .attr('y', 1450)
+                .attr('fill', 'black')
+				.attr('font-size',25)
+				.attr('font-weight','bold')
+				.attr('text-align','center');
+				
+				
+	if(parseFloat(second_array[second_index].protein)!=0 || parseFloat(second_array[second_index].carbs)!=0 || parseFloat(second_array[second_index].fat)!=0){
+	
+	 var data = [{"label":"protein", "value":(100*parseFloat(second_array[second_index].protein)*4.1 / second_array[second_index].Broj_kalorija).toFixed(2)}, 
+            {"label":"carbs", "value":(100*parseFloat(second_array[second_index].carbs)*4.1 / second_array[second_index].Broj_kalorija).toFixed(2)}, 
+            {"label":"fat", "value":(100*parseFloat(second_array[second_index].fat)*8.8 / second_array[second_index].Broj_kalorija).toFixed(2)}];
+	
+    var vis = d3.select('body').select("#machine")
+        .select("svg")              //create the SVG element inside the <body>
+        .data([data])                   //associate our data with the document
+        .append("svg:g")    
+		.attr("id","second_pie")//make a group to hold our pie chart
+            .attr("transform", "translate(" + 850 + "," + 1350 + ")")    //move the center of the pie chart from 0, 0 to radius, radius
+
+    var arc = d3.svg.arc()              //this will create <path> elements for us using arc data
+        .outerRadius(r);
+
+    var pie = d3.layout.pie()           //this will create arc data for us given a list of values
+        .value(function(d) { return d.value; });    //we must tell it out to access the value of each element in our data array
+
+    var arcs = vis.selectAll("g.slice")     //this selects all <g> elements with class slice (there aren't any yet)
+        .data(pie)                          //associate the generated pie data (an array of arcs, each having startAngle, endAngle and value properties) 
+        .enter()                            //this will create <g> elements for every "extra" data element that should be associated with a selection. The result is creating a <g> for every object in the data array
+            .append("svg:g")                //create a group to hold each slice (we will have a <path> and a <text> element associated with each slice)
+                .attr("class", "slice");    //allow us to style things in the slices (like text)
+
+        arcs.append("svg:path")
+                .attr("fill", function(d, i) { return color(i); } ) //set the color for each slice to be chosen from the color function defined above
+                .attr("d", arc);                                    //this creates the actual SVG path using the associated data (pie) with the arc drawing function
+
+        arcs.append("svg:text")                                     //add a label to each slice
+                .attr("transform", function(d) {                    //set the label's origin to the center of the arc
+                //we have to make sure to set these before calling arc.centroid
+                d.innerRadius = r-75;
+                d.outerRadius = r;
+                return "translate(" + arc.centroid(d) + ")";        //this gives us a pair of coordinates like [50, 50]
+            })
+            .attr("text-anchor", "middle")                          //center the text on it's origin
+            .text(function(d, i) { return data[i].value + "%"; });        //get the label from our original data array
+        
+		 arcs.append("svg:text")                                     //add a label to each slice
+                .attr("transform", function(d) {                    //set the label's origin to the center of the arc
+                //we have to make sure to set these before calling arc.centroid
+                d.innerRadius = r+90;
+                d.outerRadius = r;
+                return "translate(" + arc.centroid(d) + ")";        //this gives us a pair of coordinates like [50, 50]
+            })
+            .attr("text-anchor", "middle")                          //center the text on it's origin
+            .text(function(d, i) { return data[i].label; });        //get the label from our original data array
+}
+
+});
+
+$(".druga_slika").mouseleave(function(){
+    d3.select("#second_info").remove();
+	d3.select("#second_pie").remove();
+});
+
 }
 function third_draw(transition){
 empty_third=0;
@@ -217,37 +546,183 @@ empty_third=0;
 body = d3.select('body').select("#machine")
 		svg = body.select('svg');
 		var g= svg.append('g');
-rect = g.append('rect').transition().duration(500*transition).attr('width', 200)
+rect = g.append('rect').transition().duration(500*transition).attr('width', 260)
                 .attr('height', 300)
-                .attr('x', 500)
+                .attr('x', 620)
                 .attr('y', 650)
-                .style('fill', 'white')
+                .style('fill', '#EBDCB2')
                 .attr('stroke', 'black')
 				.attr('stroke-width',5)
 		var img = svg.append("svg:image")
 				.attr("xlink:href", third_array[third_index].slika)
-				.attr("width", 190)
+				.attr("width", 250)
 				.attr("height", 180)
-				.attr("x", 505)
+				.attr("x", 625)
 				.attr("y",760);
 		var text = g.append('text').text(third_array[third_index].Ime)
-                .attr('x', 505)
+                .attr('x', 625)
                 .attr('y', 700)
                 .attr('fill', 'black')
 				.attr('font-size',50)
 				.attr('font-weight','bold')
 				.attr('text-align','center')
-				.attr('textLength',190)
+				.attr('textLength',250)
 				.attr('lengthAdjust','spacingAndGlyphs');	
 		var text = g.append('text').text(third_array[third_index].Broj_kalorija + " kCal")
-                .attr('x', 505)
+                .attr('x', 625)
                 .attr('y', 750)
                 .attr('fill', 'black')
 				.attr('font-size',50)
 				.attr('font-weight','bold')
 				.attr('text-align','center')
-				.attr('textLength',190)
+				.attr('textLength',250)
 				.attr('lengthAdjust','spacingAndGlyphs');
+				
+img.attr("class","treca_slika");
+
+
+$(".treca_slika").mouseover(function(){
+	body = d3.select('body').select("#machine")
+		svg = body.select('svg');
+		var third_info= svg.append('g');
+		third_info.attr("id","third_info");
+    rect = third_info.append('rect').transition().duration(500*transition).attr('width', 500)
+                .attr('height', 300)
+                .attr('x', 100)
+                .attr('y', 1200)
+                .style('fill', 'white')
+                .attr('stroke', 'black')
+				.attr('stroke-width',2);
+	var text = third_info.append('text').text(third_array[third_index].Ime)
+                .attr('x', 105)
+                .attr('y', 1250)
+                .attr('fill', 'black')
+				.attr('font-size',50)
+				.attr('font-weight','bold')
+				.attr('text-align','center')
+				.attr('textLength',495)
+				.attr('lengthAdjust','spacingAndGlyphs');	
+	var text = third_info.append('text').text("Calories:                  "+ third_array[third_index].Broj_kalorija )
+                .attr('x', 105)
+                .attr('y', 1300)
+                .attr('fill', 'black')
+				.attr('font-size',25)
+				.attr('font-weight','bold')
+				.attr('text-align','center');
+				
+	var text = third_info.append('text').text("Calories from fat:                  "+ (parseFloat(third_array[third_index].fat)*8.8).toFixed(2))
+                .attr('x', 295)
+                .attr('y', 1300)
+                .attr('fill', 'black')
+				.attr('font-size',25)
+				.attr('font-weight','bold')
+				.attr('text-align','center');
+				
+	var text = third_info.append('text').text("Total fat:                  "+ third_array[third_index].fat)
+                .attr('x', 105)
+                .attr('y', 1350)
+                .attr('fill', 'black')
+				.attr('font-size',25)
+				.attr('font-weight','bold')
+				.attr('text-align','center');
+	var text = third_info.append('text').text((100*parseFloat(third_array[third_index].fat)*8.8 / third_array[third_index].Broj_kalorija).toFixed(2) +" %") 
+                .attr('x', 450)
+                .attr('y', 1350)
+                .attr('fill', 'black')
+				.attr('font-size',25)
+				.attr('font-weight','bold')
+				.attr('text-align','center');
+	
+	var text = third_info.append('text').text("Total carbohydrates:                  "+ third_array[third_index].carbs)
+                .attr('x', 105)
+                .attr('y', 1400)
+                .attr('fill', 'black')
+				.attr('font-size',25)
+				.attr('font-weight','bold')
+				.attr('text-align','center');
+	var text = third_info.append('text').text((100*parseFloat(third_array[third_index].carbs)*4.1 / third_array[third_index].Broj_kalorija).toFixed(2) +" %") 
+                .attr('x', 450)
+                .attr('y', 1400)
+                .attr('fill', 'black')
+				.attr('font-size',25)
+				.attr('font-weight','bold')
+				.attr('text-align','center');
+	
+	
+	var text = third_info.append('text').text("Total protein:                  "+ third_array[third_index].protein)
+                .attr('x', 105)
+                .attr('y', 1450)
+                .attr('fill', 'black')
+				.attr('font-size',25)
+				.attr('font-weight','bold')
+				.attr('text-align','center');
+	var text = third_info.append('text').text((100*parseFloat(third_array[third_index].protein)*4.1 / third_array[third_index].Broj_kalorija).toFixed(2) +" %") 
+                .attr('x', 450)
+                .attr('y', 1450)
+                .attr('fill', 'black')
+				.attr('font-size',25)
+				.attr('font-weight','bold')
+				.attr('text-align','center');
+				
+				
+		if(parseFloat(third_array[third_index].protein)!=0 || parseFloat(third_array[third_index].carbs)!=0 || parseFloat(third_array[third_index].fat)!=0){
+
+	
+	 var data = [{"label":"protein", "value":(100*parseFloat(third_array[third_index].protein)*4.1 / third_array[third_index].Broj_kalorija).toFixed(2)}, 
+            {"label":"carbs", "value":(100*parseFloat(third_array[third_index].carbs)*4.1 / third_array[third_index].Broj_kalorija).toFixed(2)}, 
+            {"label":"fat", "value":(100*parseFloat(third_array[third_index].fat)*8.8 / third_array[third_index].Broj_kalorija).toFixed(2)}];
+	
+    var vis = d3.select('body').select("#machine")
+        .select("svg")              //create the SVG element inside the <body>
+        .data([data])                   //associate our data with the document
+        .append("svg:g")    
+		.attr("id","third_pie")//make a group to hold our pie chart
+            .attr("transform", "translate(" + 850 + "," + 1350 + ")")    //move the center of the pie chart from 0, 0 to radius, radius
+
+    var arc = d3.svg.arc()              //this will create <path> elements for us using arc data
+        .outerRadius(r);
+
+    var pie = d3.layout.pie()           //this will create arc data for us given a list of values
+        .value(function(d) { return d.value; });    //we must tell it out to access the value of each element in our data array
+
+    var arcs = vis.selectAll("g.slice")     //this selects all <g> elements with class slice (there aren't any yet)
+        .data(pie)                          //associate the generated pie data (an array of arcs, each having startAngle, endAngle and value properties) 
+        .enter()                            //this will create <g> elements for every "extra" data element that should be associated with a selection. The result is creating a <g> for every object in the data array
+            .append("svg:g")                //create a group to hold each slice (we will have a <path> and a <text> element associated with each slice)
+                .attr("class", "slice");    //allow us to style things in the slices (like text)
+
+        arcs.append("svg:path")
+                .attr("fill", function(d, i) { return color(i); } ) //set the color for each slice to be chosen from the color function defined above
+                .attr("d", arc);                                    //this creates the actual SVG path using the associated data (pie) with the arc drawing function
+
+        arcs.append("svg:text")                                     //add a label to each slice
+                .attr("transform", function(d) {                    //set the label's origin to the center of the arc
+                //we have to make sure to set these before calling arc.centroid
+                d.innerRadius = r-75;
+                d.outerRadius = r;
+                return "translate(" + arc.centroid(d) + ")";        //this gives us a pair of coordinates like [50, 50]
+            })
+            .attr("text-anchor", "middle")                          //center the text on it's origin
+            .text(function(d, i) { return data[i].value + "%"; });        //get the label from our original data array
+        
+		 arcs.append("svg:text")                                     //add a label to each slice
+                .attr("transform", function(d) {                    //set the label's origin to the center of the arc
+                //we have to make sure to set these before calling arc.centroid
+                d.innerRadius = r+90;
+                d.outerRadius = r;
+                return "translate(" + arc.centroid(d) + ")";        //this gives us a pair of coordinates like [50, 50]
+            })
+            .attr("text-anchor", "middle")                          //center the text on it's origin
+            .text(function(d, i) { return data[i].label; });        //get the label from our original data array
+}
+
+});
+
+$(".treca_slika").mouseleave(function(){
+    d3.select("#third_info").remove();
+	d3.select("#third_pie").remove();
+});
+
 		
 }
 function fourth_draw(transition){
@@ -256,37 +731,180 @@ empty_fourth=0;
 body = d3.select('body').select("#machine")
 		svg = body.select('svg');
 		var g= svg.append('g');
-		rect = g.append('rect').transition().duration(500*transition).attr('width', 200)
+		rect = g.append('rect').transition().duration(500*transition).attr('width', 260)
                 .attr('height', 300)
-                .attr('x', 700)
+                .attr('x', 880)
                 .attr('y', 650)
-                .style('fill', 'white')
+                .style('fill', '#EBDCB2')
                 .attr('stroke', 'black')
 				.attr('stroke-width',5)
 		var img = svg.append("svg:image")
 				.attr("xlink:href", fourth_array[fourth_index].slika)
-				.attr("width", 190)
+				.attr("width", 250)
 				.attr("height", 180)
-				.attr("x", 705)
+				.attr("x", 885)
 				.attr("y",760);
 		var text = g.append('text').text(fourth_array[fourth_index].Ime)
-                .attr('x', 705)
+                .attr('x', 885)
                 .attr('y', 700)
                 .attr('fill', 'black')
 				.attr('font-size',50)
 				.attr('font-weight','bold')
 				.attr('text-align','center')
-				.attr('textLength',190)
+				.attr('textLength',250)
 				.attr('lengthAdjust','spacingAndGlyphs');	
 		var text = g.append('text').text(fourth_array[fourth_index].Broj_kalorija + " kCal")
-                .attr('x', 705)
+                .attr('x', 885)
                 .attr('y', 750)
                 .attr('fill', 'black')
 				.attr('font-size',50)
 				.attr('font-weight','bold')
 				.attr('text-align','center')
-				.attr('textLength',190)
+				.attr('textLength',250)
 				.attr('lengthAdjust','spacingAndGlyphs');
+img.attr("class","cetvrta_slika");
+
+$(".cetvrta_slika").mouseover(function(){
+	body = d3.select('body').select("#machine")
+		svg = body.select('svg');
+		var fourth_info= svg.append('g');
+		fourth_info.attr("id","fourth_info");
+    rect = fourth_info.append('rect').transition().duration(500*transition).attr('width', 500)
+                .attr('height', 300)
+                .attr('x', 100)
+                .attr('y', 1200)
+                .style('fill', 'white')
+                .attr('stroke', 'black')
+				.attr('stroke-width',2);
+	var text = fourth_info.append('text').text(fourth_array[fourth_index].Ime)
+                .attr('x', 105)
+                .attr('y', 1250)
+                .attr('fill', 'black')
+				.attr('font-size',50)
+				.attr('font-weight','bold')
+				.attr('text-align','center')
+				.attr('textLength',495)
+				.attr('lengthAdjust','spacingAndGlyphs');	
+	var text = fourth_info.append('text').text("Calories:                  "+ fourth_array[fourth_index].Broj_kalorija )
+                .attr('x', 105)
+                .attr('y', 1300)
+                .attr('fill', 'black')
+				.attr('font-size',25)
+				.attr('font-weight','bold')
+				.attr('text-align','center');
+				
+	var text = fourth_info.append('text').text("Calories from fat:                  "+ (parseFloat(fourth_array[fourth_index].fat)*8.8).toFixed(2))
+                .attr('x', 295)
+                .attr('y', 1300)
+                .attr('fill', 'black')
+				.attr('font-size',25)
+				.attr('font-weight','bold')
+				.attr('text-align','center');
+				
+	var text = fourth_info.append('text').text("Total fat:                  "+ fourth_array[fourth_index].fat)
+                .attr('x', 105)
+                .attr('y', 1350)
+                .attr('fill', 'black')
+				.attr('font-size',25)
+				.attr('font-weight','bold')
+				.attr('text-align','center');
+	var text = fourth_info.append('text').text((100*parseFloat(fourth_array[fourth_index].fat)*8.8 / fourth_array[fourth_index].Broj_kalorija).toFixed(2) +" %") 
+                .attr('x', 450)
+                .attr('y', 1350)
+                .attr('fill', 'black')
+				.attr('font-size',25)
+				.attr('font-weight','bold')
+				.attr('text-align','center');
+	
+	var text = fourth_info.append('text').text("Total carbohydrates:                  "+ fourth_array[fourth_index].carbs)
+                .attr('x', 105)
+                .attr('y', 1400)
+                .attr('fill', 'black')
+				.attr('font-size',25)
+				.attr('font-weight','bold')
+				.attr('text-align','center');
+	var text = fourth_info.append('text').text((100*parseFloat(fourth_array[fourth_index].carbs)*4.1 / fourth_array[fourth_index].Broj_kalorija).toFixed(2) +" %") 
+                .attr('x', 450)
+                .attr('y', 1400)
+                .attr('fill', 'black')
+				.attr('font-size',25)
+				.attr('font-weight','bold')
+				.attr('text-align','center');
+	
+	
+	var text = fourth_info.append('text').text("Total protein:                  "+ fourth_array[fourth_index].protein)
+                .attr('x', 105)
+                .attr('y', 1450)
+                .attr('fill', 'black')
+				.attr('font-size',25)
+				.attr('font-weight','bold')
+				.attr('text-align','center');
+	var text = fourth_info.append('text').text((100*parseFloat(fourth_array[fourth_index].protein)*4.1 / fourth_array[fourth_index].Broj_kalorija).toFixed(2) +" %") 
+                .attr('x', 450)
+                .attr('y', 1450)
+                .attr('fill', 'black')
+				.attr('font-size',25)
+				.attr('font-weight','bold')
+				.attr('text-align','center');
+				
+	
+		if(parseFloat(fourth_array[fourth_index].protein)!=0 || parseFloat(fourth_array[fourth_index].carbs)!=0 || parseFloat(fourth_array[fourth_index].fat)!=0){
+
+	 var data = [{"label":"protein", "value":(100*parseFloat(fourth_array[fourth_index].protein)*4.1 / fourth_array[fourth_index].Broj_kalorija).toFixed(2)}, 
+            {"label":"carbs", "value":(100*parseFloat(fourth_array[fourth_index].carbs)*4.1 / fourth_array[fourth_index].Broj_kalorija).toFixed(2)}, 
+            {"label":"fat", "value":(100*parseFloat(fourth_array[fourth_index].fat)*8.8 / fourth_array[fourth_index].Broj_kalorija).toFixed(2)}];
+	
+    var vis = d3.select('body').select("#machine")
+        .select("svg")              //create the SVG element inside the <body>
+        .data([data])                   //associate our data with the document
+        .append("svg:g")    
+		.attr("id","fourth_pie")//make a group to hold our pie chart
+            .attr("transform", "translate(" + 850 + "," + 1350 + ")")    //move the center of the pie chart from 0, 0 to radius, radius
+
+    var arc = d3.svg.arc()              //this will create <path> elements for us using arc data
+        .outerRadius(r);
+
+    var pie = d3.layout.pie()           //this will create arc data for us given a list of values
+        .value(function(d) { return d.value; });    //we must tell it out to access the value of each element in our data array
+
+    var arcs = vis.selectAll("g.slice")     //this selects all <g> elements with class slice (there aren't any yet)
+        .data(pie)                          //associate the generated pie data (an array of arcs, each having startAngle, endAngle and value properties) 
+        .enter()                            //this will create <g> elements for every "extra" data element that should be associated with a selection. The result is creating a <g> for every object in the data array
+            .append("svg:g")                //create a group to hold each slice (we will have a <path> and a <text> element associated with each slice)
+                .attr("class", "slice");    //allow us to style things in the slices (like text)
+
+        arcs.append("svg:path")
+                .attr("fill", function(d, i) { return color(i); } ) //set the color for each slice to be chosen from the color function defined above
+                .attr("d", arc);                                    //this creates the actual SVG path using the associated data (pie) with the arc drawing function
+
+        arcs.append("svg:text")                                     //add a label to each slice
+                .attr("transform", function(d) {                    //set the label's origin to the center of the arc
+                //we have to make sure to set these before calling arc.centroid
+                d.innerRadius = r-75;
+                d.outerRadius = r;
+                return "translate(" + arc.centroid(d) + ")";        //this gives us a pair of coordinates like [50, 50]
+            })
+            .attr("text-anchor", "middle")                          //center the text on it's origin
+            .text(function(d, i) { return data[i].value + "%"; });        //get the label from our original data array
+        
+		 arcs.append("svg:text")                                     //add a label to each slice
+                .attr("transform", function(d) {                    //set the label's origin to the center of the arc
+                //we have to make sure to set these before calling arc.centroid
+                d.innerRadius = r+90;
+                d.outerRadius = r;
+                return "translate(" + arc.centroid(d) + ")";        //this gives us a pair of coordinates like [50, 50]
+            })
+            .attr("text-anchor", "middle")                          //center the text on it's origin
+            .text(function(d, i) { return data[i].label; });        //get the label from our original data array
+}
+
+});
+
+$(".cetvrta_slika").mouseleave(function(){
+    d3.select("#fourth_info").remove();
+	d3.select("#fourth_pie").remove();
+});
+
 }
 function fifth_draw(transition){
 empty_fifth=0;
@@ -294,37 +912,183 @@ empty_fifth=0;
 body = d3.select('body').select("#machine")
 		svg = body.select('svg');
 		var g= svg.append('g');
-		rect = g.append('rect').transition().duration(500*transition).attr('width', 200)
+		rect = g.append('rect').transition().duration(500*transition).attr('width', 260)
                 .attr('height', 300)
-                .attr('x', 900)
+                .attr('x', 1140)
                 .attr('y', 650)
-                .style('fill', 'white')
+                .style('fill', '#EBDCB2')
                 .attr('stroke', 'black')
 				.attr('stroke-width',5)
 		var img = svg.append("svg:image")
 				.attr("xlink:href", fifth_array[fifth_index].slika)
-				.attr("width", 190)
+				.attr("width", 250)
 				.attr("height", 180)
-				.attr("x", 905)
+				.attr("x", 1145)
 				.attr("y",760);
 		var text = g.append('text').text(fifth_array[fifth_index].Ime)
-                .attr('x', 905)
+                .attr('x', 1145)
                 .attr('y', 700)
                 .attr('fill', 'black')
 				.attr('font-size',50)
 				.attr('font-weight','bold')
 				.attr('text-align','center')
-				.attr('textLength',190)
+				.attr('textLength',250)
 				.attr('lengthAdjust','spacingAndGlyphs');	
 		var text = g.append('text').text(fifth_array[fifth_index].Broj_kalorija + " kCal")
-                .attr('x', 905)
+                .attr('x', 1145)
                 .attr('y', 750)
                 .attr('fill', 'black')
 				.attr('font-size',50)
 				.attr('font-weight','bold')
 				.attr('text-align','center')
-				.attr('textLength',190)
+				.attr('textLength',250)
 				.attr('lengthAdjust','spacingAndGlyphs');
+img.attr("class","peta_slika");
+
+
+$(".peta_slika").mouseover(function(){
+	body = d3.select('body').select("#machine")
+		svg = body.select('svg');
+		var fifth_info= svg.append('g');
+		fifth_info.attr("id","fifth_info");
+   rect = fifth_info.append('rect').transition().duration(500*transition).attr('width', 500)
+                .attr('height', 300)
+                .attr('x', 100)
+                .attr('y', 1200)
+                .style('fill', 'white')
+                .attr('stroke', 'black')
+				.attr('stroke-width',2);
+	var text = fifth_info.append('text').text(fifth_array[fifth_index].Ime)
+                .attr('x', 105)
+                .attr('y', 1250)
+                .attr('fill', 'black')
+				.attr('font-size',50)
+				.attr('font-weight','bold')
+				.attr('text-align','center')
+				.attr('textLength',495)
+				.attr('lengthAdjust','spacingAndGlyphs');	
+	var text = fifth_info.append('text').text("Calories:                  "+ fifth_array[fifth_index].Broj_kalorija )
+                .attr('x', 105)
+                .attr('y', 1300)
+                .attr('fill', 'black')
+				.attr('font-size',25)
+				.attr('font-weight','bold')
+				.attr('text-align','center');
+				
+	var text = fifth_info.append('text').text("Calories from fat:                  "+ (parseFloat(fifth_array[fifth_index].fat)*8.8).toFixed(2))
+                .attr('x', 295)
+                .attr('y', 1300)
+                .attr('fill', 'black')
+				.attr('font-size',25)
+				.attr('font-weight','bold')
+				.attr('text-align','center');
+				
+	var text = fifth_info.append('text').text("Total fat:                  "+ fifth_array[fifth_index].fat)
+                .attr('x', 105)
+                .attr('y', 1350)
+                .attr('fill', 'black')
+				.attr('font-size',25)
+				.attr('font-weight','bold')
+				.attr('text-align','center');
+	var text = fifth_info.append('text').text((100*parseFloat(fifth_array[fifth_index].fat)*8.8 / fifth_array[fifth_index].Broj_kalorija).toFixed(2) +" %") 
+                .attr('x', 450)
+                .attr('y', 1350)
+                .attr('fill', 'black')
+				.attr('font-size',25)
+				.attr('font-weight','bold')
+				.attr('text-align','center');
+	
+	var text = fifth_info.append('text').text("Total carbohydrates:                  "+ fifth_array[fifth_index].carbs)
+                .attr('x', 105)
+                .attr('y', 1400)
+                .attr('fill', 'black')
+				.attr('font-size',25)
+				.attr('font-weight','bold')
+				.attr('text-align','center');
+	var text = fifth_info.append('text').text((100*parseFloat(fifth_array[fifth_index].carbs)*4.1 / fifth_array[fifth_index].Broj_kalorija).toFixed(2) +" %") 
+                .attr('x', 450)
+                .attr('y', 1400)
+                .attr('fill', 'black')
+				.attr('font-size',25)
+				.attr('font-weight','bold')
+				.attr('text-align','center');
+	
+	
+	var text = fifth_info.append('text').text("Total protein:                  "+ fifth_array[fifth_index].protein)
+                .attr('x', 105)
+                .attr('y', 1450)
+                .attr('fill', 'black')
+				.attr('font-size',25)
+				.attr('font-weight','bold')
+				.attr('text-align','center');
+	var text = fifth_info.append('text').text((100*parseFloat(fifth_array[fifth_index].protein)*4.1 / fifth_array[fifth_index].Broj_kalorija).toFixed(2) +" %") 
+                .attr('x', 450)
+                .attr('y', 1450)
+                .attr('fill', 'black')
+				.attr('font-size',25)
+				.attr('font-weight','bold')
+				.attr('text-align','center');
+				
+				
+		if(parseFloat(fifth_array[fifth_index].protein)!=0 || parseFloat(fifth_array[fifth_index].carbs)!=0 || parseFloat(fifth_array[fifth_index].fat)!=0){
+
+	
+	 var data = [{"label":"protein", "value":(100*parseFloat(fifth_array[fifth_index].protein)*4.1 / fifth_array[fifth_index].Broj_kalorija).toFixed(2)}, 
+            {"label":"carbs", "value":(100*parseFloat(fifth_array[fifth_index].carbs)*4.1 / fifth_array[fifth_index].Broj_kalorija).toFixed(2)}, 
+            {"label":"fat", "value":(100*parseFloat(fifth_array[fifth_index].fat)*8.8 / fifth_array[fifth_index].Broj_kalorija).toFixed(2)}];
+	
+    var vis = d3.select('body').select("#machine")
+        .select("svg")              //create the SVG element inside the <body>
+        .data([data])                   //associate our data with the document
+        .append("svg:g")    
+		.attr("id","fifth_pie")//make a group to hold our pie chart
+            .attr("transform", "translate(" + 850 + "," + 1350 + ")")    //move the center of the pie chart from 0, 0 to radius, radius
+
+    var arc = d3.svg.arc()              //this will create <path> elements for us using arc data
+        .outerRadius(r);
+
+    var pie = d3.layout.pie()           //this will create arc data for us given a list of values
+        .value(function(d) { return d.value; });    //we must tell it out to access the value of each element in our data array
+
+    var arcs = vis.selectAll("g.slice")     //this selects all <g> elements with class slice (there aren't any yet)
+        .data(pie)                          //associate the generated pie data (an array of arcs, each having startAngle, endAngle and value properties) 
+        .enter()                            //this will create <g> elements for every "extra" data element that should be associated with a selection. The result is creating a <g> for every object in the data array
+            .append("svg:g")                //create a group to hold each slice (we will have a <path> and a <text> element associated with each slice)
+                .attr("class", "slice");    //allow us to style things in the slices (like text)
+
+        arcs.append("svg:path")
+                .attr("fill", function(d, i) { return color(i); } ) //set the color for each slice to be chosen from the color function defined above
+                .attr("d", arc);                                    //this creates the actual SVG path using the associated data (pie) with the arc drawing function
+
+        arcs.append("svg:text")                                     //add a label to each slice
+                .attr("transform", function(d) {                    //set the label's origin to the center of the arc
+                //we have to make sure to set these before calling arc.centroid
+                d.innerRadius = r-75;
+                d.outerRadius = r;
+                return "translate(" + arc.centroid(d) + ")";        //this gives us a pair of coordinates like [50, 50]
+            })
+            .attr("text-anchor", "middle")                          //center the text on it's origin
+            .text(function(d, i) { return data[i].value + "%"; });        //get the label from our original data array
+        
+		 arcs.append("svg:text")                                     //add a label to each slice
+                .attr("transform", function(d) {                    //set the label's origin to the center of the arc
+                //we have to make sure to set these before calling arc.centroid
+                d.innerRadius = r+90;
+                d.outerRadius = r;
+                return "translate(" + arc.centroid(d) + ")";        //this gives us a pair of coordinates like [50, 50]
+            })
+            .attr("text-anchor", "middle")                          //center the text on it's origin
+            .text(function(d, i) { return data[i].label; });        //get the label from our original data array
+ }
+
+});
+
+$(".peta_slika").mouseleave(function(){
+    d3.select("#fifth_info").remove();
+	d3.select("#fifth_pie").remove();
+});
+
+				
 }
 //Klikanje na trokute za gore-dolje
  $(document).on('click','polygon',function(){ 
@@ -404,7 +1168,7 @@ body = d3.select('body').select("#machine")
 					if(br==second_index)  break;
 				}
 				if(br!=second_index) second_draw(1);
-				if(br==second_index) drawEmpty(300);
+				if(br==second_index) drawEmpty(360);
 			}
 		}
 		break;
@@ -429,7 +1193,7 @@ body = d3.select('body').select("#machine")
 					if(br==second_index)  break;
 				}
 				if(br!=second_index) second_draw(1);
-				if(br==second_index) drawEmpty(300);
+				if(br==second_index) drawEmpty(360);
 			}
 		}
 		break;
@@ -454,7 +1218,7 @@ body = d3.select('body').select("#machine")
 					if(br==third_index)  break;
 				}
 				if(br!=third_index) third_draw(1);
-				if(br==third_index) drawEmpty(500);
+				if(br==third_index) drawEmpty(620);
 			}
 		}
 		break;
@@ -479,7 +1243,7 @@ body = d3.select('body').select("#machine")
 					if(br==third_index)  break;
 				}
 				if(br!=third_index) third_draw(1);
-				if(br==third_index) drawEmpty(500);
+				if(br==third_index) drawEmpty(620);
 			}
 		}
 		break;
@@ -504,7 +1268,7 @@ body = d3.select('body').select("#machine")
 					if(br==fourth_index)  break;
 				}
 				if(br!=fourth_index) fourth_draw(1);
-				if(br==fourth_index) drawEmpty(700);
+				if(br==fourth_index) drawEmpty(880);
 			}
 		}
 		break;
@@ -529,7 +1293,7 @@ body = d3.select('body').select("#machine")
 					if(br==fourth_index)  break;
 				}
 				if(br!=fourth_index) fourth_draw(1);
-				if(br==fourth_index) drawEmpty(700);
+				if(br==fourth_index) drawEmpty(880);
 			}
 		}
 		break;
@@ -554,7 +1318,7 @@ body = d3.select('body').select("#machine")
 					if(br==fifth_index)  break;
 				}
 				if(br!=fifth_index) fifth_draw(1);
-				if(br==fifth_index) drawEmpty(900);
+				if(br==fifth_index) drawEmpty(1140);
 			}
 		}
 		break;
@@ -579,14 +1343,19 @@ body = d3.select('body').select("#machine")
 					if(br==fifth_index)  break;
 				}
 				if(br!=fifth_index) fifth_draw(1);
-				if(br==fifth_index) drawEmpty(900); 
+				if(br==fifth_index) drawEmpty(1140); 
 			}
 		}
 		break;
 		}
-		if(empty_value==0)
+		if(empty_value==0){
 		current_number_of_calories=parseFloat((1-empty_first)*first_array[first_index].Broj_kalorija)+parseFloat((1-empty_second)*second_array[second_index].Broj_kalorija)+parseFloat((1-empty_third)*third_array[third_index].Broj_kalorija)+parseFloat((1-empty_fourth)*fourth_array[fourth_index].Broj_kalorija)+parseFloat((1-empty_fifth)*fifth_array[fifth_index].Broj_kalorija);
-		draw(current_number_of_calories,1200,650,"Current number of calories");
+		current_number_of_proteins=(1-empty_first)*parseFloat(first_array[first_index].protein)+(1-empty_second)*parseFloat(second_array[second_index].protein)+(1-empty_third)*parseFloat(third_array[third_index].protein)+(1-empty_fourth)*parseFloat(fourth_array[fourth_index].protein)+(1-empty_fifth)*parseFloat(fifth_array[fifth_index].protein);
+		current_number_of_carbs=(1-empty_first)*parseFloat(first_array[first_index].carbs)+(1-empty_second)*parseFloat(second_array[second_index].carbs)+(1-empty_third)*parseFloat(third_array[third_index].carbs)+(1-empty_fourth)*parseFloat(fourth_array[fourth_index].carbs)+(1-empty_fifth)*parseFloat(fifth_array[fifth_index].carbs);
+		current_number_of_fat=(1-empty_first)*parseFloat(first_array[first_index].fat)+(1-empty_second)*parseFloat(second_array[second_index].fat)+(1-empty_third)*parseFloat(third_array[third_index].fat)+(1-empty_fourth)*parseFloat(fourth_array[fourth_index].fat)+(1-empty_fifth)*parseFloat(fifth_array[fifth_index].fat);
+		}
+		draw(current_number_of_calories,1200,250,"Current number of calories");
+		draw_pie();
 	}); 
 	
 	function drawEmpty(x){
@@ -594,28 +1363,48 @@ body = d3.select('body').select("#machine")
 	empty_value=1;
 	switch(x){
 	case 100:
-	if(empty_first==0)
+	if(empty_first==0){
 	current_number_of_calories=current_number_of_calories-parseFloat(first_array[first_index].Broj_kalorija);
+	current_number_of_proteins=current_number_of_proteins-parseFloat(first_array[first_index].protein);
+	current_number_of_carbs=current_number_of_carbs-parseFloat(first_array[first_index].carbs);
+	current_number_of_fat=current_number_of_fat-parseFloat(first_array[first_index].fat);
+	}
 	empty_first=1;
 	break;
-	case 300:
-	if(empty_second==0)
+	case 360:
+	if(empty_second==0){
 	current_number_of_calories=current_number_of_calories-parseFloat(second_array[second_index].Broj_kalorija);
+	current_number_of_proteins=current_number_of_proteins-parseFloat(second_array[second_index].protein);
+	current_number_of_carbs=current_number_of_carbs-parseFloat(second_array[second_index].carbs);
+	current_number_of_fat=current_number_of_fat-parseFloat(second_array[second_index].fat);
+	}
 	empty_second=1;
 	break;
-	case 500:
-	if(empty_third==0)
+	case 620:
+	if(empty_third==0){
 	current_number_of_calories=current_number_of_calories-parseFloat(third_array[third_index].Broj_kalorija);
+	current_number_of_proteins=current_number_of_proteins-parseFloat(third_array[third_index].protein);
+	current_number_of_carbs=current_number_of_carbs-parseFloat(third_array[third_index].carbs);
+	current_number_of_fat=current_number_of_fat-parseFloat(third_array[third_index].fat);
+	}
 	empty_third=1;
 	break;
-	case 700:
-	if(empty_fourth==0)
+	case 880:
+	if(empty_fourth==0){
 	current_number_of_calories=current_number_of_calories-parseFloat(fourth_array[fourth_index].Broj_kalorija);
+	current_number_of_proteins=current_number_of_proteins-parseFloat(fourth_array[fourth_index].protein);
+	current_number_of_carbs=current_number_of_carbs-parseFloat(fourth_array[fourth_index].carbs);
+	current_number_of_fat=current_number_of_fat-parseFloat(fourth_array[fourth_index].fat);
+	}
 	empty_fourth=1;
 	break;
-	case 900:
-	if(empty_fifth==0)
+	case 1140:
+	if(empty_fifth==0){
 	current_number_of_calories=current_number_of_calories-parseFloat(fifth_array[fifth_index].Broj_kalorija);
+	current_number_of_proteins=current_number_of_proteins-parseFloat(fifth_array[fifth_index].protein);
+	current_number_of_carbs=current_number_of_carbs-parseFloat(fifth_array[fifth_index].carbs);
+	current_number_of_fat=current_number_of_fat-parseFloat(fifth_array[fifth_index].fat);
+	}
 	empty_fifth=1;
 	break;
 	}
@@ -623,11 +1412,12 @@ body = d3.select('body').select("#machine")
 	body = d3.select('body').select("#machine")
 		svg = body.select('svg');
 		var g= svg.append('g');
-rect = g.append('rect').transition().duration(500).attr('width', 200)
+		
+rect = g.append('rect').attr('width', 260)
                 .attr('height', 300)
                 .attr('x', x)
                 .attr('y', 650)
-                .style('fill', 'white')
+                .style('fill', '#EBDCB2')
                 .attr('stroke', 'black')
 				.attr('stroke-width',5)
 		var text = g.append('text').text("No such value")
@@ -637,13 +1427,16 @@ rect = g.append('rect').transition().duration(500).attr('width', 200)
 				.attr('font-size',50)
 				.attr('font-weight','bold')
 				.attr('text-align','center')
-				.attr('textLength',190)
+				.attr('textLength',250)
 				.attr('lengthAdjust','spacingAndGlyphs');	
 	}
+	
+				
 //Unos ukupnog broja kalorija
 	function handleClick(event){
 		if(document.getElementById("myVal").value!=""){
 		total_number_of_calories= parseFloat(document.getElementById("myVal").value);
+		combination(); 
 		target_number_of_calories=total_number_of_calories*sum/100;
 		first_kcal=((first/100)*total_number_of_calories);
 		second_kcal=(second/100)*total_number_of_calories;
@@ -655,9 +1448,9 @@ rect = g.append('rect').transition().duration(500).attr('width', 200)
 		document.getElementById("third_meal_calories").value = third_kcal.toFixed(2);
 		document.getElementById("fourth_meal_calories").value = fourth_kcal.toFixed(2);
 		document.getElementById("fifth_meal_calories").value = fifth_kcal.toFixed(2);
-		document.getElementById("Total_sum_calories").value=total_number_of_calories +" kcal";
-		console.log(document.getElementById("myVal").value)
-		draw(document.getElementById("myVal").value,1200,250,"Target number of calories:");
+		document.getElementById("Total_sum_calories").value=target_number_of_calories +" kcal";
+		draw(document.getElementById("myVal").value,1200,-100,"Target number of calories:");
+		number_of_meals();
 		}
 		return false;
 	}
@@ -667,57 +1460,85 @@ rect = g.append('rect').transition().duration(500).attr('width', 200)
 	});
 	
 	$(document).ready(function() {
+    $('#filterCalories').click(filterCalories);
+	});
+	
+	$(document).ready(function() {
     $('#Spin').click(spin);
 	});
+	
 function spin(event){
 event.preventDefault();
+
 	target_number_of_calories=total_number_of_calories*sum/100;
-	draw(target_number_of_calories,1200,250,"Target number of calories:");
-	combination();
+	draw(target_number_of_calories,1200,-100,"Target number of calories:");
+	
 	var i=0;
 	var current_number_of_times=0;
 	var array_of_indexes=[];
 	var j=0;
-	
 	for(i=0;i<combination_array.length;i++){
 	if(parseFloat(combination_array[i].Broj_kalorija)<target_number_of_calories)
 		{
+		if(filter==0){
 		array_of_indexes[j++]=i;
 		}
+		else{
+		if(parseFloat(first_array[combination_array[i].prvi].Broj_kalorija)<(first*target_number_of_calories/100) && parseFloat(second_array[combination_array[i].drugi].Broj_kalorija)<(second*target_number_of_calories/100) && parseFloat(third_array[combination_array[i].treci].Broj_kalorija)<(third*target_number_of_calories/100) && parseFloat(fourth_array[combination_array[i].cetvrti].Broj_kalorija)<(fourth*target_number_of_calories/100) && parseFloat(fifth_array[combination_array[i].peti].Broj_kalorija)<(fifth*target_number_of_calories/100))
+			array_of_indexes[j++]=i;
+		}
+		}
 	}
+	
 	var lucky_winner= Math.floor((Math.random()*array_of_indexes.length) +0); 
 	var index=0;
-	var number_of_times=20;
+	var number_of_times=7;
 	
 	if(array_of_indexes.length==0){
-	drawEmpty(100); drawEmpty(300); drawEmpty(500); drawEmpty(700); drawEmpty(900); 
+	drawEmpty(100); drawEmpty(360); drawEmpty(620); drawEmpty(880); drawEmpty(1140); 
 	current_number_of_calories=parseFloat((1-empty_first)*first_array[first_index].Broj_kalorija)+parseFloat((1-empty_second)*second_array[second_index].Broj_kalorija)+parseFloat((1-empty_third)*third_array[third_index].Broj_kalorija)+parseFloat((1-empty_fourth)*fourth_array[fourth_index].Broj_kalorija)+parseFloat((1-empty_fifth)*fifth_array[fifth_index].Broj_kalorija);
-	draw(current_number_of_calories,1200,650,"Current number of calories");
+	current_number_of_proteins=(1-empty_first)*parseFloat(first_array[first_index].protein)+(1-empty_second)*parseFloat(second_array[second_index].protein)+(1-empty_third)*parseFloat(third_array[third_index].protein)+(1-empty_fourth)*parseFloat(fourth_array[fourth_index].protein)+(1-empty_fifth)*parseFloat(fifth_array[fifth_index].protein);
+	current_number_of_carbs=(1-empty_first)*parseFloat(first_array[first_index].carbs)+(1-empty_second)*parseFloat(second_array[second_index].carbs)+(1-empty_third)*parseFloat(third_array[third_index].carbs)+(1-empty_fourth)*parseFloat(fourth_array[fourth_index].carbs)+(1-empty_fifth)*parseFloat(fifth_array[fifth_index].carbs);
+	current_number_of_fat=(1-empty_first)*parseFloat(first_array[first_index].fat)+(1-empty_second)*parseFloat(second_array[second_index].fat)+(1-empty_third)*parseFloat(third_array[third_index].fat)+(1-empty_fourth)*parseFloat(fourth_array[fourth_index].fat)+(1-empty_fifth)*parseFloat(fifth_array[fifth_index].fat);
+	draw(current_number_of_calories,1200,250,"Current number of calories");
+	draw_pie();
 	number_of_times=0;
-	alert("Done spinning");
+	if(filter==0)
+	alert("There is no combination of meals which number of calories is under "+ target_number_of_calories + " kcal");
+	if(filter==1)
+	alert("There is no combination of meals which number of calories is under "+ target_number_of_calories + " kcal.\nMaybe try removing the filter.");
 	}
 	
 	else {
 	function loop(){
 	current_number_of_times++;
 	if(parseFloat(combination_array[array_of_indexes[index]].Broj_kalorija)<target_number_of_calories){
-		first_index=combination_array[array_of_indexes[index]].prvi;
-		second_index=combination_array[array_of_indexes[index]].drugi;
-		third_index=combination_array[array_of_indexes[index]].treci;
-		fourth_index=combination_array[array_of_indexes[index]].cetvrti;
-		fifth_index=combination_array[array_of_indexes[index]].peti;
+		var random_first=Math.floor((Math.random()*array_of_indexes.length) +0);
+		var random_second=Math.floor((Math.random()*array_of_indexes.length) +0);
+		var random_third=Math.floor((Math.random()*array_of_indexes.length) +0);
+		var random_fourth=Math.floor((Math.random()*array_of_indexes.length) +0);
+		var random_fifth=Math.floor((Math.random()*array_of_indexes.length) +0);
+		first_index=combination_array[array_of_indexes[random_first]].prvi;
+		second_index=combination_array[array_of_indexes[random_second]].drugi;
+		third_index=combination_array[array_of_indexes[random_third]].treci;
+		fourth_index=combination_array[array_of_indexes[random_fourth]].cetvrti;
+		fifth_index=combination_array[array_of_indexes[random_fifth]].peti;
 			first_draw(0);
 			second_draw(0);
 			third_draw(0);
 			fourth_draw(0);
 			fifth_draw(0);
 			current_number_of_calories=parseFloat((1-empty_first)*first_array[first_index].Broj_kalorija)+parseFloat((1-empty_second)*second_array[second_index].Broj_kalorija)+parseFloat((1-empty_third)*third_array[third_index].Broj_kalorija)+parseFloat((1-empty_fourth)*fourth_array[fourth_index].Broj_kalorija)+parseFloat((1-empty_fifth)*fifth_array[fifth_index].Broj_kalorija);
-			draw(current_number_of_calories,1200,650,"Current number of calories");
+			current_number_of_proteins=(1-empty_first)*parseFloat(first_array[first_index].protein)+(1-empty_second)*parseFloat(second_array[second_index].protein)+(1-empty_third)*parseFloat(third_array[third_index].protein)+(1-empty_fourth)*parseFloat(fourth_array[fourth_index].protein)+(1-empty_fifth)*parseFloat(fifth_array[fifth_index].protein);
+			current_number_of_carbs=(1-empty_first)*parseFloat(first_array[first_index].carbs)+(1-empty_second)*parseFloat(second_array[second_index].carbs)+(1-empty_third)*parseFloat(third_array[third_index].carbs)+(1-empty_fourth)*parseFloat(fourth_array[fourth_index].carbs)+(1-empty_fifth)*parseFloat(fifth_array[fifth_index].carbs);
+			current_number_of_fat=(1-empty_first)*parseFloat(first_array[first_index].fat)+(1-empty_second)*parseFloat(second_array[second_index].fat)+(1-empty_third)*parseFloat(third_array[third_index].fat)+(1-empty_fourth)*parseFloat(fourth_array[fourth_index].fat)+(1-empty_fifth)*parseFloat(fifth_array[fifth_index].fat);
+			draw(current_number_of_calories,1200,250,"Current number of calories");
+			draw_pie();
 		}
 	if(index==array_of_indexes.length-1) index=0;
 	else
 		index++;
-	if(current_number_of_times<number_of_times){ setTimeout( loop, 5 ); }
+	if(current_number_of_times<number_of_times){ setTimeout( loop, 0 ); }
 	
 	else { 
 			first_index=combination_array[array_of_indexes[lucky_winner]].prvi;
@@ -730,12 +1551,16 @@ event.preventDefault();
 			third_draw(0);
 			fourth_draw(0);
 			fifth_draw(0);
+			current_number_of_proteins=(1-empty_first)*parseFloat(first_array[first_index].protein)+(1-empty_second)*parseFloat(second_array[second_index].protein)+(1-empty_third)*parseFloat(third_array[third_index].protein)+(1-empty_fourth)*parseFloat(fourth_array[fourth_index].protein)+(1-empty_fifth)*parseFloat(fifth_array[fifth_index].protein);
+			current_number_of_carbs=(1-empty_first)*parseFloat(first_array[first_index].carbs)+(1-empty_second)*parseFloat(second_array[second_index].carbs)+(1-empty_third)*parseFloat(third_array[third_index].carbs)+(1-empty_fourth)*parseFloat(fourth_array[fourth_index].carbs)+(1-empty_fifth)*parseFloat(fifth_array[fifth_index].carbs);
+			current_number_of_fat=(1-empty_first)*parseFloat(first_array[first_index].fat)+(1-empty_second)*parseFloat(second_array[second_index].fat)+(1-empty_third)*parseFloat(third_array[third_index].fat)+(1-empty_fourth)*parseFloat(fourth_array[fourth_index].fat)+(1-empty_fifth)*parseFloat(fifth_array[fifth_index].fat);
 			current_number_of_calories=parseFloat((1-empty_first)*first_array[first_index].Broj_kalorija)+parseFloat((1-empty_second)*second_array[second_index].Broj_kalorija)+parseFloat((1-empty_third)*third_array[third_index].Broj_kalorija)+parseFloat((1-empty_fourth)*fourth_array[fourth_index].Broj_kalorija)+parseFloat((1-empty_fifth)*fifth_array[fifth_index].Broj_kalorija);
-			draw(current_number_of_calories,1200,650,"Current number of calories");   
+			draw(current_number_of_calories,1200,250,"Current number of calories");   
+			draw_pie();
 			setTimeout(function(){
 			if(number_of_times!=0)
 			alert("Done spinning");
-			}, 10);
+			}, 0);
 		}
 	}
 	loop();
@@ -749,17 +1574,21 @@ var first_timeout, second_timeout;
 
 	function slowMotion(event){
 	event.preventDefault();
+	
 	if(slowMotionClicked==1){
 	slowMotionClicked=0;
+	document.getElementById("SlotMachine").value="Slow motion";
 	clearTimeout(first_timeout);
 	clearTimeout(second_timeout);
 	}
 	
 	else {
+	document.getElementById("SlotMachine").value="Stop";
+	
 	slowMotionClicked=1;
 	target_number_of_calories=total_number_of_calories*sum/100;
-	draw(target_number_of_calories,1200,250,"Target number of calories:");
-	combination();
+	draw(target_number_of_calories,1200,-100,"Target number of calories:");
+	
 	var i=0;
 	var current_number_of_times=0;
 	var array_of_indexes=[];
@@ -767,14 +1596,33 @@ var first_timeout, second_timeout;
 	for(i=0;i<combination_array.length;i++){
 	if(parseFloat(combination_array[i].Broj_kalorija)<target_number_of_calories)
 	{
-	array_of_indexes[j++]=i;
+	
+	if(filter==0){
+		array_of_indexes[j++]=i;
+		
+	}
+	else{
+		if(parseFloat(first_array[combination_array[i].prvi].Broj_kalorija)<(first*target_number_of_calories/100) && parseFloat(second_array[combination_array[i].drugi].Broj_kalorija)<(second*target_number_of_calories/100) && parseFloat(third_array[combination_array[i].treci].Broj_kalorija)<(third*target_number_of_calories/100) && parseFloat(fourth_array[combination_array[i].cetvrti].Broj_kalorija)<(fourth*target_number_of_calories/100) && parseFloat(fifth_array[combination_array[i].peti].Broj_kalorija)<(fifth*target_number_of_calories/100))
+		array_of_indexes[j++]=i;
+		
+		}
 	}
 	}
 	var number_of_times=array_of_indexes.length;
 	if(number_of_times==0){
-	drawEmpty(100); drawEmpty(300); drawEmpty(500); drawEmpty(700); drawEmpty(900); 
+	drawEmpty(100); drawEmpty(360); drawEmpty(620); drawEmpty(880); drawEmpty(1140); 
+	current_number_of_proteins=(1-empty_first)*parseFloat(first_array[first_index].protein)+(1-empty_second)*parseFloat(second_array[second_index].protein)+(1-empty_third)*parseFloat(third_array[third_index].protein)+(1-empty_fourth)*parseFloat(fourth_array[fourth_index].protein)+(1-empty_fifth)*parseFloat(fifth_array[fifth_index].protein);
+	current_number_of_carbs=(1-empty_first)*parseFloat(first_array[first_index].carbs)+(1-empty_second)*parseFloat(second_array[second_index].carbs)+(1-empty_third)*parseFloat(third_array[third_index].carbs)+(1-empty_fourth)*parseFloat(fourth_array[fourth_index].carbs)+(1-empty_fifth)*parseFloat(fifth_array[fifth_index].carbs);
+	current_number_of_fat=(1-empty_first)*parseFloat(first_array[first_index].fat)+(1-empty_second)*parseFloat(second_array[second_index].fat)+(1-empty_third)*parseFloat(third_array[third_index].fat)+(1-empty_fourth)*parseFloat(fourth_array[fourth_index].fat)+(1-empty_fifth)*parseFloat(fifth_array[fifth_index].fat);
 	current_number_of_calories=parseFloat((1-empty_first)*first_array[first_index].Broj_kalorija)+parseFloat((1-empty_second)*second_array[second_index].Broj_kalorija)+parseFloat((1-empty_third)*third_array[third_index].Broj_kalorija)+parseFloat((1-empty_fourth)*fourth_array[fourth_index].Broj_kalorija)+parseFloat((1-empty_fifth)*fifth_array[fifth_index].Broj_kalorija);
-	draw(current_number_of_calories,1200,650,"Current number of calories");
+	draw(current_number_of_calories,1200,250,"Current number of calories");
+	draw_pie();
+	document.getElementById("SlotMachine").value="Slow motion";
+	if(filter==0)
+	alert("There is no combination of meals which number of calories is under "+ target_number_of_calories + " kcal");
+	else
+	alert("There is no combination of meals which number of calories is under "+ target_number_of_calories + " kcal.\nMaybe try removing the filter.");
+	slowMotionClicked=0;
 	}
 	function loop(){
 	if(parseFloat(combination_array[array_of_indexes[current_number_of_times]].Broj_kalorija)<target_number_of_calories){
@@ -788,17 +1636,22 @@ var first_timeout, second_timeout;
 			third_draw(0);
 			fourth_draw(0);
 			fifth_draw(0);
+			current_number_of_proteins=(1-empty_first)*parseFloat(first_array[first_index].protein)+(1-empty_second)*parseFloat(second_array[second_index].protein)+(1-empty_third)*parseFloat(third_array[third_index].protein)+(1-empty_fourth)*parseFloat(fourth_array[fourth_index].protein)+(1-empty_fifth)*parseFloat(fifth_array[fifth_index].protein);
+			current_number_of_carbs=(1-empty_first)*parseFloat(first_array[first_index].carbs)+(1-empty_second)*parseFloat(second_array[second_index].carbs)+(1-empty_third)*parseFloat(third_array[third_index].carbs)+(1-empty_fourth)*parseFloat(fourth_array[fourth_index].carbs)+(1-empty_fifth)*parseFloat(fifth_array[fifth_index].carbs);
+			current_number_of_fat=(1-empty_first)*parseFloat(first_array[first_index].fat)+(1-empty_second)*parseFloat(second_array[second_index].fat)+(1-empty_third)*parseFloat(third_array[third_index].fat)+(1-empty_fourth)*parseFloat(fourth_array[fourth_index].fat)+(1-empty_fifth)*parseFloat(fifth_array[fifth_index].fat);
 			current_number_of_calories=parseFloat((1-empty_first)*first_array[first_index].Broj_kalorija)+parseFloat((1-empty_second)*second_array[second_index].Broj_kalorija)+parseFloat((1-empty_third)*third_array[third_index].Broj_kalorija)+parseFloat((1-empty_fourth)*fourth_array[fourth_index].Broj_kalorija)+parseFloat((1-empty_fifth)*fifth_array[fifth_index].Broj_kalorija);
-			draw(current_number_of_calories,1200,650,"Current number of calories");
+			draw(current_number_of_calories,1200,250,"Current number of calories");
+			draw_pie();
 		}
 	current_number_of_times++;
 	if(current_number_of_times<number_of_times){ first_timeout=setTimeout( loop, 4000 ); }
 	}
 	loop();
-	var cekanje=4000*number_of_times;
+	var cekanje=2500*number_of_times;
 	second_timeout=setTimeout(function(){
-	if(number_of_times!=0)
+	if(number_of_times!=0){
 	alert("Slow motion done!");
+	document.getElementById("SlotMachine").value="Slow motion"; }
 	}, cekanje);
 	}
 	return false;
@@ -806,11 +1659,16 @@ var first_timeout, second_timeout;
 	}
 	
 	
-	function filterCalories(){
-		//var r= confirm("Do you want to filter each meal based on calories?");
-		//if(r==true){
+	function filterCalories(event){
+	combination(); 
+	event.preventDefault()
+	if(filter==0){
+		if(sum==100){
+		document.getElementById("filterCalories").value="Remove filter";
+		var r= confirm("Do you want to filter each meal based on calories?");
+		if(r==true){
 		target_number_of_calories=total_number_of_calories*sum/100;
-		draw(target_number_of_calories,1200,250,"Target number of calories:");
+		draw(target_number_of_calories,1200,-100,"Target number of calories:");
 		filter=1;
 		
 		if(parseFloat(first_array[first_index].Broj_kalorija)<first_kcal)
@@ -837,7 +1695,7 @@ var first_timeout, second_timeout;
 					if(br==second_index)  break;
 				}
 				if(br!=second_index) second_draw(1);
-				if(br==second_index) drawEmpty(300);
+				if(br==second_index) drawEmpty(360);
 			}
 		if(parseFloat(third_array[third_index].Broj_kalorija)<third_kcal)
 				third_draw(1);
@@ -850,7 +1708,7 @@ var first_timeout, second_timeout;
 					if(br==third_index)  break;
 				}
 				if(br!=third_index) third_draw(1);
-				if(br==third_index) drawEmpty(500);
+				if(br==third_index) drawEmpty(620);
 			}
 		if(parseFloat(fourth_array[fourth_index].Broj_kalorija)<fourth_kcal)
 				fourth_draw(1);
@@ -863,7 +1721,7 @@ var first_timeout, second_timeout;
 					if(br==fourth_index)  break;
 				}
 				if(br!=fourth_index) fourth_draw(1);
-				if(br==fourth_index) drawEmpty(700);
+				if(br==fourth_index) drawEmpty(880);
 			}
 		if(parseFloat(fifth_array[fifth_index].Broj_kalorija)<fifth_kcal)
 				fifth_draw(1);
@@ -876,26 +1734,199 @@ var first_timeout, second_timeout;
 					if(br==fifth_index)  break;
 				}
 				if(br!=fifth_index) fifth_draw(1);
-				if(br==fifth_index) drawEmpty(900);
+				if(br==fifth_index) drawEmpty(1140);
 			}
+		current_number_of_proteins=(1-empty_first)*parseFloat(first_array[first_index].protein)+(1-empty_second)*parseFloat(second_array[second_index].protein)+(1-empty_third)*parseFloat(third_array[third_index].protein)+(1-empty_fourth)*parseFloat(fourth_array[fourth_index].protein)+(1-empty_fifth)*parseFloat(fifth_array[fifth_index].protein);
+		current_number_of_carbs=(1-empty_first)*parseFloat(first_array[first_index].carbs)+(1-empty_second)*parseFloat(second_array[second_index].carbs)+(1-empty_third)*parseFloat(third_array[third_index].carbs)+(1-empty_fourth)*parseFloat(fourth_array[fourth_index].carbs)+(1-empty_fifth)*parseFloat(fifth_array[fifth_index].carbs);
+		current_number_of_fat=(1-empty_first)*parseFloat(first_array[first_index].fat)+(1-empty_second)*parseFloat(second_array[second_index].fat)+(1-empty_third)*parseFloat(third_array[third_index].fat)+(1-empty_fourth)*parseFloat(fourth_array[fourth_index].fat)+(1-empty_fifth)*parseFloat(fifth_array[fifth_index].fat);
 		current_number_of_calories=parseFloat((1-empty_first)*first_array[first_index].Broj_kalorija)+parseFloat((1-empty_second)*second_array[second_index].Broj_kalorija)+parseFloat((1-empty_third)*third_array[third_index].Broj_kalorija)+parseFloat((1-empty_fourth)*fourth_array[fourth_index].Broj_kalorija)+parseFloat((1-empty_fifth)*fifth_array[fifth_index].Broj_kalorija);
-		draw(current_number_of_calories,1200,650,"Current number of calories");
-		
-		
-		//}
-		
+		draw(current_number_of_calories,1200,250,"Current number of calories");
+		draw_pie();
+		}
+		}
+		else {
+		alert("The sum of the values on the filters should not be different than 100%");
+		}
+		}
+		else{
+		filter=0;
+		document.getElementById("filterCalories").value="Filter columns";
+		alert("Filter is removed.");
+		}
+		number_of_meals();
 		return false;
+	}
+	function draw_pie(){
+	d3.select("#whole_pie").remove();
+	if(current_number_of_proteins!=0 || current_number_of_carbs!=0 || current_number_of_fat!=0){
+	 var data = [{"label":"protein", "value":(current_number_of_proteins*100*4.1/current_number_of_calories).toFixed(2)}, 
+            {"label":"carbs", "value":(current_number_of_carbs*100*4.1/current_number_of_calories).toFixed(2)}, 
+            {"label":"fat", "value":(current_number_of_fat*100*8.8/current_number_of_calories).toFixed(2)}];
+	
+    var vis = d3.select('body').select("#machine")
+        .select("svg")              //create the SVG element inside the <body>
+        .data([data])                   //associate our data with the document
+        .append("svg:g")    
+		.attr("id","whole_pie")//make a group to hold our pie chart
+            .attr("transform", "translate(" + 1700 + "," + 825 + ")")    //move the center of the pie chart from 0, 0 to radius, radius
+
+    var arc = d3.svg.arc()              //this will create <path> elements for us using arc data
+        .outerRadius(r);
+
+    var pie = d3.layout.pie()           //this will create arc data for us given a list of values
+        .value(function(d) { return d.value; });    //we must tell it out to access the value of each element in our data array
+
+    var arcs = vis.selectAll("g.slice")     //this selects all <g> elements with class slice (there aren't any yet)
+        .data(pie)                          //associate the generated pie data (an array of arcs, each having startAngle, endAngle and value properties) 
+        .enter()                            //this will create <g> elements for every "extra" data element that should be associated with a selection. The result is creating a <g> for every object in the data array
+            .append("svg:g")                //create a group to hold each slice (we will have a <path> and a <text> element associated with each slice)
+                .attr("class", "slice");    //allow us to style things in the slices (like text)
+
+        arcs.append("svg:path")
+                .attr("fill", function(d, i) { return color(i); } ) //set the color for each slice to be chosen from the color function defined above
+                .attr("d", arc);                                    //this creates the actual SVG path using the associated data (pie) with the arc drawing function
+
+        arcs.append("svg:text")                                     //add a label to each slice
+                .attr("transform", function(d) {                    //set the label's origin to the center of the arc
+                //we have to make sure to set these before calling arc.centroid
+                d.innerRadius = r-100;
+                d.outerRadius = r;
+                return "translate(" + arc.centroid(d) + ")";        //this gives us a pair of coordinates like [50, 50]
+            })
+            .attr("text-anchor", "middle")                          //center the text on it's origin
+            .text(function(d, i) { return data[i].value + "%"; });        //get the label from our original data array
+        
+		 arcs.append("svg:text")                                     //add a label to each slice
+                .attr("transform", function(d) {                    //set the label's origin to the center of the arc
+                //we have to make sure to set these before calling arc.centroid
+                d.innerRadius = r+90;
+                d.outerRadius = r;
+                return "translate(" + arc.centroid(d) + ")";        //this gives us a pair of coordinates like [50, 50]
+            })
+            .attr("text-anchor", "middle")                          //center the text on it's origin
+            .text(function(d, i) { return data[i].label; });        //get the label from our original data array
+
+	}
+	}
+	function number_of_meals(){
+	d3.select("#number_of_meals").remove();
+	var g= svg.append('g').attr('id','number_of_meals').attr('color','#FF0000');
+	g.append('text').text('Number of meals within each box:')
+		.attr('x',500)
+		.attr('y',460)
+		.attr('color','#FF0000')
+		.attr('font-size',30)
+	var first_number=0, second_number=0,third_number=0,fourth_number=0,fifth_number=0;
+	var i=0;
+	for(i=0;i<first_array.length;i++){
+	if(filter==0)
+	first_number++;
+	else
+	if(first_array[i].Broj_kalorija<first*target_number_of_calories/100)
+	first_number++;
+	}
+	for(i=0;i<second_array.length;i++){
+	if(filter==0)
+	second_number++;
+	else
+	if(second_array[i].Broj_kalorija<second*target_number_of_calories/100)
+	second_number++;
+	}
+	for(i=0;i<third_array.length;i++){
+	if(filter==0)
+	third_number++;
+	else
+	if(third_array[i].Broj_kalorija<third*target_number_of_calories/100)
+	third_number++;
+	}
+	for(i=0;i<fourth_array.length;i++){
+	if(filter==0)
+	fourth_number++;
+	else
+	if(fourth_array[i].Broj_kalorija<fourth*target_number_of_calories/100)
+	fourth_number++;
+	}
+	for(i=0;i<fifth_array.length;i++){
+	if(filter==0)
+	fifth_number++;
+	else
+	if(fifth_array[i].Broj_kalorija<fifth*target_number_of_calories/100)
+	fifth_number++;
+	}
+	if((filter==0 && first_array.length>1)||filter==1)
+	g.append('text').text(first_number)
+		.attr('x',200)
+		.attr('y',510)
+		.attr('fill','#800000')
+		.attr('font-size',40)
+	if((filter==0 && second_array.length>1)||filter==1)
+	g.append('text').text(second_number)
+		.attr('x',460)
+		.attr('y',510)
+		.attr('fill','#800000')
+		.attr('font-size',40)
+	if((filter==0 && third_array.length>1)||filter==1)
+	g.append('text').text(third_number)
+		.attr('x',720)
+		.attr('y',510)
+		.attr('fill','#800000')
+		.attr('font-size',40)
+	if((filter==0 && fourth_array.length>1)||filter==1)
+	g.append('text').text(fourth_number)
+		.attr('x',980)
+		.attr('y',510)
+		.attr('fill','#800000')
+		.attr('font-size',40)
+	if((filter==0 && fifth_array.length>1)||filter==1)
+	g.append('text').text(fifth_number)
+		.attr('x',1240)
+		.attr('y',510)
+		.attr('fill','#800000')
+		.attr('font-size',40)
+	}
+	function draw_combinations()
+	{
+	target_number_of_calories=total_number_of_calories*sum/100;	
+	number_of_combination_with_filter=0;
+	number_of_combination_without_filter=0;
+	for(i=0;i<combination_array.length;i++){
+	if(parseFloat(combination_array[i].Broj_kalorija)<=target_number_of_calories){
+		number_of_combination_without_filter++;
+	if(parseFloat(first_array[combination_array[i].prvi].Broj_kalorija)<(first*target_number_of_calories/100) && parseFloat(second_array[combination_array[i].drugi].Broj_kalorija)<(second*target_number_of_calories/100) && parseFloat(third_array[combination_array[i].treci].Broj_kalorija)<(third*target_number_of_calories/100) && parseFloat(fourth_array[combination_array[i].cetvrti].Broj_kalorija)<(fourth*target_number_of_calories/100) && parseFloat(fifth_array[combination_array[i].peti].Broj_kalorija)<(fifth*target_number_of_calories/100))
+		number_of_combination_with_filter++;
+	}
+	}
+	d3.select("#kombinacije_bez_filtra").remove();
+	d3.select("#kombinacije_sa_filtrom").remove();
+	
+	svg.append('text').text('Number of combinations without filter:		'+number_of_combination_without_filter)
+		.attr('x',105)
+		.attr('y',350)
+		.attr('id','kombinacije_bez_filtra')
+		.attr('color','#FF0000')
+		.attr('font-size',30)
+
+	svg.append('text').text('Number of combinations with filter:		'+number_of_combination_with_filter)
+		.attr('x',105)
+		.attr('y',400)
+		.attr('id','kombinacije_sa_filtrom')
+		.attr('color','#FF0000')
+		.attr('font-size',30)
+	
 	}
 	
 //Crtanje pravokutnika s podacima o ukupnom broju kalorija
 	function draw(val,x,y,tekst){
+	var x=x+250;
+	height=300;
+	if(y==250) height=800;
 		body = d3.select('body').select("#machine")
 		svg = body.select('svg');
 	rect = svg.append('rect').attr('width', 500)
-		.attr('height', 300)
+		.attr('height', height)
 		.attr('x', x)
 		.attr('y', y)
-		.style('fill', 'white')
+		.style('fill', '#EBDCB2')
 		.attr('stroke', 'black')
 		.attr('stroke-width',4)
 	var text = svg.append('text').text(tekst)
@@ -925,12 +1956,62 @@ var first_timeout, second_timeout;
 
 //Crtanje slot-machinea i trokutica iznad i ispod njega 
 var i=0;
-var x_small_rectangles=[100,300,500,700,900];
+
 var svg = d3.select("body").select("#machine")
 	.append("svg")
+	
 	.attr("width","1000")
-	.attr("height","600")
-	.attr("viewBox","0 200 2000 800"); //Ovo se mijenja u ovisnosti o ekranu
+	.attr("height","800")
+	.attr("viewBox","250 -200 1800 1800"); //Ovo se mijenja u ovisnosti o ekranu
+
+var g=svg.append("g").attr("id","start_arrow");
+
+function arrow(){
+g.selectAll("rect").remove();
+g.selectAll("polygon").remove();
+g.append("polygon")
+.attr("points", "150,300 200,250 200,350")
+.attr("stroke-width", "1px")
+.attr("fill","red")
+.attr("stroke", "red")
+.transition()
+	.delay(500)
+	.duration(500)
+	.attr("points", "125,325 200,255 200,380")
+.transition()
+	.delay(1000)
+	.duration(500)
+	.attr("points", "150,300 200,250 200,350");
+
+g.append("rect").
+attr("x",200)
+.attr("y",275)
+.attr("height",50)
+.attr("width",200)
+.attr("stroke-width", "1px")
+.attr("fill","red")
+.attr("stroke", "red")
+.transition()
+	.delay(500)
+	.duration(500)
+	.attr("y",280)
+	.attr("height",75)
+	.attr("width",300)
+.transition()
+	.delay(1000)
+	.duration(500)
+	.attr("y",275)
+	.attr("height",50)
+	.attr("width",200);
+setTimeout( arrow, 1500 );
+}
+
+g.append("text").text('Click on the menu bar to choose types of meals.')
+.attr("x",600)
+.attr("y",320)
+.attr("font-size",30)
+.attr("font-family","Arial");
+setTimeout( arrow, 100 );
 	/*
 for(i=0;i<5;i++){		
 svg.append("rect")
@@ -941,77 +2022,89 @@ svg.append("rect")
 .attr("style","stroke:black;stroke-width:4;fill:none;");
 }
 */
+var x_small_rectangles=[100,360,620,880,1140];
 for(i=0;i<5;i++){
 svg.append("rect")
 .attr("x",x_small_rectangles[i])
 .attr("y",650)
-.attr("width","200")
+.attr("width","260")
 .attr("height","300")
-.attr("style","stroke:black;stroke-width:4;fill:none;");
+.attr("style","stroke:black;stroke-width:4;fill:#EBDCB2;");
 }
 
 svg.append("polygon")
-.attr("points", "150,600 200,600 175,550")
+.attr("points", "185,600 275,600 230,550")
 .attr("stroke-width", "2px")
+.attr("fill","#800000")
 .attr("id","first_polygon_up")
 .attr("stroke", "black"); 
 
 svg.append("polygon")
-.attr("points", "150,1000 200,1000 175,1050")
+.attr("points", "185,1000 275,1000 230,1050")
 .attr("stroke-width", "2px")
+.attr("fill","#800000")
 .attr("id","first_polygon_down")
 .attr("stroke", "black");
 
 svg.append("polygon")
-.attr("points", "350,600 400,600 375,550")
+.attr("points", "445,600 535,600 490,550")
 .attr("stroke-width", "2px")
+.attr("fill","#800000")
 .attr("id","second_polygon_up")
 .attr("stroke", "black");
 
 svg.append("polygon")
-.attr("points", "350,1000 400,1000 375,1050")
+.attr("points", "445,1000 535,1000 490,1050")
 .attr("stroke-width", "2px")
+.attr("fill","#800000")
 .attr("id","second_polygon_down")
 .attr("stroke", "black");
 
 svg.append("polygon")
-.attr("points", "550,600 600,600 575,550")
+.attr("points", "705,600 795,600 750,550")
 .attr("stroke-width", "2px")
+.attr("fill","#800000")
 .attr("id","third_polygon_up")
 .attr("stroke", "black");
 
 svg.append("polygon")
-.attr("points", "550,1000 600,1000 575,1050")
+.attr("points", "705,1000 795,1000 750,1050")
 .attr("stroke-width", "2px")
+.attr("fill","#800000")
 .attr("id","third_polygon_down")
 .attr("stroke", "black");
 
 svg.append("polygon")
-.attr("points", "750,600 800,600 775,550")
+.attr("points", "965,600 1055,600 1010,550")
 .attr("stroke-width", "2px")
+.attr("fill","#800000")
 .attr("id","fourth_polygon_up")
 .attr("stroke", "black");
 
 svg.append("polygon")
-.attr("points", "750,1000 800,1000 775,1050")
+.attr("points", "965,1000 1055,1000 1010,1050")
 .attr("stroke-width", "2px")
+.attr("fill","#800000")
 .attr("id","fourth_polygon_down")
 .attr("stroke", "black");
 
 svg.append("polygon")
-.attr("points", "950,600 1000,600 975,550")
+.attr("points", "1225,600 1315,600 1270,550")
 .attr("stroke-width", "2px")
+.attr("fill","#800000")
 .attr("id","fifth_polygon_up")
 .attr("stroke", "black");
 
 svg.append("polygon")
-.attr("points", "950,1000 1000,1000 975,1050")
+.attr("points", "1225,1000 1315,1000 1270,1050")
 .attr("stroke-width", "2px")
+.attr("fill","#800000")
 .attr("id","fifth_polygon_up")
 .attr("stroke", "black");
 
 //Rukovanje sa sliderima
  $(function() {
+	
 	$( "#Total_sum" ).val( "100%" );
 	$( "#first_meal_calories" ).val( first_kcal );
 	$( "#second_meal_calories" ).val( second_kcal );
@@ -1022,6 +2115,7 @@ svg.append("polygon")
 	   orientation:"vertical",
 	   value:20,
 	   slide: function( event, ui ) {
+	   draw_combinations();
 	   $( "#first_meal" ).val( ui.value + "%" );
 	   first=ui.value;
 	   sum=first+second+third+fourth+fifth;
@@ -1035,13 +2129,16 @@ svg.append("polygon")
 	   $( "#Total_sum_calories" ).val( total_number_of_calories*sum/100 +" kcal" );
 		first_kcal=((first/100)*total_number_of_calories);
 		document.getElementById("first_meal_calories").value = first_kcal.toFixed(2);
+		number_of_meals();
 	   }	
 	});
 	$( "#first_meal" ).val( $( "#slider-1" ).slider( "value") );
 	$( "#slider-2" ).slider({
+	   
 	   orientation:"vertical",
 	   value:20,
 	   slide: function( event, ui ) {
+	   draw_combinations();
 		  $( "#second_meal" ).val( ui.value + "%" );
 	   second=ui.value;
 	   sum=first+second+third+fourth+fifth;
@@ -1055,13 +2152,16 @@ svg.append("polygon")
 	   second_kcal=(second/100)*total_number_of_calories;
 	   document.getElementById("second_meal_calories").value = second_kcal.toFixed(2);
 	    $( "#Total_sum_calories" ).val( total_number_of_calories*sum/100 +" kcal" );
+	   number_of_meals();
 	   }	
 	});
 	$( "#second_meal" ).val( $( "#slider-2" ).slider( "value" ) );
 	$( "#slider-3" ).slider({
+	   
 	   orientation:"vertical",
 	   value:20,
 	   slide: function( event, ui ) {
+	   draw_combinations();
 		  $( "#third_meal" ).val( ui.value + "%" );
 	   third=ui.value;
 	   sum=first+second+third+fourth+fifth;
@@ -1075,6 +2175,7 @@ svg.append("polygon")
 	   third_kcal=(third/100)*total_number_of_calories;
 	   document.getElementById("third_meal_calories").value = third_kcal.toFixed(2);
 	    $( "#Total_sum_calories" ).val( total_number_of_calories*sum/100 +" kcal" );
+	   number_of_meals();
 	   }	
 	});
 	$( "#third_meal" ).val( $( "#slider-3" ).slider( "value" ) );
@@ -1082,6 +2183,7 @@ svg.append("polygon")
 	   orientation:"vertical",
 	   value:20,
 	   slide: function( event, ui ) {
+	   draw_combinations();
 		  $( "#fourth_meal" ).val( ui.value +"%" );
 	   fourth=ui.value;
 	   sum=first+second+third+fourth+fifth;
@@ -1095,6 +2197,7 @@ svg.append("polygon")
 	   fourth_kcal=(fourth/100)*total_number_of_calories;
 	   document.getElementById("fourth_meal_calories").value = fourth_kcal.toFixed(2);
 	    $( "#Total_sum_calories" ).val( total_number_of_calories*sum/100 +" kcal" );
+	   number_of_meals();
 	   }	
 	});
 	$( "#fourth_meal" ).val( $( "#slider-4" ).slider( "value" ) );
@@ -1102,6 +2205,7 @@ svg.append("polygon")
 	   orientation:"vertical",
 	   value:20,
 	   slide: function( event, ui ) {
+	   draw_combinations();
 		  $( "#fifth_meal" ).val( ui.value + "%" );
 	   fifth=ui.value;
 	   sum=first+second+third+fourth+fifth;
@@ -1115,6 +2219,7 @@ svg.append("polygon")
 	   fifth_kcal=(fifth/100)*total_number_of_calories;
 	   document.getElementById("fifth_meal_calories").value = fifth_kcal.toFixed(2);
 	    $( "#Total_sum_calories" ).val( total_number_of_calories*sum/100 +" kcal" );
+	   number_of_meals();
 	   }	
 	});
 	$( "#fifth_meal" ).val( $( "#slider-5" ).slider( "value" ) );
@@ -1129,10 +2234,10 @@ svg.append("polygon")
         var rectangle = container.append("rect")
                 .attr("id", id)
 				.attr("class","drag_meal")
-                .attr("fill", "none")
-                .attr("fill-opacity", .8)
+                .attr("fill", "#800000")
+                .attr("fill-opacity",1)
                 .attr("stroke", "black")
-                .attr("stroke-width", 3)
+                .attr("stroke-width", 1)
 				.attr("x",x)
 				.attr("y",y)
                 .attr("width", 150)
@@ -1149,221 +2254,236 @@ svg.append("polygon")
                 .attr('x', '50%')
                 .attr('y', y+18)
 				.attr('text-anchor','middle')
-                .attr('fill', 'black')
+                .attr('fill', '#FFF8DC')
 				.attr('font-size',20)
 				.attr('text-align','center');
 		
 		
 		img.on("dblclick",function(d){ 
+		number_of_clicks++;
+		d3.select("#start_arrow").remove();
 		var temp_array;
 		switch(index){
 		case 0: 
 		temp_array=juhe;
 		break;
 		case 1:
-		temp_array=hladna_predjela;
+		temp_array=predjela;
 		break;
 		case 2:
-		temp_array=topla_predjela;
+		temp_array=glavna_jela;
 		break;
 		case 3:
-		temp_array=mesa;
-		break;
-		case 4:
-		temp_array=ribe;
-		break;
-		case 5:
 		temp_array=prilozi;
 		break;
-		case 6:
+		case 4:
 		temp_array=umaci;
 		break;
-		case 7:
+		case 5:
 		temp_array=salate;
 		break;
-		case 8:
+		case 6:
 		temp_array=deserti;
 		break;
-		case 9:
-		temp_array=voce;
+		
 		break;
 		}
-		number_of_clicks++;
 		body = d3.select('body')
 		svg = body.select("#machine").select('svg');
 		if(number_of_clicks==1){
+		
 		svg.append("rect")
 		.attr("x",100)
-		.attr("y",300)
-		.attr("width","200")
+		.attr("y",150)
+		.attr("width","260")
 		.attr("height","150")
 		.attr("style","stroke:black;stroke-width:6;fill:white;");	
 		svg.append("rect")
 		.attr("x",100)
-		.attr("y",250)
-		.attr("width","200")
+		.attr("y",100)
+		.attr("width","260")
 		.attr("height","50")
-		.attr("style","stroke:black;stroke-width:6;fill:white;");
+		.attr("style","stroke:black;stroke-width:6;fill:#800000;");
 		var img = svg.append("svg:image")
 				.attr("xlink:href", image)
-				.attr("width", 180)
+				.attr("width", 250)
 				.attr('class','izabranaJela')
-				.attr("height", 150)
-				.attr("x", 110)
-				.attr("y",300);
+				.attr("height", 140)
+				.attr("x", 105)
+				.attr("y",155);
 		var text = svg.append('text').text(title)
                 .attr('x', 110)
-                .attr('y', 280)
+                .attr('y', 130)
 				.attr('class','izabranaJela')
-                .attr('fill', 'black')
+                .attr('fill', '#FFF8DC')
 				.attr('font-size',23)
 				.attr('font-weight','bold')
 				.attr('text-align','center');
 		first_array=temp_array;
 		first_size=first_array.length;
 		first_draw(1);
+		current_number_of_proteins=(1-empty_first)*parseFloat(first_array[first_index].protein)+(1-empty_second)*parseFloat(second_array[second_index].protein)+(1-empty_third)*parseFloat(third_array[third_index].protein)+(1-empty_fourth)*parseFloat(fourth_array[fourth_index].protein)+(1-empty_fifth)*parseFloat(fifth_array[fifth_index].protein);
+		current_number_of_carbs=(1-empty_first)*parseFloat(first_array[first_index].carbs)+(1-empty_second)*parseFloat(second_array[second_index].carbs)+(1-empty_third)*parseFloat(third_array[third_index].carbs)+(1-empty_fourth)*parseFloat(fourth_array[fourth_index].carbs)+(1-empty_fifth)*parseFloat(fifth_array[fifth_index].carbs);
+		current_number_of_fat=(1-empty_first)*parseFloat(first_array[first_index].fat)+(1-empty_second)*parseFloat(second_array[second_index].fat)+(1-empty_third)*parseFloat(third_array[third_index].fat)+(1-empty_fourth)*parseFloat(fourth_array[fourth_index].fat)+(1-empty_fifth)*parseFloat(fifth_array[fifth_index].fat);
 		current_number_of_calories=parseFloat(first_array[first_index].Broj_kalorija)+parseFloat(second_array[second_index].Broj_kalorija)+parseFloat(third_array[third_index].Broj_kalorija)+parseFloat(fourth_array[fourth_index].Broj_kalorija)+parseFloat(fifth_array[fifth_index].Broj_kalorija);
-		draw(current_number_of_calories,1200,650,"Current number of calories");
+		draw(current_number_of_calories,1200,250,"Current number of calories");
+		draw_pie();
 		}
 		if(number_of_clicks==2){
 		svg.append("rect")
-		.attr("x",300)
-		.attr("y",300)
-		.attr("width","200")
+		.attr("x",360)
+		.attr("y",150)
+		.attr("width","260")
 		.attr("height","150")
 		.attr("style","stroke:black;stroke-width:6;fill:white;");	
 		svg.append("rect")
-		.attr("x",300)
-		.attr("y",250)
-		.attr("width","200")
+		.attr("x",360)
+		.attr("y",100)
+		.attr("width","260")
 		.attr("height","50")
-		.attr("style","stroke:black;stroke-width:6;fill:white;");
+		.attr("style","stroke:black;stroke-width:6;fill:#800000;");
 		var img = svg.append("svg:image")
 				.attr("xlink:href", image)
-				.attr("width", 180)
+				.attr("width", 250)
 				.attr('class','izabranaJela')
-				.attr("height", 150)
-				.attr("x", 310)
-				.attr("y",300);
+				.attr("height", 140)
+				.attr("x", 365)
+				.attr("y",155);
 		var text = svg.append('text').text(title)
-                .attr('x', 310)
-                .attr('y', 280)
+                .attr('x', 370)
+                .attr('y', 130)
 				.attr('class','izabranaJela')
-                .attr('fill', 'black')
+                .attr('fill', '#FFF8DC')
 				.attr('font-size',23)
 				.attr('font-weight','bold')
 				.attr('text-align','center');
 		second_array=temp_array;
 		second_size=second_array.length;
 		second_draw(1);
+		current_number_of_proteins=(1-empty_first)*parseFloat(first_array[first_index].protein)+(1-empty_second)*parseFloat(second_array[second_index].protein)+(1-empty_third)*parseFloat(third_array[third_index].protein)+(1-empty_fourth)*parseFloat(fourth_array[fourth_index].protein)+(1-empty_fifth)*parseFloat(fifth_array[fifth_index].protein);
+		current_number_of_carbs=(1-empty_first)*parseFloat(first_array[first_index].carbs)+(1-empty_second)*parseFloat(second_array[second_index].carbs)+(1-empty_third)*parseFloat(third_array[third_index].carbs)+(1-empty_fourth)*parseFloat(fourth_array[fourth_index].carbs)+(1-empty_fifth)*parseFloat(fifth_array[fifth_index].carbs);
+		current_number_of_fat=(1-empty_first)*parseFloat(first_array[first_index].fat)+(1-empty_second)*parseFloat(second_array[second_index].fat)+(1-empty_third)*parseFloat(third_array[third_index].fat)+(1-empty_fourth)*parseFloat(fourth_array[fourth_index].fat)+(1-empty_fifth)*parseFloat(fifth_array[fifth_index].fat);
 		current_number_of_calories=parseFloat(first_array[first_index].Broj_kalorija)+parseFloat(second_array[second_index].Broj_kalorija)+parseFloat(third_array[third_index].Broj_kalorija)+parseFloat(fourth_array[fourth_index].Broj_kalorija)+parseFloat(fifth_array[fifth_index].Broj_kalorija);
-		draw(current_number_of_calories,1200,650,"Current number of calories");
+		draw(current_number_of_calories,1200,250,"Current number of calories");
+		draw_pie();
 		}
 		if(number_of_clicks==3){
 		svg.append("rect")
-		.attr("x",500)
-		.attr("y",300)
-		.attr("width","200")
+		.attr("x",620)
+		.attr("y",150)
+		.attr("width","260")
 		.attr("height","150")
 		.attr("style","stroke:black;stroke-width:6;fill:white;");	
 		svg.append("rect")
-		.attr("x",500)
-		.attr("y",250)
-		.attr("width","200")
+		.attr("x",620)
+		.attr("y",100)
+		.attr("width","260")
 		.attr("height","50")
-		.attr("style","stroke:black;stroke-width:6;fill:white;");
+		.attr("style","stroke:black;stroke-width:6;fill:#800000;");
 		var img = svg.append("svg:image")
 				.attr("xlink:href", image)
-				.attr("width", 180)
+				.attr("width", 250)
 				.attr('class','izabranaJela')
-				.attr("height", 150)
-				.attr("x", 510)
-				.attr("y",300);
+				.attr("height", 140)
+				.attr("x", 625)
+				.attr("y",155);
 		var text = svg.append('text').text(title)
-                .attr('x', 510)
-                .attr('y', 280)
+                .attr('x', 630)
+                .attr('y', 130)
 				.attr('class','izabranaJela')
-                .attr('fill', 'black')
+                .attr('fill', '#FFF8DC')
 				.attr('font-size',23)
 				.attr('font-weight','bold')
 				.attr('text-align','center');
 		third_array=temp_array;
 		third_size=third_array.length;
 		third_draw(1);
+		current_number_of_proteins=(1-empty_first)*parseFloat(first_array[first_index].protein)+(1-empty_second)*parseFloat(second_array[second_index].protein)+(1-empty_third)*parseFloat(third_array[third_index].protein)+(1-empty_fourth)*parseFloat(fourth_array[fourth_index].protein)+(1-empty_fifth)*parseFloat(fifth_array[fifth_index].protein);
+		current_number_of_carbs=(1-empty_first)*parseFloat(first_array[first_index].carbs)+(1-empty_second)*parseFloat(second_array[second_index].carbs)+(1-empty_third)*parseFloat(third_array[third_index].carbs)+(1-empty_fourth)*parseFloat(fourth_array[fourth_index].carbs)+(1-empty_fifth)*parseFloat(fifth_array[fifth_index].carbs);
+		current_number_of_fat=(1-empty_first)*parseFloat(first_array[first_index].fat)+(1-empty_second)*parseFloat(second_array[second_index].fat)+(1-empty_third)*parseFloat(third_array[third_index].fat)+(1-empty_fourth)*parseFloat(fourth_array[fourth_index].fat)+(1-empty_fifth)*parseFloat(fifth_array[fifth_index].fat);
 		current_number_of_calories=parseFloat(first_array[first_index].Broj_kalorija)+parseFloat(second_array[second_index].Broj_kalorija)+parseFloat(third_array[third_index].Broj_kalorija)+parseFloat(fourth_array[fourth_index].Broj_kalorija)+parseFloat(fifth_array[fifth_index].Broj_kalorija);
-		draw(current_number_of_calories,1200,650,"Current number of calories");
+		draw(current_number_of_calories,1200,250,"Current number of calories");
+		draw_pie();
 		}
 		if(number_of_clicks==4){
 			svg.append("rect")
-		.attr("x",700)
-		.attr("y",300)
-		.attr("width","200")
+		.attr("x",880)
+		.attr("y",150)
+		.attr("width","260")
 		.attr("height","150")
 		.attr("style","stroke:black;stroke-width:6;fill:white;");	
 		svg.append("rect")
-		.attr("x",700)
-		.attr("y",250)
-		.attr("width","200")
+		.attr("x",880)
+		.attr("y",100)
+		.attr("width","260")
 		.attr("height","50")
-		.attr("style","stroke:black;stroke-width:6;fill:white;");
+		.attr("style","stroke:black;stroke-width:6;fill:#800000;");
 		var img = svg.append("svg:image")
 				.attr("xlink:href", image)
-				.attr("width", 180)
+				.attr("width", 250)
 				.attr('class','izabranaJela')
-				.attr("height", 150)
-				.attr("x", 710)
-				.attr("y",300);
+				.attr("height", 140)
+				.attr("x", 885)
+				.attr("y",155);
 		var text = svg.append('text').text(title)
-                .attr('x', 710)
-                .attr('y', 280)
+                .attr('x', 890)
+                .attr('y', 130)
 				.attr('class','izabranaJela')
-                .attr('fill', 'black')
+                .attr('fill', '#FFF8DC')
 				.attr('font-size',23)
 				.attr('font-weight','bold')
 				.attr('text-align','center');
 		fourth_array=temp_array;
 		fourth_size=fourth_array.length;
 		fourth_draw(1);
+		current_number_of_proteins=(1-empty_first)*parseFloat(first_array[first_index].protein)+(1-empty_second)*parseFloat(second_array[second_index].protein)+(1-empty_third)*parseFloat(third_array[third_index].protein)+(1-empty_fourth)*parseFloat(fourth_array[fourth_index].protein)+(1-empty_fifth)*parseFloat(fifth_array[fifth_index].protein);
+		current_number_of_carbs=(1-empty_first)*parseFloat(first_array[first_index].carbs)+(1-empty_second)*parseFloat(second_array[second_index].carbs)+(1-empty_third)*parseFloat(third_array[third_index].carbs)+(1-empty_fourth)*parseFloat(fourth_array[fourth_index].carbs)+(1-empty_fifth)*parseFloat(fifth_array[fifth_index].carbs);
+		current_number_of_fat=(1-empty_first)*parseFloat(first_array[first_index].fat)+(1-empty_second)*parseFloat(second_array[second_index].fat)+(1-empty_third)*parseFloat(third_array[third_index].fat)+(1-empty_fourth)*parseFloat(fourth_array[fourth_index].fat)+(1-empty_fifth)*parseFloat(fifth_array[fifth_index].fat);
 		current_number_of_calories=parseFloat(first_array[first_index].Broj_kalorija)+parseFloat(second_array[second_index].Broj_kalorija)+parseFloat(third_array[third_index].Broj_kalorija)+parseFloat(fourth_array[fourth_index].Broj_kalorija)+parseFloat(fifth_array[fifth_index].Broj_kalorija);
-		draw(current_number_of_calories,1200,650,"Current number of calories");
+		draw(current_number_of_calories,1200,250,"Current number of calories");
+		draw_pie();
 		}
 		if(number_of_clicks==5){
 			number_of_clicks=0;
 			svg.append("rect")
-		.attr("x",900)
-		.attr("y",300)
-		.attr("width","200")
+		.attr("x",1140)
+		.attr("y",150)
+		.attr("width","260")
 		.attr("height","150")
 		.attr("style","stroke:black;stroke-width:6;fill:white;");	
 		svg.append("rect")
-		.attr("x",900)
-		.attr("y",250)
-		.attr("width","200")
+		.attr("x",1140)
+		.attr("y",100)
+		.attr("width","260")
 		.attr("height","50")
-		.attr("style","stroke:black;stroke-width:6;fill:white;");
+		.attr("style","stroke:black;stroke-width:6;fill:#800000;");
 		var img = svg.append("svg:image")
 				.attr("xlink:href", image)
-				.attr("width", 180)
+				.attr("width", 250)
 				.attr('class','izabranaJela')
-				.attr("height", 150)
-				.attr("x", 910)
-				.attr("y",300);
+				.attr("height", 140)
+				.attr("x", 1145)
+				.attr("y",155);
 		var text = svg.append('text').text(title)
-                .attr('x', 910)
-                .attr('y', 280)
+                .attr('x', 1150)
+                .attr('y', 130)
 				.attr('class','izabranaJela')
-                .attr('fill', 'black')
+                .attr('fill', '#FFF8DC')
 				.attr('font-size',23)
 				.attr('font-weight','bold')
 				.attr('text-align','center');
 		fifth_array=temp_array;
 		fifth_size=fifth_array.length;
 		fifth_draw(1);
+		current_number_of_proteins=(1-empty_first)*parseFloat(first_array[first_index].protein)+(1-empty_second)*parseFloat(second_array[second_index].protein)+(1-empty_third)*parseFloat(third_array[third_index].protein)+(1-empty_fourth)*parseFloat(fourth_array[fourth_index].protein)+(1-empty_fifth)*parseFloat(fifth_array[fifth_index].protein);
+		current_number_of_carbs=(1-empty_first)*parseFloat(first_array[first_index].carbs)+(1-empty_second)*parseFloat(second_array[second_index].carbs)+(1-empty_third)*parseFloat(third_array[third_index].carbs)+(1-empty_fourth)*parseFloat(fourth_array[fourth_index].carbs)+(1-empty_fifth)*parseFloat(fifth_array[fifth_index].carbs);
+		current_number_of_fat=(1-empty_first)*parseFloat(first_array[first_index].fat)+(1-empty_second)*parseFloat(second_array[second_index].fat)+(1-empty_third)*parseFloat(third_array[third_index].fat)+(1-empty_fourth)*parseFloat(fourth_array[fourth_index].fat)+(1-empty_fifth)*parseFloat(fifth_array[fifth_index].fat);
 		current_number_of_calories=parseFloat(first_array[first_index].Broj_kalorija)+parseFloat(second_array[second_index].Broj_kalorija)+parseFloat(third_array[third_index].Broj_kalorija)+parseFloat(fourth_array[fourth_index].Broj_kalorija)+parseFloat(fifth_array[fifth_index].Broj_kalorija);
-		draw(current_number_of_calories,1200,650,"Current number of calories");
+		draw(current_number_of_calories,1200,250,"Current number of calories");
+		draw_pie();
 		}
-	
-
+		combination(); 
+		number_of_meals();
 		});
     }
 
@@ -1374,17 +2494,17 @@ svg.append("polygon")
         .append("svg")
             .attr("width", w)
             .attr("height", h);
-			
+	/*		
        container.append("rect")
                 .attr("width", "100%")
-                .attr("height", "100%")
+                .attr("height", "70%")
                 .attr("stroke", "#000")
                 .attr("stroke-width", 3)
                 .attr("fill", "none")
-
-    var titles = ["Soup","Cold appetizer", "Warm appetizer","Meat", "Fish", "Side dish", "Gravy", "Salad", "Dessert", "Fruit"];
-	var images =["pictures/juha.jpg","pictures/hladno_predjelo.jpg","pictures/toplo_predjelo.jpg","pictures/meso.jpg","pictures/riba.jpg","pictures/prilog.jpg","pictures/umak.jpg","pictures/salata.jpg","pictures/kolac.jpg","pictures/voce.jpg"];
-    for(i = 0; i < 10; i++)
+*/
+	var images =["pictures/juha.jpg","pictures/hladno_predjelo.jpg","pictures/meso.jpg","pictures/prilog.jpg","pictures/umak.jpg","pictures/salata.jpg","pictures/kolac.jpg"];
+    var titles = ["Soup","Appetizer","Main course", "Side dish", "Gravy", "Salad", "Dessert", "Drink"];
+    for(i = 0; i < 7; i++)
     {	
         x = 25;
         y =(i*100)+(i+1)*10;
@@ -1394,41 +2514,41 @@ svg.append("polygon")
     
    
 </script>
-
+ 
       <p>
          <label for = "first_meal"  style="display:inline-block; margin-left:80px;" >First meal:</label>
 		 <input type = "text" id = "first_meal" 
-            style = "border:0; color:#b9cd6d; font-weight:bold; display:inline-block; margin-right:-125px;">
+            style = "border:0; color:#b9cd6d; font-weight:bold; display:inline-block; margin-right:-125px; background-color:#F6F6F6; ">
 		 <label for = "second_meal"  style="display:inline-block; ">Second meal:</label>
 		<input type = "text" id = "second_meal" 
-            style = "border:0; color:#b9cd6d; font-weight:bold; display:inline-block; margin-right:-125px;">
+            style = "border:0; color:#b9cd6d; font-weight:bold; display:inline-block; margin-right:-125px; background-color:#F6F6F6; ">
 		 <label for = "third_meal"  style="display:inline-block; ">Third meal:</label>
 		 <input type = "text" id = "third_meal" 
-            style = "border:0; color:#b9cd6d; font-weight:bold; display:inline-block; margin-right:-125px;">
+            style = "border:0; color:#b9cd6d; font-weight:bold; display:inline-block; margin-right:-125px; background-color:#F6F6F6; ">
 		 <label for = "fourth_meal"  style="display:inline-block; ">Fourth meal:</label>
 		 <input type = "text" id = "fourth_meal" 
-            style = "border:0; color:#b9cd6d; font-weight:bold; display:inline-block; margin-right:-125px;">
+            style = "border:0; color:#b9cd6d; font-weight:bold; display:inline-block; margin-right:-125px; background-color:#F6F6F6; ">
 		 <label for = "fifth_meal"  style="display:inline-block; ">Fifth meal:</label>
 		 <input type = "text" id = "fifth_meal" 
-            style = "border:0; color:#b9cd6d; font-weight:bold; display:inline-block; margin-right:-125px;">
+            style = "border:0; color:#b9cd6d; font-weight:bold; display:inline-block; margin-right:-125px; background-color:#F6F6F6; ">
       </p>
 	  
-	   <p>
+	   <p style="background-color:#F6F6F6;">
          <label for = "first_meal_calories"  style="display:inline-block; margin-left:80px;" >kCal:</label>
 		 <input type = "text" id = "first_meal_calories" 
-            style = "border:0; color:#b9cd6d; font-weight:bold; display:inline-block; margin-right:-80px;">
+            style = "border:0; color:#b9cd6d; font-weight:bold; display:inline-block; margin-right:-80px; background-color:#F6F6F6;">
 		 <label for = "second_meal_calories"  style="display:inline-block; ">kCal:</label>
 		<input type = "text" id = "second_meal_calories" 
-            style = "border:0; color:#b9cd6d; font-weight:bold; display:inline-block; margin-right:-80px;">
+            style = "border:0; color:#b9cd6d; font-weight:bold; display:inline-block; margin-right:-80px; background-color:#F6F6F6; ">
 		 <label for = "third_meal_calories"  style="display:inline-block; ">kCal:</label>
 		 <input type = "text" id = "third_meal_calories" 
-            style = "border:0; color:#b9cd6d; font-weight:bold; display:inline-block; margin-right:-80px;">
+            style = "border:0; color:#b9cd6d; font-weight:bold; display:inline-block; margin-right:-80px; background-color:#F6F6F6; ">
 		 <label for = "fourth_meal_calories"  style="display:inline-block; ">kCal:</label>
 		 <input type = "text" id = "fourth_meal_calories" 
-            style = "border:0; color:#b9cd6d; font-weight:bold; display:inline-block; margin-right:-80px;">
+            style = "border:0; color:#b9cd6d; font-weight:bold; display:inline-block; margin-right:-80px; background-color:#F6F6F6; ">
 		 <label for = "fifth_meal_calories"  style="display:inline-block; ">kCal:</label>
 		 <input type = "text" id = "fifth_meal_calories" 
-            style = "border:0; color:#b9cd6d; font-weight:bold; display:inline-block; margin-right:-80px;">
+            style = "border:0; color:#b9cd6d; font-weight:bold; display:inline-block; margin-right:-80px; background-color:#F6F6F6; ">
       </p>
 	
 <div id = "slider-1" style="height:200px; width:12px; float:left; margin-left:130px;"></div>
@@ -1440,20 +2560,34 @@ svg.append("polygon")
 <p align="right">
    <label for = "Total_sum"  style="">Total percentage:</label>
 	 <input type = "text" id = "Total_sum" 
-		style = "border:0; color:#b9cd6d; font-weight:bold; display:inline-block; margin-right:-110px;font-size:15px;">
+		style = "border:0; color:#b9cd6d; font-weight:bold; display:inline-block; margin-right:-110px;font-size:15px;background-color:#F6F6F6; ">
 	</br> 
 	<label for = "Total_sum_calories"  style="margin-right:10px; margin-top:10px;">Total calories:</label>
 	 <input type = "text" id = "Total_sum_calories" 
-		style = "border:0; color:#b9cd6d; font-weight:bold; display:inline-block; margin-right:-90px;">
+		style = "border:0; color:#b9cd6d; font-weight:bold; display:inline-block; margin-right:-90px; background-color:#F6F6F6; ">
 </p>
+
 </div>
+
+
     </div>
-    <div class="col-sm-2 sidenav">
-      <div class="well">
-        
+    <div class="col-sm-2 sidenav" style="background-image:url('pictures/menu_background.jpg'); background-size:100%;">
+	
+      <div class="well" style="margin-top:100px;">
+        <p style="word-wrap: break-word; font-family:Arial; font-size:16x; text-align:left;">
+		  Spin button: On pressing spin button, you will get slot machine effect. Random combinations of meals will fill appropriate box provided that sum of calories is less than target number of calories. 
+		</p> 
       </div>
       <div class="well">
-        
+       <p style="word-wrap: break-word; font-family:Arial; font-size:16x; text-align:left;">
+		  Slow motion button: On pressing slow motion button, slot machine will show every possible combination of meals provided that sum of calories is less than target number of calories.
+		  Time interval between every combination is 4 seconds. 
+		</p>  
+      </div>
+	   <div class="well">
+        <p style="word-wrap: break-word; font-family:Arial; font-size:16x; text-align:left;">
+		  Filter columns button: On pressing filter columns button, you set up filter for each box. Every box will show only meals which have less calories than value given in a appropriate slider.  
+		</p> 
       </div>
     </div>
   </div>

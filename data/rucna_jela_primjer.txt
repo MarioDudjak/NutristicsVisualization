@@ -1,0 +1,29 @@
+var hladna_predjela = [{"Ime":"Sarena slana rolada","calories":"250","slika":"probne_slike/rolada.jpg"},
+{"Ime":"Hladna plata","Broj_kalorija":"600","slika":"probne_slike/hladna_plata.jpg"},
+{"Ime":"Bijele pihtije","Broj_kalorija":"310","slika":"probne_slike/bijele_pihtije.jpg"}
+];
+var juhe = [{"Ime":"Riblja juha","Broj_kalorija":"110","slika":"https://coolinarika-cdn.azureedge.net/image/riblja-juha-0dc2351fcec7f4a604ac97a9f7cc22bf_view_l.jpg?v=2"},
+{"Ime":"Pire juha od cvjetače","Broj_kalorija":"130","slika":"https://coolinarika-cdn.azureedge.net/image/pire-juha-od-cvjetace-6bfa6a5e269d251414bff55a19c65809_header.jpg?v=3"},
+{"Ime":"Bistra juha","Broj_kalorija":"90","slika":"https://coolinarika-cdn.azureedge.net/image/pileca-juha-koja-lijeci-2c7b545ad37d80d3e5777dd66ff1894e_view_l.jpg?v=1"}
+];
+var topla_predjela=[{"Ime":"Palacinka s mesom","Broj_kalorija":"250","slika":"https://coolinarika-cdn.azureedge.net/image/palacinka-s-mesom-d71f2de0f70f99357072a55f38912bf0_listing_l.jpg?v=3"},
+{"Ime":"Zapeceni sampinjoni sa sirom","Broj_kalorija":"220","slika":"https://coolinarika-cdn.azureedge.net/image/zapeceni-sampinjoni-sa-sirom-c66c3a92e2999ecf00ac1c1fdc390645_view_l.jpg?v=15"},
+{"Ime":"Burek s mesom","Broj_kalorija":"690","slika":"https://coolinarika-cdn.azureedge.net/image/burek-1407c30c0963cd484004a33df620212a_header.jpg?v=1"}];
+
+var mesa=[{"Ime":"Pohano bijelo meso","Broj_kalorija":"340","slika":"https://coolinarika-cdn.azureedge.net/image/beli-medaljoni-a672bb1fa1980163deba9571843368f8_header.jpg?v=0"},
+{"Ime":"Fasirano meso","Broj_kalorija":"430","slika":"https://coolinarika-cdn.azureedge.net/image/fasirano-meso-d77f8351eecc643449cf488b4cdab166_header.jpg?v=10"},
+{"Ime":"Cordon blue","Broj_kalorija":"490","slika":"https://coolinarika-cdn.azureedge.net/image/pileci-cordon-bleu-iz-pecnice-2ad0e6c05c83d9ddbdf35f1bc52aa008_header.jpg?v=1"}];
+
+var prilozi=[{"Ime":"Krumpir iz pecnice","Broj_kalorija":"260","slika":"https://coolinarika-cdn.azureedge.net/image/krumpir-iz-pecnice-31ff03fe9a8809840811a79fe2b2d0f9_header.jpg?v=2"},
+{"Ime":"Tikvice i gljive","Broj_kalorija":"120","slika":"https://coolinarika-cdn.azureedge.net/image/prilog-od-poriluka-tikvica-i-sampinjona-2b396b0cdc0499212cf32224d69a60f2_view_l.jpg?v=10"},
+{"Ime":"Okruglice od rize","Broj_kalorija":"250","slika":"https://coolinarika-cdn.azureedge.net/image/sarena-riza-2c91c5814e96f1687e8f8ec0dce3581f_view_l.jpg?v=0"}];
+
+var ribe=[];
+var umaci=[];
+var salate=[];
+
+var deserti=[{"Ime":"Monte kolac","Broj_kalorija":"660","slika":"https://coolinarika-cdn.azureedge.net/image/monte-kolac-c016d53ddcd764ad8e457e3d670bb3df_header.jpg?v=0"},
+{"Ime":"Pita od maka","Broj_kalorija":"520","slika":"https://coolinarika-cdn.azureedge.net/image/pita-od-maka--b41b4aaeea71197c9cd2bb13714dd073_header.jpg?v=0"},
+{"Ime":"Tena kolac","Broj_kalorija":"650","slika":"https://coolinarika-cdn.azureedge.net/image/tena-kolac-71a5f3a435ca89ddbf047958d9b222b8_header.jpg?v=2"}];
+
+var voce=[];

@@ -1,0 +1,902 @@
+ [{
+				"id": 44,
+				"Ime": "Chicory In Anchovy Sauce",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/chicory-in-anchovy-sauce-2-44.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 250,
+				"protein": "5g",
+				"fat": "22g",
+				"carbs": "11g"
+			}, {
+				"id": 121,
+				"Ime": "Turkey Cutlets in Anchovy-Butter Sauce",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/turkey-cutlets-in-anchovy-butter-sauce-2-121.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 438,
+				"protein": "39g",
+				"fat": "22g",
+				"carbs": "11g"
+			}, {
+				"id": 218,
+				"Ime": "Puttanesca Sauce",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/puttanesca-sauce-218.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 101,
+				"protein": "3g",
+				"fat": "7g",
+				"carbs": "9g"
+			}, {
+				"id": 281,
+				"Ime": "Dinner Tonight: Tomato Sauce with Mushrooms and Anchovy",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/dinner_tonight_tomato_sauce_with_mushrooms_and_anchovy-281.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 733,
+				"protein": "32g",
+				"fat": "24g",
+				"carbs": "100g"
+			}, {
+				"id": 295,
+				"Ime": "Bagna Cauda",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/bagna-cauda-295.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 139,
+				"protein": "4g",
+				"fat": "11g",
+				"carbs": "7g"
+			}, {
+				"id": 373,
+				"Ime": "Buttermilk Bagna Cauda",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/buttermilk_bagna_cauda-373.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 423,
+				"protein": "3g",
+				"fat": "45g",
+				"carbs": "3g"
+			}, {
+				"id": 390,
+				"Ime": "Spring Vegetable Bagna Cauda",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/spring-vegetable-bagna-cauda-390.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 240,
+				"protein": "14g",
+				"fat": "15g",
+				"carbs": "13g"
+			}, {
+				"id": 438,
+				"Ime": "Roasted Bagna Cauda Broccoli",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/roasted_bagna_cauda_broccoli-438.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 370,
+				"protein": "11g",
+				"fat": "29g",
+				"carbs": "23g"
+			}, {
+				"id": 627,
+				"Ime": "Peanut Sauce",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/peanut-sauce-2-627.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 88,
+				"protein": "2g",
+				"fat": "3g",
+				"carbs": "13g"
+			}, {
+				"id": 660,
+				"Ime": "Bagna Cauda",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/bagna-cauda-660.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 139,
+				"protein": "4g",
+				"fat": "11g",
+				"carbs": "7g"
+			}, {
+				"id": 674,
+				"Ime": "Bagna Cauda",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/bagna-cauda-674.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 139,
+				"protein": "4g",
+				"fat": "11g",
+				"carbs": "7g"
+			}, {
+				"id": 730,
+				"Ime": "Puttanesca Sauce",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/puttanesca_sauce-730.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 441,
+				"protein": "9g",
+				"fat": "35g",
+				"carbs": "31g"
+			}, {
+				"id": 757,
+				"Ime": "Faux Peanut Sauce",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/faux-peanut-sauce-757.jpeg",
+				"imageType": "jpeg",
+				"Broj_kalorija": 237,
+				"protein": "7g",
+				"fat": "20g",
+				"carbs": "11g"
+			}, {
+				"id": 798,
+				"Ime": "Arugula Pesto: Pesto Di Rucola",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/arugula-pesto-pesto-di-rucola-798.jpeg",
+				"imageType": "jpeg",
+				"Broj_kalorija": 157,
+				"protein": "3g",
+				"fat": "15g",
+				"carbs": "2g"
+			}, {
+				"id": 816,
+				"Ime": "Bagna Cauda",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/bagna-cauda-816.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 139,
+				"protein": "4g",
+				"fat": "11g",
+				"carbs": "7g"
+			}, {
+				"id": 1087,
+				"Ime": "Sea Bass and Spicy Tomato Sauce Over Braised Fennel",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/sea-bass-and-spicy-tomato-sauce-over-braised-fennel-2-1087.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 243,
+				"protein": "29g",
+				"fat": "7g",
+				"carbs": "18g"
+			}, {
+				"id": 4338,
+				"Ime": "Spinach Pesto On Sardine Crostini",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/spinach-pesto-on-sardine-crostini-2-4338.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 284,
+				"protein": "9g",
+				"fat": "21g",
+				"carbs": "18g"
+			}, {
+				"id": 6335,
+				"Ime": "Roman-esco (Italian Romesco) with Red Snapper",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/roman-esco-italian-romesco-with-red-snapper-6335.jpeg",
+				"imageType": "jpeg",
+				"Broj_kalorija": 411,
+				"protein": "38g",
+				"fat": "22g",
+				"carbs": "15g"
+			}, {
+				"id": 8227,
+				"Ime": "Arugula Pesto",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/arugula_pesto-8227.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 393,
+				"protein": "7g",
+				"fat": "40g",
+				"carbs": "4g"
+			}, {
+				"id": 8247,
+				"Ime": "Arugula Pesto",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/arugula_pesto-8247.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 574,
+				"protein": "14g",
+				"fat": "57g",
+				"carbs": "7g"
+			}, {
+				"id": 8264,
+				"Ime": "Arugula Pesto",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/arugula-pesto-8264.jpeg",
+				"imageType": "jpeg",
+				"Broj_kalorija": 69,
+				"protein": "3g",
+				"fat": "6g",
+				"carbs": "1g"
+			}, {
+				"id": 8313,
+				"Ime": "Arugula Walnut Pesto",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/arugula_walnut_pesto-8313.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 723,
+				"protein": "29g",
+				"fat": "62g",
+				"carbs": "21g"
+			}, {
+				"id": 8342,
+				"Ime": "Pesto Arugula Wraps",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/pesto-arugula-wraps-8342.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 251,
+				"protein": "11g",
+				"fat": "21g",
+				"carbs": "4g"
+			}, {
+				"id": 8447,
+				"Ime": "Arugula Walnut Pesto Recipe",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/arugula_walnut_pesto_recipe-8447.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 935,
+				"protein": "22g",
+				"fat": "58g",
+				"carbs": "85g"
+			}, {
+				"id": 8623,
+				"Ime": "Arugula Almond Pesto",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/arugula_almond_pesto-8623.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 110,
+				"protein": "4g",
+				"fat": "10g",
+				"carbs": "2g"
+			}, {
+				"id": 8997,
+				"Ime": "New Potatoes, Artichoke Pesto And Rocket",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/new_potatoes_artichoke_pesto_and_rocket-8997.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 897,
+				"protein": "35g",
+				"fat": "30g",
+				"carbs": "130g"
+			}, {
+				"id": 9903,
+				"Ime": "Spicy Bok Choy in Garlic Sauce",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/spicy-bok-choy-in-garlic-sauce-2-9903.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 95,
+				"protein": "2g",
+				"fat": "7g",
+				"carbs": "7g"
+			}, {
+				"id": 10677,
+				"Ime": "Brussels Sprouts in Cheese Sauce",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/brussels-sprouts-in-cheese-sauce-10677.jpeg",
+				"imageType": "jpeg",
+				"Broj_kalorija": 90,
+				"protein": "4g",
+				"fat": "5g",
+				"carbs": "8g"
+			}, {
+				"id": 10820,
+				"Ime": "Braised Brussels Sprouts in Mustard Sauce",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/braised-brussels-sprouts-in-mustard-sauce-10820.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 152,
+				"protein": "2g",
+				"fat": "14g",
+				"carbs": "6g"
+			}, {
+				"id": 10822,
+				"Ime": "Brussels Sprouts in Creamy Mustard Sauce",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/brussels-sprouts-in-creamy-mustard-sauce-10822.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 113,
+				"protein": "2g",
+				"fat": "4g",
+				"carbs": "18g"
+			}, {
+				"id": 11878,
+				"Ime": "Bolognese Sauce",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/bolognese-sauce-11878.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 402,
+				"protein": "31g",
+				"fat": "24g",
+				"carbs": "26g"
+			}, {
+				"id": 11998,
+				"Ime": "Top Chef Masters\u2019 Jody Adam\u2019s Pistachio-Celery Pesto",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/top-chef-masters-jody-adams-pistachio-celery-pesto-11998.png",
+				"imageType": "png",
+				"Broj_kalorija": 436,
+				"protein": "4g",
+				"fat": "46g",
+				"carbs": "4g"
+			}, {
+				"id": 12287,
+				"Ime": "Classic Gravy",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/classic-gravy-12287.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 94,
+				"protein": "2g",
+				"fat": "6g",
+				"carbs": "7g"
+			}, {
+				"id": 12572,
+				"Ime": "Bolognese Sauce",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/bolognese-sauce-12572.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 402,
+				"protein": "31g",
+				"fat": "24g",
+				"carbs": "26g"
+			}, {
+				"id": 12942,
+				"Ime": "Bagna Cauda",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/bagna-cauda-12942.jpeg",
+				"imageType": "jpeg",
+				"Broj_kalorija": 260,
+				"protein": "5g",
+				"fat": "22g",
+				"carbs": "13g"
+			}, {
+				"id": 13213,
+				"Ime": "Collard Green Pesto",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/collard-green-pesto-13213.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 88,
+				"protein": "1g",
+				"fat": "9g",
+				"carbs": "1g"
+			}, {
+				"id": 13904,
+				"Ime": "Skirt Steak Romesco",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/skirt-steak-romesco-13904.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 699,
+				"protein": "53g",
+				"fat": "37g",
+				"carbs": "43g"
+			}, {
+				"id": 14273,
+				"Ime": "Black Pepper-Crusted Standing Rib Roast au Jus",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/black-pepper-crusted-standing-rib-roast-au-jus-2-14273.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 1753,
+				"protein": "68g",
+				"fat": "159g",
+				"carbs": "7g"
+			}, {
+				"id": 14681,
+				"Ime": "Strawberry & Rhubarb Compote with Honey Custard",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/strawberry-rhubarb-compote-with-honey-custard-2-14681.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 295,
+				"protein": "5g",
+				"fat": "22g",
+				"carbs": "21g"
+			}, {
+				"id": 15671,
+				"Ime": "Lamb in Honey Sauce",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/lamb-in-honey-sauce-15671.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 700,
+				"protein": "97g",
+				"fat": "19g",
+				"carbs": "31g"
+			}, {
+				"id": 16033,
+				"Ime": "Lamb Chops in Fennel-Tomato-Caper Sauce",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/lamb-chops-in-fennel-tomato-caper-sauce-16033.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 85,
+				"protein": "8g",
+				"fat": "2g",
+				"carbs": "10g"
+			}, {
+				"id": 16171,
+				"Ime": "Lamb in Red Mole Sauce",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/lamb-in-red-mole-sauce-16171.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 182,
+				"protein": "3g",
+				"fat": "12g",
+				"carbs": "19g"
+			}, {
+				"id": 16638,
+				"Ime": "Chimichurri Romaine Spoons",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/chimichurri-romaine-spoons-16638.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 67,
+				"protein": "3g",
+				"fat": "5g",
+				"carbs": "2g"
+			}, {
+				"id": 16845,
+				"Ime": "Spicy Mustard Green Pesto",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/spicy_mustard_green_pesto-16845.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 94,
+				"protein": "2g",
+				"fat": "9g",
+				"carbs": "2g"
+			}, {
+				"id": 16847,
+				"Ime": "Mustard-Herb Sauce",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/mustard-herb-sauce-16847.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 345,
+				"protein": "14g",
+				"fat": "27g",
+				"carbs": "17g"
+			}, {
+				"id": 16982,
+				"Ime": "Sweet Mustard Barbecue Sauce",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/sweet-mustard-barbecue-sauce-16982.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 101,
+				"protein": "1g",
+				"fat": "4g",
+				"carbs": "15g"
+			}, {
+				"id": 17110,
+				"Ime": "Grainy Mustard Sauce",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/grainy-mustard-sauce-17110.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 228,
+				"protein": "3g",
+				"fat": "23g",
+				"carbs": "4g"
+			}, {
+				"id": 17385,
+				"Ime": "Peach Barbecue Sauce",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/peach-barbecue-sauce-17385.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 63,
+				"protein": "1g",
+				"fat": "1g",
+				"carbs": "11g"
+			}, {
+				"id": 18184,
+				"Ime": "Peas in Three-Cheese Sauce",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/peas-in-three-cheese-sauce-18184.jpeg",
+				"imageType": "jpeg",
+				"Broj_kalorija": 341,
+				"protein": "11g",
+				"fat": "27g",
+				"carbs": "15g"
+			}, {
+				"id": 18404,
+				"Ime": "Pasta, Pesto, and Peas",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/pasta-pesto-and-peas-18404.jpeg",
+				"imageType": "jpeg",
+				"Broj_kalorija": 636,
+				"protein": "20g",
+				"fat": "40g",
+				"carbs": "49g"
+			}, {
+				"id": 18846,
+				"Ime": "Mozzarella, Pesto, and Roasted Radicchio",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/mozzarella-pesto-and-roasted-radicchio-18846.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 603,
+				"protein": "20g",
+				"fat": "55g",
+				"carbs": "10g"
+			}, {
+				"id": 20316,
+				"Ime": "Eggplant Tortino in a Kalamata Olive Marinara Sauce",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/eggplant_tortino_in_a_kalamata_olive_marinara_sauce-20316.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 253,
+				"protein": "17g",
+				"fat": "15g",
+				"carbs": "16g"
+			}, {
+				"id": 20788,
+				"Ime": "Beef Pot Roast and Gravy",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/beef-pot-roast-and-gravy-20788.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 304,
+				"protein": "25g",
+				"fat": "14g",
+				"carbs": "19g"
+			}, {
+				"id": 21159,
+				"Ime": "Tofu in Indian-Spiced Tomato Sauce",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/tofu-in-indian-spiced-tomato-sauce-21159.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 400,
+				"protein": "11g",
+				"fat": "32g",
+				"carbs": "22g"
+			}, {
+				"id": 22095,
+				"Ime": "Yellow Pepper Pesto Terrine",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/yellow-pepper-pesto-terrine-22095.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 127,
+				"protein": "4g",
+				"fat": "9g",
+				"carbs": "8g"
+			}, {
+				"id": 22494,
+				"Ime": "Roasted-Tomato Sauce",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/roasted-tomato-sauce-22494.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 318,
+				"protein": "10g",
+				"fat": "16g",
+				"carbs": "44g"
+			}, {
+				"id": 22566,
+				"Ime": "Sweet-and-Sour Sauce",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/sweet-and-sour-sauce-22566.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 326,
+				"protein": "1g",
+				"fat": "7g",
+				"carbs": "63g"
+			}, {
+				"id": 23576,
+				"Ime": "Healthy & Delicious: Eggplant in Spicy Tomato Sauce",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/healthy_delicious_eggplant_in_spicy_tomato_sauce-23576.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 127,
+				"protein": "4g",
+				"fat": "6g",
+				"carbs": "15g"
+			}, {
+				"id": 23744,
+				"Ime": "Eggplant Bolognese",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/eggplant-bolognese-23744.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 421,
+				"protein": "18g",
+				"fat": "13g",
+				"carbs": "57g"
+			}, {
+				"id": 26208,
+				"Ime": "Tomatillo Barbecue Sauce",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/tomatillo-barbecue-sauce-26208.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 333,
+				"protein": "7g",
+				"fat": "3g",
+				"carbs": "73g"
+			}, {
+				"id": 26224,
+				"Ime": "Tomatillo Sauce",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/tomatillo-sauce-26224.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 262,
+				"protein": "5g",
+				"fat": "13g",
+				"carbs": "35g"
+			}, {
+				"id": 26315,
+				"Ime": "Green Barbecue Sauce",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/green-barbecue-sauce-26315.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 333,
+				"protein": "7g",
+				"fat": "3g",
+				"carbs": "73g"
+			}, {
+				"id": 26368,
+				"Ime": "Quick-Cooked Tomatillo-Chile Sauce",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/quick-cooked-tomatillo-chile-sauce-26368.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 413,
+				"protein": "22g",
+				"fat": "32g",
+				"carbs": "10g"
+			}, {
+				"id": 26453,
+				"Ime": "Pork & Vegetables in Tomatillo-Cascabel Sauce",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/pork-vegetables-in-tomatillo-cascabel-sauce-26453.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 433,
+				"protein": "35g",
+				"fat": "14g",
+				"carbs": "41g"
+			}, {
+				"id": 26847,
+				"Ime": "Tomatoes in Spicy Yogurt Sauce",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/tomatoes-in-spicy-yogurt-sauce-26847.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 77,
+				"protein": "3g",
+				"fat": "4g",
+				"carbs": "8g"
+			}, {
+				"id": 29120,
+				"Ime": "Cheddar-Beer Sauce Broccoli",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/cheddar-beer-sauce-broccoli-29120.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 106,
+				"protein": "7g",
+				"fat": "5g",
+				"carbs": "9g"
+			}, {
+				"id": 30896,
+				"Ime": "Zucchini Flower Sauce",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/zucchini_flower_sauce-30896.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 265,
+				"protein": "8g",
+				"fat": "19g",
+				"carbs": "16g"
+			}, {
+				"id": 31686,
+				"Ime": "Ceci (Chickpeas) Sauce with Penne",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/ceci-chickpeas-sauce-with-penne-31686.jpeg",
+				"imageType": "jpeg",
+				"Broj_kalorija": 833,
+				"protein": "33g",
+				"fat": "20g",
+				"carbs": "134g"
+			}, {
+				"id": 31897,
+				"Ime": "Easy Dairy-Free Korma Sauce with Black Chickpeas, Purple Potatoes and Butternut Squash",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/easy-dairy-free-korma-sauce-with-black-chickpeas-purple-potatoes-and-butternut-squash-31897.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 976,
+				"protein": "24g",
+				"fat": "29g",
+				"carbs": "162g"
+			}, {
+				"id": 32039,
+				"Ime": "Fried Chicken and Milk Gravy",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/fried-chicken-and-milk-gravy-32039.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 754,
+				"protein": "44g",
+				"fat": "49g",
+				"carbs": "31g"
+			}, {
+				"id": 32145,
+				"Ime": "Duck Legs in Green Olive Sauce with Cracklings and Pappardelle",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/duck-legs-in-green-olive-sauce-with-cracklings-and-pappardelle-32145.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 741,
+				"protein": "58g",
+				"fat": "27g",
+				"carbs": "63g"
+			}, {
+				"id": 32327,
+				"Ime": "Fava Beans in Tahini Sauce",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/fava-beans-in-tahini-sauce-2-32327.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 243,
+				"protein": "10g",
+				"fat": "14g",
+				"carbs": "22g"
+			}, {
+				"id": 32560,
+				"Ime": "Grilled Vegetables In Balsamic Tomato Sauce With Couscous",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/grilled-vegetables-in-balsamic-tomato-sauce-with-couscous-2-32560.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 344,
+				"protein": "12g",
+				"fat": "5g",
+				"carbs": "66g"
+			}, {
+				"id": 32684,
+				"Ime": "Green Beans in a Creamy Mushroom Sauce",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/green_beans_in_a_creamy_mushroom_sauce-32684.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 285,
+				"protein": "10g",
+				"fat": "20g",
+				"carbs": "20g"
+			}, {
+				"id": 32749,
+				"Ime": "Green Beans in Cherry Tomato Sauce",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/green-beans-in-cherry-tomato-sauce-32749.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 142,
+				"protein": "3g",
+				"fat": "11g",
+				"carbs": "10g"
+			}, {
+				"id": 32865,
+				"Ime": "Greek Green Beans in Tomato Sauce with Feta (Fasolakia)",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/greek_green_beans_in_tomato_sauce_with_feta-32865.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 194,
+				"protein": "8g",
+				"fat": "8g",
+				"carbs": "26g"
+			}, {
+				"id": 33055,
+				"Ime": "Green Beans in Mustard Sauce",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/green-beans-in-mustard-sauce-33055.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 156,
+				"protein": "2g",
+				"fat": "12g",
+				"carbs": "11g"
+			}, {
+				"id": 34258,
+				"Ime": "Baked Gigantes in Tomato Sauce",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/baked-gigantes-in-tomato-sauce-34258.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 321,
+				"protein": "15g",
+				"fat": "8g",
+				"carbs": "52g"
+			}, {
+				"id": 36728,
+				"Ime": "Pasta Pork Bolognese",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/pasta-pork-bolognese-36728.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 576,
+				"protein": "30g",
+				"fat": "23g",
+				"carbs": "58g"
+			}, {
+				"id": 37477,
+				"Ime": "Vietnamese Peanut Sauce",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/vietnamese-peanut-sauce-37477.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 420,
+				"protein": "15g",
+				"fat": "33g",
+				"carbs": "17g"
+			}, {
+				"id": 37521,
+				"Ime": "Pork Braised in Dark Soy Sauce",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/pork-braised-in-dark-soy-sauce-2-37521.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 282,
+				"protein": "35g",
+				"fat": "12g",
+				"carbs": "8g"
+			}, {
+				"id": 37549,
+				"Ime": "Three C\u2019s In a Roasted Lentil-Chile Sauce",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/three-cs-in-a-roasted-lentil-chile-sauce-37549.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 555,
+				"protein": "28g",
+				"fat": "16g",
+				"carbs": "79g"
+			}, {
+				"id": 38116,
+				"Ime": "Asparagus Pesto",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/asparagus-pesto-38116.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 95,
+				"protein": "2g",
+				"fat": "9g",
+				"carbs": "2g"
+			}, {
+				"id": 38597,
+				"Ime": "Garlicky Hoisin Sauce",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/garlicky-hoisin-sauce-38597.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 189,
+				"protein": "3g",
+				"fat": "7g",
+				"carbs": "29g"
+			}, {
+				"id": 38800,
+				"Ime": "a : bbq sauce that\u2019s hot, sweet and black as sin",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/homemade_barbecue_sauce-38800.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 755,
+				"protein": "6g",
+				"fat": "15g",
+				"carbs": "156g"
+			}, {
+				"id": 38869,
+				"Ime": "Mushroom Sauce",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/mushroom-sauce-38869.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 209,
+				"protein": "5g",
+				"fat": "17g",
+				"carbs": "8g"
+			}, {
+				"id": 39250,
+				"Ime": "Leeks Romesco with Crumbled Garrotxa Cheese",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/leeks-romesco-with-crumbled-garrotxa-cheese-39250.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 400,
+				"protein": "5g",
+				"fat": "32g",
+				"carbs": "26g"
+			}, {
+				"id": 40250,
+				"Ime": "Balsamic-Shallot Sauce",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/balsamic-shallot-sauce-40250.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 117,
+				"protein": "1g",
+				"fat": "9g",
+				"carbs": "7g"
+			}, {
+				"id": 40477,
+				"Ime": "Thanksgiving : mashed sweet potatoes and giblet gravy",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/thanksgiving-mashed-sweet-potatoes-and-giblet-gravy-40477.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 178,
+				"protein": "2g",
+				"fat": "5g",
+				"carbs": "32g"
+			}, {
+				"id": 40503,
+				"Ime": "Cranberry Sauce with Roasted Shallots and Port",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/cranberry-sauce-with-roasted-shallots-and-port-2-40503.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 440,
+				"protein": "4g",
+				"fat": "4g",
+				"carbs": "75g"
+			}, {
+				"id": 40693,
+				"Ime": "Wild Leek (aka Ramp) Pesto",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/wild_leek_pesto-40693.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 182,
+				"protein": "4g",
+				"fat": "18g",
+				"carbs": "3g"
+			}, {
+				"id": 42353,
+				"Ime": "Creamy Horseradish Sauce",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/creamy-horseradish-sauce-42353.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 316,
+				"protein": "4g",
+				"fat": "31g",
+				"carbs": "9g"
+			}, {
+				"id": 42369,
+				"Ime": "Blue Cheese-Horseradish Sauce",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/",
+				"imageType": "",
+				"Broj_kalorija": 97,
+				"protein": "1g",
+				"fat": "8g",
+				"carbs": "5g"
+			}, {
+				"id": 42486,
+				"Ime": "Sour-Cream Horseradish Sauce",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/sour-cream-horseradish-sauce-42486.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 192,
+				"protein": "2g",
+				"fat": "18g",
+				"carbs": "6g"
+			}, {
+				"id": 42565,
+				"Ime": "Louis Sauce",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/louis-sauce-42565.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 1153,
+				"protein": "5g",
+				"fat": "112g",
+				"carbs": "29g"
+			}, {
+				"id": 42574,
+				"Ime": "R\u00e9moulade Sauce",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/rmoulade-sauce-42574.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 624,
+				"protein": "2g",
+				"fat": "68g",
+				"carbs": "3g"
+			}, {
+				"id": 42587,
+				"Ime": "Horseradish Beet Sauce",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/horseradish-beet-sauce-42587.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 105,
+				"protein": "2g",
+				"fat": "8g",
+				"carbs": "7g"
+			}, {
+				"id": 42765,
+				"Ime": "Herbed Horseradish Shrimp Cocktail Sauce",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/herbed-horseradish-shrimp-cocktail-sauce-42765.jpeg",
+				"imageType": "jpeg",
+				"Broj_kalorija": 82,
+				"protein": "1g",
+				"fat": "8g",
+				"carbs": "2g"
+			}, {
+				"id": 42827,
+				"Ime": "Big Bob Gibson's Alabama White BBQ Sauce",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/big-bob-gibsons-alabama-white-bbq-sauce-42827.jpeg",
+				"imageType": "jpeg",
+				"Broj_kalorija": 1771,
+				"protein": "2g",
+				"fat": "177g",
+				"carbs": "37g"
+			}, {
+				"id": 43885,
+				"Ime": "Pesto Crushed Potatoes",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/pesto-crushed-potatoes-43885.jpeg",
+				"imageType": "jpeg",
+				"Broj_kalorija": 225,
+				"protein": "10g",
+				"fat": "14g",
+				"carbs": "17g"
+			}
+		]

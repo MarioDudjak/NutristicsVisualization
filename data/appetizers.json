@@ -1,0 +1,902 @@
+[{
+				"id": 22,
+				"Ime": "Anchovy And Onion Tart",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/anchovy-and-onion-tart-2-22.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 453,
+				"protein": "11g",
+				"fat": "16g",
+				"carbs": "66g"
+			}, {
+				"id": 54,
+				"Ime": "Anchovy and Piquillo Pepper Bruschetta",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/anchovy-and-piquillo-pepper-bruschetta-54.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 152,
+				"protein": "1g",
+				"fat": "14g",
+				"carbs": "4g"
+			}, {
+				"id": 66,
+				"Ime": "Egg and Anchovy Crostini",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/egg-and-anchovy-crostini-66.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 265,
+				"protein": "11g",
+				"fat": "9g",
+				"carbs": "35g"
+			}, {
+				"id": 93,
+				"Ime": "Fried Calamari with Spicy Anchovy Mayonnaise",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/fried-calamari-with-spicy-anchovy-mayonnaise-93.jpeg",
+				"imageType": "jpeg",
+				"Broj_kalorija": 871,
+				"protein": "25g",
+				"fat": "68g",
+				"carbs": "44g"
+			}, {
+				"id": 106,
+				"Ime": "Bagna Cauda (piedmontese Warm Garlic-anchovy Dip)",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/bagna_cauda-106.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 63,
+				"protein": "2g",
+				"fat": "4g",
+				"carbs": "5g"
+			}, {
+				"id": 160,
+				"Ime": "Italian Salsa Verde",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/italian-salsa-verde-2-160.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 807,
+				"protein": "26g",
+				"fat": "30g",
+				"carbs": "110g"
+			}, {
+				"id": 186,
+				"Ime": "Pissaladiere",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/pissaladiere-2-186.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 119,
+				"protein": "3g",
+				"fat": "6g",
+				"carbs": "14g"
+			}, {
+				"id": 190,
+				"Ime": "Chickpea and Octopus Bruschetta",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/chickpea-and-octopus-bruschetta-190.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 179,
+				"protein": "11g",
+				"fat": "10g",
+				"carbs": "9g"
+			}, {
+				"id": 203,
+				"Ime": "Bagna Cauda Dip With Assorted Vegetables",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/bagna_cauda_dip_with_assorted_vegetables-203.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 1184,
+				"protein": "27g",
+				"fat": "101g",
+				"carbs": "50g"
+			}, {
+				"id": 211,
+				"Ime": "Bagna Cauda Dip with Assorted Vegetables",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/bagna-cauda-dip-with-assorted-vegetables-2-211.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 340,
+				"protein": "9g",
+				"fat": "26g",
+				"carbs": "22g"
+			}, {
+				"id": 230,
+				"Ime": "Queso Manchego con Aceitunas y Piquillos",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/queso-manchego-con-aceitunas-y-piquillos-2-230.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 60,
+				"protein": "3g",
+				"fat": "5g",
+				"carbs": "1g"
+			}, {
+				"id": 235,
+				"Ime": "Crostini With Beef Tartare And White Truffle Oil",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/crostini-with-beef-tartare-and-white-truffle-oil-2-235.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 497,
+				"protein": "23g",
+				"fat": "43g",
+				"carbs": "3g"
+			}, {
+				"id": 250,
+				"Ime": "Caramelized Onion Tart With Olives",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/caramelized-onion-tart-with-olives-2-250.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 468,
+				"protein": "6g",
+				"fat": "35g",
+				"carbs": "34g"
+			}, {
+				"id": 295,
+				"Ime": "Bagna Cauda",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/bagna-cauda-295.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 139,
+				"protein": "4g",
+				"fat": "11g",
+				"carbs": "7g"
+			}, {
+				"id": 322,
+				"Ime": "Sweet & Sour Kale With Garlic & Anchovy",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/sweet-sour-kale-with-garlic-anchovy-2-322.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 49,
+				"protein": "1g",
+				"fat": "4g",
+				"carbs": "3g"
+			}, {
+				"id": 339,
+				"Ime": "Ancho\u00efade With Radishes, Fennel, Celery And Carrots",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/anchoade-with-radishes-fennel-celery-and-carrots-2-339.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 86,
+				"protein": "2g",
+				"fat": "8g",
+				"carbs": "3g"
+			}, {
+				"id": 373,
+				"Ime": "Buttermilk Bagna Cauda",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/buttermilk_bagna_cauda-373.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 423,
+				"protein": "3g",
+				"fat": "45g",
+				"carbs": "3g"
+			}, {
+				"id": 375,
+				"Ime": "Green Goddess Dip With Endive",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/green-goddess-dip-with-endive-2-375.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 25,
+				"protein": "1g",
+				"fat": "2g",
+				"carbs": "2g"
+			}, {
+				"id": 390,
+				"Ime": "Spring Vegetable Bagna Cauda",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/spring-vegetable-bagna-cauda-390.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 240,
+				"protein": "14g",
+				"fat": "15g",
+				"carbs": "13g"
+			}, {
+				"id": 395,
+				"Ime": "Chicken-Liver Crostini",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/chicken-liver-crostini-395.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 65,
+				"protein": "3g",
+				"fat": "3g",
+				"carbs": "4g"
+			}, {
+				"id": 399,
+				"Ime": "Roasted Pepper Antipasto",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/roasted-pepper-antipasto-2-399.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 168,
+				"protein": "1g",
+				"fat": "14g",
+				"carbs": "9g"
+			}, {
+				"id": 422,
+				"Ime": "Pissaladiere",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/pissaladiere-422.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 63,
+				"protein": "2g",
+				"fat": "3g",
+				"carbs": "8g"
+			}, {
+				"id": 436,
+				"Ime": "Celery and Olive Antipasto with Ricotta Salata",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/celery-and-olive-antipasto-with-ricotta-salata-436.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 107,
+				"protein": "3g",
+				"fat": "9g",
+				"carbs": "3g"
+			}, {
+				"id": 437,
+				"Ime": "Burn-Your-Fingers Chicken Wings",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/burn-your-fingers-chicken-wings-437.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 736,
+				"protein": "55g",
+				"fat": "47g",
+				"carbs": "21g"
+			}, {
+				"id": 438,
+				"Ime": "Roasted Bagna Cauda Broccoli",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/roasted_bagna_cauda_broccoli-438.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 370,
+				"protein": "11g",
+				"fat": "29g",
+				"carbs": "23g"
+			}, {
+				"id": 442,
+				"Ime": "Roasted Garlic And Caramelized Onion Tart",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/roasted-garlic-and-caramelized-onion-tart-2-442.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 240,
+				"protein": "5g",
+				"fat": "16g",
+				"carbs": "19g"
+			}, {
+				"id": 443,
+				"Ime": "French Onion Tart",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/french_onion_tart-443.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 37,
+				"protein": "1g",
+				"fat": "2g",
+				"carbs": "4g"
+			}, {
+				"id": 453,
+				"Ime": "Pissaladi\u00e8re Tartlets",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/pissaladire-tartlets-453.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 76,
+				"protein": "2g",
+				"fat": "2g",
+				"carbs": "14g"
+			}, {
+				"id": 463,
+				"Ime": "Bagna Cauda Bruschetta",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/bagna-cauda-bruschetta-463.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 100,
+				"protein": "2g",
+				"fat": "5g",
+				"carbs": "11g"
+			}, {
+				"id": 467,
+				"Ime": "Salmon Salsa Verde",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/salmon-salsa-verde-2-467.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 293,
+				"protein": "35g",
+				"fat": "16g",
+				"carbs": "1g"
+			}, {
+				"id": 479,
+				"Ime": "Four-Herb Green Goddess Dressing",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/four-herb-green-goddess-dressing-479.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 29,
+				"protein": "2g",
+				"fat": "2g",
+				"carbs": "2g"
+			}, {
+				"id": 488,
+				"Ime": "Mussels with Tomatoes, Basil & Saffron",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/mussels-with-tomatoes-basil-saffron-488.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 681,
+				"protein": "51g",
+				"fat": "27g",
+				"carbs": "46g"
+			}, {
+				"id": 490,
+				"Ime": "Tomato and Anchovy Bruschetta",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/tomato-and-anchovy-bruschetta-490.jpeg",
+				"imageType": "jpeg",
+				"Broj_kalorija": 160,
+				"protein": "11g",
+				"fat": "12g",
+				"carbs": "2g"
+			}, {
+				"id": 510,
+				"Ime": "Springtime Dip",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/springtime-dip-510.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 85,
+				"protein": "6g",
+				"fat": "3g",
+				"carbs": "10g"
+			}, {
+				"id": 554,
+				"Ime": "Neapolitan Toasts (Crostini Napoletani)",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/neapolitan-toasts-crostini-napoletani-554.jpeg",
+				"imageType": "jpeg",
+				"Broj_kalorija": 534,
+				"protein": "22g",
+				"fat": "16g",
+				"carbs": "77g"
+			}, {
+				"id": 567,
+				"Ime": "Chicken Liver Crostini",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/chicken-liver-crostini-2-567.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 286,
+				"protein": "13g",
+				"fat": "23g",
+				"carbs": "4g"
+			}, {
+				"id": 579,
+				"Ime": "Miniature Onion Tartlets",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/miniature-onion-tartlets-2-579.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 654,
+				"protein": "9g",
+				"fat": "45g",
+				"carbs": "53g"
+			}, {
+				"id": 595,
+				"Ime": "Mussels with Tomatoes, Wine, and Anise",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/mussels-with-tomatoes-wine-and-anise-2-595.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 354,
+				"protein": "16g",
+				"fat": "17g",
+				"carbs": "23g"
+			}, {
+				"id": 660,
+				"Ime": "Bagna Cauda",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/bagna-cauda-660.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 139,
+				"protein": "4g",
+				"fat": "11g",
+				"carbs": "7g"
+			}, {
+				"id": 669,
+				"Ime": "Fried Zucchini Flowers with Alici e Limone",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/fried-zucchini-flowers-with-alici-e-limone-669.jpeg",
+				"imageType": "jpeg",
+				"Broj_kalorija": 355,
+				"protein": "18g",
+				"fat": "19g",
+				"carbs": "36g"
+			}, {
+				"id": 674,
+				"Ime": "Bagna Cauda",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/bagna-cauda-674.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 139,
+				"protein": "4g",
+				"fat": "11g",
+				"carbs": "7g"
+			}, {
+				"id": 701,
+				"Ime": "Broad Beans With Tomatoes & Anchovies",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/broad-beans-with-tomatoes-anchovies-2-701.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 78,
+				"protein": "4g",
+				"fat": "2g",
+				"carbs": "11g"
+			}, {
+				"id": 715,
+				"Ime": "Bruschetta With Fig & Walnut Anchoiade",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/bruschetta-with-fig-walnut-anchoiade-2-715.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 241,
+				"protein": "3g",
+				"fat": "19g",
+				"carbs": "15g"
+			}, {
+				"id": 716,
+				"Ime": "Bruschetta With Rustic Green Olive Tapenade",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/bruschetta-with-rustic-green-olive-tapenade-2-716.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 205,
+				"protein": "4g",
+				"fat": "21g",
+				"carbs": "2g"
+			}, {
+				"id": 725,
+				"Ime": "Grilled Calamari on a Bed of White Beans",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/grilled-calamari-on-a-bed-of-white-beans-725.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 847,
+				"protein": "40g",
+				"fat": "59g",
+				"carbs": "42g"
+			}, {
+				"id": 789,
+				"Ime": "Sauteed Calamari With Tomatoes, Basil, Raisins, And Pine Nuts",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/sauteed-calamari-with-tomatoes-basil-raisins-and-pine-nuts-2-789.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 736,
+				"protein": "38g",
+				"fat": "38g",
+				"carbs": "65g"
+			}, {
+				"id": 806,
+				"Ime": "Rare Beef With Mustard Yorkshires",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/rare_beef_with_mustard_yorkshires-806.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 979,
+				"protein": "42g",
+				"fat": "75g",
+				"carbs": "35g"
+			}, {
+				"id": 816,
+				"Ime": "Bagna Cauda",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/bagna-cauda-816.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 139,
+				"protein": "4g",
+				"fat": "11g",
+				"carbs": "7g"
+			}, {
+				"id": 832,
+				"Ime": "Chicken Liver Crostini",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/chicken-liver-crostini-2-832.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 173,
+				"protein": "9g",
+				"fat": "10g",
+				"carbs": "13g"
+			}, {
+				"id": 842,
+				"Ime": "Salsa Verde",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/salsa_verde-842.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 222,
+				"protein": "1g",
+				"fat": "24g",
+				"carbs": "3g"
+			}, {
+				"id": 1139,
+				"Ime": "Black Sea Bass and Mussels a la Nage",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/black-sea-bass-and-mussels-a-la-nage-1139.jpeg",
+				"imageType": "jpeg",
+				"Broj_kalorija": 299,
+				"protein": "39g",
+				"fat": "6g",
+				"carbs": "12g"
+			}, {
+				"id": 1156,
+				"Ime": "Stilton Cheese Puffs",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/stilton-cheese-puffs-2-1156.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 28,
+				"protein": "1g",
+				"fat": "2g",
+				"carbs": "1g"
+			}, {
+				"id": 1270,
+				"Ime": "Baked Gefilte Fish",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/baked-gefilte-fish-1270.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 471,
+				"protein": "38g",
+				"fat": "23g",
+				"carbs": "29g"
+			}, {
+				"id": 1323,
+				"Ime": "Smoked Fish Crostini",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/smoked-fish-crostini-1323.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 341,
+				"protein": "11g",
+				"fat": "32g",
+				"carbs": "4g"
+			}, {
+				"id": 1336,
+				"Ime": "Smoked Bluefish Pate",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/smoked-bluefish-pate-2-1336.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 778,
+				"protein": "30g",
+				"fat": "67g",
+				"carbs": "7g"
+			}, {
+				"id": 1342,
+				"Ime": "Smoked-bluefish Pate With Roasted Tomatoes On Crackers",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/smoked-bluefish-pate-with-roasted-tomatoes-on-crackers-2-1342.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 306,
+				"protein": "11g",
+				"fat": "22g",
+				"carbs": "15g"
+			}, {
+				"id": 1627,
+				"Ime": "Red Snapper Gefilte Fish",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/red-snapper-gefilte-fish-1627.jpeg",
+				"imageType": "jpeg",
+				"Broj_kalorija": 538,
+				"protein": "30g",
+				"fat": "32g",
+				"carbs": "32g"
+			}, {
+				"id": 1936,
+				"Ime": "Salmon Rillettes",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/salmon-rillettes-1936.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 98,
+				"protein": "8g",
+				"fat": "7g",
+				"carbs": "1g"
+			}, {
+				"id": 1999,
+				"Ime": "spicy tomato mussels",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/",
+				"imageType": "",
+				"Broj_kalorija": 78,
+				"protein": "2g",
+				"fat": "5g",
+				"carbs": "7g"
+			}, {
+				"id": 2017,
+				"Ime": "Whole Roast Bream With Potatoes & Olives",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/whole-roast-bream-with-potatoes-olives-2-2017.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 60,
+				"protein": "7g",
+				"fat": "2g",
+				"carbs": "1g"
+			}, {
+				"id": 2024,
+				"Ime": "Roast Brill With Puy Lentils & Shiitake Mushrooms",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/roast-brill-with-puy-lentils-shiitake-mushrooms-2-2024.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 67,
+				"protein": "3g",
+				"fat": "2g",
+				"carbs": "8g"
+			}, {
+				"id": 2354,
+				"Ime": "Beer-battered Cod and Onion Rings",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/beer-battered-cod-and-onion-rings-2354.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 310,
+				"protein": "36g",
+				"fat": "3g",
+				"carbs": "31g"
+			}, {
+				"id": 2426,
+				"Ime": "Green Rice With Cod And Morels",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/green_rice_with_cod_and_morels-2426.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 190,
+				"protein": "4g",
+				"fat": "15g",
+				"carbs": "11g"
+			}, {
+				"id": 2462,
+				"Ime": "Cod, Artichoke, and White Bean Dip",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/cod-artichoke-and-white-bean-dip-2462.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 297,
+				"protein": "16g",
+				"fat": "14g",
+				"carbs": "27g"
+			}, {
+				"id": 2533,
+				"Ime": "Black Bean Dip",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/black_bean_dip-2533.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 200,
+				"protein": "31g",
+				"fat": "5g",
+				"carbs": "7g"
+			}, {
+				"id": 2539,
+				"Ime": "Braised Peas With Bacon, Lentils & Cod",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/braised-peas-with-bacon-lentils-cod-2-2539.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 56,
+				"protein": "6g",
+				"fat": "2g",
+				"carbs": "4g"
+			}, {
+				"id": 2627,
+				"Ime": "Fried Seafood Platter",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/fried-seafood-platter-2-2627.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 175,
+				"protein": "6g",
+				"fat": "16g",
+				"carbs": "3g"
+			}, {
+				"id": 2629,
+				"Ime": "Bakaliaros Skordalia",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/bakaliaros-skordalia-2-2629.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 137,
+				"protein": "16g",
+				"fat": "5g",
+				"carbs": "7g"
+			}, {
+				"id": 2761,
+				"Ime": "Wise Sons' Gefilte Fish",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/wise-sons-gefilte-fish-2761.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 1476,
+				"protein": "175g",
+				"fat": "36g",
+				"carbs": "102g"
+			}, {
+				"id": 2797,
+				"Ime": "How To Make And  Roll Sushi",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/how_to_make_and_roll_sushi-2797.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 878,
+				"protein": "23g",
+				"fat": "12g",
+				"carbs": "171g"
+			}, {
+				"id": 2899,
+				"Ime": "Smoked Whitefish Gefilte Fish with Lemon-Horseradish Sauce",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/smoked-whitefish-gefilte-fish-with-lemon-horseradish-sauce-2899.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 143,
+				"protein": "9g",
+				"fat": "10g",
+				"carbs": "5g"
+			}, {
+				"id": 3076,
+				"Ime": "Smoked Haddock Tartlets With Poached Eggs & Chives",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/smoked-haddock-tartlets-with-poached-eggs-chives-2-3076.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 31,
+				"protein": "2g",
+				"fat": "1g",
+				"carbs": "3g"
+			}, {
+				"id": 3446,
+				"Ime": "Halibut Tostadas with Yogurt-Lime Sauce",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/halibut-tostadas-with-yogurt-lime-sauce-3446.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 280,
+				"protein": "26g",
+				"fat": "10g",
+				"carbs": "22g"
+			}, {
+				"id": 3511,
+				"Ime": "Grilled Halibut and Fresh Mango Salsa",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/grilled-halibut-and-fresh-mango-salsa-3511.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 247,
+				"protein": "33g",
+				"fat": "6g",
+				"carbs": "15g"
+			}, {
+				"id": 3691,
+				"Ime": "Fish Sliders on Cornbread Rounds with Red Pepper Mayonnaise",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/fish-sliders-on-cornbread-rounds-with-red-pepper-mayonnaise-3691.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 197,
+				"protein": "9g",
+				"fat": "13g",
+				"carbs": "11g"
+			}, {
+				"id": 3709,
+				"Ime": "Grilled Fish Tostadas with Pineapple-J\u00edcama Salsa",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/grilled-fish-tostadas-with-pineapple-jcama-salsa-2-3709.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 338,
+				"protein": "23g",
+				"fat": "16g",
+				"carbs": "29g"
+			}, {
+				"id": 3730,
+				"Ime": "Spiced Rice With Kippers & Poached Eggs",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/spiced-rice-with-kippers-poached-eggs-2-3730.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 41,
+				"protein": "1g",
+				"fat": "2g",
+				"carbs": "4g"
+			}, {
+				"id": 3771,
+				"Ime": "Polish Canape Butters (polska Maslo)",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/polish_canape_butters-3771.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 1200,
+				"protein": "44g",
+				"fat": "112g",
+				"carbs": "8g"
+			}, {
+				"id": 3837,
+				"Ime": "Smoked Mackerel Dip",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/smoked-mackerel-dip-2-3837.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 127,
+				"protein": "8g",
+				"fat": "5g",
+				"carbs": "13g"
+			}, {
+				"id": 3850,
+				"Ime": "Box Of Pullman Loaf Recipe",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/box_of_pullman_loaf_recipe-3850.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 267,
+				"protein": "13g",
+				"fat": "16g",
+				"carbs": "18g"
+			}, {
+				"id": 3860,
+				"Ime": "20-minute Rice Supper",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/20-minute-rice-supper-2-3860.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 88,
+				"protein": "4g",
+				"fat": "2g",
+				"carbs": "13g"
+			}, {
+				"id": 3863,
+				"Ime": "Grilled Sardine, Tomato, and Mint Bruschetta",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/grilled-sardine-tomato-and-mint-bruschetta-3863.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 537,
+				"protein": "48g",
+				"fat": "30g",
+				"carbs": "15g"
+			}, {
+				"id": 3990,
+				"Ime": "Mahi Mahi Lettuce Wraps",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/mahi-mahi-lettuce-wraps-3990.jpeg",
+				"imageType": "jpeg",
+				"Broj_kalorija": 298,
+				"protein": "33g",
+				"fat": "9g",
+				"carbs": "23g"
+			}, {
+				"id": 3998,
+				"Ime": "Bean Sprout Kimchi Ahi Tuna Tostadas",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/bean_sprout_kimchi_ahi_tuna_tostadas-3998.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 1397,
+				"protein": "115g",
+				"fat": "85g",
+				"carbs": "40g"
+			}, {
+				"id": 4050,
+				"Ime": "Pineapple Salsa Mahi",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/pineapple-salsa-mahi-2-4050.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 403,
+				"protein": "66g",
+				"fat": "5g",
+				"carbs": "23g"
+			}, {
+				"id": 4245,
+				"Ime": "Gefilte Fish Pate",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/gefilte-fish-pate-2-4245.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 128,
+				"protein": "15g",
+				"fat": "4g",
+				"carbs": "8g"
+			}, {
+				"id": 4251,
+				"Ime": "Gunflint Walleye",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/gunflint-walleye-2-4251.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 114,
+				"protein": "17g",
+				"fat": "4g",
+				"carbs": "3g"
+			}, {
+				"id": 4254,
+				"Ime": "Delicious Old Style Gefilte Fish",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/delicious_old_style_gefilte_fish-4254.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 288,
+				"protein": "48g",
+				"fat": "5g",
+				"carbs": "13g"
+			}, {
+				"id": 4264,
+				"Ime": "Beer-battered Pollack Bites",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/beer-battered_pollack_bites-4264.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 325,
+				"protein": "1g",
+				"fat": "31g",
+				"carbs": "10g"
+			}, {
+				"id": 4305,
+				"Ime": "Chilled Tofu With Crunchy Baby Sardines Recipe",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/chilled_tofu_with_crunchy_baby_sardines_recipe-4305.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 468,
+				"protein": "37g",
+				"fat": "34g",
+				"carbs": "4g"
+			}, {
+				"id": 4325,
+				"Ime": "Grilled Sardines, Charred Lemon & Chiles",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/grilled_sardines_charred_lemon_chiles-4325.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 194,
+				"protein": "4g",
+				"fat": "19g",
+				"carbs": "4g"
+			}, {
+				"id": 4362,
+				"Ime": "Sardine Factory Famous Calamari Puffs Appetizer",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/sardine-factory-famous-calamari-puffs-appetizer-4362.jpeg",
+				"imageType": "jpeg",
+				"Broj_kalorija": 364,
+				"protein": "28g",
+				"fat": "21g",
+				"carbs": "17g"
+			}, {
+				"id": 4369,
+				"Ime": "Crostini with Salted European-Style Butter, Smoked Sardines, and Pepper Cress",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/crostini-with-salted-european-style-butter-smoked-sardines-and-pepper-cress-4369.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 474,
+				"protein": "37g",
+				"fat": "21g",
+				"carbs": "33g"
+			}, {
+				"id": 4372,
+				"Ime": "Bruschetta with Fresh Monterey Sardines",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/bruschetta-with-fresh-monterey-sardines-4372.jpeg",
+				"imageType": "jpeg",
+				"Broj_kalorija": 273,
+				"protein": "11g",
+				"fat": "20g",
+				"carbs": "13g"
+			}, {
+				"id": 4804,
+				"Ime": "Deviled Eggs on a Nest of Butter Lettuce with Honey Mustard Dressing",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/simple_roast_salmon_with_potatoes_asparagus_and_lemon-dill-ca-4804.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 141,
+				"protein": "7g",
+				"fat": "9g",
+				"carbs": "9g"
+			}, {
+				"id": 5172,
+				"Ime": "Japanese Tempura, Fondue Style",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/japanese-tempura-fondue-style-5172.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 341,
+				"protein": "33g",
+				"fat": "19g",
+				"carbs": "9g"
+			}, {
+				"id": 5251,
+				"Ime": "Shrimp Cakes",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/shrimp-cakes-2-5251.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 244,
+				"protein": "11g",
+				"fat": "11g",
+				"carbs": "29g"
+			}, {
+				"id": 5326,
+				"Ime": "Shrimp Cakes with Carrot Slaw",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/shrimp-cakes-with-carrot-slaw-5326.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 323,
+				"protein": "36g",
+				"fat": "13g",
+				"carbs": "13g"
+			}, {
+				"id": 5374,
+				"Ime": "Grilled Shrimp Cocktail",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/grilled-shrimp-cocktail-5374.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 312,
+				"protein": "3g",
+				"fat": "23g",
+				"carbs": "27g"
+			}, {
+				"id": 5444,
+				"Ime": "Thai Shrimp Cake",
+				"slika": "https:\/\/spoonacular.com\/recipeImages\/thai_shrimp_cake-5444.jpg",
+				"imageType": "jpg",
+				"Broj_kalorija": 44,
+				"protein": "4g",
+				"fat": "3g",
+				"carbs": "2g"
+			}
+		]
