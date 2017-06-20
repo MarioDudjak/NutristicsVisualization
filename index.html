@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<html manifest="manifest.json">
 <head>
   <title>Data visualization</title>
   <meta charset="utf-8">
@@ -9,15 +10,15 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="http://d3js.org/d3.v3.min.js"></script>
-      <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.2/d3.js"></script>
+      <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/d3/3.4.2/d3.js"></script>
   <link rel="stylesheet" href="styles.css">
   <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
          rel = "stylesheet">
       <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
       <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-	  <script src="jquery.min.js"></script>
-		<script src="jquery.textfill.min.js"></script>
-		
+<!--	  <script src="https://jquery.min.js"></script>
+		<script src="https://jquery.textfill.min.js"></script>
+		-->
 
 
 </head>
@@ -58,19 +59,19 @@
 	  <div id="machine" >
 	  
 	     <form style="float:left; display:inline; position:relative; top:100px; left:50px;" name="myform" onSubmit="return handleClick()">
-            <input name="Submit1"  type="submit" value="Add total calories" style="width:200px; height:50px;">
+            <input name="Submit1"  type="submit" value="Add total calories" style="width:200px; height:50px; ">
             <input type="number" min="0" required id="myVal" placeholder="Input number&hellip;" style="width:200px; height:50px;">
         </form>
 		
-		 <form style="float:right; display:inline; position:relative; top:700px; right:110px;" name="secondForm">
+		 <form style="float:right; display:inline; position:relative; top:800px; right:110px;" name="secondForm">
             <input name="Submit2"  id="SlotMachine" type="submit" value="Slow motion" style="width:100px; height:50px;">
         </form>
 		
-		 <form style="float:right; display:inline; position:relative; top:700px; right:-100px;" name="thirdForm"  ">
+		 <form style="float:right; display:inline; position:relative; top:800px; right:-100px;" name="thirdForm"  ">
             <input name="Submit3"  id="filterCalories" type="submit" value="Filter columns" style="width:110; height:50px;">
         </form>
 		
-		 <form style="float:right; display:inline; position:relative; top:700px; right:0px;" name="fourthForm">
+		 <form style="float:right; display:inline; position:relative; top:800px; right:0px;" name="fourthForm">
             <input name="Submit4"  id="Spin" type="submit" value="Spin" style="width:100px; height:50px;">
         </form>
 		
@@ -168,7 +169,8 @@ draw_combinations();
 	var r=150;
 var color = d3.scale.category10();
 
-
+var slot_machine_rect_y=1100;
+var onmouseover_y=1575;
 
 function first_draw(transition){
 empty_first=0;
@@ -179,7 +181,7 @@ body = d3.select('body').select("#machine")
 rect = g.append('rect').transition().duration(500*transition).attr('width', 260)
                 .attr('height', 300)
                 .attr('x', 100)
-                .attr('y', 650)
+                .attr('y', slot_machine_rect_y)
                 .style('fill', '#EBDCB2')
                 .attr('stroke', 'black')
 				.attr('stroke-width',5)
@@ -188,10 +190,10 @@ rect = g.append('rect').transition().duration(500*transition).attr('width', 260)
 				.attr("width", 250)
 				.attr("height", 180)
 				.attr("x", 105)
-				.attr("y",760);
+				.attr("y",slot_machine_rect_y+110);
 		var text = g.append('text').text(first_array[first_index].Ime)
                 .attr('x', 105)
-                .attr('y', 700)
+                .attr('y', slot_machine_rect_y+50)
                 .attr('fill', 'black')
 				.attr('font-size',50)
 				.attr('font-weight','bold')
@@ -200,7 +202,7 @@ rect = g.append('rect').transition().duration(500*transition).attr('width', 260)
 				.attr('lengthAdjust','spacingAndGlyphs');	
 		var text = g.append('text').text(first_array[first_index].Broj_kalorija + " kCal")
                 .attr('x', 105)
-                .attr('y', 750)
+                .attr('y', slot_machine_rect_y+100)
                 .attr('fill', 'black')
 				.attr('font-size',50)
 				.attr('font-weight','bold')
@@ -217,15 +219,15 @@ $(".prva_slika").mouseover(function(){
 		var first_info= svg.append('g');
 		first_info.attr("id","first_info");
     rect = first_info.append('rect').transition().duration(500*transition).attr('width', 500)
-                .attr('height', 300)
+                .attr('height', 275)
                 .attr('x', 100)
-                .attr('y', 1200)
+                .attr('y', onmouseover_y)
                 .style('fill', 'white')
                 .attr('stroke', 'black')
 				.attr('stroke-width',2);
 	var text = first_info.append('text').text(first_array[first_index].Ime)
                 .attr('x', 105)
-                .attr('y', 1250)
+                .attr('y', onmouseover_y+50)
                 .attr('fill', 'black')
 				.attr('font-size',50)
 				.attr('font-weight','bold')
@@ -234,7 +236,7 @@ $(".prva_slika").mouseover(function(){
 				.attr('lengthAdjust','spacingAndGlyphs');	
 	var text = first_info.append('text').text("Calories:                  "+ first_array[first_index].Broj_kalorija )
                 .attr('x', 105)
-                .attr('y', 1300)
+                .attr('y', onmouseover_y+100)
                 .attr('fill', 'black')
 				.attr('font-size',25)
 				.attr('font-weight','bold')
@@ -242,7 +244,7 @@ $(".prva_slika").mouseover(function(){
 				
 	var text = first_info.append('text').text("Calories from fat:                  "+ (parseFloat(first_array[first_index].fat)*8.8).toFixed(2))
                 .attr('x', 295)
-                .attr('y', 1300)
+                .attr('y', onmouseover_y+100)
                 .attr('fill', 'black')
 				.attr('font-size',25)
 				.attr('font-weight','bold')
@@ -250,14 +252,14 @@ $(".prva_slika").mouseover(function(){
 				
 	var text = first_info.append('text').text("Total fat:                  "+ first_array[first_index].fat)
                 .attr('x', 105)
-                .attr('y', 1350)
+                .attr('y', onmouseover_y+150)
                 .attr('fill', 'black')
 				.attr('font-size',25)
 				.attr('font-weight','bold')
 				.attr('text-align','center');
 	var text = first_info.append('text').text((100*parseFloat(first_array[first_index].fat)*8.8 / first_array[first_index].Broj_kalorija).toFixed(2) +" %") 
                 .attr('x', 450)
-                .attr('y', 1350)
+                .attr('y', onmouseover_y+150)
                 .attr('fill', 'black')
 				.attr('font-size',25)
 				.attr('font-weight','bold')
@@ -265,14 +267,14 @@ $(".prva_slika").mouseover(function(){
 	
 	var text = first_info.append('text').text("Total carbohydrates:                  "+ first_array[first_index].carbs)
                 .attr('x', 105)
-                .attr('y', 1400)
+                .attr('y', onmouseover_y+200)
                 .attr('fill', 'black')
 				.attr('font-size',25)
 				.attr('font-weight','bold')
 				.attr('text-align','center');
 	var text = first_info.append('text').text((100*parseFloat(first_array[first_index].carbs)*4.1 / first_array[first_index].Broj_kalorija).toFixed(2) +" %") 
                 .attr('x', 450)
-                .attr('y', 1400)
+                .attr('y', onmouseover_y+200)
                 .attr('fill', 'black')
 				.attr('font-size',25)
 				.attr('font-weight','bold')
@@ -281,14 +283,14 @@ $(".prva_slika").mouseover(function(){
 	
 	var text = first_info.append('text').text("Total protein:                  "+ first_array[first_index].protein)
                 .attr('x', 105)
-                .attr('y', 1450)
+                .attr('y', onmouseover_y+250)
                 .attr('fill', 'black')
 				.attr('font-size',25)
 				.attr('font-weight','bold')
 				.attr('text-align','center');
 	var text = first_info.append('text').text((100*parseFloat(first_array[first_index].protein)*4.1 / first_array[first_index].Broj_kalorija).toFixed(2) +" %") 
                 .attr('x', 450)
-                .attr('y', 1450)
+                .attr('y', onmouseover_y+250)
                 .attr('fill', 'black')
 				.attr('font-size',25)
 				.attr('font-weight','bold')
@@ -306,7 +308,7 @@ $(".prva_slika").mouseover(function(){
         .data([data])                   //associate our data with the document
         .append("svg:g")    
 		.attr("id","first_pie")//make a group to hold our pie chart
-            .attr("transform", "translate(" + 850 + "," + 1350 + ")")    //move the center of the pie chart from 0, 0 to radius, radius
+            .attr("transform", "translate(" + 850 + "," + (onmouseover_y +135) + ")")    //move the center of the pie chart from 0, 0 to radius, radius
 
     var arc = d3.svg.arc()              //this will create <path> elements for us using arc data
         .outerRadius(r);
@@ -327,7 +329,7 @@ $(".prva_slika").mouseover(function(){
         arcs.append("svg:text")                                     //add a label to each slice
                 .attr("transform", function(d) {                    //set the label's origin to the center of the arc
                 //we have to make sure to set these before calling arc.centroid
-                d.innerRadius = r-75;
+                d.innerRadius = r-85;
                 d.outerRadius = r;
                 return "translate(" + arc.centroid(d) + ")";        //this gives us a pair of coordinates like [50, 50]
             })
@@ -337,7 +339,7 @@ $(".prva_slika").mouseover(function(){
 		 arcs.append("svg:text")                                     //add a label to each slice
                 .attr("transform", function(d) {                    //set the label's origin to the center of the arc
                 //we have to make sure to set these before calling arc.centroid
-                d.innerRadius = r+90;
+                d.innerRadius = r+80;
                 d.outerRadius = r;
                 return "translate(" + arc.centroid(d) + ")";        //this gives us a pair of coordinates like [50, 50]
             })
@@ -366,7 +368,7 @@ body = d3.select('body').select("#machine")
 rect = g.append('rect').transition().duration(500*transition).attr('width', 260)
                 .attr('height', 300)
                 .attr('x', 360)
-                .attr('y', 650)
+                .attr('y', slot_machine_rect_y)
                 .style('fill', '#EBDCB2')
                 .attr('stroke', 'black')
 				.attr('stroke-width',5)
@@ -375,10 +377,10 @@ rect = g.append('rect').transition().duration(500*transition).attr('width', 260)
 				.attr("width", 250)
 				.attr("height", 180)
 				.attr("x", 365)
-				.attr("y",760);
+				.attr("y",slot_machine_rect_y+110);
 		var text = g.append('text').text(second_array[second_index].Ime)
                 .attr('x', 365)
-                .attr('y', 700)
+                .attr('y', slot_machine_rect_y+50)
                 .attr('fill', 'black')
 				.attr('font-size',50)
 				.attr('font-weight','bold')
@@ -387,7 +389,7 @@ rect = g.append('rect').transition().duration(500*transition).attr('width', 260)
 				.attr('lengthAdjust','spacingAndGlyphs');	
 		var text = g.append('text').text(second_array[second_index].Broj_kalorija + " kCal")
                 .attr('x', 365)
-                .attr('y', 750)
+                .attr('y', slot_machine_rect_y+100)
                 .attr('fill', 'black')
 				.attr('font-size',50)
 				.attr('font-weight','bold')
@@ -404,15 +406,15 @@ $(".druga_slika").mouseover(function(){
 		var second_info= svg.append('g');
 		second_info.attr("id","second_info");
    rect = second_info.append('rect').transition().duration(500*transition).attr('width', 500)
-                .attr('height', 300)
+                .attr('height', 275)
                 .attr('x', 100)
-                .attr('y', 1200)
+                .attr('y', onmouseover_y)
                 .style('fill', 'white')
                 .attr('stroke', 'black')
 				.attr('stroke-width',2);
 	var text = second_info.append('text').text(second_array[second_index].Ime)
                 .attr('x', 105)
-                .attr('y', 1250)
+                .attr('y', onmouseover_y+50)
                 .attr('fill', 'black')
 				.attr('font-size',50)
 				.attr('font-weight','bold')
@@ -421,7 +423,7 @@ $(".druga_slika").mouseover(function(){
 				.attr('lengthAdjust','spacingAndGlyphs');	
 	var text = second_info.append('text').text("Calories:                  "+ second_array[second_index].Broj_kalorija )
                 .attr('x', 105)
-                .attr('y', 1300)
+                .attr('y', onmouseover_y+100)
                 .attr('fill', 'black')
 				.attr('font-size',25)
 				.attr('font-weight','bold')
@@ -429,7 +431,7 @@ $(".druga_slika").mouseover(function(){
 				
 	var text = second_info.append('text').text("Calories from fat:                  "+ (parseFloat(second_array[second_index].fat)*8.8).toFixed(2))
                 .attr('x', 295)
-                .attr('y', 1300)
+                .attr('y', onmouseover_y+100)
                 .attr('fill', 'black')
 				.attr('font-size',25)
 				.attr('font-weight','bold')
@@ -437,14 +439,14 @@ $(".druga_slika").mouseover(function(){
 				
 	var text = second_info.append('text').text("Total fat:                  "+ second_array[second_index].fat)
                 .attr('x', 105)
-                .attr('y', 1350)
+                .attr('y', onmouseover_y+150)
                 .attr('fill', 'black')
 				.attr('font-size',25)
 				.attr('font-weight','bold')
 				.attr('text-align','center');
 	var text = second_info.append('text').text((100*parseFloat(second_array[second_index].fat)*8.8 / second_array[second_index].Broj_kalorija).toFixed(2) +" %") 
                 .attr('x', 450)
-                .attr('y', 1350)
+                .attr('y', onmouseover_y+150)
                 .attr('fill', 'black')
 				.attr('font-size',25)
 				.attr('font-weight','bold')
@@ -452,14 +454,14 @@ $(".druga_slika").mouseover(function(){
 	
 	var text = second_info.append('text').text("Total carbohydrates:                  "+ second_array[second_index].carbs)
                 .attr('x', 105)
-                .attr('y', 1400)
+                .attr('y', onmouseover_y+200)
                 .attr('fill', 'black')
 				.attr('font-size',25)
 				.attr('font-weight','bold')
 				.attr('text-align','center');
 	var text = second_info.append('text').text((100*parseFloat(second_array[second_index].carbs)*4.1 / second_array[second_index].Broj_kalorija).toFixed(2) +" %") 
                 .attr('x', 450)
-                .attr('y', 1400)
+                .attr('y', onmouseover_y+200)
                 .attr('fill', 'black')
 				.attr('font-size',25)
 				.attr('font-weight','bold')
@@ -468,14 +470,14 @@ $(".druga_slika").mouseover(function(){
 	
 	var text = second_info.append('text').text("Total protein:                  "+ second_array[second_index].protein)
                 .attr('x', 105)
-                .attr('y', 1450)
+                .attr('y', onmouseover_y+250)
                 .attr('fill', 'black')
 				.attr('font-size',25)
 				.attr('font-weight','bold')
 				.attr('text-align','center');
 	var text = second_info.append('text').text((100*parseFloat(second_array[second_index].protein)*4.1 / second_array[second_index].Broj_kalorija).toFixed(2) +" %") 
                 .attr('x', 450)
-                .attr('y', 1450)
+                .attr('y', onmouseover_y+250)
                 .attr('fill', 'black')
 				.attr('font-size',25)
 				.attr('font-weight','bold')
@@ -493,7 +495,7 @@ $(".druga_slika").mouseover(function(){
         .data([data])                   //associate our data with the document
         .append("svg:g")    
 		.attr("id","second_pie")//make a group to hold our pie chart
-            .attr("transform", "translate(" + 850 + "," + 1350 + ")")    //move the center of the pie chart from 0, 0 to radius, radius
+            .attr("transform", "translate(" + 850 + "," + (onmouseover_y +135) + ")")    //move the center of the pie chart from 0, 0 to radius, radius
 
     var arc = d3.svg.arc()              //this will create <path> elements for us using arc data
         .outerRadius(r);
@@ -514,7 +516,7 @@ $(".druga_slika").mouseover(function(){
         arcs.append("svg:text")                                     //add a label to each slice
                 .attr("transform", function(d) {                    //set the label's origin to the center of the arc
                 //we have to make sure to set these before calling arc.centroid
-                d.innerRadius = r-75;
+                d.innerRadius = r-85;
                 d.outerRadius = r;
                 return "translate(" + arc.centroid(d) + ")";        //this gives us a pair of coordinates like [50, 50]
             })
@@ -549,7 +551,7 @@ body = d3.select('body').select("#machine")
 rect = g.append('rect').transition().duration(500*transition).attr('width', 260)
                 .attr('height', 300)
                 .attr('x', 620)
-                .attr('y', 650)
+                .attr('y', slot_machine_rect_y)
                 .style('fill', '#EBDCB2')
                 .attr('stroke', 'black')
 				.attr('stroke-width',5)
@@ -558,10 +560,10 @@ rect = g.append('rect').transition().duration(500*transition).attr('width', 260)
 				.attr("width", 250)
 				.attr("height", 180)
 				.attr("x", 625)
-				.attr("y",760);
+				.attr("y",slot_machine_rect_y+110);
 		var text = g.append('text').text(third_array[third_index].Ime)
                 .attr('x', 625)
-                .attr('y', 700)
+                .attr('y', slot_machine_rect_y+50)
                 .attr('fill', 'black')
 				.attr('font-size',50)
 				.attr('font-weight','bold')
@@ -570,7 +572,7 @@ rect = g.append('rect').transition().duration(500*transition).attr('width', 260)
 				.attr('lengthAdjust','spacingAndGlyphs');	
 		var text = g.append('text').text(third_array[third_index].Broj_kalorija + " kCal")
                 .attr('x', 625)
-                .attr('y', 750)
+                .attr('y', slot_machine_rect_y+100)
                 .attr('fill', 'black')
 				.attr('font-size',50)
 				.attr('font-weight','bold')
@@ -587,15 +589,15 @@ $(".treca_slika").mouseover(function(){
 		var third_info= svg.append('g');
 		third_info.attr("id","third_info");
     rect = third_info.append('rect').transition().duration(500*transition).attr('width', 500)
-                .attr('height', 300)
+                .attr('height', 275)
                 .attr('x', 100)
-                .attr('y', 1200)
+                .attr('y', onmouseover_y)
                 .style('fill', 'white')
                 .attr('stroke', 'black')
 				.attr('stroke-width',2);
 	var text = third_info.append('text').text(third_array[third_index].Ime)
                 .attr('x', 105)
-                .attr('y', 1250)
+                .attr('y', onmouseover_y+50)
                 .attr('fill', 'black')
 				.attr('font-size',50)
 				.attr('font-weight','bold')
@@ -604,7 +606,7 @@ $(".treca_slika").mouseover(function(){
 				.attr('lengthAdjust','spacingAndGlyphs');	
 	var text = third_info.append('text').text("Calories:                  "+ third_array[third_index].Broj_kalorija )
                 .attr('x', 105)
-                .attr('y', 1300)
+                .attr('y', onmouseover_y+100)
                 .attr('fill', 'black')
 				.attr('font-size',25)
 				.attr('font-weight','bold')
@@ -612,7 +614,7 @@ $(".treca_slika").mouseover(function(){
 				
 	var text = third_info.append('text').text("Calories from fat:                  "+ (parseFloat(third_array[third_index].fat)*8.8).toFixed(2))
                 .attr('x', 295)
-                .attr('y', 1300)
+                .attr('y', onmouseover_y+100)
                 .attr('fill', 'black')
 				.attr('font-size',25)
 				.attr('font-weight','bold')
@@ -620,14 +622,14 @@ $(".treca_slika").mouseover(function(){
 				
 	var text = third_info.append('text').text("Total fat:                  "+ third_array[third_index].fat)
                 .attr('x', 105)
-                .attr('y', 1350)
+                .attr('y', onmouseover_y+150)
                 .attr('fill', 'black')
 				.attr('font-size',25)
 				.attr('font-weight','bold')
 				.attr('text-align','center');
 	var text = third_info.append('text').text((100*parseFloat(third_array[third_index].fat)*8.8 / third_array[third_index].Broj_kalorija).toFixed(2) +" %") 
                 .attr('x', 450)
-                .attr('y', 1350)
+                .attr('y', onmouseover_y+150)
                 .attr('fill', 'black')
 				.attr('font-size',25)
 				.attr('font-weight','bold')
@@ -635,14 +637,14 @@ $(".treca_slika").mouseover(function(){
 	
 	var text = third_info.append('text').text("Total carbohydrates:                  "+ third_array[third_index].carbs)
                 .attr('x', 105)
-                .attr('y', 1400)
+                .attr('y', onmouseover_y+200)
                 .attr('fill', 'black')
 				.attr('font-size',25)
 				.attr('font-weight','bold')
 				.attr('text-align','center');
 	var text = third_info.append('text').text((100*parseFloat(third_array[third_index].carbs)*4.1 / third_array[third_index].Broj_kalorija).toFixed(2) +" %") 
                 .attr('x', 450)
-                .attr('y', 1400)
+                .attr('y', onmouseover_y+200)
                 .attr('fill', 'black')
 				.attr('font-size',25)
 				.attr('font-weight','bold')
@@ -651,14 +653,14 @@ $(".treca_slika").mouseover(function(){
 	
 	var text = third_info.append('text').text("Total protein:                  "+ third_array[third_index].protein)
                 .attr('x', 105)
-                .attr('y', 1450)
+                .attr('y', onmouseover_y+250)
                 .attr('fill', 'black')
 				.attr('font-size',25)
 				.attr('font-weight','bold')
 				.attr('text-align','center');
 	var text = third_info.append('text').text((100*parseFloat(third_array[third_index].protein)*4.1 / third_array[third_index].Broj_kalorija).toFixed(2) +" %") 
                 .attr('x', 450)
-                .attr('y', 1450)
+                .attr('y', onmouseover_y+250)
                 .attr('fill', 'black')
 				.attr('font-size',25)
 				.attr('font-weight','bold')
@@ -677,7 +679,7 @@ $(".treca_slika").mouseover(function(){
         .data([data])                   //associate our data with the document
         .append("svg:g")    
 		.attr("id","third_pie")//make a group to hold our pie chart
-            .attr("transform", "translate(" + 850 + "," + 1350 + ")")    //move the center of the pie chart from 0, 0 to radius, radius
+            .attr("transform", "translate(" + 850 + "," + (onmouseover_y +135) + ")")    //move the center of the pie chart from 0, 0 to radius, radius
 
     var arc = d3.svg.arc()              //this will create <path> elements for us using arc data
         .outerRadius(r);
@@ -698,7 +700,7 @@ $(".treca_slika").mouseover(function(){
         arcs.append("svg:text")                                     //add a label to each slice
                 .attr("transform", function(d) {                    //set the label's origin to the center of the arc
                 //we have to make sure to set these before calling arc.centroid
-                d.innerRadius = r-75;
+                d.innerRadius = r-85;
                 d.outerRadius = r;
                 return "translate(" + arc.centroid(d) + ")";        //this gives us a pair of coordinates like [50, 50]
             })
@@ -734,7 +736,7 @@ body = d3.select('body').select("#machine")
 		rect = g.append('rect').transition().duration(500*transition).attr('width', 260)
                 .attr('height', 300)
                 .attr('x', 880)
-                .attr('y', 650)
+                .attr('y', slot_machine_rect_y)
                 .style('fill', '#EBDCB2')
                 .attr('stroke', 'black')
 				.attr('stroke-width',5)
@@ -743,10 +745,10 @@ body = d3.select('body').select("#machine")
 				.attr("width", 250)
 				.attr("height", 180)
 				.attr("x", 885)
-				.attr("y",760);
+				.attr("y",slot_machine_rect_y+110);
 		var text = g.append('text').text(fourth_array[fourth_index].Ime)
                 .attr('x', 885)
-                .attr('y', 700)
+                .attr('y', slot_machine_rect_y+50)
                 .attr('fill', 'black')
 				.attr('font-size',50)
 				.attr('font-weight','bold')
@@ -755,7 +757,7 @@ body = d3.select('body').select("#machine")
 				.attr('lengthAdjust','spacingAndGlyphs');	
 		var text = g.append('text').text(fourth_array[fourth_index].Broj_kalorija + " kCal")
                 .attr('x', 885)
-                .attr('y', 750)
+                .attr('y', slot_machine_rect_y+100)
                 .attr('fill', 'black')
 				.attr('font-size',50)
 				.attr('font-weight','bold')
@@ -770,15 +772,15 @@ $(".cetvrta_slika").mouseover(function(){
 		var fourth_info= svg.append('g');
 		fourth_info.attr("id","fourth_info");
     rect = fourth_info.append('rect').transition().duration(500*transition).attr('width', 500)
-                .attr('height', 300)
+                .attr('height', 275)
                 .attr('x', 100)
-                .attr('y', 1200)
+                .attr('y', onmouseover_y)
                 .style('fill', 'white')
                 .attr('stroke', 'black')
 				.attr('stroke-width',2);
 	var text = fourth_info.append('text').text(fourth_array[fourth_index].Ime)
                 .attr('x', 105)
-                .attr('y', 1250)
+                .attr('y', onmouseover_y+50)
                 .attr('fill', 'black')
 				.attr('font-size',50)
 				.attr('font-weight','bold')
@@ -787,7 +789,7 @@ $(".cetvrta_slika").mouseover(function(){
 				.attr('lengthAdjust','spacingAndGlyphs');	
 	var text = fourth_info.append('text').text("Calories:                  "+ fourth_array[fourth_index].Broj_kalorija )
                 .attr('x', 105)
-                .attr('y', 1300)
+                .attr('y', onmouseover_y+100)
                 .attr('fill', 'black')
 				.attr('font-size',25)
 				.attr('font-weight','bold')
@@ -795,7 +797,7 @@ $(".cetvrta_slika").mouseover(function(){
 				
 	var text = fourth_info.append('text').text("Calories from fat:                  "+ (parseFloat(fourth_array[fourth_index].fat)*8.8).toFixed(2))
                 .attr('x', 295)
-                .attr('y', 1300)
+                .attr('y', onmouseover_y+100)
                 .attr('fill', 'black')
 				.attr('font-size',25)
 				.attr('font-weight','bold')
@@ -803,14 +805,14 @@ $(".cetvrta_slika").mouseover(function(){
 				
 	var text = fourth_info.append('text').text("Total fat:                  "+ fourth_array[fourth_index].fat)
                 .attr('x', 105)
-                .attr('y', 1350)
+                .attr('y', onmouseover_y+150)
                 .attr('fill', 'black')
 				.attr('font-size',25)
 				.attr('font-weight','bold')
 				.attr('text-align','center');
 	var text = fourth_info.append('text').text((100*parseFloat(fourth_array[fourth_index].fat)*8.8 / fourth_array[fourth_index].Broj_kalorija).toFixed(2) +" %") 
                 .attr('x', 450)
-                .attr('y', 1350)
+                .attr('y', onmouseover_y+150)
                 .attr('fill', 'black')
 				.attr('font-size',25)
 				.attr('font-weight','bold')
@@ -818,14 +820,14 @@ $(".cetvrta_slika").mouseover(function(){
 	
 	var text = fourth_info.append('text').text("Total carbohydrates:                  "+ fourth_array[fourth_index].carbs)
                 .attr('x', 105)
-                .attr('y', 1400)
+                .attr('y', onmouseover_y+200)
                 .attr('fill', 'black')
 				.attr('font-size',25)
 				.attr('font-weight','bold')
 				.attr('text-align','center');
 	var text = fourth_info.append('text').text((100*parseFloat(fourth_array[fourth_index].carbs)*4.1 / fourth_array[fourth_index].Broj_kalorija).toFixed(2) +" %") 
                 .attr('x', 450)
-                .attr('y', 1400)
+                .attr('y', onmouseover_y+200)
                 .attr('fill', 'black')
 				.attr('font-size',25)
 				.attr('font-weight','bold')
@@ -834,14 +836,14 @@ $(".cetvrta_slika").mouseover(function(){
 	
 	var text = fourth_info.append('text').text("Total protein:                  "+ fourth_array[fourth_index].protein)
                 .attr('x', 105)
-                .attr('y', 1450)
+                .attr('y', onmouseover_y+250)
                 .attr('fill', 'black')
 				.attr('font-size',25)
 				.attr('font-weight','bold')
 				.attr('text-align','center');
 	var text = fourth_info.append('text').text((100*parseFloat(fourth_array[fourth_index].protein)*4.1 / fourth_array[fourth_index].Broj_kalorija).toFixed(2) +" %") 
                 .attr('x', 450)
-                .attr('y', 1450)
+                .attr('y', onmouseover_y+250)
                 .attr('fill', 'black')
 				.attr('font-size',25)
 				.attr('font-weight','bold')
@@ -859,7 +861,7 @@ $(".cetvrta_slika").mouseover(function(){
         .data([data])                   //associate our data with the document
         .append("svg:g")    
 		.attr("id","fourth_pie")//make a group to hold our pie chart
-            .attr("transform", "translate(" + 850 + "," + 1350 + ")")    //move the center of the pie chart from 0, 0 to radius, radius
+            .attr("transform", "translate(" + 850 + "," + (onmouseover_y +135) + ")")    //move the center of the pie chart from 0, 0 to radius, radius
 
     var arc = d3.svg.arc()              //this will create <path> elements for us using arc data
         .outerRadius(r);
@@ -880,7 +882,7 @@ $(".cetvrta_slika").mouseover(function(){
         arcs.append("svg:text")                                     //add a label to each slice
                 .attr("transform", function(d) {                    //set the label's origin to the center of the arc
                 //we have to make sure to set these before calling arc.centroid
-                d.innerRadius = r-75;
+                d.innerRadius = r-85;
                 d.outerRadius = r;
                 return "translate(" + arc.centroid(d) + ")";        //this gives us a pair of coordinates like [50, 50]
             })
@@ -915,7 +917,7 @@ body = d3.select('body').select("#machine")
 		rect = g.append('rect').transition().duration(500*transition).attr('width', 260)
                 .attr('height', 300)
                 .attr('x', 1140)
-                .attr('y', 650)
+                .attr('y', slot_machine_rect_y)
                 .style('fill', '#EBDCB2')
                 .attr('stroke', 'black')
 				.attr('stroke-width',5)
@@ -924,10 +926,10 @@ body = d3.select('body').select("#machine")
 				.attr("width", 250)
 				.attr("height", 180)
 				.attr("x", 1145)
-				.attr("y",760);
+				.attr("y",slot_machine_rect_y+110);
 		var text = g.append('text').text(fifth_array[fifth_index].Ime)
                 .attr('x', 1145)
-                .attr('y', 700)
+                .attr('y', slot_machine_rect_y+50)
                 .attr('fill', 'black')
 				.attr('font-size',50)
 				.attr('font-weight','bold')
@@ -936,7 +938,7 @@ body = d3.select('body').select("#machine")
 				.attr('lengthAdjust','spacingAndGlyphs');	
 		var text = g.append('text').text(fifth_array[fifth_index].Broj_kalorija + " kCal")
                 .attr('x', 1145)
-                .attr('y', 750)
+                .attr('y', slot_machine_rect_y+100)
                 .attr('fill', 'black')
 				.attr('font-size',50)
 				.attr('font-weight','bold')
@@ -952,15 +954,15 @@ $(".peta_slika").mouseover(function(){
 		var fifth_info= svg.append('g');
 		fifth_info.attr("id","fifth_info");
    rect = fifth_info.append('rect').transition().duration(500*transition).attr('width', 500)
-                .attr('height', 300)
+                .attr('height', 275)
                 .attr('x', 100)
-                .attr('y', 1200)
+                .attr('y', onmouseover_y)
                 .style('fill', 'white')
                 .attr('stroke', 'black')
 				.attr('stroke-width',2);
 	var text = fifth_info.append('text').text(fifth_array[fifth_index].Ime)
                 .attr('x', 105)
-                .attr('y', 1250)
+                .attr('y', onmouseover_y+50)
                 .attr('fill', 'black')
 				.attr('font-size',50)
 				.attr('font-weight','bold')
@@ -969,7 +971,7 @@ $(".peta_slika").mouseover(function(){
 				.attr('lengthAdjust','spacingAndGlyphs');	
 	var text = fifth_info.append('text').text("Calories:                  "+ fifth_array[fifth_index].Broj_kalorija )
                 .attr('x', 105)
-                .attr('y', 1300)
+                .attr('y', onmouseover_y+100)
                 .attr('fill', 'black')
 				.attr('font-size',25)
 				.attr('font-weight','bold')
@@ -977,7 +979,7 @@ $(".peta_slika").mouseover(function(){
 				
 	var text = fifth_info.append('text').text("Calories from fat:                  "+ (parseFloat(fifth_array[fifth_index].fat)*8.8).toFixed(2))
                 .attr('x', 295)
-                .attr('y', 1300)
+                .attr('y', onmouseover_y+100)
                 .attr('fill', 'black')
 				.attr('font-size',25)
 				.attr('font-weight','bold')
@@ -985,14 +987,14 @@ $(".peta_slika").mouseover(function(){
 				
 	var text = fifth_info.append('text').text("Total fat:                  "+ fifth_array[fifth_index].fat)
                 .attr('x', 105)
-                .attr('y', 1350)
+                .attr('y', onmouseover_y+150)
                 .attr('fill', 'black')
 				.attr('font-size',25)
 				.attr('font-weight','bold')
 				.attr('text-align','center');
 	var text = fifth_info.append('text').text((100*parseFloat(fifth_array[fifth_index].fat)*8.8 / fifth_array[fifth_index].Broj_kalorija).toFixed(2) +" %") 
                 .attr('x', 450)
-                .attr('y', 1350)
+                .attr('y', onmouseover_y+150)
                 .attr('fill', 'black')
 				.attr('font-size',25)
 				.attr('font-weight','bold')
@@ -1000,14 +1002,14 @@ $(".peta_slika").mouseover(function(){
 	
 	var text = fifth_info.append('text').text("Total carbohydrates:                  "+ fifth_array[fifth_index].carbs)
                 .attr('x', 105)
-                .attr('y', 1400)
+                .attr('y', onmouseover_y+200)
                 .attr('fill', 'black')
 				.attr('font-size',25)
 				.attr('font-weight','bold')
 				.attr('text-align','center');
 	var text = fifth_info.append('text').text((100*parseFloat(fifth_array[fifth_index].carbs)*4.1 / fifth_array[fifth_index].Broj_kalorija).toFixed(2) +" %") 
                 .attr('x', 450)
-                .attr('y', 1400)
+                .attr('y', onmouseover_y+200)
                 .attr('fill', 'black')
 				.attr('font-size',25)
 				.attr('font-weight','bold')
@@ -1016,14 +1018,14 @@ $(".peta_slika").mouseover(function(){
 	
 	var text = fifth_info.append('text').text("Total protein:                  "+ fifth_array[fifth_index].protein)
                 .attr('x', 105)
-                .attr('y', 1450)
+                .attr('y', onmouseover_y+250)
                 .attr('fill', 'black')
 				.attr('font-size',25)
 				.attr('font-weight','bold')
 				.attr('text-align','center');
 	var text = fifth_info.append('text').text((100*parseFloat(fifth_array[fifth_index].protein)*4.1 / fifth_array[fifth_index].Broj_kalorija).toFixed(2) +" %") 
                 .attr('x', 450)
-                .attr('y', 1450)
+                .attr('y', onmouseover_y+250)
                 .attr('fill', 'black')
 				.attr('font-size',25)
 				.attr('font-weight','bold')
@@ -1042,7 +1044,7 @@ $(".peta_slika").mouseover(function(){
         .data([data])                   //associate our data with the document
         .append("svg:g")    
 		.attr("id","fifth_pie")//make a group to hold our pie chart
-            .attr("transform", "translate(" + 850 + "," + 1350 + ")")    //move the center of the pie chart from 0, 0 to radius, radius
+            .attr("transform", "translate(" + 850 + "," + (onmouseover_y +135) + ")")    //move the center of the pie chart from 0, 0 to radius, radius
 
     var arc = d3.svg.arc()              //this will create <path> elements for us using arc data
         .outerRadius(r);
@@ -1063,7 +1065,7 @@ $(".peta_slika").mouseover(function(){
         arcs.append("svg:text")                                     //add a label to each slice
                 .attr("transform", function(d) {                    //set the label's origin to the center of the arc
                 //we have to make sure to set these before calling arc.centroid
-                d.innerRadius = r-75;
+                d.innerRadius = r-85;
                 d.outerRadius = r;
                 return "translate(" + arc.centroid(d) + ")";        //this gives us a pair of coordinates like [50, 50]
             })
@@ -1354,7 +1356,7 @@ $(".peta_slika").mouseleave(function(){
 		current_number_of_carbs=(1-empty_first)*parseFloat(first_array[first_index].carbs)+(1-empty_second)*parseFloat(second_array[second_index].carbs)+(1-empty_third)*parseFloat(third_array[third_index].carbs)+(1-empty_fourth)*parseFloat(fourth_array[fourth_index].carbs)+(1-empty_fifth)*parseFloat(fifth_array[fifth_index].carbs);
 		current_number_of_fat=(1-empty_first)*parseFloat(first_array[first_index].fat)+(1-empty_second)*parseFloat(second_array[second_index].fat)+(1-empty_third)*parseFloat(third_array[third_index].fat)+(1-empty_fourth)*parseFloat(fourth_array[fourth_index].fat)+(1-empty_fifth)*parseFloat(fifth_array[fifth_index].fat);
 		}
-		draw(current_number_of_calories,1200,250,"Current number of calories");
+		draw(current_number_of_calories,1200,600,"Current number of calories");
 		draw_pie();
 	}); 
 	
@@ -1416,13 +1418,13 @@ $(".peta_slika").mouseleave(function(){
 rect = g.append('rect').attr('width', 260)
                 .attr('height', 300)
                 .attr('x', x)
-                .attr('y', 650)
+                .attr('y', slot_machine_rect_y)
                 .style('fill', '#EBDCB2')
                 .attr('stroke', 'black')
 				.attr('stroke-width',5)
 		var text = g.append('text').text("No such value")
                 .attr('x', x+5)
-                .attr('y', 700)
+                .attr('y', slot_machine_rect_y+50)
                 .attr('fill', 'black')
 				.attr('font-size',50)
 				.attr('font-weight','bold')
@@ -1449,7 +1451,7 @@ rect = g.append('rect').attr('width', 260)
 		document.getElementById("fourth_meal_calories").value = fourth_kcal.toFixed(2);
 		document.getElementById("fifth_meal_calories").value = fifth_kcal.toFixed(2);
 		document.getElementById("Total_sum_calories").value=target_number_of_calories +" kcal";
-		draw(document.getElementById("myVal").value,1200,-100,"Target number of calories:");
+		draw(document.getElementById("myVal").value,1200,100,"Target number of calories:");
 		number_of_meals();
 		}
 		return false;
@@ -1471,7 +1473,7 @@ function spin(event){
 event.preventDefault();
 
 	target_number_of_calories=total_number_of_calories*sum/100;
-	draw(target_number_of_calories,1200,-100,"Target number of calories:");
+	draw(target_number_of_calories,1200,100,"Target number of calories:");
 	
 	var i=0;
 	var current_number_of_times=0;
@@ -1500,7 +1502,7 @@ event.preventDefault();
 	current_number_of_proteins=(1-empty_first)*parseFloat(first_array[first_index].protein)+(1-empty_second)*parseFloat(second_array[second_index].protein)+(1-empty_third)*parseFloat(third_array[third_index].protein)+(1-empty_fourth)*parseFloat(fourth_array[fourth_index].protein)+(1-empty_fifth)*parseFloat(fifth_array[fifth_index].protein);
 	current_number_of_carbs=(1-empty_first)*parseFloat(first_array[first_index].carbs)+(1-empty_second)*parseFloat(second_array[second_index].carbs)+(1-empty_third)*parseFloat(third_array[third_index].carbs)+(1-empty_fourth)*parseFloat(fourth_array[fourth_index].carbs)+(1-empty_fifth)*parseFloat(fifth_array[fifth_index].carbs);
 	current_number_of_fat=(1-empty_first)*parseFloat(first_array[first_index].fat)+(1-empty_second)*parseFloat(second_array[second_index].fat)+(1-empty_third)*parseFloat(third_array[third_index].fat)+(1-empty_fourth)*parseFloat(fourth_array[fourth_index].fat)+(1-empty_fifth)*parseFloat(fifth_array[fifth_index].fat);
-	draw(current_number_of_calories,1200,250,"Current number of calories");
+	draw(current_number_of_calories,1200,600,"Current number of calories");
 	draw_pie();
 	number_of_times=0;
 	if(filter==0)
@@ -1532,7 +1534,7 @@ event.preventDefault();
 			current_number_of_proteins=(1-empty_first)*parseFloat(first_array[first_index].protein)+(1-empty_second)*parseFloat(second_array[second_index].protein)+(1-empty_third)*parseFloat(third_array[third_index].protein)+(1-empty_fourth)*parseFloat(fourth_array[fourth_index].protein)+(1-empty_fifth)*parseFloat(fifth_array[fifth_index].protein);
 			current_number_of_carbs=(1-empty_first)*parseFloat(first_array[first_index].carbs)+(1-empty_second)*parseFloat(second_array[second_index].carbs)+(1-empty_third)*parseFloat(third_array[third_index].carbs)+(1-empty_fourth)*parseFloat(fourth_array[fourth_index].carbs)+(1-empty_fifth)*parseFloat(fifth_array[fifth_index].carbs);
 			current_number_of_fat=(1-empty_first)*parseFloat(first_array[first_index].fat)+(1-empty_second)*parseFloat(second_array[second_index].fat)+(1-empty_third)*parseFloat(third_array[third_index].fat)+(1-empty_fourth)*parseFloat(fourth_array[fourth_index].fat)+(1-empty_fifth)*parseFloat(fifth_array[fifth_index].fat);
-			draw(current_number_of_calories,1200,250,"Current number of calories");
+			draw(current_number_of_calories,1200,600,"Current number of calories");
 			draw_pie();
 		}
 	if(index==array_of_indexes.length-1) index=0;
@@ -1555,7 +1557,7 @@ event.preventDefault();
 			current_number_of_carbs=(1-empty_first)*parseFloat(first_array[first_index].carbs)+(1-empty_second)*parseFloat(second_array[second_index].carbs)+(1-empty_third)*parseFloat(third_array[third_index].carbs)+(1-empty_fourth)*parseFloat(fourth_array[fourth_index].carbs)+(1-empty_fifth)*parseFloat(fifth_array[fifth_index].carbs);
 			current_number_of_fat=(1-empty_first)*parseFloat(first_array[first_index].fat)+(1-empty_second)*parseFloat(second_array[second_index].fat)+(1-empty_third)*parseFloat(third_array[third_index].fat)+(1-empty_fourth)*parseFloat(fourth_array[fourth_index].fat)+(1-empty_fifth)*parseFloat(fifth_array[fifth_index].fat);
 			current_number_of_calories=parseFloat((1-empty_first)*first_array[first_index].Broj_kalorija)+parseFloat((1-empty_second)*second_array[second_index].Broj_kalorija)+parseFloat((1-empty_third)*third_array[third_index].Broj_kalorija)+parseFloat((1-empty_fourth)*fourth_array[fourth_index].Broj_kalorija)+parseFloat((1-empty_fifth)*fifth_array[fifth_index].Broj_kalorija);
-			draw(current_number_of_calories,1200,250,"Current number of calories");   
+			draw(current_number_of_calories,1200,600,"Current number of calories");   
 			draw_pie();
 			setTimeout(function(){
 			if(number_of_times!=0)
@@ -1587,7 +1589,7 @@ var first_timeout, second_timeout;
 	
 	slowMotionClicked=1;
 	target_number_of_calories=total_number_of_calories*sum/100;
-	draw(target_number_of_calories,1200,-100,"Target number of calories:");
+	draw(target_number_of_calories,1200,100,"Target number of calories:");
 	
 	var i=0;
 	var current_number_of_times=0;
@@ -1615,7 +1617,7 @@ var first_timeout, second_timeout;
 	current_number_of_carbs=(1-empty_first)*parseFloat(first_array[first_index].carbs)+(1-empty_second)*parseFloat(second_array[second_index].carbs)+(1-empty_third)*parseFloat(third_array[third_index].carbs)+(1-empty_fourth)*parseFloat(fourth_array[fourth_index].carbs)+(1-empty_fifth)*parseFloat(fifth_array[fifth_index].carbs);
 	current_number_of_fat=(1-empty_first)*parseFloat(first_array[first_index].fat)+(1-empty_second)*parseFloat(second_array[second_index].fat)+(1-empty_third)*parseFloat(third_array[third_index].fat)+(1-empty_fourth)*parseFloat(fourth_array[fourth_index].fat)+(1-empty_fifth)*parseFloat(fifth_array[fifth_index].fat);
 	current_number_of_calories=parseFloat((1-empty_first)*first_array[first_index].Broj_kalorija)+parseFloat((1-empty_second)*second_array[second_index].Broj_kalorija)+parseFloat((1-empty_third)*third_array[third_index].Broj_kalorija)+parseFloat((1-empty_fourth)*fourth_array[fourth_index].Broj_kalorija)+parseFloat((1-empty_fifth)*fifth_array[fifth_index].Broj_kalorija);
-	draw(current_number_of_calories,1200,250,"Current number of calories");
+	draw(current_number_of_calories,1200,600,"Current number of calories");
 	draw_pie();
 	document.getElementById("SlotMachine").value="Slow motion";
 	if(filter==0)
@@ -1640,7 +1642,7 @@ var first_timeout, second_timeout;
 			current_number_of_carbs=(1-empty_first)*parseFloat(first_array[first_index].carbs)+(1-empty_second)*parseFloat(second_array[second_index].carbs)+(1-empty_third)*parseFloat(third_array[third_index].carbs)+(1-empty_fourth)*parseFloat(fourth_array[fourth_index].carbs)+(1-empty_fifth)*parseFloat(fifth_array[fifth_index].carbs);
 			current_number_of_fat=(1-empty_first)*parseFloat(first_array[first_index].fat)+(1-empty_second)*parseFloat(second_array[second_index].fat)+(1-empty_third)*parseFloat(third_array[third_index].fat)+(1-empty_fourth)*parseFloat(fourth_array[fourth_index].fat)+(1-empty_fifth)*parseFloat(fifth_array[fifth_index].fat);
 			current_number_of_calories=parseFloat((1-empty_first)*first_array[first_index].Broj_kalorija)+parseFloat((1-empty_second)*second_array[second_index].Broj_kalorija)+parseFloat((1-empty_third)*third_array[third_index].Broj_kalorija)+parseFloat((1-empty_fourth)*fourth_array[fourth_index].Broj_kalorija)+parseFloat((1-empty_fifth)*fifth_array[fifth_index].Broj_kalorija);
-			draw(current_number_of_calories,1200,250,"Current number of calories");
+			draw(current_number_of_calories,1200,600,"Current number of calories");
 			draw_pie();
 		}
 	current_number_of_times++;
@@ -1668,7 +1670,7 @@ var first_timeout, second_timeout;
 		var r= confirm("Do you want to filter each meal based on calories?");
 		if(r==true){
 		target_number_of_calories=total_number_of_calories*sum/100;
-		draw(target_number_of_calories,1200,-100,"Target number of calories:");
+		draw(target_number_of_calories,1200,100,"Target number of calories:");
 		filter=1;
 		
 		if(parseFloat(first_array[first_index].Broj_kalorija)<first_kcal)
@@ -1740,7 +1742,7 @@ var first_timeout, second_timeout;
 		current_number_of_carbs=(1-empty_first)*parseFloat(first_array[first_index].carbs)+(1-empty_second)*parseFloat(second_array[second_index].carbs)+(1-empty_third)*parseFloat(third_array[third_index].carbs)+(1-empty_fourth)*parseFloat(fourth_array[fourth_index].carbs)+(1-empty_fifth)*parseFloat(fifth_array[fifth_index].carbs);
 		current_number_of_fat=(1-empty_first)*parseFloat(first_array[first_index].fat)+(1-empty_second)*parseFloat(second_array[second_index].fat)+(1-empty_third)*parseFloat(third_array[third_index].fat)+(1-empty_fourth)*parseFloat(fourth_array[fourth_index].fat)+(1-empty_fifth)*parseFloat(fifth_array[fifth_index].fat);
 		current_number_of_calories=parseFloat((1-empty_first)*first_array[first_index].Broj_kalorija)+parseFloat((1-empty_second)*second_array[second_index].Broj_kalorija)+parseFloat((1-empty_third)*third_array[third_index].Broj_kalorija)+parseFloat((1-empty_fourth)*fourth_array[fourth_index].Broj_kalorija)+parseFloat((1-empty_fifth)*fifth_array[fifth_index].Broj_kalorija);
-		draw(current_number_of_calories,1200,250,"Current number of calories");
+		draw(current_number_of_calories,1200,600,"Current number of calories");
 		draw_pie();
 		}
 		}
@@ -1768,7 +1770,7 @@ var first_timeout, second_timeout;
         .data([data])                   //associate our data with the document
         .append("svg:g")    
 		.attr("id","whole_pie")//make a group to hold our pie chart
-            .attr("transform", "translate(" + 1700 + "," + 825 + ")")    //move the center of the pie chart from 0, 0 to radius, radius
+            .attr("transform", "translate(" + 1760 + "," + 1175 + ")")    //move the center of the pie chart from 0, 0 to radius, radius
 
     var arc = d3.svg.arc()              //this will create <path> elements for us using arc data
         .outerRadius(r);
@@ -1808,16 +1810,10 @@ var first_timeout, second_timeout;
 
 	}
 	}
-	function number_of_meals(){
-	d3.select("#number_of_meals").remove();
-	var g= svg.append('g').attr('id','number_of_meals').attr('color','#FF0000');
-	g.append('text').text('Number of meals within each box:')
-		.attr('x',500)
-		.attr('y',460)
-		.attr('color','#FF0000')
-		.attr('font-size',30)
 	var first_number=0, second_number=0,third_number=0,fourth_number=0,fifth_number=0;
+	function number_of_meals(){
 	var i=0;
+	first_number=second_number=third_number=fourth_number=fifth_number=0;
 	for(i=0;i<first_array.length;i++){
 	if(filter==0)
 	first_number++;
@@ -1853,36 +1849,7 @@ var first_timeout, second_timeout;
 	if(fifth_array[i].Broj_kalorija<fifth*target_number_of_calories/100)
 	fifth_number++;
 	}
-	if((filter==0 && first_array.length>1)||filter==1)
-	g.append('text').text(first_number)
-		.attr('x',200)
-		.attr('y',510)
-		.attr('fill','#800000')
-		.attr('font-size',40)
-	if((filter==0 && second_array.length>1)||filter==1)
-	g.append('text').text(second_number)
-		.attr('x',460)
-		.attr('y',510)
-		.attr('fill','#800000')
-		.attr('font-size',40)
-	if((filter==0 && third_array.length>1)||filter==1)
-	g.append('text').text(third_number)
-		.attr('x',720)
-		.attr('y',510)
-		.attr('fill','#800000')
-		.attr('font-size',40)
-	if((filter==0 && fourth_array.length>1)||filter==1)
-	g.append('text').text(fourth_number)
-		.attr('x',980)
-		.attr('y',510)
-		.attr('fill','#800000')
-		.attr('font-size',40)
-	if((filter==0 && fifth_array.length>1)||filter==1)
-	g.append('text').text(fifth_number)
-		.attr('x',1240)
-		.attr('y',510)
-		.attr('fill','#800000')
-		.attr('font-size',40)
+	barchart();
 	}
 	function draw_combinations()
 	{
@@ -1917,9 +1884,9 @@ var first_timeout, second_timeout;
 	
 //Crtanje pravokutnika s podacima o ukupnom broju kalorija
 	function draw(val,x,y,tekst){
-	var x=x+250;
+	var x=x+300;
 	height=300;
-	if(y==250) height=800;
+	if(y==600) height=800;
 		body = d3.select('body').select("#machine")
 		svg = body.select('svg');
 	rect = svg.append('rect').attr('width', 500)
@@ -1961,8 +1928,8 @@ var svg = d3.select("body").select("#machine")
 	.append("svg")
 	
 	.attr("width","1000")
-	.attr("height","800")
-	.attr("viewBox","250 -200 1800 1800"); //Ovo se mijenja u ovisnosti o ekranu
+	.attr("height","900")
+	.attr("viewBox","250 -200 1800 2100"); //Ovo se mijenja u ovisnosti o ekranu
 
 var g=svg.append("g").attr("id","start_arrow");
 
@@ -2026,81 +1993,82 @@ var x_small_rectangles=[100,360,620,880,1140];
 for(i=0;i<5;i++){
 svg.append("rect")
 .attr("x",x_small_rectangles[i])
-.attr("y",650)
+.attr("y",slot_machine_rect_y)
 .attr("width","260")
 .attr("height","300")
 .attr("style","stroke:black;stroke-width:4;fill:#EBDCB2;");
 }
 
 svg.append("polygon")
-.attr("points", "185,600 275,600 230,550")
+.attr("points", "185,1050 275,1050 230,1000")
 .attr("stroke-width", "2px")
 .attr("fill","#800000")
 .attr("id","first_polygon_up")
 .attr("stroke", "black"); 
 
 svg.append("polygon")
-.attr("points", "185,1000 275,1000 230,1050")
+.attr("points", "185,1450 275,1450 230,1500")
 .attr("stroke-width", "2px")
 .attr("fill","#800000")
 .attr("id","first_polygon_down")
 .attr("stroke", "black");
 
 svg.append("polygon")
-.attr("points", "445,600 535,600 490,550")
+.attr("points", "445,1050 535,1050 490,1000")
 .attr("stroke-width", "2px")
 .attr("fill","#800000")
 .attr("id","second_polygon_up")
 .attr("stroke", "black");
 
 svg.append("polygon")
-.attr("points", "445,1000 535,1000 490,1050")
+.attr("points", "445,1450 535,1450 490,1500")
 .attr("stroke-width", "2px")
 .attr("fill","#800000")
 .attr("id","second_polygon_down")
 .attr("stroke", "black");
 
 svg.append("polygon")
-.attr("points", "705,600 795,600 750,550")
+.attr("points", "705,1050 795,1050 750,1000")
 .attr("stroke-width", "2px")
 .attr("fill","#800000")
 .attr("id","third_polygon_up")
 .attr("stroke", "black");
 
 svg.append("polygon")
-.attr("points", "705,1000 795,1000 750,1050")
+.attr("points", "705,1450 795,1450 750,1500")
 .attr("stroke-width", "2px")
 .attr("fill","#800000")
 .attr("id","third_polygon_down")
 .attr("stroke", "black");
 
 svg.append("polygon")
-.attr("points", "965,600 1055,600 1010,550")
+.attr("points", "965,1050 1055,1050 1010,1000")
 .attr("stroke-width", "2px")
 .attr("fill","#800000")
 .attr("id","fourth_polygon_up")
 .attr("stroke", "black");
 
 svg.append("polygon")
-.attr("points", "965,1000 1055,1000 1010,1050")
+.attr("points", "965,1450 1055,1450 1010,1500")
 .attr("stroke-width", "2px")
 .attr("fill","#800000")
 .attr("id","fourth_polygon_down")
 .attr("stroke", "black");
 
 svg.append("polygon")
-.attr("points", "1225,600 1315,600 1270,550")
+.attr("points", "1225,1050 1315,1050 1270,1000")
 .attr("stroke-width", "2px")
 .attr("fill","#800000")
 .attr("id","fifth_polygon_up")
 .attr("stroke", "black");
 
 svg.append("polygon")
-.attr("points", "1225,1000 1315,1000 1270,1050")
+.attr("points", "1225,1450 1315,1450 1270,1500")
 .attr("stroke-width", "2px")
 .attr("fill","#800000")
 .attr("id","fifth_polygon_up")
 .attr("stroke", "black");
+
 
 //Rukovanje sa sliderima
  $(function() {
@@ -2227,6 +2195,7 @@ svg.append("polygon")
  
  
 	var number_of_clicks=0;
+	var first_meal_name, second_meal_name, third_meal_name, fourth_meal_name, fifth_meal_name;
  // Menu items 
     function rect_factory(id, x, y,title,image,index)
     { 
@@ -2291,7 +2260,6 @@ svg.append("polygon")
 		body = d3.select('body')
 		svg = body.select("#machine").select('svg');
 		if(number_of_clicks==1){
-		
 		svg.append("rect")
 		.attr("x",100)
 		.attr("y",150)
@@ -2322,11 +2290,12 @@ svg.append("polygon")
 		first_array=temp_array;
 		first_size=first_array.length;
 		first_draw(1);
+		first_meal_name=title;
 		current_number_of_proteins=(1-empty_first)*parseFloat(first_array[first_index].protein)+(1-empty_second)*parseFloat(second_array[second_index].protein)+(1-empty_third)*parseFloat(third_array[third_index].protein)+(1-empty_fourth)*parseFloat(fourth_array[fourth_index].protein)+(1-empty_fifth)*parseFloat(fifth_array[fifth_index].protein);
 		current_number_of_carbs=(1-empty_first)*parseFloat(first_array[first_index].carbs)+(1-empty_second)*parseFloat(second_array[second_index].carbs)+(1-empty_third)*parseFloat(third_array[third_index].carbs)+(1-empty_fourth)*parseFloat(fourth_array[fourth_index].carbs)+(1-empty_fifth)*parseFloat(fifth_array[fifth_index].carbs);
 		current_number_of_fat=(1-empty_first)*parseFloat(first_array[first_index].fat)+(1-empty_second)*parseFloat(second_array[second_index].fat)+(1-empty_third)*parseFloat(third_array[third_index].fat)+(1-empty_fourth)*parseFloat(fourth_array[fourth_index].fat)+(1-empty_fifth)*parseFloat(fifth_array[fifth_index].fat);
 		current_number_of_calories=parseFloat(first_array[first_index].Broj_kalorija)+parseFloat(second_array[second_index].Broj_kalorija)+parseFloat(third_array[third_index].Broj_kalorija)+parseFloat(fourth_array[fourth_index].Broj_kalorija)+parseFloat(fifth_array[fifth_index].Broj_kalorija);
-		draw(current_number_of_calories,1200,250,"Current number of calories");
+		draw(current_number_of_calories,1200,600,"Current number of calories");
 		draw_pie();
 		}
 		if(number_of_clicks==2){
@@ -2360,11 +2329,12 @@ svg.append("polygon")
 		second_array=temp_array;
 		second_size=second_array.length;
 		second_draw(1);
+		second_meal_name=title;
 		current_number_of_proteins=(1-empty_first)*parseFloat(first_array[first_index].protein)+(1-empty_second)*parseFloat(second_array[second_index].protein)+(1-empty_third)*parseFloat(third_array[third_index].protein)+(1-empty_fourth)*parseFloat(fourth_array[fourth_index].protein)+(1-empty_fifth)*parseFloat(fifth_array[fifth_index].protein);
 		current_number_of_carbs=(1-empty_first)*parseFloat(first_array[first_index].carbs)+(1-empty_second)*parseFloat(second_array[second_index].carbs)+(1-empty_third)*parseFloat(third_array[third_index].carbs)+(1-empty_fourth)*parseFloat(fourth_array[fourth_index].carbs)+(1-empty_fifth)*parseFloat(fifth_array[fifth_index].carbs);
 		current_number_of_fat=(1-empty_first)*parseFloat(first_array[first_index].fat)+(1-empty_second)*parseFloat(second_array[second_index].fat)+(1-empty_third)*parseFloat(third_array[third_index].fat)+(1-empty_fourth)*parseFloat(fourth_array[fourth_index].fat)+(1-empty_fifth)*parseFloat(fifth_array[fifth_index].fat);
 		current_number_of_calories=parseFloat(first_array[first_index].Broj_kalorija)+parseFloat(second_array[second_index].Broj_kalorija)+parseFloat(third_array[third_index].Broj_kalorija)+parseFloat(fourth_array[fourth_index].Broj_kalorija)+parseFloat(fifth_array[fifth_index].Broj_kalorija);
-		draw(current_number_of_calories,1200,250,"Current number of calories");
+		draw(current_number_of_calories,1200,600,"Current number of calories");
 		draw_pie();
 		}
 		if(number_of_clicks==3){
@@ -2398,11 +2368,12 @@ svg.append("polygon")
 		third_array=temp_array;
 		third_size=third_array.length;
 		third_draw(1);
+		third_meal_name=title;
 		current_number_of_proteins=(1-empty_first)*parseFloat(first_array[first_index].protein)+(1-empty_second)*parseFloat(second_array[second_index].protein)+(1-empty_third)*parseFloat(third_array[third_index].protein)+(1-empty_fourth)*parseFloat(fourth_array[fourth_index].protein)+(1-empty_fifth)*parseFloat(fifth_array[fifth_index].protein);
 		current_number_of_carbs=(1-empty_first)*parseFloat(first_array[first_index].carbs)+(1-empty_second)*parseFloat(second_array[second_index].carbs)+(1-empty_third)*parseFloat(third_array[third_index].carbs)+(1-empty_fourth)*parseFloat(fourth_array[fourth_index].carbs)+(1-empty_fifth)*parseFloat(fifth_array[fifth_index].carbs);
 		current_number_of_fat=(1-empty_first)*parseFloat(first_array[first_index].fat)+(1-empty_second)*parseFloat(second_array[second_index].fat)+(1-empty_third)*parseFloat(third_array[third_index].fat)+(1-empty_fourth)*parseFloat(fourth_array[fourth_index].fat)+(1-empty_fifth)*parseFloat(fifth_array[fifth_index].fat);
 		current_number_of_calories=parseFloat(first_array[first_index].Broj_kalorija)+parseFloat(second_array[second_index].Broj_kalorija)+parseFloat(third_array[third_index].Broj_kalorija)+parseFloat(fourth_array[fourth_index].Broj_kalorija)+parseFloat(fifth_array[fifth_index].Broj_kalorija);
-		draw(current_number_of_calories,1200,250,"Current number of calories");
+		draw(current_number_of_calories,1200,600,"Current number of calories");
 		draw_pie();
 		}
 		if(number_of_clicks==4){
@@ -2436,11 +2407,12 @@ svg.append("polygon")
 		fourth_array=temp_array;
 		fourth_size=fourth_array.length;
 		fourth_draw(1);
+		fourth_meal_name=title;
 		current_number_of_proteins=(1-empty_first)*parseFloat(first_array[first_index].protein)+(1-empty_second)*parseFloat(second_array[second_index].protein)+(1-empty_third)*parseFloat(third_array[third_index].protein)+(1-empty_fourth)*parseFloat(fourth_array[fourth_index].protein)+(1-empty_fifth)*parseFloat(fifth_array[fifth_index].protein);
 		current_number_of_carbs=(1-empty_first)*parseFloat(first_array[first_index].carbs)+(1-empty_second)*parseFloat(second_array[second_index].carbs)+(1-empty_third)*parseFloat(third_array[third_index].carbs)+(1-empty_fourth)*parseFloat(fourth_array[fourth_index].carbs)+(1-empty_fifth)*parseFloat(fifth_array[fifth_index].carbs);
 		current_number_of_fat=(1-empty_first)*parseFloat(first_array[first_index].fat)+(1-empty_second)*parseFloat(second_array[second_index].fat)+(1-empty_third)*parseFloat(third_array[third_index].fat)+(1-empty_fourth)*parseFloat(fourth_array[fourth_index].fat)+(1-empty_fifth)*parseFloat(fifth_array[fifth_index].fat);
 		current_number_of_calories=parseFloat(first_array[first_index].Broj_kalorija)+parseFloat(second_array[second_index].Broj_kalorija)+parseFloat(third_array[third_index].Broj_kalorija)+parseFloat(fourth_array[fourth_index].Broj_kalorija)+parseFloat(fifth_array[fifth_index].Broj_kalorija);
-		draw(current_number_of_calories,1200,250,"Current number of calories");
+		draw(current_number_of_calories,1200,600,"Current number of calories");
 		draw_pie();
 		}
 		if(number_of_clicks==5){
@@ -2475,11 +2447,12 @@ svg.append("polygon")
 		fifth_array=temp_array;
 		fifth_size=fifth_array.length;
 		fifth_draw(1);
+		fifth_meal_name=title;
 		current_number_of_proteins=(1-empty_first)*parseFloat(first_array[first_index].protein)+(1-empty_second)*parseFloat(second_array[second_index].protein)+(1-empty_third)*parseFloat(third_array[third_index].protein)+(1-empty_fourth)*parseFloat(fourth_array[fourth_index].protein)+(1-empty_fifth)*parseFloat(fifth_array[fifth_index].protein);
 		current_number_of_carbs=(1-empty_first)*parseFloat(first_array[first_index].carbs)+(1-empty_second)*parseFloat(second_array[second_index].carbs)+(1-empty_third)*parseFloat(third_array[third_index].carbs)+(1-empty_fourth)*parseFloat(fourth_array[fourth_index].carbs)+(1-empty_fifth)*parseFloat(fifth_array[fifth_index].carbs);
 		current_number_of_fat=(1-empty_first)*parseFloat(first_array[first_index].fat)+(1-empty_second)*parseFloat(second_array[second_index].fat)+(1-empty_third)*parseFloat(third_array[third_index].fat)+(1-empty_fourth)*parseFloat(fourth_array[fourth_index].fat)+(1-empty_fifth)*parseFloat(fifth_array[fifth_index].fat);
 		current_number_of_calories=parseFloat(first_array[first_index].Broj_kalorija)+parseFloat(second_array[second_index].Broj_kalorija)+parseFloat(third_array[third_index].Broj_kalorija)+parseFloat(fourth_array[fourth_index].Broj_kalorija)+parseFloat(fifth_array[fifth_index].Broj_kalorija);
-		draw(current_number_of_calories,1200,250,"Current number of calories");
+		draw(current_number_of_calories,1200,600,"Current number of calories");
 		draw_pie();
 		}
 		combination(); 
@@ -2511,44 +2484,178 @@ svg.append("polygon")
 		id="meal"+i;
         rect_factory(id, x, y,titles[i],images[i],i);
     }
-    
-   
+  
+function barchart(){
+d3.select("#barchart").remove();
+var data= [
+{"Ime_jela":first_meal_name,"Broj_jela":first_number},
+{"Ime_jela":second_meal_name,"Broj_jela":second_number},
+{"Ime_jela":third_meal_name,"Broj_jela":third_number},
+{"Ime_jela":fourth_meal_name,"Broj_jela":fourth_number},
+{"Ime_jela":fifth_meal_name,"Broj_jela":fifth_number}]
+
+var Ime_jela = [];
+var Broj_jela = [];
+for(i=0;i<5;i++){
+Ime_jela[i]=data[i].Ime_jela;
+Broj_jela[i]=data[i].Broj_jela;
+}
+var margin = {top: 50, bottom: 70, left:100, right: 20};
+var width = 1420 - margin.left - margin.right;
+var height = 500 - margin.top - margin.bottom;
+var barPadding = 4;
+var barWidth = width / data.length - barPadding;
+
+var x = d3.scale.ordinal().domain(d3.range(data.length)).rangeRoundBands([0, width]);
+
+var y = d3.scale.linear().domain([0,d3.max(Broj_jela)]).range([height, 0]);
+
+var svg = d3.select("body").select("#machine")
+.select("svg").append("g").attr("id","barchart")
+.attr("width", width + margin.left + margin.right)
+.attr("height", height + margin.bottom + margin.top)
+.style("background-color", "#F4EBDB")
+.append("g")
+.attr("font-size",40)
+.attr("transform", "translate(" + 100 + "," + 500 +
+")");
+
+var xAxis = d3.svg.axis()
+.scale(x)
+.orient("bottom")
+.tickFormat(function(d, i) {return data[i].Ime_jela;});
+
+var yAxis = d3.svg.axis()
+.scale(y)
+.orient("left")
+.ticks(5);
+	
+svg.append("g")
+.attr("class", "x axis")
+.attr("transform", "translate(0," + height + ")")
+.call(xAxis)
+.attr("fill","#800000")
+.selectAll("text")
+.attr("font-size",40)
+.style("text-anchor", "middle");
+
+svg.append("g")
+.attr("class", "y axis")
+.call(yAxis)
+.attr("fill","#800000")
+.append("text")
+.attr("transform", "rotate(-90)")
+.attr("y", 6)
+.attr("dy", ".71em")
+.style("text-anchor", "end");
+
+
+var barchart = svg.selectAll("rect")
+.data(Broj_jela)
+.enter()
+.append("rect")
+.attr("x", function(d, i) { return x(i); })
+.attr("y", y) .attr("height", function(d) { return height - y(d); })
+.attr("width", barWidth)
+.attr("id", function(d,i){ return "rect"+i})
+.attr("fill", "#EBDCB2");
+
+svg.append("text") 
+		.attr("x", (width / 2)) 
+		.attr("y",  margin.top- 75) 
+		.attr("text-anchor", "middle") 
+		.attr("font-size",40)
+		.text("Number of meals in boxes");
+var i=0, max=0;
+if(first_number>max) max=first_number;
+if(second_number>max) max=second_number;
+if(third_number>max) max=third_number;
+if(fourth_number>max) max=fourth_number;
+if(fifth_number>max) max=fifth_number;
+$("#rect0").mouseover(function(){	
+var y=55 + (1-first_number/max)*360;
+console.log(first_number,max);
+document.getElementById("rect0").style.fill="#800000";
+svg.append("g").attr("id","meal_label").append("text").text(first_number).attr("x","90").attr("y",y).attr("fill","#FFF8DC").attr("font-size",50);
+});  
+$("#rect0").mouseleave(function(){	
+document.getElementById("rect0").style.fill="#EBDCB2";
+document.getElementById("meal_label").remove();
+});   
+$("#rect1").mouseover(function(){	
+var y=60 + (1-second_number/max)*360;
+document.getElementById("rect1").style.fill="#800000";
+svg.append("g").attr("id","meal_label").append("text").text(second_number).attr("x","350").attr("y",y).attr("fill","#FFF8DC").attr("font-size",50);
+});  
+$("#rect1").mouseleave(function(){	
+document.getElementById("rect1").style.fill="#EBDCB2";
+document.getElementById("meal_label").remove();
+}); 
+$("#rect2").mouseover(function(){	
+var y=60 + (1-third_number/max)*360;
+document.getElementById("rect2").style.fill="#800000";
+svg.append("g").attr("id","meal_label").append("text").text(third_number).attr("x","610").attr("y",y).attr("fill","#FFF8DC").attr("font-size",50);
+});  
+$("#rect2").mouseleave(function(){	
+document.getElementById("rect2").style.fill="#EBDCB2";
+document.getElementById("meal_label").remove();
+}); 
+$("#rect3").mouseover(function(){	
+var y=60 + (1-fourth_number/max)*360;
+document.getElementById("rect3").style.fill="#800000";
+svg.append("g").attr("id","meal_label").append("text").text(fourth_number).attr("x","870").attr("y",y).attr("fill","#FFF8DC").attr("font-size",50);
+});  
+$("#rect3").mouseleave(function(){	
+document.getElementById("rect3").style.fill="#EBDCB2";
+document.getElementById("meal_label").remove();
+}); 
+$("#rect4").mouseover(function(){	
+var y=60 + (1-fifth_number/max)*360;
+document.getElementById("rect4").style.fill="#800000";
+svg.append("g").attr("id","meal_label").append("text").text(fifth_number).attr("x","1130").attr("y",y).attr("fill","#FFF8DC").attr("font-size",50);
+});  
+$("#rect4").mouseleave(function(){	
+document.getElementById("rect4").style.fill="#EBDCB2";
+document.getElementById("meal_label").remove();
+}); 
+
+}
 </script>
  
       <p>
-         <label for = "first_meal"  style="display:inline-block; margin-left:80px;" >First meal:</label>
+         <label for = "first_meal" id="first_meal_label" style="display:inline-block; margin-left:80px;" >First meal:</label>
 		 <input type = "text" id = "first_meal" 
-            style = "border:0; color:#b9cd6d; font-weight:bold; display:inline-block; margin-right:-125px; background-color:#F6F6F6; ">
-		 <label for = "second_meal"  style="display:inline-block; ">Second meal:</label>
+            style = "border:0; color:#b9cd6d; font-weight:bold; display:inline-block; margin-right:-125px; background-color:#F4EBDB; ">
+		 <label for = "second_meal" id="second_meal_label" style="display:inline-block; ">Second meal:</label>
 		<input type = "text" id = "second_meal" 
-            style = "border:0; color:#b9cd6d; font-weight:bold; display:inline-block; margin-right:-125px; background-color:#F6F6F6; ">
-		 <label for = "third_meal"  style="display:inline-block; ">Third meal:</label>
+            style = "border:0; color:#b9cd6d; font-weight:bold; display:inline-block; margin-right:-125px; background-color:#F4EBDB; ">
+		 <label for = "third_meal"  id="third_meal_label" style="display:inline-block; ">Third meal:</label>
 		 <input type = "text" id = "third_meal" 
-            style = "border:0; color:#b9cd6d; font-weight:bold; display:inline-block; margin-right:-125px; background-color:#F6F6F6; ">
-		 <label for = "fourth_meal"  style="display:inline-block; ">Fourth meal:</label>
+            style = "border:0; color:#b9cd6d; font-weight:bold; display:inline-block; margin-right:-125px; background-color:#F4EBDB; ">
+		 <label for = "fourth_meal"  id="fourth_meal_label" style="display:inline-block; ">Fourth meal:</label>
 		 <input type = "text" id = "fourth_meal" 
-            style = "border:0; color:#b9cd6d; font-weight:bold; display:inline-block; margin-right:-125px; background-color:#F6F6F6; ">
-		 <label for = "fifth_meal"  style="display:inline-block; ">Fifth meal:</label>
+            style = "border:0; color:#b9cd6d; font-weight:bold; display:inline-block; margin-right:-125px; background-color:#F4EBDB; ">
+		 <label for = "fifth_meal"  id="fifth_meal_label" style="display:inline-block; ">Fifth meal:</label>
 		 <input type = "text" id = "fifth_meal" 
-            style = "border:0; color:#b9cd6d; font-weight:bold; display:inline-block; margin-right:-125px; background-color:#F6F6F6; ">
+            style = "border:0; color:#b9cd6d; font-weight:bold; display:inline-block; margin-right:-125px; background-color:#F4EBDB; ">
       </p>
 	  
-	   <p style="background-color:#F6F6F6;">
+	   <p style="background-color:#F4EBDB;">
          <label for = "first_meal_calories"  style="display:inline-block; margin-left:80px;" >kCal:</label>
 		 <input type = "text" id = "first_meal_calories" 
-            style = "border:0; color:#b9cd6d; font-weight:bold; display:inline-block; margin-right:-80px; background-color:#F6F6F6;">
+            style = "border:0; color:#b9cd6d; font-weight:bold; display:inline-block; margin-right:-80px; background-color:#F4EBDB;">
 		 <label for = "second_meal_calories"  style="display:inline-block; ">kCal:</label>
 		<input type = "text" id = "second_meal_calories" 
-            style = "border:0; color:#b9cd6d; font-weight:bold; display:inline-block; margin-right:-80px; background-color:#F6F6F6; ">
+            style = "border:0; color:#b9cd6d; font-weight:bold; display:inline-block; margin-right:-80px; background-color:#F4EBDB; ">
 		 <label for = "third_meal_calories"  style="display:inline-block; ">kCal:</label>
 		 <input type = "text" id = "third_meal_calories" 
-            style = "border:0; color:#b9cd6d; font-weight:bold; display:inline-block; margin-right:-80px; background-color:#F6F6F6; ">
+            style = "border:0; color:#b9cd6d; font-weight:bold; display:inline-block; margin-right:-80px; background-color:#F4EBDB; ">
 		 <label for = "fourth_meal_calories"  style="display:inline-block; ">kCal:</label>
 		 <input type = "text" id = "fourth_meal_calories" 
-            style = "border:0; color:#b9cd6d; font-weight:bold; display:inline-block; margin-right:-80px; background-color:#F6F6F6; ">
+            style = "border:0; color:#b9cd6d; font-weight:bold; display:inline-block; margin-right:-80px; background-color:#F4EBDB; ">
 		 <label for = "fifth_meal_calories"  style="display:inline-block; ">kCal:</label>
 		 <input type = "text" id = "fifth_meal_calories" 
-            style = "border:0; color:#b9cd6d; font-weight:bold; display:inline-block; margin-right:-80px; background-color:#F6F6F6; ">
+            style = "border:0; color:#b9cd6d; font-weight:bold; display:inline-block; margin-right:-80px; background-color:#F4EBDB; ">
       </p>
 	
 <div id = "slider-1" style="height:200px; width:12px; float:left; margin-left:130px;"></div>
@@ -2560,11 +2667,11 @@ svg.append("polygon")
 <p align="right">
    <label for = "Total_sum"  style="">Total percentage:</label>
 	 <input type = "text" id = "Total_sum" 
-		style = "border:0; color:#b9cd6d; font-weight:bold; display:inline-block; margin-right:-110px;font-size:15px;background-color:#F6F6F6; ">
+		style = "border:0; color:#b9cd6d; font-weight:bold; display:inline-block; margin-right:-110px;font-size:15px;background-color:#F4EBDB; ">
 	</br> 
 	<label for = "Total_sum_calories"  style="margin-right:10px; margin-top:10px;">Total calories:</label>
 	 <input type = "text" id = "Total_sum_calories" 
-		style = "border:0; color:#b9cd6d; font-weight:bold; display:inline-block; margin-right:-90px; background-color:#F6F6F6; ">
+		style = "border:0; color:#b9cd6d; font-weight:bold; display:inline-block; margin-right:-90px; background-color:#F4EBDB; ">
 </p>
 
 </div>
